@@ -378,6 +378,310 @@ AF.push(
  {c:'s03', s:'În Reality Therapy, motivele inconștiente scuză comportamentul clientului.', v:false}
 );
 
+/* ---- content/capitole/s04.js ---- */
+/* CAPITOLUL IV (Specialitate) – Aspecte deontologice și etice ale consilierii psihopedagogice */
+CAPITOLE.push({id:'s04', parte:'Tematica de specialitate', nr:'IV', emoji:'⚖️', scurt:'Deontologie și etică',
+titlu:'Aspecte deontologice și etice ale consilierii psihopedagogice',
+sectiuni:[
+{titlu:'Rețeaua: CJRAE, CJAP, cabinete', puncte:[
+ '**CJRAE/CMBRAE** (Centrul Județean / al Municipiului București de Resurse și Asistență Educațională) – unități conexe ale învățământului preuniversitar, cu personalitate juridică, subordonate ministerului (OM 5555/2011); coordonează și **CJAP/CMBAP** (asistență psihopedagogică).',
+ '**Cabinetul școlar** de asistență psihopedagogică: în unități cu cel puțin **800 de elevi** (sau 400 de preșcolari).',
+ '**Cabinetul interșcolar**: pentru cel puțin două unități care împreună au efectivul cerut.',
+ 'Activități: cunoaștere și consiliere individuală/colectivă, îndrumarea părinților și profesorilor, colaborare cu comunitatea, orientarea școlară și profesională, consilierea elevilor cu manifestări deviante.',
+ 'Consilierul lucrează în cabinet, în cabinetul de orientare sau în clasă, conform standardului ocupațional (ANC); sarcina primară – **prevenirea tulburărilor emoționale și comportamentale** (A. Băban).',
+ 'Raportare anuală: minimum **90 de ședințe de consiliere individuală** și **40 de sesiuni de consiliere de grup** (elevi, părinți, profesori).']},
+{titlu:'1. Atribuții și responsabilități', puncte:[
+ 'Etica profesională: abordarea clientului fără condiționări, ajutor competent, respectarea deciziilor clientului, **confidențialitate**, lucrul doar în aria de competență, apelul la colegi pentru cazuri dificile, a nu impune propriile valori, perfecționare continuă, prestigiu profesional, gândire pozitivă (I. Al. Dumitru).',
+ 'Trei direcții de acțiune (Muro și Kottman): **consilierea propriu-zisă** (individuală și de grup), **consultanța** (profesori, părinți, manageri), **coordonarea serviciilor educaționale**.',
+ 'La primar și gimnaziu: consiliere pe curriculum, dezvoltare personală (inclusiv carieră), cazuri speciale, coordonarea serviciilor.']},
+{titlu:'2. Formarea continuă și evaluarea', puncte:[
+ 'Formare universitară: psihologie, psihopedagogie, sociologie, asistență socială, științele educației; master/studii aprofundate.',
+ 'Competențe de bază: consiliere școlară și profesională, evaluare psihologică, cunoașterea personalității, teorii și tehnici, cercetare, abordări interculturale, management.',
+ 'Formarea continuă: stagii acreditate, ateliere, seminarii, conferințe, mobilități; rezultatele autoevaluării și evaluărilor externe ghidează formarea.',
+ 'Denumirea din Statutul personalului didactic: **profesor psihopedagog**.',
+ 'Dacă un caz depășește competența → trimiterea la alt specialist.',
+ '**Supervizare/consultanță**: nivel I – supervizare didactică (modele, feedback pe înregistrări); nivel II – supervizare care încurajează autonomia (cazuri atipice); nivel III – **consultanță** între colegi experimentați.',
+ 'Evaluarea: autoevaluare, interevaluare (colegi), expert, coordonatori; beneficiarii pot da sugestii.',
+ 'Indicatori **cantitativi** („Cât de mult? Cât de des?” – nr. de beneficiari, activități, persoane testate) și **calitativi** („Cât de util? Cât de bun?” – satisfacția clienților, impactul, eficiența socială).']},
+{titlu:'3. Aspecte deontologice', puncte:[
+ 'Patru aspecte principale: **consimțământul clientului**, **confidențialitatea**, **aria de competență**, **conflictul de interese**.',
+ '**Consimțământul informat**: clientul e informat despre obiective, desfășurare, proceduri, rezultate scontate.',
+ '**Confidențialitatea** – cea mai importantă problemă etică. Niveluri (Blocher): (1) date generale – folosite profesional, cu protecția identității în cercetare; (2) informații speciale – pot fi împărtășite altor specialiști, cu informarea clientului; (3) informații strict personale – nu se divulgă niciodată, **excepție: pericol iminent pentru viața și securitatea clientului**.',
+ 'Grijă sporită la minori (mai ales cu părinți divorțați).',
+ '**Aria de competență**: lucrează doar unde s-a format; un „tratament” greșit face mai mult rău decât lipsa ajutorului; **malpraxisul** e pedepsit de lege.',
+ '**Conflictul de interese**: nu consiliază rude, prieteni, angajați/angajatori; nu se lasă influențat de cei care plătesc/recomandă clientul.']},
+{titlu:'4. Principii de etică', puncte:[
+ 'Concepții morale-cadru (Al. I. Dumitru): **teismul** (voința divină), **raționalismul etic**, **imperativul moral** (Kant – binele/adevărul aplicate universal), **utilitarismul moral** (fericirea și bunăstarea oamenilor), **egoismul etic** (aplicabil clientului, NU consilierului – acesta trebuie să fie altruist), **intuiționismul moral** (compasiune), **justiția socială** (egalitate de șanse, fără discriminare).',
+ 'Valori: respectul față de viața umană, adevăr, libertate, autonomie, angajamente, viața privată; grija față de cei vulnerabili.',
+ '**Rezolvarea unei dileme morale – 5 pași:** (1) recapitularea concepțiilor și principiilor etice generale; (2) lista principiilor specifice relevante; (3) adunarea informațiilor despre situație; (4) lista opțiunilor majore; (5) raportarea opțiunilor la concepții, principii și standarde profesionale.']}
+]});
+
+CARDURI.push(
+ {c:'s04', q:'De la câți elevi se înființează un cabinet școlar de asistență psihopedagogică?', a:'Minimum **800 de elevi** (sau 400 de preșcolari). Sub acest număr – cabinet **interșcolar**.'},
+ {c:'s04', q:'Ce raportează anual un profesor consilier (minim)?', a:'- 90 de ședințe de consiliere individuală\n- 40 de sesiuni de consiliere de grup'},
+ {c:'s04', q:'Cele trei direcții de acțiune ale consilierului (Muro și Kottman)', a:'- Consilierea propriu-zisă (individuală și de grup)\n- Consultanța (profesori, părinți, manageri)\n- Coordonarea serviciilor educaționale'},
+ {c:'s04', q:'Cele 4 aspecte deontologice principale', a:'- Consimțământul clientului\n- Confidențialitatea\n- Aria de competență\n- Conflictul de interese'},
+ {c:'s04', q:'Nivelurile confidențialității (Blocher)', a:'- **I:** date generale – uz profesional, identitatea protejată\n- **II:** informații speciale – pot fi împărtășite altor specialiști, cu informarea clientului\n- **III:** informații strict personale – nu se divulgă, **excepție: pericol iminent pentru viața clientului**', term:'Confidențialitatea', short:'cea mai importantă problemă etică; excepție – pericol iminent'},
+ {c:'s04', q:'Când poate fi încălcată confidențialitatea informațiilor strict personale?', a:'Doar când există un **pericol iminent pentru viața și securitatea clientului**.'},
+ {c:'s04', q:'Ce face consilierul când un caz îi depășește competența?', a:'Îl trimite la un alt specialist cu pregătire corespunzătoare și îi comunică acest lucru clientului.'},
+ {c:'s04', q:'Ce înseamnă conflictul de interese în consiliere?', a:'Situația în care interesele consilierului interferează cu ale clientului – de aceea nu consiliază rude, prieteni, persoane în relație angajator–angajat și nu se lasă influențat de cei care plătesc.', term:'Conflictul de interese', short:'interesele consilierului interferează cu binele clientului'},
+ {c:'s04', q:'Nivelurile supervizării/consultanței', a:'- Nivel I – supervizare didactică (modele, feedback)\n- Nivel II – supervizare care încurajează autonomia\n- Nivel III – consultanță între colegi'},
+ {c:'s04', q:'Indicatori cantitativi vs calitativi în evaluarea consilierului', a:'- **Cantitativi:** „Cât de mult? Cât de des?” (nr. beneficiari, activități)\n- **Calitativi:** „Cât de util? Cât de bun?” (satisfacția, impactul)'},
+ {c:'s04', q:'Cei 5 pași ai rezolvării unei dileme morale', a:'- Recapitularea concepțiilor etice generale\n- Lista principiilor specifice relevante\n- Adunarea informațiilor despre situație\n- Lista opțiunilor majore\n- Raportarea opțiunilor la principii și standarde'},
+ {c:'s04', q:'Utilitarismul moral vs egoismul etic în consiliere', a:'- **Utilitarism:** moral e ce aduce fericire și bunăstare\n- **Egoism etic:** se aplică clientului (să-și satisfacă nevoile), NU consilierului, care trebuie să fie altruist'},
+ {c:'s04', q:'Ce este malpraxisul?', a:'Practica profesională greșită; consilierul poate fi pedepsit de lege dacă i se dovedește vinovăția.', term:'Malpraxisul', short:'practică profesională greșită, pedepsită de lege'}
+);
+
+GRILE.push(
+ {c:'s04', q:'Cea mai importantă problemă de etică profesională a consilierului este:', o:['Conflictul de interese','Confidențialitatea','Formarea continuă','Evaluarea'], r:1},
+ {c:'s04', q:'Informațiile strict personale pot fi divulgate doar:', o:['La cererea dirigintelui','La cererea părinților','În caz de pericol iminent pentru viața clientului','În rapoartele anuale'], r:2},
+ {c:'s04', q:'Un cabinet școlar se înființează în unități cu cel puțin:', o:['300 de elevi','500 de elevi','800 de elevi','1000 de elevi'], r:2},
+ {c:'s04', q:'Concepția etică aplicabilă clientului, dar NU consilierului:', o:['Utilitarismul','Egoismul etic','Imperativul moral','Justiția socială'], r:1},
+ {c:'s04', q:'Imperativul moral își are originea în opera lui:', o:['Kant','Bentham','Rogers','Freud'], r:0},
+ {c:'s04', q:'Relația de nivel III între consilieri este una de:', o:['Supervizare didactică','Consultanță între colegi','Evaluare ierarhică','Control'], r:1},
+ {c:'s04', q:'„Satisfacția clienților” este un indicator:', o:['Cantitativ','Calitativ','Financiar','Statistic'], r:1},
+ {c:'s04', q:'Consilierul poate consilia, în mod corect etic:', o:['Propriul copil','Un prieten apropiat','Un elev al școlii fără relații personale','Angajatorul său'], r:2}
+);
+
+AF.push(
+ {c:'s04', s:'Clienții pot fi incluși în programe de consiliere fără consimțământul lor, dacă e spre binele lor.', v:false},
+ {c:'s04', s:'Un tratament aplicat neprofesionist poate face mai mult rău decât lipsa ajutorului.', v:true},
+ {c:'s04', s:'CJRAE sunt unități conexe ale învățământului preuniversitar.', v:true},
+ {c:'s04', s:'Consilierul își poate impune propriile valori clientului, dacă sunt corecte.', v:false},
+ {c:'s04', s:'Denumirea consilierului școlar în Statutul personalului didactic este „profesor psihopedagog”.', v:true},
+ {c:'s04', s:'Supervizarea de nivel I se face pe baza autocaracterizărilor verbale ale celui supervizat.', v:false, e:'Se face pe observare directă, înregistrări, modele.'}
+);
+
+/* ---- content/capitole/s05.js ---- */
+/* CAPITOLUL V (Specialitate) – Metode și tehnici de învățare eficientă */
+CAPITOLE.push({id:'s05', parte:'Tematica de specialitate', nr:'V', emoji:'📖', scurt:'Învățarea eficientă',
+titlu:'Metode și tehnici de învățare eficientă. Învățarea și cerințele vieții sociale',
+sectiuni:[
+{titlu:'1. Eficacitatea instruirii și randamentul învățării', puncte:[
+ '**Eficacitatea instruirii** = depășirea de către TOȚI elevii a nivelului minimal acceptabil de performanță, proporțional cu posibilitățile individuale, în confort psihic și cu economie de efort și timp. Instruirea ineficace = reușita doar a unei părți a clasei.',
+ 'Soluția: **individualizarea, diferențierea și motivarea** învățării.',
+ 'Genofond (rezervorul genetic al speciei) vs genotip (calitățile ereditare individuale) – elevii au aceleași capacități, dar le folosesc diferit.',
+ '**Randamentul învățării** = raportul dintre rezultatul didactic ideal (proiectat în documentele școlare) și rezultatul obținut.']},
+{titlu:'1. Motivele învățării', puncte:[
+ '**Cognitive** – curiozitatea, impulsul de a cunoaște; impulsul cognitiv poate deveni cel mai puternic motiv școlar.',
+ '**De afiliere** – apartenența la grup, prieteni.',
+ '**De aprobare socială** – recompense, respect, aprecierea celorlalți.',
+ '**De putere/influență** – recunoaștere, control.',
+ '**De afirmare a Eului și autorealizare** – succes, evitarea eșecului.',
+ 'Perspective: structurală (cognitiv + afectiv + volitiv împreună) și relațional-dinamică (neconcordanța nevoi interne – solicitări externe → **disonanță cognitivă**, motiv al învățării).',
+ 'Motivație **extrinsecă** (recompense, cerințe externe) vs **intrinsecă** (activitatea e interesantă în sine).',
+ 'T. Amabile: factori extrinseci **sinergetici** (se combină bine cu motivația intrinsecă) și **nonsinergetici** (persoana se simte constrânsă).']},
+{titlu:'1. Stilurile de învățare', puncte:[
+ '**Stilul de învățare** = modalitatea preferată de a recepta, asimila, procesa, stoca și reactualiza informațiile (I. Al. Dumitru).',
+ 'Determinat de: preferința senzorială (**vizual, auditiv, tactil-kinestezic**) + preferința emisferică (**stângă, dreaptă, integrate**) → 9 stiluri.',
+ 'Se identifică prin autoobservare, reflecție, chestionare/inventare.',
+ 'Consilierea urmărește identificarea și valorificarea stilului personal (self-management al învățării).']},
+{titlu:'1. Inteligențele multiple (H. Gardner)', puncte:[
+ '„Toți suntem inteligenți, dar în moduri diferite.”',
+ '**Vizual-spațială** – învață prin imagini, scheme, culori, hărți.',
+ '**Verbal-lingvistică** – citit, scris, povești; cea mai solicitată în școală.',
+ '**Logico-matematică** – raționamente, numere, tipare (IQ).',
+ '**Muzical-ritmică** – ritmuri, versificarea conținutului.',
+ '**Corporal-kinestezică** – mișcare, manipulare de obiecte, jocuri.',
+ '**Interpersonală** – relaționare, cooperare, dezbatere.',
+ '**Intrapersonală** – reflecție, studiu individual, autocunoaștere (uneori lent, temeinic).',
+ '**Naturalistă** – clasificarea plantelor, animalelor.',
+ '**Existențială** – întrebările fundamentale ale existenței.']},
+{titlu:'2. Insuccesul școlar: forme', puncte:[
+ 'Definiție: rămânerea în urmă sau neîndeplinirea cerințelor obligatorii – efect al discrepanței dintre exigențe, posibilități și rezultate.',
+ 'Indicatori: abandon precoce, decalaj potențial–rezultate, părăsirea școlii fără calificare, neatingerea obiectivelor, eșec la examene, inadaptare.',
+ '**Eșec de tip cognitiv**: nerealizarea obiectivelor pedagogice (corigențe, repetenție) – din întârzieri intelectuale sau neajunsuri motivaționale, volitive, operaționale (aspirații scăzute, lipsa deprinderilor de muncă, gândire abstractă insuficientă).',
+ '**Eșec de tip necognitiv**: inadaptarea la exigențele vieții școlare → abandon, „strada”; cauze afective sau psihonervoase (hiperexcitabilitate, autism, impulsivitate).',
+ 'Grade: **rămânerea în urmă** (latent, temporar – intervenție ușoară) → **insucces particular** (la unele discipline) → **insucces generalizat** (corigențe repetate, repetenție – intervenție foarte dificilă).',
+ 'Insuccesul = **dublă inadaptare**: a copilului la școală și a școlii la copil.']},
+{titlu:'2. Cauze și factori perturbatori', puncte:[
+ 'Cauze **obiective**: organizarea școlară, programe încărcate, orar greșit, lipsa de tact a profesorului, erori de evaluare; familia (condiții precare, indiferență, conflicte).',
+ 'Cauze **subiective**: sănătatea, oboseala, deficiențe intelectuale, afective, tulburări de comportament.',
+ 'Factori: **biologici** (sănătate, analizatori), **psihologici** (procese, atenție, limbaj, personalitate), **pedagogici** (stilul profesorului, metode, climat), **socioculturali** (familie, prieteni), **de presiune și stres** (fizici, fiziologici, psihosociali).',
+ 'Cauzele devin efecte și invers; viziune ecologică, pedagogia diversității.']},
+{titlu:'2. Strategii de prevenire și intervenție', puncte:[
+ 'Organizare științifică: repartizarea corectă pe clase, manuale, orar judicios, climat stimulativ, diferențiere.',
+ '**D. Sălăvăstru** – strategii: colaborarea școală–familie și comunitate; creșterea rolului **învățământului preșcolar** (peste 50% din diferențele de randament provin de la debutul școlarității); descongestionarea conținuturilor, abordări interdisciplinare; pregătirea psihopedagogică a profesorilor; tratarea diferențiată și individualizată (grupe de nivel, sarcini cu șanse de succes); **evaluarea centrată pe progres**, nu pe ierarhii; ameliorarea practicilor (fără etichete, amenințări, limbaj vulgar); orientarea școlară și profesională.',
+ 'Expectanțele scăzute ale profesorilor/părinților → subsolicitare, sentiment de inferioritate; cele exagerate → suprasolicitare, oboseală cronică (efect Pygmalion).']},
+{titlu:'3. Planificarea studiului și condițiile învățării', puncte:[
+ '„Ceea ce contează nu este ce învățăm, ci **cum** învățăm.” Învățarea școlară are aspect informativ și formativ.',
+ 'Planificarea: după stilul și ritmul propriu; regim de viață (ore fixe; după prânz – cel mai puțin indicat), pauze scurte.',
+ 'Organizarea materialului: outline/cuprins, scheme (cauză-efect, parte-întreg, cronologic), reprezentări grafice, sumarizare.',
+ '**Condiții interne**: percepția (~90% din informații pe cale vizuală), reprezentările, **memoria** (condiții: scopul memorării, înțelegerea, repetarea eșalonată, cunoașterea rezultatelor), gândirea, imaginația, **atenția** (concentrare maximă 15–20 min), factori biologici (somn, bioritm) și psihici (inteligență, aptitudini).',
+ '**Condiții externe**: statusul și pregătirea profesorului, organizarea activității, factori socio-organizaționali, spațiul, materialele.']},
+{titlu:'3. Strategii și tehnici mnezice', puncte:[
+ '**Luarea de notițe**: stocare externă, triplă codare (verbală, vizuală, kinestezică), structurare; revizuirea în 24 de ore.',
+ '**Sublinierea**: citești tot paragraful înainte, nu subliniezi prea mult, semne diferite consecvente (cercuri pentru concepte, linie pentru definiții).',
+ '**Monitorizarea comprehensiunii**: formularea de întrebări (titluri → întrebări), clarificarea, sumarizarea, predicția; **predarea reciprocă** în grup.',
+ '**Gândirea critică**: a obține, interpreta, evalua activ informația; mediul favorabil – diversitate de idei, implicare activă, siguranță, încredere, timp.',
+ '**Managementul timpului**: momentele de eficiență maximă (de obicei 8–12 și 16–18), începi cu ce e mai ușor, fără „maratoane”, loc fără distractori, a spune „nu” tentațiilor.',
+ '**Evitarea procrastinării**: planuri de studiu cu obiective specifice, măsurabile, realiste, termene.']},
+{titlu:'3. Strategii de învățare, metaînvățarea, activizarea', puncte:[
+ 'Strategiile de învățare = ansambluri de metode, procedee, tehnici: de informare și documentare; de învățare efectivă (individuală, în grup); de valorificare (examene, portofoliu, recenzie, lucrare științifică).',
+ 'Alegerea strategiei depinde de: scop, natura materialului, modul de abordare, cunoștințele și **metacognițiile** celui care învață.',
+ '**Metaînvățarea** = a ști cum să înveți; diferența dintre oameni stă mai ales în metacogniții.',
+ '**Activizarea** (M. Bocoș): implicarea întregului potențial al elevului (cognitiv, psihomotor, afectiv-volitiv). Cerințe: pregătirea psihologică (motivație, **sensibilizare**, climat de încredere), organizarea rațională, reducerea „zgomotelor” din comunicare, **repertorii congruente** (limbaj comun), metode activizante (problematizare, descoperire, studiu de caz, joc de rol, simulare).']},
+{titlu:'4. Învățarea de-a lungul întregii vieți', puncte:[
+ 'Totalitatea activităților de învățare de-a lungul vieții pentru dezvoltare personală, civică, socială, ocupațională; **principiu de bază** al învățământului contemporan.',
+ 'Dimensiuni: **orizontală** (lifewide learning – în toate aspectele vieții), **verticală** (lifelong learning – toată viața), **transversală** (learning for life – competențe-cheie).',
+ 'Integrează educația formală, nonformală și informală.',
+ '**Memorandumul privind învățarea permanentă** (UE) – 6 mesaje-cheie: noi deprinderi de bază pentru toți; investiții în resursele umane; inovație în predare și învățare; valorificarea învățării (inclusiv nonformale/informale); regândirea orientării și consilierii; învățarea mai aproape de domiciliu.']},
+{titlu:'5. Autoînvățarea, autoeducația, învățarea independentă', puncte:[
+ '**Autoînvățarea**: capacitatea de a îndeplini sarcini autonom, dar după obiective și îndrumări stabilite de educator (S. Cristea).',
+ '**Autoinstruirea**: autoperfecționarea acțiunilor de autoînvățare, în afara dispozitivelor formale, fără agent educativ.',
+ '**Autoinformarea** – dimensiunea cantitativă (volum de informații); **autoformarea** – transformarea calitativă a personalității.',
+ '**Autoeducația**: transformarea obiectului educației în subiect, a educatului în educator; capacități – autoevaluare, autoînvățare, autoinformare, autoinstruire, autoformare, autoproiectare.',
+ '**Învățarea independentă**: elevul își gestionează obiectivele, metodele, monitorizarea, evaluarea; profesorul devine mediator/consilier al cunoașterii (M. Ionescu). Învățare automotivată, autoorganizată, autodirijată, autoevaluată (I. Neacșu).',
+ '**Autonomia educativă**: fixarea propriilor scopuri, priorități, metode, planificare, control; corelate – libertatea de alegere, responsabilitatea, gândirea critică, metacogniția, creativitatea.']}
+]});
+
+CARDURI.push(
+ {c:'s05', q:'Ce este eficacitatea instruirii?', a:'Depășirea de către TOȚI elevii a nivelului minimal acceptabil de performanță, proporțional cu posibilitățile lor, în confort psihic și cu economie de efort și timp.', term:'Eficacitatea instruirii', short:'toți elevii depășesc pragul minimal, după posibilități'},
+ {c:'s05', q:'Ce este randamentul învățării?', a:'Raportul dintre rezultatul didactic ideal (proiectat în documentele școlare) și rezultatul efectiv obținut.', term:'Randamentul învățării', short:'raportul rezultat obținut / rezultat proiectat'},
+ {c:'s05', q:'Categorii de motive ale învățării', a:'- Cognitive\n- De afiliere\n- De aprobare socială\n- De putere/influență\n- De afirmare a Eului și autorealizare'},
+ {c:'s05', q:'Factori extrinseci sinergetici vs nonsinergetici (Amabile)', a:'- **Sinergetici:** lucrează împreună cu motivația intrinsecă, cresc eficiența\n- **Nonsinergetici:** persoana se simte constrânsă'},
+ {c:'s05', q:'Ce este stilul de învățare?', a:'Modalitatea preferată de a recepta, asimila, procesa, stoca și reactualiza informații; depinde de preferința senzorială (vizual/auditiv/kinestezic) și de emisfera dominantă.', term:'Stilul de învățare', short:'modul preferat de a recepta și procesa informația'},
+ {c:'s05', q:'Inteligențele multiple (Gardner)', a:'Vizual-spațială, verbal-lingvistică, logico-matematică, muzicală, corporal-kinestezică, interpersonală, intrapersonală, naturalistă, existențială.', term:'Inteligențele multiple', short:'teoria lui H. Gardner: toți suntem inteligenți diferit'},
+ {c:'s05', q:'Care inteligență este cea mai solicitată de școala actuală?', a:'Inteligența **verbal-lingvistică** (și logico-matematică).'},
+ {c:'s05', q:'Eșec școlar cognitiv vs necognitiv', a:'- **Cognitiv:** nerealizarea obiectivelor pedagogice (corigențe, repetenție)\n- **Necognitiv:** inadaptarea la exigențele vieții școlare (abandon)'},
+ {c:'s05', q:'Gradele insuccesului școlar', a:'- Rămânerea în urmă (latent, temporar)\n- Insucces particular (la unele discipline)\n- Insucces generalizat (corigențe repetate, repetenție)'},
+ {c:'s05', q:'De ce e insuccesul o „dublă inadaptare”?', a:'Pentru că este inadaptarea copilului la școală ȘI a școlii la particularitățile copilului – deci intervenția vizează ambele părți.'},
+ {c:'s05', q:'Strategii de prevenire a insuccesului (D. Sălăvăstru)', a:'- Colaborare școală–familie–comunitate\n- Rolul învățământului preșcolar\n- Descongestionarea conținuturilor, interdisciplinaritate\n- Pregătire psihopedagogică a profesorilor\n- Tratare diferențiată\n- Evaluare centrată pe progres\n- Ameliorarea practicilor din clasă\n- Orientare școlară și profesională'},
+ {c:'s05', q:'Condițiile unei memorări eficiente', a:'- cunoașterea scopului memorării\n- înțelegerea\n- repetarea perseverentă (eșalonată pentru materiale mari)\n- cunoașterea rezultatelor și autoreglarea'},
+ {c:'s05', q:'Cât timp poate menține un elev atenția concentrată?', a:'Aproximativ **15–20 de minute** – de aceea sunt necesare sarcini variate la lecțiile grele.'},
+ {c:'s05', q:'Funcțiile luării de notițe', a:'- stocare externă a informației\n- triplă codare (verbală, vizuală, kinestezică) → retenție mai bună\n- structurarea materialului în timpul predării'},
+ {c:'s05', q:'Ce este metaînvățarea?', a:'Dobândirea cunoștințelor procedurale și a abilităților de a învăța eficient în orice situație – „a ști cum să înveți”; diferența dintre oameni stă în metacogniții.', term:'Metaînvățarea', short:'a ști cum să înveți (metacogniție)'},
+ {c:'s05', q:'Cele trei dimensiuni ale învățării permanente', a:'- Orizontală – lifewide learning\n- Verticală – lifelong learning\n- Transversală – learning for life', term:'Învățarea permanentă', short:'învățare pe tot parcursul și în toate aspectele vieții'},
+ {c:'s05', q:'Cele 6 mesaje-cheie ale Memorandumului privind învățarea permanentă', a:'- Noi deprinderi de bază pentru toți\n- Investiții mai mari în resursele umane\n- Inovație în predare și învățare\n- Valorificarea învățării\n- Regândirea orientării și consilierii\n- Învățarea mai aproape de domiciliu'},
+ {c:'s05', q:'Autoinformare vs autoformare', a:'- **Autoinformarea:** dimensiunea cantitativă – acumularea de informații\n- **Autoformarea:** transformarea calitativă a personalității'},
+ {c:'s05', q:'Ce este autoeducația?', a:'Transformarea obiectului educației în subiect, a educatului în propriul educator; proces de durată (autoevaluare → autoînvățare → autoinformare → autoinstruire → autoformare → autoproiectare).', term:'Autoeducația', short:'educatul devine propriul educator'},
+ {c:'s05', q:'Cerințele activizării elevilor (M. Bocoș)', a:'- pregătirea psihologică (motivație, sensibilizare, climat)\n- organizarea rațională a învățării\n- reducerea perturbațiilor din comunicare\n- repertorii congruente (limbaj comun)\n- metode activizante'}
+);
+
+GRILE.push(
+ {c:'s05', q:'Teoria inteligențelor multiple aparține lui:', o:['Piaget','H. Gardner','D. Goleman','R. Gagné'], r:1},
+ {c:'s05', q:'Inteligența care favorizează reflecția și studiul individual este:', o:['Interpersonală','Intrapersonală','Kinestezică','Naturalistă'], r:1},
+ {c:'s05', q:'Eșecul școlar de tip necognitiv se referă la:', o:['Nerealizarea obiectivelor','Inadaptarea la exigențele vieții școlare','Notele mici la matematică','Lipsa inteligenței'], r:1},
+ {c:'s05', q:'Ce formă de insucces este cea mai ușor de remediat?', o:['Rămânerea în urmă la învățătură','Insuccesul generalizat','Repetenția','Abandonul'], r:0},
+ {c:'s05', q:'Evaluarea, pentru a preveni insuccesul, trebuie centrată pe:', o:['Ierarhii','Progresul elevului','Comparații cu colegii','Media clasei'], r:1},
+ {c:'s05', q:'Pe ce cale primim aproximativ 90% din informații?', o:['Auditivă','Vizuală','Tactilă','Kinestezică'], r:1},
+ {c:'s05', q:'„Lifewide learning” se referă la dimensiunea:', o:['Verticală','Orizontală','Transversală','Formală'], r:1},
+ {c:'s05', q:'Disonanța cognitivă poate deveni:', o:['Un obstacol definitiv','Un motiv al învățării','Un stil de învățare','O formă de eșec'], r:1},
+ {c:'s05', q:'Peste 50% din diferențele de randament școlar își au originea, după Sălăvăstru, în:', o:['Liceu','Debutul școlarității','Facultate','Gimnaziu'], r:1},
+ {c:'s05', q:'Ce NU este o strategie mnezică?', o:['Luarea de notițe','Sublinierea','Monitorizarea comprehensiunii','Învățarea doar înainte de test'], r:3},
+ {c:'s05', q:'Repertoriile congruente înseamnă:', o:['Același manual','Un limbaj și un sistem de concepte comun profesor–elev','Aceeași notă','Același orar'], r:1},
+ {c:'s05', q:'Autoînvățarea, după S. Cristea, se face:', o:['Fără niciun obiectiv','După obiective și îndrumări stabilite de educator','Doar în familie','Doar la universitate'], r:1}
+);
+
+AF.push(
+ {c:'s05', s:'Motivația intrinsecă și cea extrinsecă sunt ireconciliabile.', v:false},
+ {c:'s05', s:'Intervalul imediat după masa de prânz e cel mai indicat pentru studiu.', v:false},
+ {c:'s05', s:'Expectanțele scăzute ale profesorilor pot fixa la elev sentimentul ineficienței personale.', v:true},
+ {c:'s05', s:'Notițele se revizuiesc ideal în aproximativ o zi de la luarea lor.', v:true},
+ {c:'s05', s:'La subliniere, e bine să subliniezi aproape tot textul.', v:false},
+ {c:'s05', s:'Educația permanentă integrează educația formală, nonformală și informală.', v:true},
+ {c:'s05', s:'În insuccesul școlar, cauzele pot deveni efecte și efectele cauze.', v:true},
+ {c:'s05', s:'Sesiunile de studiu „maraton” sunt recomandate.', v:false},
+ {c:'s05', s:'Autoformarea se referă doar la acumularea cantitativă de informații.', v:false, e:'Aceea e autoinformarea; autoformarea e transformare calitativă.'},
+ {c:'s05', s:'Inteligența naturalistă presupune ușurința de a clasifica plante și animale.', v:true}
+);
+
+/* ---- content/capitole/s06.js ---- */
+/* CAPITOLUL VI (Specialitate) – Managementul comunicării */
+CAPITOLE.push({id:'s06', parte:'Tematica de specialitate', nr:'VI', emoji:'💬', scurt:'Managementul comunicării',
+titlu:'Managementul comunicării',
+sectiuni:[
+{titlu:'1. Componentele comunicării', puncte:[
+ 'Comunicarea = transfer de informație de la un emițător la un receptor, cu schimbarea rolurilor (I.O. Pânișoară).',
+ '**Emițătorul**: are informația mai bine structurată, o stare de spirit (motivație), un scop explicit și unul implicit. Profesorul modern e și receptor, pentru a fi un emițător mai bun.',
+ '**Receptorul**: îi e adresat mesajul sau îl primește întâmplător, conștient sau subliminal. Mucchielli: în comunicare contează mai ales **cui** te adresezi – comunicarea bună e centrată pe receptor. Tipuri de ascultare: pentru informații, pentru divertisment, empatică etc.',
+ '**Mesajul**: informații obiective + judecăți de valoare + trăiri personale.',
+ '**Canalul**: calea de difuzare; principalul spațiu al factorilor perturbatori; rețeaua de comunicare.',
+ '**Contextul**: fizic (aranjarea mobilierului) și psihopedagogic (proximitate, similaritate, apartenența la grup).',
+ '**Feedback-ul** (Gamble): toate mesajele verbale și nonverbale transmise, conștient sau nu, ca răspuns la comunicarea altuia.',
+ 'Feedback **evaluativ**: pozitiv (menține direcția), negativ (corectiv), **formativ** (negativ amânat până când activitatea poate fi reluată – perceput ca sprijin).',
+ 'Feedback **nonevaluativ**: de sondare, de înțelegere, suportiv, „mesajul-eu”.']},
+{titlu:'1. Niveluri și tipuri de comunicare', puncte:[
+ 'Esențiale: relația, schimbul de semnificații, modificarea comportamentului. Conținut: informațional, afectiv-emoțional, motivațional, volitiv; informații cognitive, indiceale, conative.',
+ '**Niveluri**: intrapersonală (cu sine), **interpersonală** (față în față – cea mai importantă și frecventă), de grup, de masă (fără feedback eficient), publică/mediatică (rădăcini în retorica antică).',
+ 'După cod: verbală (orală/scrisă), paraverbală, nonverbală.',
+ 'După natura informației: **digitală** (conținutul) și **analogică** (relația – gesturi, înfățișare).',
+ 'După canal: directă și mediată; după statut: **verticală** (ierarhică) și **orizontală**; după feedback: unidirecțională (lateralizată) și bi/multidirecțională.',
+ 'După obiective: incidentală, consumatorie, instrumentală; după cultură: intra- și interculturală.']},
+{titlu:'1. Barierele comunicării', puncte:[
+ 'Factori: efecte de statut, probleme semantice (jargon), distorsiuni perceptive, diferențe culturale, alegerea greșită a canalului sau momentului, canale prea lungi, factori fizici (zgomot, lumină, temperatură).',
+ 'Bariere: fizice, semantice, interne (implicare, diferențe de percepție, lipsa de interes, emoțiile puternice), **blocajul psihic** (întreruperea fluxului ideatic din suprasolicitare sau șoc), **tracul**.',
+ '**A. Băban** – bariere: tendința de a judeca/aproba/dezaproba, etichetarea, oferirea de soluții, ordinele, amenințările, moralizarea („ar trebui”), devierea subiectului, impunerea argumentelor logice (ignoră sentimentele).']},
+{titlu:'2. Comunicarea asertivă', puncte:[
+ '**Lazarus** – persoana matură (asertivă): își exprimă deschis dorințele; poate spune **NU**; vorbește deschis despre sentimente pozitive și negative; inițiază, întreține și încheie o discuție.',
+ '**Pasiv**: își neagă drepturile, nu-și exprimă sentimentele, se lasă influențat, vinovăție, anxietate; voce încetă, contact vizual minim, umeri aplecați („Dacă zici tu…”).',
+ '**Agresiv**: încalcă drepturile altora, jignește, ton ridicat, superioritate, critică distructivă, întrerupe; privire fixă, gesturi amenințătoare („Toți sunteți niște proști!”). Și ironia, sarcasmul sunt agresive.',
+ '**Asertiv**: respectă drepturile proprii ȘI ale altora, își exprimă deschis nevoile și sentimentele, ascultă, face compromisuri, critică constructiv; contact vizual, voce calmă și sigură („Eu cred că…”, „Aș dori…”).',
+ '**Asertivitatea** = exprimarea propriilor idei și sentimente și apărarea drepturilor, fără a le încălca pe ale celorlalți; se poate învăța.',
+ '**Drepturile asertive**: de a-ți stabili prioritățile, de a avea opinii proprii, de a nu te justifica, de a spune NU / NU ȘTIU / NU ÎNȚELEG, de a cere ajutor, de a greși, de a te răzgândi, de a fi imperfect, de a-ți alege prietenii.',
+ 'Deprinderi: afirmații la persoana I, fără minimalizare, fără cuvinte-parazit, feedback concret, limbaj neutru, confruntarea imediată a situațiilor neplăcute, concordanță verbal–nonverbal.']},
+{titlu:'2. Managementul conflictelor', puncte:[
+ 'Conflictul – parte naturală, inevitabilă a vieții școlare. **Deutsch**: conflictul = stare de incompatibilitate comportamentală; conflictul de interese – acțiunile unuia blochează scopurile altuia.',
+ 'Conflictele negate, suprimate sau evitate devin **distructive**; gestionate constructiv cresc angajamentul, motivația, abilitățile de rezolvare a problemelor.',
+ 'Surse: nevoi fundamentale, valori diferite, percepții diferite, resurse limitate, interese diferite, nevoi psihologice.',
+ 'Principii (A. Băban): relație pozitivă pe durata conflictului (ascultare activă, întrebări deschise); diferențierea evenimente–comportament–interpretare; **focus pe problemă, nu pe persoană** („A apărut o problemă”, nu „Tu ai creat…”); comunicare directă, fără învinovățire; identificarea barierelor; deprinderi de rezolvare de probleme.',
+ 'Strategii: coerciție/manipulare, ofertă–răspuns, argumentare; inhibare, ignorare, **arbitraj**, **mediere** (Higgins și Priest).',
+ '**5 pași**: (1) pregătirea contextului; (2) strângerea informațiilor (interese, nevoi); (3) **acceptarea conflictului** (percepție comună a problemei); (4) generarea de soluții (brainstorming); (5) **negocierea**.',
+ '**Medierea de către egali (peer mediation)**: elevi mediatori instruiți; pentru bullying, bârfe, invidie. Johnson și Johnson – 4 pași: încetarea ostilităților; angajarea în negociere cu bună-credință; sprijin în negociere; monitorizarea respectării acordului. Dacă eșuează – mediază profesorul; apoi profesorul **arbitrează**.',
+ 'Efecte pozitive: motivație pentru schimbare, coeziune, creativitate, cunoaștere de sine. Efecte negative (conflict reprimat): scăderea implicării și încrederii, coaliții, dileme morale.',
+ 'Stiluri: **câștig–pierdere** (competiție, un singur post), **pierdere–pierdere** (nimeni nu primește jucăria; compromisul), **câștig–câștig** (soluția satisface ambele părți – cea dezirabilă).']},
+{titlu:'3. Rolul comunicării în consiliere', puncte:[
+ 'Consilierea = relație, comunicare, conversație, sfătuire, intervenție.',
+ 'Relația anulează izolarea consiliatului – primul pas spre anularea izolării în viața reală.',
+ 'Comunicarea reală e **biunivocă**: de la consiliat spre consilier – problemele; de la consilier spre consiliat – orientările.',
+ 'Distorsiuni: codurile, mesajul, structura psihologică a partenerilor; consiliatul vine cu așteptări (**feed-forward**).',
+ 'Comunicarea = întâlnirea **repertoriilor** consiliatului și consilierului (scheme cognitive, afective, volitive, valori, atitudini); feedback-ul corectează distorsiunile.']}
+]});
+
+CARDURI.push(
+ {c:'s06', q:'Componentele procesului de comunicare', a:'Emițător, receptor, mesaj, canal, cod, context, feedback.'},
+ {c:'s06', q:'Ce este feedback-ul formativ?', a:'Un tip de feedback negativ **amânat** până când activitatea poate fi reluată, ca să fie perceput ca sprijin, nu ca o critică.', term:'Feedback-ul formativ', short:'feedback negativ amânat până la reluarea activității'},
+ {c:'s06', q:'Tipuri de feedback nonevaluativ', a:'- de sondare\n- de înțelegere\n- suportiv\n- „mesajul-eu”'},
+ {c:'s06', q:'Nivelurile comunicării', a:'- Intrapersonală\n- Interpersonală (cea mai importantă)\n- De grup\n- De masă\n- Publică / mediatică'},
+ {c:'s06', q:'Comunicare digitală vs analogică', a:'- **Digitală:** se referă la conținutul comunicării\n- **Analogică:** se referă la relația dintre parteneri (gesturi, înfățișare)'},
+ {c:'s06', q:'Barierele comunicării după A. Băban', a:'- a judeca, eticheta\n- a oferi soluții\n- a da ordine\n- a amenința\n- a moraliza\n- a devia subiectul\n- a impune argumente logice'},
+ {c:'s06', q:'Ce este blocajul psihic?', a:'Întreruperea fluxului ideatic, cauzată de suprasolicitare sau șoc – mecanism de apărare care duce la ignorare, refuz, abandon.', term:'Blocajul psihic', short:'întreruperea fluxului ideatic din suprasolicitare sau șoc'},
+ {c:'s06', q:'Cele 4 deprinderi ale persoanei asertive (Lazarus)', a:'- își exprimă deschis dorințele și nevoile\n- poate spune NU\n- vorbește deschis despre sentimente pozitive și negative\n- inițiază, întreține și încheie o discuție'},
+ {c:'s06', q:'Ce este asertivitatea?', a:'Exprimarea propriilor idei, sentimente și drepturi fără a le încălca pe ale celorlalți. Se poate învăța.', term:'Asertivitatea', short:'îți exprimi ideile și drepturile fără a le încălca pe ale altora'},
+ {c:'s06', q:'Pasiv – agresiv – asertiv: exemple de replici', a:'- **Pasiv:** „Dacă zici tu…”, „Îmi cer scuze că v-am răpit timpul”\n- **Agresiv:** „Toți sunteți niște proști!”\n- **Asertiv:** „Eu cred că…”, „Aș dori să…”'},
+ {c:'s06', q:'Câteva drepturi asertive', a:'- să spui NU / NU ȘTIU / NU ÎNȚELEG\n- să greșești\n- să te răzgândești\n- să nu te justifici\n- să ai opinii proprii\n- să ceri ajutor\n- să fii imperfect'},
+ {c:'s06', q:'Cum definește Deutsch conflictul?', a:'O stare de incompatibilitate comportamentală; conflictul de interese apare când acțiunile unei persoane blochează scopurile alteia.'},
+ {c:'s06', q:'Surse ale conflictului', a:'Nevoi fundamentale, valori diferite, percepții diferite, resurse limitate, interese diferite, nevoi psihologice.'},
+ {c:'s06', q:'Cei 5 pași ai rezolvării conflictului', a:'- Pregătirea contextului\n- Strângerea informațiilor\n- Acceptarea conflictului (percepție comună)\n- Generarea de soluții\n- Negocierea'},
+ {c:'s06', q:'Pașii medierii (Johnson și Johnson)', a:'- Încetarea ostilităților\n- Angajarea în negociere cu bună-credință\n- Sprijin pentru o negociere reușită\n- Monitorizarea respectării acordului', term:'Medierea între egali', short:'elevi instruiți mediază conflictele colegilor'},
+ {c:'s06', q:'Stilurile de abordare a conflictelor', a:'- Câștig–pierdere\n- Pierdere–pierdere (compromis)\n- Câștig–câștig (dezirabil)'},
+ {c:'s06', q:'Ce înseamnă „feed-forward” în consiliere?', a:'Așteptările cu care consiliatul inițiază comunicarea, în funcție de structura lui psihologică.'}
+);
+
+GRILE.push(
+ {c:'s06', q:'Cea mai importantă și mai frecventă formă de comunicare este:', o:['Intrapersonală','Interpersonală','De masă','Publică'], r:1},
+ {c:'s06', q:'Comunicarea de masă se caracterizează prin:', o:['Feedback imediat','Lipsa unui feedback eficient','Relație față în față','Dialog'], r:1},
+ {c:'s06', q:'„Dacă zici tu…” este o replică specifică stilului:', o:['Agresiv','Pasiv','Asertiv','Manipulativ'], r:1},
+ {c:'s06', q:'Care NU este o barieră în comunicare după A. Băban?', o:['Moralizarea','Oferirea de soluții','Ascultarea activă','Amenințarea'], r:2},
+ {c:'s06', q:'Pasul în care părțile ajung la o percepție comună a problemei:', o:['Pregătirea contextului','Acceptarea conflictului','Negocierea','Generarea de soluții'], r:1},
+ {c:'s06', q:'Dacă medierea între elevi eșuează, primul pas recomandat este:', o:['Sancționarea','Profesorul preia rolul de mediator','Chemarea poliției','Ignorarea conflictului'], r:1},
+ {c:'s06', q:'Doi candidați pentru un singur post reprezintă o situație tipică de:', o:['Câștig–câștig','Câștig–pierdere','Pierdere–pierdere','Compromis'], r:1},
+ {c:'s06', q:'Feedback-ul care menține comunicarea în direcția actuală este:', o:['Evaluativ pozitiv','Evaluativ negativ','Formativ','De sondare'], r:0},
+ {c:'s06', q:'Comunicarea verticală are loc între:', o:['Colegi','Profesor și elev','Prieteni','Frați'], r:1},
+ {c:'s06', q:'Principiul „focus pe problemă, nu pe persoană” înseamnă formularea:', o:['„Tu ai creat o problemă”','„A apărut o problemă”','„Ești vinovat”','„Mereu faci așa”'], r:1}
+);
+
+AF.push(
+ {c:'s06', s:'Ironia și sarcasmul sunt forme de comportament agresiv.', v:true},
+ {c:'s06', s:'Asertivitatea este o trăsătură înnăscută, imposibil de învățat.', v:false},
+ {c:'s06', s:'Conflictele negate sau suprimate tind să devină distructive.', v:true},
+ {c:'s06', s:'Compromisul este o formă a metodei „pierdere–pierdere”.', v:true},
+ {c:'s06', s:'Comunicarea bună este centrată în special pe emițător.', v:false, e:'Pe receptor (Mucchielli).'},
+ {c:'s06', s:'Canalul este principalul spațiu pentru factorii perturbatori.', v:true},
+ {c:'s06', s:'Persoana asertivă respectă atât drepturile sale, cât și pe ale celorlalți.', v:true},
+ {c:'s06', s:'Conflictul este întotdeauna negativ în școală.', v:false, e:'Gestionat constructiv crește motivația și coeziunea.'}
+);
+
 /* ---- content/teste/t01.js ---- */
 SUBIECTE.push({nr:1, tema:'Comunicarea și feedback-ul · Consilierea · Brainstorming (carieră)', subiecte:[
 {titlu:'Subiectul I', puncte:30,
