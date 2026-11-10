@@ -345,3 +345,277 @@ SUBIECTE.push({nr:3, tema:'Educația permanentă · Cariera (carieră, profesie,
    'Exemplu activitate: benzi ilustrate (Pixton/Canva), monolog pozitiv pe echipe, fișa „Floarea soarelui” (situații în care mă simt încrezător).']}
  ]}
 ]});
+
+/* ---- content/teste/t04.js ---- */
+SUBIECTE.push({nr:4, tema:'Nevoia de consiliere educațională · ADHD · Curriculum, notare, Piaget vs Galperin', subiecte:[
+{titlu:'Subiectul I', puncte:30,
+ text:'Enunț: _Individul, indiferent de vârstă, are nevoie de prezența unei persoane care să-l îndrume sau de instituții care să-l susțină în rezolvarea situațiilor cu care se confruntă…_\nArgumentați în patru pagini importanța nevoii de consiliere educațională.',
+ items:[
+  {cer:'Rolul **consilierii educaționale** în procesul formativ.', rep:[
+   'Consilierea = relație de sprijin între o persoană specializată și una care solicită un serviciu; are caracter liber și cooperant.',
+   'Ajută persoana să-și folosească șansele pentru a face față problemelor; promovează capacitatea de autodirecționare.',
+   'Obiectivul orelor nu e doar cunoașterea elevului de către profesor, ci facilitarea **autocunoașterii**.',
+   'Accent pe prevenție, dezvoltare personală, rezolvarea situațiilor problematice.',
+   'Consilierul nu formulează probleme și nu sugerează soluții – îl ajută pe elev să le găsească singur (ex. modelul de rezolvare de probleme Goldfried: identificarea situației, alternative, alegerea soluției, pașii, evaluarea).']},
+  {cer:'**Nevoia** de consiliere educațională.', rep:[
+   'Creșterea comportamentelor nesănătoase, a eșecurilor și tulburărilor emoționale la elevi.',
+   'Răspunde nevoilor de: comunicare, respect de sine, cunoaștere de sine, echilibru, tehnici de învățare eficientă, rezolvare de probleme.',
+   'Perspectiva umanistă (Carl Rogers).']},
+  {cer:'**Caracteristicile** consilierii și **abilitățile** consilierului.', rep:[
+   'Se adresează persoanelor normale, pentru stresul și sarcinile vieții cotidiene.',
+   'Folosește un model educațional și de dezvoltare – învață individul să-și valorifice potențialul.',
+   'Prevenția problemelor: identificarea situațiilor și grupurilor de risc.',
+   'Abilități: observarea, ascultarea activă, furnizarea de informații, adresarea întrebărilor, feedback, parafrazarea, sumarizarea.']},
+  {cer:'**Obiectivele și funcțiile** procesului de consiliere.', rep:[
+   'Obiective: abilități sociale, armonizarea personalității, conștiința de sine, rezolvarea de probleme, autoacceptarea.',
+   'Funcții: ameliorarea relațiilor elev–elev, elev–profesor, elev–familie, școală–familie; stima persoanelor consiliate; prevenirea conflictelor; orientarea școlară și profesională.',
+   'Profesorul consilier NU face consiliere de criză sau psihoterapie (sunt ale psihologului).',
+   'Planuri de diferențiere: unde (cabinet), cine (cadru abilitat), beneficiari, obiective, tematica.']}
+ ]},
+{titlu:'Subiectul al II-lea', puncte:30, text:'ADHD – incapacitatea de a sta liniștit, de a fi atent la lecții și la sarcini.',
+ items:[
+  {cer:'A. Definiți **educația specială**.', rep:['Sens restrâns: educația copiilor cu deficiențe/dizabilități.','Sens larg: educație adaptată persoanelor care nu reușesc să atingă anumite niveluri educative (CES).']},
+  {cer:'B. Ce este **tulburarea de deficit de atenție/hiperactivitate**.', rep:[
+   'Tulburare neurodezvoltativă frecventă la copii.',
+   '**Neatenție:** pierde obiecte, uită, greu își menține atenția, greșeli din neglijență, pare să nu asculte.',
+   '**Hiperactivitate–impulsivitate:** greu își așteaptă rândul, vorbește excesiv, se agită, se cațără, întrerupe/intervine în activitatea altora.']},
+  {cer:'C. **Provocări școlare** pentru elevii cu ADHD.', rep:['Note mici, repetenție, risc crescut de abandon; acces redus la studii universitare.','Dificultăți în relațiile cu colegii și profesorii, risc de marginalizare, de delincvență și consum de substanțe.','Intervenția timpurie echilibrează șansele.']},
+  {cer:'D. Patru **strategii** în mediul școlar.', rep:[
+   'Adaptări (aceleași standarde, acces la curriculum).',
+   'Evaluare orală în loc de scris / timp suplimentar.',
+   'Programarea sarcinilor cerând atenție când concentrarea e maximă (scade pe parcursul zilei).',
+   'Limitarea stimulilor externi: elevul așezat aproape de profesor, planul lecției la tablă, îndepărtarea distractorilor.']},
+  {cer:'E. **Intervenții de gestionare a consecințelor**.', rep:['Programe de întărire cu **jetoane** (token economy), extinse și acasă.','Analiza funcțională a comportamentului înainte de intervenție.','Recompense frecvente, privilegii primite în aceeași zi, sarcini cu dificultate crescătoare, rapoarte simple școală–familie.']},
+  {cer:'F. **Implicații** în plan personal, familial, social.', rep:['Personal: accidente, expunere la violență (agresor/victimă), eșec școlar și profesional, consum de substanțe.','Familial: tensiuni, frustrare, conflicte conjugale, divorțuri, costuri de tratament.','Social: izolare, etichetare „copil-problemă”.']}
+ ]},
+{titlu:'Subiectul al III-lea', puncte:30, text:'Metodica disciplinei.',
+ items:[
+  {cer:'1. Precizați: **curriculum, arie curriculară, memorie**.', rep:[
+   'Curriculum = ansamblul experiențelor de predare, învățare, evaluare oferite de școală pentru formarea unei personalități creative, integrate, autonome.',
+   'Aria curriculară = grupare de discipline cu obiective comune, componentă a planului-cadru; 7 arii: Limbă și comunicare; Matematică și științe; Om și societate; Arte; Educație fizică și sport; Tehnologii; Consiliere și orientare.',
+   'Memoria = proces psihic de întipărire, stocare și reactualizare a informației.']},
+  {cer:'2. Necesitatea **notării**.', rep:['Notarea = acțiunea de apreciere a rezultatelor prin note/calificative, pe baza unei scări de notare; decizia vine după măsurare și apreciere.','Nota are valoare informativă, diagnostică, motivațională; trebuie distinse aptitudinile de alte calități care influențează performanța.']},
+  {cer:'3. **Piaget** (psihogeneza cunoștințelor) vs **Galperin** (formarea în etape a acțiunilor mintale).', rep:[
+   'Piaget: cunoașterea pornește din acțiune; învățarea = interiorizarea acțiunilor externe în structuri operaționale; depinde de stadiul de dezvoltare.',
+   'Galperin: etapele formării acțiunii mintale – orientarea (cunoașterea scopului și modului acțiunii), acțiunea materială/materializată, acțiunea în planul limbajului extern (cu voce tare), limbajul extern „pentru sine”, limbajul intern (acțiune mintală).']},
+  {cer:'4. Listă: **standarde și descriptori de performanță**.', rep:['Standardele de performanță = criterii de evaluare raportate la programă; arată nivelul de cunoștințe, capacități, atitudini atins.','Vizează: structurile cognitive, psihomotrice (deprinderi de muncă intelectuală), capacitatea de aplicare, trăsăturile de personalitate (motivație, voință, nivel de aspirație).']},
+  {cer:'5. Cl. a IX-a – CS 2.1 **„Exersarea comunicării eficiente”**.', rep:[
+   'Adolescența: criză de comunicare, nevoie de autonomie, idealuri, egocentrism, dezvoltarea gândirii abstracte, a voinței și a intereselor profesionale.',
+   'Comunicarea eficientă cu adolescenții: ascultare activă, limbajul responsabilității (mesaje la persoana I), respectarea opiniilor diferite.',
+   'Exemplu: metoda „6 de ce”, pantomimă pentru mesaje nonverbale, ghid pentru comunicarea asertivă; „Două monologuri nu fac un dialog.”']}
+ ]}
+]});
+
+/* ---- content/teste/t05.js ---- */
+SUBIECTE.push({nr:5, tema:'Învățarea eficientă și motivația · ADHD și CES · Brainstorming (autocontrol emoțional)', subiecte:[
+{titlu:'Subiectul I', puncte:30,
+ text:'Enunț: _Omul contemporan apelează la mecanisme din ce în ce mai complexe în procesarea informațiilor…_\nArgumentați în patru pagini necesitatea învățării eficiente în concordanță cu orientările contemporane.',
+ items:[
+  {cer:'Conceptul de **învățare**: forme, tipuri, niveluri.', rep:[
+   'Învățarea = însușirea experienței sociale în scopul adaptării optime la mediu; implică întregul sistem psihic.',
+   'Forme clasice: prin încercare și eroare (**Thorndike**), reflex-condiționată (**Pavlov**), prin intuiție/insight (**Köhler**).',
+   '**Gagné – 8 tipuri (ierarhic):** de semnale; stimul–răspuns; înlănțuirea motorie; asociații verbale; prin discriminare; a noțiunilor; a regulilor; prin rezolvare de probleme.',
+   'Taxonomie M. Zlate: învățare didactică, socială, din experiența proprie și a altora.']},
+  {cer:'Două **domenii** ale învățării.', rep:['Cognitiv: înțelegere, aplicare, analiză, sinteză, evaluare.','Afectiv: a accepta, a arăta, a exprima → motivație, atitudini, preferințe, judecăți de valoare (teoria disonanței cognitive).']},
+  {cer:'Procese **cognitive, afective, volitive** – condiții interne ale învățării.', rep:[
+   'Senzațiile și percepțiile (material intuitiv, variat); reprezentările; gândirea (concret → abstract, particular → general); limbajul; memoria (fixare, păstrare, reactualizare); imaginația.',
+   'Afectivitatea și voința susțin efortul și perseverența.']},
+  {cer:'Rolul **motivației** în prevenirea insuccesului școlar.', rep:[
+   'Motive școlare: satisfacția activității, dorința de a înțelege, interese, progres, aprecierea grupului, dorința de laudă, de colaborare.',
+   'Întărirea (recompensa, lauda adaptată personalității) crește randamentul.',
+   'Elevul are dreptul să greșească; obiectiv prioritar: prevenirea rămânerii în urmă și succesul fiecărui elev.']}
+ ]},
+{titlu:'Subiectul al II-lea', puncte:30, text:'ADHD – „tulburare hiperkinetică”.',
+ items:[
+  {cer:'A. Ce este **ADHD** și criteriile.', rep:['Diferență de funcționare a creierului; neatenție, hiperactivitate, impulsivitate; probleme de memorie de scurtă durată, de învățare și de comportament.','Diagnostic: diferențe semnificative față de copiii de aceeași vârstă, persistente, în mai multe contexte.','Suportul timpuriu reduce riscul tulburării opozițional-sfidătoare.']},
+  {cer:'B. Trei **soluții pentru părinți/profesori**.', rep:['Rutina zilnică clară.','Managementul timpului și parteneriat școală–familie, întărirea comportamentelor pozitive acasă și la școală.','Verbalizarea importanței autocontrolului și autoorganizării.']},
+  {cer:'C. **Implicații** personale, familiale, sociale.', rep:['Marginalizare, accidente, agresivitate în grup.','Tensiuni și conflicte familiale.','Rezultate slabe, fumat/alcool, abandon școlar, activități antisociale, depresie.']},
+  {cer:'D. **Tulburarea de învățare**.', rep:['Incapacitate/deficiență cu dominantă psihoafectivă sau psihomotorie a comportamentului de învățare, la copii cu ritm lent, intelect liminar sau tulburări instrumentale cognitiv-perceptive.']},
+  {cer:'E. **Categorii de deficiențe** la persoanele cu CES.', rep:['Fizice/neuromotorii','Mintale (ușoare, medii, severe, profunde)','Multiple','Senzoriale (de auz, de vedere)','Tulburări de limbaj','Tulburări afectiv-comportamentale','Tulburări de învățare','Alte categorii: autism, HIV/SIDA, copii instituționalizați etc.']},
+  {cer:'F. **Rolul consilierului** în managementul comportamental (ADHD).', rep:['Calm, răbdare, acceptarea diferențelor.','Identificarea stărilor emoționale, strategii de reglare, legătura gânduri–comportament; evitarea pedepsei, accent pe comportamente noi, laude/recompense.','Metode: respirație și relaxare, jocuri, marionete, îmbunătățirea imaginii de sine, obiective pentru viitor.']}
+ ]},
+{titlu:'Subiectul al III-lea', puncte:30, text:'Cl. a IX-a, CS 2.2 „Aplicarea tehnicilor de autocontrol emoțional” – demers didactic prin **brainstorming**.',
+ items:[
+  {cer:'Explicarea metodei și etapele de pregătire.', rep:['Metodă de rezolvare creativă a problemelor, exersează gândirea divergentă.','Etape: organizare/pregătire; stabilirea temei; faza de creativitate (generare); analiza listei de idei; evaluarea critică; soluția finală.']},
+  {cer:'Activitate de învățare + resurse.', rep:['Tema „Călătorie în lumea emoțiilor”, 50 min, formare de priceperi și deprinderi; scop: reglarea emoțională și autocontrolul.','Resurse: povești terapeutice, „Emoții la borcan”, imagini cu emoții, flipchart; forme: frontal, individual, pe echipe.','Evaluare: observarea sistematică, aprecieri verbale; temă: poster „Emoțiile mele”.']},
+  {cer:'Avantajele brainstormingului.', rep:['Argumentare, comunicare, reflecție, încredere în sine, participarea tuturor, climat pozitiv.']}
+ ]}
+]});
+
+/* ---- content/teste/t06.js ---- */
+SUBIECTE.push({nr:6, tema:'Managementul clasei și consilierea · Consilierea cadrelor didactice, educația pozitivă · Expunerea și discuția (CV)', subiecte:[
+{titlu:'Subiectul I', puncte:30,
+ text:'Enunț despre managementul educațional ca știință pedagogică și relațiile de cooperare cu elevii și părinții.\nArgumentați în patru pagini necesitatea managementului clasei și rolul consilierii psihopedagogice.',
+ items:[
+  {cer:'Semnificația conceptului de **management al clasei de elevi**.', rep:['Organizarea, planificarea și evaluarea activităților educative din clasă; structura și obiectivele școlii derivă din idealul social.']},
+  {cer:'Rolul consilierii și **principiile** fundamentale (socio-afectiv, stimulativ, eficient).', rep:[
+   'Consilierea psihopedagogică = sprijin pentru elevi, profesori, părinți, autorități școlare; dezvoltare personală, educațională, socială, prevenirea crizelor.',
+   'Principii: consilierea e **permisivă** (libertatea elevului de a avea opinii); **responsabilitate** pentru dezvoltarea elevului (respect, acceptare, toleranță); **consecvență** în reguli și principii, elevul ca individualitate unică.',
+   'Procesul: interactiv, constructiv, dinamic; problemele transformate în scopuri specifice.',
+   'Condiții pentru comunicare: reducerea anxietății, ascultare atentă, prioritizarea subiectelor, pauze; tehnici: timpul de răspuns, stimuli verbali minimali, repetarea, reflectarea, rezumarea/sumarizarea.']},
+  {cer:'**Atribuțiile** consilierului în orientarea școlară și profesională.', rep:[
+   'Roluri: mediator de conflicte, consultant educațional, profesor; activitate în cabinet coordonat de CJRAE (unitate conexă ISJ).',
+   'Patru acțiuni: educarea pentru carieră, cunoașterea personalității elevului, cunoașterea rețelei școlare, îndrumarea efectivă.',
+   'Triada familie–elev–școală.']},
+  {cer:'Tipuri de relații/situații care **cauzează tensiuni** în clasă.', rep:['Stimulare inegală; cunoașterea empirică a elevilor; neatenția la cauzele comportamentelor; rutina/șablonul; evaluare subiectivă; reducerea metodelor activizante; neacceptarea opiniilor opuse; abuz de muncă frontală; comunicare slabă cu părinții; neimplicarea elevilor în managementul clasei.']}
+ ]},
+{titlu:'Subiectul al II-lea', puncte:30, text:'Consilierea educațională sprijină elevii, profesorii, părinții și dezvoltarea clasei ca grup.',
+ items:[
+  {cer:'A. **Nevoia de consiliere școlară**.', rep:['Creșterea abandonului, eșecului, tulburărilor emoționale; disciplina Consiliere și orientare la primar, gimnaziu, liceu.','Ajută: autocunoaștere, respect de sine, relaționare, coeziune de grup (prevenirea violenței), decizii de carieră.']},
+  {cer:'B. Trei **perspective** asupra valorilor și experiențelor de învățare.', rep:['Perspectiva de grup (relațiile cu colegii, acceptare reciprocă).','Perspectiva individuală (dificultățile de învățare, CES).','Perspectiva curriculară (adaptarea mijloacelor, flexibilizarea conținuturilor, educație incluzivă).']},
+  {cer:'C. **Consilierea cadrelor didactice**.', rep:['Activități individuale/de grup de informare și orientare, la cerere (comisii metodice, consilii profesorale).','Variabile în lucrul cu adulții: atribuirea cauzală, sistemul de valori, **reactanța psihologică** (caracter voluntar), gradul de acceptare a soluțiilor.']},
+  {cer:'D. **Responsabilitatea** comportamentelor și intervențiilor consilierului.', rep:['Relații de cooperare cu toți factorii; respect pentru personalitatea fiecărui elev; strategii adaptate; motivație intrinsecă.']},
+  {cer:'E. De ce copiii cresc cel mai bine cu **educația pozitivă**.', rep:['Relație apropiată + responsabilizare; metodele tradiționale transformă părinții și copiii în adversari.','Disciplina = educație, nu pedeapsă; copilul își asumă greșeala și o repară; se caută cauza comportamentului.']},
+  {cer:'F. **Tehnici** de educație pozitivă în școală.', rep:['Solicitarea/cererea în loc de ordin („Ai vrea să…”).','Evitarea întrebărilor retorice; reformularea pozitivă a mesajelor.','„Hai să rezolvăm împreună!”','Rutine, reguli și limite clare, laudă și încurajare, adaptare la temperament.']}
+ ]},
+{titlu:'Subiectul al III-lea', puncte:30, text:'Cl. a XII-a, CS 4.2 „Exersarea abilităților de utilizare a documentelor de marketing personal” (CV, scrisoare de intenție, Europass) – demers prin **expunere și discuție**.',
+ items:[
+  {cer:'Explicarea metodelor și caracterul activ.', rep:['Expunerea: prezentare sistematică; cerințe – plan/schemă, voce caldă, ritm potrivit, materiale adecvate; activează gândirea prin clasificări, comparații.','Discuția: schimb organizat de idei pe o temă; tipuri: seminar, dialog, masa rotundă, discuția dirijată; dezvoltă exprimarea și caracterul participativ.']},
+  {cer:'Activitate de învățare + conținut științific.', rep:['Tema „Marketing personal – întocmirea unui CV”, cabinet, 50 min.','Elementele CV-ului Europass, scrisoarea de intenție, interviul; exercițiu de autoprezentare („reclamă despre sine”).','Temă: CV în format european.']}
+ ]}
+]});
+
+/* ---- content/teste/t07.js ---- */
+SUBIECTE.push({nr:7, tema:'Comunicarea didactică, asertivitatea, discuția critică · Dezvoltarea personalității · Conversația (scrisoarea de intenție)', subiecte:[
+{titlu:'Subiectul I', puncte:30,
+ text:'Enunț: _Comunicarea este procesul esențial prin care fiecare individ devine ceea ce este și intră în relație cu alții…_\nArgumentați în patru pagini necesitatea comunicării didactice.',
+ items:[
+  {cer:'Explicarea **comunicării psihopedagogice** (didactice).', rep:[
+   'Transmiterea mesajului educativ de la profesor la elev pentru a produce schimbări de comportament – baza predării–învățării–evaluării.',
+   'Se comunică informații cognitive, indiceale și conative; canale = analizatorii.',
+   'Funcții: formativă; de transmitere a mesajelor didactice; de transmitere a influențelor educaționale (coeziune); de rezolvare a conflictelor; de reglare și evaluare.',
+   'Particularități: mesaj structurat pe obiective, combinare verbal–nonverbal–paraverbal, stil determinat de concepția didactică, reglare prin feedback/retroacțiuni.',
+   'Tipuri: intrapersonală, interpersonală, de grup, publică, de masă; verbală, paraverbală (ritm, pauză, intonație), nonverbală (contactul vizual – cel mai puternic indiciu); metacomunicarea.']},
+  {cer:'**Factorii și barierele** în optimizarea comunicării.', rep:['Comunicare descendentă, ascendentă, orizontală.','Bariere: prejudecăți, stereotipuri, lipsa feedback-ului, mesaje care contrazic valorile receptorului.','Feedback-ul (Mucchielli – semnele nonverbale de oboseală, neatenție); retroacțiunea anticipată.']},
+  {cer:'Cinci caracteristici ale **persoanei asertive**.', rep:['Asertivitatea = exprimarea ideilor și opiniilor fără a încălca drepturile celorlalți.','Cooperează ușor; acceptă feedback-ul; își face cunoscute opiniile și sentimentele; e atentă la nevoile celorlalți; exprimă dezacordul argumentat și cu respect.']},
+  {cer:'Șase **reguli ale discuției critice** (Eemeren și Grootendorst).', rep:[
+   'Cine avansează un punct de vedere trebuie să-l apere, dacă i se cere.',
+   'Atacul trebuie să vizeze punctul de vedere avansat de interlocutor.',
+   'Nu prezinți o premisă ca acceptată dacă nu este.',
+   'O opinie care nu a convins trebuie abandonată.',
+   'Doar argumente valide, logice.',
+   'Fără expresii neclare/ambigue.',
+   'Conflictul de opinie stă la baza maieuticii socratice.']}
+ ]},
+{titlu:'Subiectul al II-lea', puncte:30, text:'Psihologia dezvoltării – capitol distinct al concursului.',
+ items:[
+  {cer:'A. Noțiunea de **dezvoltare a personalității**.', rep:['Trecere de la inferior la superior, de la simplu la complex; caracter ascendent, în spirală; rezultat al contradicțiilor; ritm propriu fiecărui individ.']},
+  {cer:'B. **Factorii ereditari** ca premise.', rep:['Particularitățile anatomo-fiziologice ale analizatorilor și ale sistemului nervos; predispoziții polivalente; maturizarea spontană după programul genetic.','Două planuri: trăsături generale ale speciei + particularități ereditare individuale.']},
+  {cer:'C. **Educabilitatea manifestă vs latentă**.', rep:['Manifestă: ce arată individul într-o situație de examinare (examene de selecție) – poate fi limitativă.','Latentă: potențialul de învățare, adesea superior celui manifestat la școală.']},
+  {cer:'D. Doi întemeietori ai pedagogiei cu concepție **ambientalistă**.', rep:['J.A. Comenius','J.H. Pestalozzi']},
+  {cer:'E. Rolul educației (factori interni–externi).', rep:['Acțiune în acord cu idealul educațional; valorifică potențialul nativ; organizează metodologia, conținuturile, formele; personalitatea = interacțiunea ereditate–mediu–educație.']},
+  {cer:'F. Eficiența consilierii în dezvoltarea optimă.', rep:['Prevenirea crizelor; principii: libertatea de opinie a elevului, acceptarea ca individualitate unică, respect.','Stone și Shertzer: prima ședință e foarte importantă, reduce anxietatea.','Model ierarhic al trăsăturilor (Allport); psihologia umanistă.']}
+ ]},
+{titlu:'Subiectul al III-lea', puncte:30, text:'Cl. a XII-a, CS 4.2 (marketing personal) – demers prin **conversație**.',
+ items:[
+  {cer:'Explicarea conversației, etape și caracter activ.', rep:['Metodă prin întrebări-răspunsuri; valoare formativă (gândire, memorie, imaginație); cerințe: întrebări clare, variate, evitarea răspunsurilor monosilabice, stimularea creativității.','Forme: euristică, catehetică, de consolidare, de verificare.']},
+  {cer:'Activitate de învățare.', rep:['Tema „Întocmirea unei scrisori de intenție”; grupe – scrisori pentru vânzător, translator, casier; liderul citește anunțul și scrisoarea; feedback cu sugestii.','Portofoliu cu scrisoarea pentru jobul dorit; data viitoare – simularea interviului.']}
+ ]}
+]});
+
+/* ---- content/teste/t08.js ---- */
+SUBIECTE.push({nr:8, tema:'Învățarea ca fundament al dezvoltării · Tehnologia digitală în consiliere, cyberbullying · Erori de evaluare', subiecte:[
+{titlu:'Subiectul I', puncte:30,
+ text:'P. Popescu-Neveanu: _„Învățarea nu este o simplă beneficiară a condițiilor de dezvoltare, ci generează noi structuri și procese…”_\nArgumentați în patru pagini importanța psihică a învățării în adaptarea la cerințele școlare.',
+ items:[
+  {cer:'Conceptul de **învățare ca fundament al dezvoltării psihice**.', rep:['Dobândirea de informații și capacități pentru adaptarea la mediu; dimensiune informațională + operațională.','Tinca Crețu: învățarea școlară are conținut stabilit în raport cu dezvoltarea științei, cerințele sociale și posibilitățile elevului; unitatea predare–învățare; e guvernată de motivație, organizare, autocontrol, autoreglare.','Piaget: asimilarea depinde de stadiul cognitiv → restructurări mentale.']},
+  {cer:'Aspecte **individuale și sociale** ale adaptării școlare.', rep:['Factori: familia, educația timpurie, factori individuali (inteligența, temperamentul, emoționalitatea).','Autoreglarea (emoțională și cognitivă) – premisă a adaptării; maturizarea cortexului prefrontal; stresul scade reglarea și randamentul.','Implicații: climatul familial să dezvolte competența emoțională; atenție la dificultățile de adaptare; educația parentală.']},
+  {cer:'Contribuția teoriilor învățării la **instruirea eficientă**.', rep:[
+   '**Thorndike** – învățarea prin încercare și eroare (succes); **legea efectului**: comportamentul urmat de efect plăcut tinde să se repete.',
+   '**Skinner** – condiționarea operantă; întărirea; **instruirea programată** (ritm propriu) → precursor al instruirii asistate de calculator.',
+   '**Bruner** – gândire logico-științifică vs narativă; învățarea prin descoperire; „orice se poate învăța la orice vârstă, într-o formă accesibilă”.',
+   '**Piaget** – echilibrul asimilare–acomodare, jocul simbolic, stadiile, munca în echipă; „a opera înseamnă a raționa”.',
+   '**Ausubel și Robinson** – modelul învățării școlare a noțiunilor; factori motivaționali.']},
+  {cer:'Trei **criterii fundamentale** în învățarea noilor cunoștințe.', rep:['Învățarea prin descoperire.','Învățarea conștientă (opusă celei mecanice).','Învățarea prin receptare.']}
+ ]},
+{titlu:'Subiectul al II-lea', puncte:30, text:'K. Mannheim: „Problema generațiilor…” – schimbarea de paradigmă digitală în consiliere.',
+ items:[
+  {cer:'A. Importanța **tehnologiei digitale** în consilierea carierei.', rep:['Beneficii (Vuorinen, Kettunen, Sampson): acces crescut la evaluare, la informații, la sprijin colegial, la specialiști la distanță, costuri reduse.','Portofolii digitale, bloguri, rețele sociale, Europass cu certificare digitală, chatboți, sortarea automată a CV-urilor.']},
+  {cer:'B. Arii de manifestare a **utilizării calculatorului** în educație.', rep:['Implicarea profesională','Resursele digitale','Predare și învățare','Evaluare','Abilitarea educabililor','Facilitarea competenței digitale a educabililor','(cadrul european DigCompEdu)']},
+  {cer:'C. **Avantaje/dezavantaje** ale tehnologiei digitale în consiliere.', rep:['Avantaje: acces, rentabilitate, comunități incluzive, portofolii.','Dezavantaje: calitatea informațiilor, confidențialitatea și siguranța datelor, calitatea evaluării, costuri de actualizare, rezistența/anxietatea specialiștilor.']},
+  {cer:'D. **Școala/consilierea online** – provocări, oportunități, priorități.', rep:['Pandemia: pierderi de învățare, risc de abandon, inechitate, anxietate și depresie la elevi.','Consilierii au folosit Zoom, WhatsApp, Messenger; nevoia de dotare și de formare digitală a profesorilor.']},
+  {cer:'E. **Cyberbullying** – continuare a bullyingului online.', rep:['Specializare tehnică (falsificarea identității); anonimatul agresorului; lipsa feedback-ului direct, a regretului și empatiei; rolul martorilor; audiență potențial infinită; durată nedeterminată; greu de detectat.']},
+  {cer:'F. Patru **tipuri de agresiune online**.', rep:['Împotriva școlii','Împotriva persoanelor vulnerabile','Împotriva grupurilor (ținte cunoscute)','Agresiune declanșată de impulsuri spontane']}
+ ]},
+{titlu:'Subiectul al III-lea', puncte:30, text:'Metodica disciplinei.',
+ items:[
+  {cer:'1. **Standarde curriculare de performanță, proiectare curriculară, sugestii metodologice**.', rep:['Standardele = criterii de evaluare a calității învățării, specificări de performanță (cunoștințe, capacități, comportamente).','Proiectarea curriculară: de la conținuturi fixe la demersuri didactice personalizate.','Sugestiile metodologice: orientări privind activitățile de învățare, materialele, strategiile de evaluare.']},
+  {cer:'2. Necesitatea **evaluării didactice**.', rep:['Nivel micro: raportul performanțe realizate – anticipate; nivel macro: efectele activității instructiv-educative.','Informații despre prestația profesorului, a elevilor, despre program; fundamentează decizii.']},
+  {cer:'3. **Verificarea vs măsurarea**.', rep:['Verificarea: colectarea informațiilor despre performanțe prin metode, tehnici, instrumente.','Măsurarea: aprecierea/raportarea performanțelor la indicatori și criterii – dimensiunea cantitativă a evaluării.']},
+  {cer:'4. Listă: **surse de eroare** în evaluare.', rep:['Efectul de ordine','Efectul de contrast','Efectul Pygmalion (de anticipare)','Ecuația personală a examinatorului (exigență/indulgență)','Efectul halo (Thorndike)']},
+  {cer:'5. Cl. a IX-a, CS 2.1 – comunicarea eficientă cu adolescenții.', rep:['Adolescentul vrea independență; părinții să recunoască și ei greșelile, să nu intre „cu bocancii” în viața lui, să-i cunoască prietenii.','Activitate: „Comunicarea eficientă – un pas spre reușită” – jocul „ghicește liderul”, exercițiul culorilor (blocaje), dialoguri asertive, slogan de echipă.']}
+ ]}
+]});
+
+/* ---- content/teste/t09.js ---- */
+SUBIECTE.push({nr:9, tema:'Învățarea și motivația · Competența și educația digitală, cyberbullying · Portofoliul, autoevaluarea, funcțiile notei', subiecte:[
+{titlu:'Subiectul I', puncte:30,
+ text:'Enunț: _Învățarea, ca formă dominantă de activitate pe perioada școlarității, rămâne activitatea specifică de bază pentru orice vârstă…_\nArgumentați în patru pagini necesitatea învățării în actul educațional.',
+ items:[
+  {cer:'Conceptul de **învățare**, forme și condiții.', rep:[
+   'A. Clausse: modificare de atitudine și comportament prin rezolvarea unei probleme; nu orice modificare de comportament e învățare.',
+   'Învățarea școlară = sistematică, instituționalizată, organizată pe cicluri și profiluri; contează **cum** învățăm, nu doar ce.',
+   'Clasificare: prin obișnuire, condiționare instrumentală, condiționare clasică, verbală, motorie, perceptivă.',
+   'Gagné – 8 tipuri ierarhice (de semnale … rezolvare de probleme), fiecare cu condițiile prealabile.',
+   'Ausubel: factorul principal = **structura cognitivă** (ce știe deja elevul); variabile intrapersonale și situaționale; climatul afectiv al clasei.']},
+  {cer:'Două **modele asociaționiste** ale învățării.', rep:['**Condiționarea clasică** (Pavlov): asocierea unui stimul neutru cu un răspuns; Watson și Rayner – condiționarea reacțiilor emoționale (fobii, inclusiv fobia școlară).','**Condiționarea operantă/instrumentală** (Thorndike, Skinner): comportamentul e controlat de consecințe (recompensă/pedeapsă).']},
+  {cer:'**Procesarea informației** și diferențele individuale.', rep:['Niveluri de analiză (Marr): computațional, algoritmic/reprezentațional, implementațional (neurobiologic) + nivelul cunoștințelor.','Niveluri de procesare: perceptiv (formă, culoare), fonologic, semantic.','Cunoștințe declarative vs procedurale; memoria influențată de emoții.']},
+  {cer:'Importanța **motivației**.', rep:[
+   'Motivația = „motorul personalității”; stare de necesitate care declanșează și susține acțiunea.',
+   '**Optimum motivațional** – legea Yerkes-Dodson: prea puțină sau prea multă motivație scade performanța; depinde de dificultatea sarcinii.',
+   'Motivație **intrinsecă** (curiozitate, plăcerea de a învăța) vs **extrinsecă** (note, recompense).',
+   'Ausubel și Robinson – 3 componente ale motivației școlare: **impulsul cognitiv, trebuința afirmării eului, trebuința de afiliere**.',
+   'Percepția valorii activității și a propriei competențe (autoeficacitate); profesorul să nu-i ignore pe elevii slabi.']}
+ ]},
+{titlu:'Subiectul al II-lea', puncte:30, text:'Competența digitală – una dintre cele 8 competențe-cheie pentru învățarea pe tot parcursul vieții (Comisia Europeană).',
+ items:[
+  {cer:'A. Definiți **competența digitală**.', rep:['Utilizarea cu încredere și critică a TIC pentru muncă, comunicare, timp liber, rezolvare de probleme.','5 arii (DigComp): informare și alfabetizare digitală; comunicare și colaborare; crearea de conținut digital; siguranță; rezolvarea de probleme.']},
+  {cer:'B. Importanța **educației digitale** în secolul XXI.', rep:['Elevii sunt expuși la conținut pornografic, agresiuni.','Teme: protejarea informațiilor, acces digital, comunicare, drepturi și responsabilități digitale, securitate, sănătate și bunăstare digitală.','Dimensiuni: atitudini și valori; cognitivă (gândire critică); participare activă etică.']},
+  {cer:'C. Clasificarea **cyberbullyingului** după conținut – avantaje/dezavantaje.', rep:['Avantaje: identifică grupurile de risc, categorii clare, relevante pentru prevenție.','Dezavantaje: categoriile se demodează odată cu tehnologia, se suprapun, validitate limitată în identificarea motivelor.']},
+  {cer:'D. **Norme de conviețuire** cibernetică.', rep:['Consultarea părinților','Acorduri și reguli de conduită','Cod de conduită','O persoană-cheie pentru securitate cibernetică','Măsuri proactive anti-hărțuire','Revizuirea procedurilor de utilizare a tehnologiei']},
+  {cer:'E. Categorii de **riscuri online**.', rep:['De contact (persoane necunoscute)','De conținut (ilegal, violent, rasist, dezinformare)','De confidențialitate/viață privată','De exploatare comercială (jocuri de noroc, programe ilegale)']},
+  {cer:'F. Trei exemple de **utilizare adecvată** a tehnologiei în școală.', rep:['Educarea elevilor să recunoască conținutul nepotrivit.','Folosirea dotărilor pentru sarcini academice și stare de bine.','Informarea despre furtul de identitate și hărțuire online + consecințe legale.']}
+ ]},
+{titlu:'Subiectul al III-lea', puncte:30, text:'Metodica disciplinei.',
+ items:[
+  {cer:'1. **Validitatea predictivă, validitatea unui test, standardizarea**.', rep:['Validitatea = testul măsoară ce și-a propus să măsoare.','Validitatea predictivă = capacitatea de a prezice performanțe viitoare.','Standardizarea = uniformizarea condițiilor de aplicare, conținut, criterii, cotare – condiție a caracterului științific.']},
+  {cer:'2. Necesitatea **portofoliului**.', rep:['Colecție semnificativă de produse ale elevului (lucrări, proiecte, fișe, postere, reflecții); implicarea activă a elevului în selecție.','Evaluare holistică sau analitică + evaluarea progresului; eficient cu scop clar, puține piese, reflecții personale.']},
+  {cer:'3. **Evaluarea practică vs autoevaluarea**.', rep:['Practică: probe practice pentru priceperi și deprinderi, raportate la standarde de calitate.','Autoevaluarea: aprecierea critică a propriilor competențe; implică metacogniția; instrumente – fișe și chestionare de autoevaluare.']},
+  {cer:'4. Listă: **funcțiile notei școlare** și interdependența lor.', rep:['De control (feedback)','De apreciere/constatare (diagnostică)','Socială (informarea familiei și comunității)','De reglare','Educativă (stimulativă)','Prognostică','De selecție']},
+  {cer:'5. Cl. a IX-a, CS 2.1 – comunicarea eficientă.', rep:['Adolescența: criză de identitate, nevoie de autonomie, argou/jargon, risc de delincvență; relație de cooperare cu părintele.','„Nu judeca pe tânăr după mintea ta, ci pune-te în locul lui.”','Activitate: „pânza” din ghem de ață, stilurile de comunicare, asertivitate, tăcerea ca instrument.']}
+ ]}
+]});
+
+/* ---- content/teste/t10.js ---- */
+SUBIECTE.push({nr:10, tema:'Violența școlară și bandele · Profilul de învățare în era digitală, cooperarea online · Itemi, SINELG, cvintet', subiecte:[
+{titlu:'Subiectul I', puncte:30,
+ text:'Enunț: comportamentul disciplinat presupune valori (responsabilitate, perseverență, demnitate); la polul opus – conduite indisciplinate, agresivitate, abandon, absenteism.\nArgumentați în patru pagini comportamentele deviante ale elevilor (violență, indisciplină, delincvență, evaziune școlară, comportamente de risc).',
+ items:[
+  {cer:'**Cauzalitatea violenței fizice** în școală.', rep:[
+   'Individuale: agresivitate, autocontrol redus, toleranță scăzută la frustrare, dificultăți de atenție, instabilitate psihomotorie, tulburări psihice.',
+   'Familiale/sociale: familie dezorganizată, anturaj, mass-media, grupul de apartenență.',
+   'Școlare: relaționare deficitară, evaluare, stil didactic autocrat, program/programă încărcate, prejudecăți.',
+   'Direcții: elev–elev (jigniri, porecle, loviri, furt, vandalism), elev–profesor, profesor–elev (sarcasm, dominare).',
+   'Intervenție: interviul investigativ și interviul bazat pe încredere; sancțiuni echitabile, cu conștientizarea greșelii.']},
+  {cer:'**Sursele generatoare** ale violenței în școală.', rep:['Programă încărcată, orar stresant.','Experiență didactică redusă în gestionarea crizelor.','Deficiențe de relaționare în școală.','Prejudecăți etnice.','Evaluarea rezultatelor.','Stilul autocrat al unor profesori.']},
+  {cer:'**Profilul psihologic** al unui posibil membru al unei „bande”.', rep:['Absenteism masiv, risc de abandon','Rezultate școlare slabe','Lipsa preocupărilor de timp liber','Asumarea simbolurilor și valorilor bandei','Familie dezorganizată','Domiciliu în zona bandei','Incidente frecvente cu poliția','(Forme de violență în bande – C. Neamțu, 2003)']},
+  {cer:'Importanța **consilierii** elevilor violenți.', rep:['Echipă interdisciplinară: consilier, familie, poliție, elev.','Discuții cu familia, medierea conflictelor, consiliere de grup, voluntariat.','**Biblioterapia** (lectură/filme cu personaje cu care se identifică) → empatie și autocontrol; arta dramatică.','Etichetarea și amenințarea amplifică problema; activități nonformale/outdoor cu comunitatea.']}
+ ]},
+{titlu:'Subiectul al II-lea', puncte:30, text:'Profilul de învățare – diferențele dintre învățarea cu tehnologie și cea tradițională.',
+ items:[
+  {cer:'A. Particularitățile **profilului de învățare în era digitală**.', rep:['Internetul – sursa principală; risc de învățare superficială.','Stil predominant kinestezic, învățare inductivă, autogestionarea învățării; elevul ca organizator de informații.','Prensky (2001) – „nativii digitali”: preferă imaginile, învățarea activă, grupurile sociale, recompensa imediată.']},
+  {cer:'B. Comparație **profil clasic vs digital**.', rep:['Viteză sporită vs convențională','Sarcini multiple vs sarcină unică','Imagini vs text','Acces aleatoriu vs pas cu pas','Învățare socială vs individuală','Activă vs pasivă','Joacă vs muncă','Recompensă imediată vs răbdare','Tehnologia ca prieten vs dușman']},
+  {cer:'C. **Activitatea prin cooperare** în mediul online.', rep:['Interdependență pozitivă + răspundere individuală; implicare activă; gândire critică, încredere, comunicare.']},
+  {cer:'D. **Metode de învățare prin cooperare** adaptabile online.', rep:['Gândiți – Lucrați în perechi – Comunicați (Think-Pair-Share)','Mozaicul (grupurile interdependente)','Tehnica 6/3/5 (brainwriting)','Eșafodajul metacognitiv']},
+  {cer:'E. Efectele **rețelelor sociale** în școală.', rep:['Implicarea comunității în proiecte','Tranziția între cicluri','Beneficii civice','Relații mai bune cu părinții','Diseminarea informațiilor','Promovarea imaginii școlii']},
+  {cer:'F. Trei **tipuri de platforme** online.', rep:['De comunicare și colaborare (ex. Microsoft Teams)','LMS open source (ex. Moodle)','LMS moderne cu inteligență artificială (ex. Docebo)']}
+ ]},
+{titlu:'Subiectul al III-lea', puncte:30, text:'Metodica disciplinei.',
+ items:[
+  {cer:'1. **Item pedagogic, tehnici de evaluare, strategii de evaluare**.', rep:['Itemul = întrebare + formatul ei + răspunsul așteptat; element de bază al unui instrument de evaluare.','Tehnicile = modalitățile de declanșare a răspunsurilor la itemi.','Strategiile = maniera operațională de combinare a tipurilor, formelor, descriptorilor, notării.']},
+  {cer:'2. Necesitatea **evaluării orale**.', rep:['Formă particulară a conversației; implică toată clasa; întrebări de bază + ajutătoare; cere tact pedagogic și climat de încredere; să nu se reducă la repovestire.']},
+  {cer:'3. **SINELG vs cvintet**.', rep:['SINELG (Sistemul Interactiv de Notare pentru Eficientizarea Lecturii și Gândirii): semne pe marginea textului – ✓ știam, + nou, – contrazice, ? neclar; tabel cu 4 coloane.','Cvintetul: poezie de 5 versuri – 1 substantiv (titlu), 2 adjective, 3 verbe, o propoziție de 4 cuvinte (sentimente), 1 cuvânt-esență; sinteză creativă.']},
+  {cer:'4. Listă: caracteristicile **itemilor semiobiectivi**.', rep:['Evaluează mai mult decât recunoașterea; răspuns limitat ca spațiu, formă, conținut; acoperă o arie largă de conținut; obiectivitate mai mică decât la itemii obiectivi.','Tipuri: itemi cu răspuns scurt, de completare, întrebări structurate.']},
+  {cer:'5. Cl. a XI-a, CS 1.1 – aspirații și planificarea carierei.', rep:['Cariera: proces dinamic de poziții, interacțiune factori individuali–organizaționali, identitate ocupațională.','J. Holland: personalitatea – factor proeminent în alegerea carierei.','Pașii planificării individuale a carierei: autoevaluarea; luarea deciziilor și stabilirea scopurilor; explorarea oportunităților; planificarea; urmărirea realizării scopurilor.','Activitate: brainstorming, studiu de caz, dezbatere, arborele profesional al familiei.']}
+ ]}
+]});
