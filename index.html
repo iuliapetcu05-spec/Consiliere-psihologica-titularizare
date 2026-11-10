@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Titularizare Consiliere</title>
+<meta name="description" content="Aplicație de învățat pentru titularizare – Consiliere psihopedagogică">
+<meta name="theme-color" content="#5b4bdb">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Titularizare">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icons/icon-180.png">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <button class="back" id="backBtn" aria-label="Înapoi" hidden>‹</button>
+  <h1 id="title">Titularizare</h1>
+  <div class="streak" id="streak" title="Zile la rând">🔥 0</div>
+</header>
+<main id="view"></main>
+<nav class="tabs">
+  <button data-tab="home" class="active"><span>🏠</span>Acasă</button>
+  <button data-tab="teorie"><span>📚</span>Teorie</button>
+  <button data-tab="carduri"><span>🃏</span>Carduri</button>
+  <button data-tab="grile"><span>✅</span>Grile</button>
+  <button data-tab="subiecte"><span>📝</span>Subiecte</button>
+</nav>
+<div id="toast" class="toast" hidden></div>
+<script src="data/continut.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
