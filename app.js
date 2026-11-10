@@ -31,7 +31,7 @@ function load(){
     answers:{},     // răspunsuri scrise {testNr-sub-item: text}
     checks:{},      // repere bifate
     days:{},        // activitate pe zile {YYYY-MM-DD: n}
-    examDate:'', goal:30, best:{af:0}, ai:{}
+    examDate:'', goal:30, best:{af:0}, ai:{}, gen:[], plan:{}
   }, d || {});
 }
 function save(){ try { localStorage.setItem(KEY, JSON.stringify(S)); } catch(e){} }
@@ -108,6 +108,7 @@ function Home(v){
     <div class="bar" style="margin-top:8px;background:rgba(255,255,255,.3)"><i style="width:${goalPct}%;background:#fff"></i></div>
     <button class="btn white block" style="margin-top:14px" id="quick">⚡ Sesiune rapidă (10 întrebări amestecate)</button>
   </div>
+  ${planHTML()}
   <div class="grid2">
     <div class="tile" id="tAF"><div class="ic">⏱️</div><b>Adevărat / Fals</b><small>60 de secunde, record ${S.best.af||0}</small></div>
     <div class="tile" id="tMatch"><div class="ic">🧩</div><b>Potrivește</b><small>concept ↔ definiție</small></div>
@@ -116,6 +117,8 @@ function Home(v){
     <div class="tile" id="tRand"><div class="ic">🎲</div><b>Surprinde-mă</b><small>o fișă la întâmplare</small></div>
     <div class="tile" id="tSim"><div class="ic">📝</div><b>Simulare examen</b><small>un test complet, cronometrat</small></div>
   </div>
+  <div class="grid2"><div class="tile" id="tGen"><div class="ic">🎲</div><b>Subiect nou (AI)</b><small>variantă inedită</small></div>
+    <div class="tile" id="tS3"><div class="ic">🎯</div><b>Antrenor S. III</b><small>metodica pe repede-înainte</small></div></div>
   <div class="card tap aihero" id="tOfi"><div class="row"><span style="font-size:28px">🤖</span><div class="grow"><b>Examen oficial + corectare AI</b>
     <div class="small muted">Subiecte reale 2021–2026, corectate după barem, item cu item</div><div class="small" style="margin-top:4px" data-ai-status>${aiStatusText()}</div></div><span style="font-size:20px">›</span></div></div>
   <h3>Unde ești pe capitole</h3>
@@ -144,6 +147,9 @@ function Home(v){
   $('#tSim',v).onclick=()=>{ const t=TESTE[Math.floor(Math.random()*TESTE.length)]; go(x=>Test(x,t.nr,true),'Simulare – Testul '+t.nr); };
   $('#exam',v).onchange=e=>{S.examDate=e.target.value;save();go(Home,'Titularizare',false)};
   $('#goal',v).onchange=e=>{S.goal=+e.target.value;save();go(Home,'Titularizare',false)};
+  v.querySelectorAll('#plan .plantask').forEach(el=>el.onclick=()=>runTask(planToday().tasks[+el.dataset.i]));
+  $('#tGen',v).onclick=()=>go(x=>Generator(x),'Subiect nou');
+  $('#tS3',v).onclick=()=>go(x=>AntrenorS3(x),'Antrenor Subiectul III');
   $('#tOfi',v).onclick=()=>go(x=>OficialeList(x),'Examene oficiale');
   $('#akeyS',v).onclick=()=>{ setApiKey($('#akey',v).value.trim()); toast(apiKey()?'Cheie salvată 🔑':'Cheie ștearsă'); document.querySelectorAll('[data-ai-status]').forEach(el=>el.textContent=aiStatusText()); };
   $('#exp',v).onclick=exportData; $('#imp',v).onclick=importData;
@@ -185,26 +191,30 @@ function Teorie(v){
 function Capitol(v,id,focus){
   const c=capById[id]; S.read[id]=S.read[id]||{};
   v.innerHTML=`<div class="small muted">${esc(c.parte)} · Capitolul ${c.nr}</div><h2>${esc(c.titlu)}</h2>
-   <div class="btns" style="margin-bottom:14px"><button class="btn ghost" id="fc">🃏 Carduri</button><button class="btn ghost" id="gr">✅ Grilă</button></div><div id="secs"></div>`;
+   <div class="btns" style="margin-bottom:14px"><button class="btn ghost" id="fc">🃏 Carduri</button><button class="btn ghost" id="gr">✅ Grilă</button>${TTS.ok?'<button class="btn ghost" id="lsall">🎧 Ascultă tot</button>':''}</div><div id="secs"></div>`;
+  cleanup=stopSpeak;
+  if(TTS.ok) $('#lsall',v).onclick=e=>{ const b=e.currentTarget; if(b.dataset.on){ stopSpeak(); b.dataset.on=''; b.textContent='🎧 Ascultă tot'; return; }
+    b.dataset.on='1'; b.textContent='⏹ Oprește'; speak([c.titlu].concat(...c.sectiuni.map(secParts)), ()=>{ b.dataset.on=''; b.textContent='🎧 Ascultă tot'; }); tick(); };
   $('#fc',v).onclick=()=>go(x=>Flash(x,id),'Carduri – '+(c.scurt||c.titlu));
   $('#gr',v).onclick=()=>go(x=>Quiz(x,{cap:id}),'Grilă – '+(c.scurt||c.titlu));
   const secs=$('#secs',v);
   c.sectiuni.forEach((s,i)=>{ const el=document.createElement('div'); el.className='card sec'; el.id='sec'+i;
     const done=!!S.read[id][i];
-    el.innerHTML=`<h3 style="margin-top:0">${esc(s.titlu)}</h3>${(s.puncte||[]).length?'<ul class="pts">'+s.puncte.map(p=>'<li>'+fmtInline(p)+'</li>').join('')+'</ul>':''}
+    el.innerHTML=`<div class="row" style="align-items:flex-start"><h3 style="margin-top:0" class="grow">${esc(s.titlu)}</h3>${TTS.ok?'<button class="btn ghost ls" style="padding:6px 10px" aria-label="Ascultă fișa">🔊</button>':''}</div>${(s.puncte||[]).length?'<ul class="pts">'+s.puncte.map(p=>'<li>'+fmtInline(p)+'</li>').join('')+'</ul>':''}
       ${s.retine?`<div class="key">💡 <b>De reținut:</b> ${inline(s.retine)}</div>`:''}
-      <button class="btn ${done?'ok':'ghost'} block" style="margin-top:10px">${done?'✔ Citit':'Marchează ca citit'}</button>
+      <button class="rd btn ${done?'ok':'ghost'} block" style="margin-top:10px">${done?'✔ Citit':'Marchează ca citit'}</button>
       <details class="ask" style="margin-top:8px"><summary class="small" style="cursor:pointer;color:var(--accent);font-weight:600">🤖 Întreabă AI despre fișa asta</summary>
         <div class="chips" style="margin-top:8px"><button data-q="Explică-mi fișa asta mai simplu, ca unui prieten.">🧸 Explică simplu</button><button data-q="Dă-mi un exemplu concret din școală pentru ideile din fișă.">🏫 Exemplu din școală</button><button data-q="Cum ar putea apărea asta la subiectul de titularizare? Dă-mi o cerință posibilă și reperele de punctaj.">🎯 Cum pică la examen</button><button data-q="Dă-mi un truc de memorare (mnemonic) pentru fișa asta.">🧠 Truc de memorare</button></div>
         <div class="row"><input class="grow" placeholder="sau scrie întrebarea ta…"><button class="btn">Întreabă</button></div><div class="aiout" hidden></div></details>`;
+    const lsb=el.querySelector('.ls'); if(lsb) lsb.onclick=()=>{ if(lsb.dataset.on){ stopSpeak(); lsb.dataset.on=''; lsb.textContent='🔊'; return; } document.querySelectorAll('.ls').forEach(x=>{x.dataset.on='';x.textContent='🔊';}); lsb.dataset.on='1'; lsb.textContent='⏹'; speak(secParts(s), ()=>{ lsb.dataset.on=''; lsb.textContent='🔊'; }); };
     const ask=el.querySelector('.ask'), aout=ask.querySelector('.aiout'), ain=ask.querySelector('input'); let actl=null;
     const doAsk=async q=>{ if(!q) return; if(!aiOn()) return toast('AI nu e activ încă – vezi Setări pe Acasă'); if(actl) actl.abort(); actl=new AbortController();
       aout.hidden=false; aout.innerHTML='<p class="muted small">🤔 …</p>';
       try{ const t=await aiAsk(askPrompt(c,s,q), t=>aout.innerHTML=fmt(t), actl.signal); aout.innerHTML=fmt(t); tick(); }catch(e){ if(e.name!=='AbortError') aout.innerHTML=`<p class="small" style="color:var(--bad)">⚠️ ${esc(e.message||e)}</p>`; } };
     ask.querySelectorAll('.chips button').forEach(b=>b.onclick=()=>doAsk(b.dataset.q));
     ask.querySelector('.row .btn').onclick=()=>doAsk(ain.value.trim()); ain.onkeydown=e=>{ if(e.key==='Enter') doAsk(ain.value.trim()); };
-    el.querySelector('button').onclick=e=>{ S.read[id][i]=!S.read[id][i]; if(!S.read[id][i]) delete S.read[id][i]; else tick(); save();
-      e.target.className='btn '+(S.read[id][i]?'ok':'ghost')+' block'; e.target.textContent=S.read[id][i]?'✔ Citit':'Marchează ca citit'; };
+    el.querySelector('.rd').onclick=e=>{ S.read[id][i]=!S.read[id][i]; if(!S.read[id][i]) delete S.read[id][i]; else tick(); save();
+      e.target.className='rd btn '+(S.read[id][i]?'ok':'ghost')+' block'; e.target.textContent=S.read[id][i]?'✔ Citit':'Marchează ca citit'; };
     secs.appendChild(el); });
   if(focus!=null) setTimeout(()=>{ const t=$('#sec'+focus); if(t) t.scrollIntoView({behavior:'smooth',block:'start'}); },60);
 }
@@ -393,10 +403,10 @@ function aiSource(){ return AI.sample ? 'Claude (prin claude.ai)' : (apiKey() ? 
   AI.checked=true; document.querySelectorAll('[data-ai-status]').forEach(el=>el.textContent=aiStatusText()); })();
 function aiStatusText(){ return aiOn() ? '🟢 AI activ – ' + aiSource() : (AI.checked||!window.claude ? '⚪ AI inactiv – adaugă o cheie API în Setări (Acasă)' : '⏳ verific dacă AI e disponibil…'); }
 
-async function aiAsk(prompt, onText, signal){
+async function aiAsk(prompt, onText, signal, opt={}){
   if(AI.sample){
     try {
-      const r = await AI.sample(prompt, { onText: ({text}) => onText && onText(text), signal, modelTier:'default', cache:false });
+      const r = await AI.sample(prompt, { onText: ({text}) => onText && onText(text), signal, modelTier:opt.tier||'default', cache:false });
       return r.text;
     } catch(e){
       if(e && e.code==='not_granted'){ AI.sample=null; throw new Error('Nu ai permis accesul la Claude pentru pagina asta. Îl poți activa din meniul Permissions al paginii.'); }
@@ -407,7 +417,7 @@ async function aiAsk(prompt, onText, signal){
   const key = apiKey(); if(!key) throw new Error('AI nu e activ. Pune o cheie API în Setări (pe Acasă) sau deschide aplicația de pe claude.ai.');
   const res = await fetch('https://api.anthropic.com/v1/messages', { method:'POST', signal,
     headers:{ 'content-type':'application/json', 'x-api-key':key, 'anthropic-version':'2023-06-01', 'anthropic-dangerous-direct-browser-access':'true' },
-    body: JSON.stringify({ model:'claude-sonnet-5-5', max_tokens:2500, stream:true, messages:[{role:'user',content:prompt}] }) });
+    body: JSON.stringify({ model:'claude-sonnet-5-5', max_tokens:opt.maxTokens||2500, stream:true, messages:[{role:'user',content:prompt}] }) });
   if(!res.ok){ let m=''; try{ m=(await res.json()).error.message; }catch(e){}
     throw new Error(res.status===401?'Cheia API nu e validă.':(res.status===429?'Limită de cereri atinsă. Mai încearcă puțin mai târziu.':'Eroare API ('+res.status+') '+m)); }
   const rd = res.body.getReader(); const dec = new TextDecoder(); let buf='', text='';
@@ -425,7 +435,7 @@ function gradePrompt(ctx){
   return `Ești membru al comisiei de evaluare la ${ctx.examen}, proba scrisă CONSILIERE PSIHOPEDAGOGICĂ (România). Corectezi UN SINGUR item din lucrarea unei candidate.
 
 ${REGULI}
-${ctx.barem ? 'BAREMUL OFICIAL pentru acest item:\n' + ctx.barem : 'Pentru acest item NU avem baremul oficial. Aplică logica baremelor oficiale recente: punctajul se împarte egal pe elementele cerute (ex. „două abilități” pentru 2p = câte 1p); când cerința e de descriere/explicare/exemplificare/argumentare iar candidata doar enumeră, acordă punctaj parțial redus (de regulă câte 1p pe element); la eseuri structurate, distribuie punctajul rezonabil pe reperele din structură. Spune explicit că punctajul este ESTIMATIV, nu după barem oficial.'}
+${ctx.barem ? (ctx.baremLabel||'BAREMUL OFICIAL pentru acest item:')+'\n' + ctx.barem : 'Pentru acest item NU avem baremul oficial. Aplică logica baremelor oficiale recente: punctajul se împarte egal pe elementele cerute (ex. „două abilități” pentru 2p = câte 1p); când cerința e de descriere/explicare/exemplificare/argumentare iar candidata doar enumeră, acordă punctaj parțial redus (de regulă câte 1p pe element); la eseuri structurate, distribuie punctajul rezonabil pe reperele din structură. Spune explicit că punctajul este ESTIMATIV, nu după barem oficial.'}
 
 CONTEXTUL SUBIECTULUI:
 ${ctx.text||'(fără text suport)'}
@@ -457,7 +467,7 @@ function modelPrompt(ctx){
 Scrie un RĂSPUNS-MODEL de punctaj maxim pentru cerința de mai jos, așa cum l-ar scrie un candidat foarte bine pregătit, pe foaia de examen.
 
 ${REGULI}
-${ctx.barem ? 'BAREMUL OFICIAL al itemului (răspunsul trebuie să acopere tot ce se punctează aici):\n'+ctx.barem : 'Nu avem baremul oficial; acoperă explicit fiecare element cerut.'}
+${ctx.barem ? (ctx.baremLabel||'BAREMUL OFICIAL al itemului')+' (răspunsul trebuie să acopere tot ce se punctează aici):\n'+ctx.barem : 'Nu avem baremul oficial; acoperă explicit fiecare element cerut.'}
 
 CONTEXTUL SUBIECTULUI:
 ${ctx.text||'(fără text suport)'}
@@ -521,7 +531,17 @@ function ofiScore(o){ let got=0, max=0, done=0, n=0;
   return {got,max,done,n}; }
 function OficialeList(v){
   v.innerHTML=`<div class="card"><b>Examene oficiale + corectare AI</b><p class="small muted" style="margin:6px 0 0">Subiectele reale de la titularizare/definitivat. Scrii răspunsul pe fiecare item, apoi AI-ul îl corectează după barem (unde avem baremul oficial) și îți spune exact ce lipsește.</p>
-    <p class="small" style="margin:8px 0 0" data-ai-status>${aiStatusText()}</p></div><div id="l"></div>`;
+    <p class="small" style="margin:8px 0 0" data-ai-status>${aiStatusText()}</p></div>
+    <div class="grid2"><div class="tile" id="tGen"><div class="ic">🎲</div><b>Subiect nou (AI)</b><small>variantă inedită, stil oficial</small></div>
+    <div class="tile" id="tS3"><div class="ic">🎯</div><b>Antrenor Subiectul III</b><small>CS + metodă la întâmplare</small></div></div>
+    <div id="g"></div><h3>Variante oficiale</h3><div id="l"></div>`;
+  $('#tGen',v).onclick=()=>go(x=>Generator(x),'Subiect nou');
+  $('#tS3',v).onclick=()=>go(x=>AntrenorS3(x),'Antrenor Subiectul III');
+  const gl=$('#g',v); const gens=(S.gen||[]).slice().reverse();
+  if(gens.length){ gl.innerHTML='<h3>Generate de tine</h3>'; gens.forEach(o=>{ const sc=ofiScore(o); const el=document.createElement('div'); el.className='card tap';
+    el.innerHTML=`<div class="row"><span style="font-size:22px">${o.tip==='Antrenament'?'🎯':'🎲'}</span><div class="grow"><b>${esc(o.titlu||o.varianta)}</b><div class="small muted">${esc(o.data)} · ${sc.done}/${sc.n} itemi corectați</div></div>${sc.done?`<span class="pill">${sc.got}/${sc.max}</span>`:''}<button class="btn ghost" data-del style="padding:6px 10px">🗑</button></div>`;
+    el.onclick=e=>{ if(e.target.closest('[data-del]')){ e.stopPropagation(); S.gen=S.gen.filter(x=>x.id!==o.id); save(); go(x=>OficialeList(x),'Examene oficiale',false); return; } go(x=>Oficial(x,o.id), o.titlu||'Subiect generat'); };
+    gl.appendChild(el); }); }
   const l=$('#l',v);
   OFI.slice().sort((a,b)=>b.an-a.an||(a.tip>b.tip?-1:1)).forEach(o=>{ const sc=ofiScore(o); const el=document.createElement('div'); el.className='card tap';
     el.innerHTML=`<div class="row"><span style="font-size:22px">${o.tip==='Definitivat'?'🎓':'🏛️'}</span><div class="grow"><b>${o.tip} ${o.an} · ${esc(o.varianta)}</b>
@@ -529,8 +549,9 @@ function OficialeList(v){
       <div class="bar" style="margin-top:6px"><i style="width:${Math.round(100*sc.done/sc.n)}%"></i></div></div>${sc.done?`<span class="pill">${sc.got}/${sc.max}</span>`:''}</div>`;
     el.onclick=()=>go(x=>Oficial(x,o.id),`${o.tip} ${o.an}`); l.appendChild(el); });
 }
+function findExam(id){ return OFI.find(x=>x.id===id) || (S.gen||[]).find(x=>x.id===id); }
 function Oficial(v,id){
-  const o=OFI.find(x=>x.id===id); let cur=0; let iv=null;
+  const o=findExam(id); if(!o){ v.innerHTML='<div class="card">Subiectul nu mai există.</div>'; return; } let cur=0; let iv=null;
   v.innerHTML=`${o.nota?`<div class="card key">ℹ️ ${esc(o.nota)}</div>`:''}
     <div class="card row"><span class="grow small">${esc(o.data||'')} · 4 ore · 10p din oficiu</span><button class="btn ghost" id="simb">⏱️ Pornește 4h</button><span class="timer" id="tm" hidden></span></div>
     <div class="chips" id="ch">${o.subiecte.map((s,i)=>`<button data-i="${i}" class="${i?'':'on'}">${esc(s.titlu)}</button>`).join('')}<button data-i="r">📊 Rezultat</button></div><div id="sb"></div>`;
@@ -540,13 +561,13 @@ function Oficial(v,id){
   cleanup=()=>{ if(iv) clearInterval(iv); };
   const subWords=si=>o.subiecte[si].items.reduce((a,it)=>a+words(S.answers[okey(o.id,si,it.id)]),0);
   const render=()=>{ const sb=$('#sb',v);
-    if(cur==='r'){ const sc=ofiScore(o); const nota=(sc.got+10)/10;
-      sb.innerHTML=`<div class="card hero"><div class="muted small">Notă estimată (din ${sc.done}/${sc.n} itemi corectați)</div><div class="big">${nota.toFixed(2)}</div>
-        <div class="small">${sc.got} din ${sc.max} puncte + 10 din oficiu</div></div>
+    if(cur==='r'){ const sc=ofiScore(o); const full=sc.max===90; const nota=(sc.got+10)/10;
+      sb.innerHTML=`<div class="card hero"><div class="muted small">${full?'Notă estimată':'Punctaj'} (din ${sc.done}/${sc.n} itemi corectați)</div><div class="big">${full?nota.toFixed(2):sc.got+' / '+sc.max}</div>
+        <div class="small">${full?sc.got+' din '+sc.max+' puncte + 10 din oficiu':'puncte la acest subiect'}</div></div>
         ${o.subiecte.map((s,si)=>{ let g=0,m=0; const rows=s.items.map(it=>{ const r=(S.ai||{})[okey(o.id,si,it.id)]; m+=it.p; if(r&&r.score!=null) g+=r.score;
           return `<div class="row small" style="padding:4px 0;border-top:1px solid var(--line)"><span class="grow">${esc(it.id)}. ${esc(it.cer.split('\n')[0].slice(0,70))}…</span><b>${r&&r.score!=null?r.score:'–'}/${it.p}</b></div>`; }).join('');
           return `<div class="card"><div class="row"><b class="grow">${esc(s.titlu)}</b><span class="pill">${g}/${m}</span></div>${rows}</div>`; }).join('')}
-        <p class="small muted">Nota e calculată ca la examen: (total + 10) / 10. Itemii necorectați intră cu 0.</p>`;
+        ${full?'<p class="small muted">Nota e calculată ca la examen: (total + 10) / 10. Itemii necorectați intră cu 0.</p>':''}`;
       return; }
     const s=o.subiecte[cur];
     sb.innerHTML=`<div class="card"><div class="row"><b class="grow">${esc(s.titlu)}</b><span class="pill">${s.puncte} p</span></div><div style="margin-top:8px">${fmt(s.text)}</div>
@@ -559,7 +580,7 @@ function Oficial(v,id){
         ${it.barem?`<details style="margin-top:8px"><summary class="small" style="cursor:pointer;color:var(--accent);font-weight:600">🔑 Baremul oficial (uită-te după ce scrii 😉)</summary><div class="small" style="margin-top:6px">${inline(it.barem)}</div></details>`:''}`;
       const ta=el.querySelector('textarea'), wc=el.querySelector('.wc'); const upd=()=>{ const w=words(ta.value); wc.textContent=w?`${w} cuvinte ≈ ${(w/275).toFixed(1)} pagini`:''; }; upd();
       let tmr; ta.oninput=()=>{ upd(); clearTimeout(tmr); tmr=setTimeout(()=>{S.answers[key]=ta.value;save();},400); };
-      const ctxFn=()=>{ S.answers[key]=ta.value; save(); return { examen:`${o.tip==='Definitivat'?'examenul național de definitivare':'concursul național de titularizare'} ${o.an}`, text:s.text, cer:it.cer, max:it.p, barem:it.barem||'', raspuns:ta.value, totalWords:subWords(cur) }; };
+      const ctxFn=()=>{ S.answers[key]=ta.value; save(); return { baremLabel: o.genAI?'BAREM PROPUS (nu e oficial; folosește-l ca reper, aplicând regulile oficiale):':(o.tip==='Antrenament'?'BAREM (regulile din baremele oficiale recente pentru acest tip de item):':''), examen:o.genAI?'concursul național de titularizare (subiect de antrenament în stil oficial)':`${o.tip==='Definitivat'?'examenul național de definitivare':'concursul național de titularizare'} ${o.an}`, text:s.text, cer:it.cer, max:it.p, barem:it.barem||'', raspuns:ta.value, totalWords:subWords(cur) }; };
       el._panel=aiPanel(el, ctxFn, key); its.appendChild(el); });
     $('#all',sb).onclick=async()=>{ if(!aiOn()) return toast('AI nu e activ încă – vezi Setări pe Acasă');
       const cards=[...its.children].filter(c=>c.querySelector('textarea').value.trim()); if(!cards.length) return toast('Scrie întâi niște răspunsuri ✍️');
@@ -571,6 +592,178 @@ function Oficial(v,id){
   };
   v.querySelectorAll('#ch button').forEach(b=>b.onclick=()=>{ v.querySelectorAll('#ch button').forEach(x=>x.classList.remove('on')); b.classList.add('on'); cur=b.dataset.i==='r'?'r':+b.dataset.i; render(); });
   render();
+}
+
+/* ================= GENERATOR DE SUBIECTE (AI) ================= */
+// Competențe specifice reale, preluate din subiectele oficiale primite (nu inventate)
+const CS_REALE = [
+  {cls:'a VIII-a', prog:'Consiliere și dezvoltare personală', cs:'2.2. Negocierea conflictelor prin diferite tehnici de comunicare', cont:'Conflictele: caracteristici, surse, modalități de prevenire. Stilurile de negociere a conflictelor sau de abordare constructivă prin aplicarea tehnicilor simple de comunicare'},
+  {cls:'a IX-a', prog:'Consiliere și orientare', cs:'1.2. Examinarea caracteristicilor specifice adolescenței', cont:'Autocunoaștere și dezvoltare personală. Autocunoaștere: încredere în sine; factori care influențează încrederea în sine'},
+  {cls:'a IX-a', prog:'Consiliere și orientare', cs:'1.2. Examinarea caracteristicilor specifice adolescenței', cont:'Creștere și schimbare: adolescența – caracteristicile dezvoltării fizice, cognitive, emoționale'},
+  {cls:'a IX-a', prog:'Consiliere și orientare', cs:'2.2. Aplicarea tehnicilor de autocontrol emoțional', cont:'Comunicare și abilități sociale. Comunicare: forme de comunicare eficientă. Autocontrol emoțional: tehnici de autocontrol emoțional'},
+  {cls:'a XI-a', prog:'Consiliere și orientare', cs:'4.2. Evaluarea opțiunilor personale privind dezvoltarea personală și profesională', cont:'Planificarea carierei – opțiuni și resurse de realizare a planului de carieră de scurtă și lungă durată'}
+];
+const METODE_S3 = [
+  {m:'studiul de caz', tip:'metodă didactică interactivă', b:'prezentarea a trei etape ale aplicării metodei'},
+  {m:'problematizarea (învățarea prin problematizare)', tip:'metodă didactică modernă', b:'prezentarea a trei etape ale aplicării metodei'},
+  {m:'demonstrația', tip:'metodă didactică tradițională', b:'precizarea a două forme didactice ale metodei'},
+  {m:'jocul de rol', tip:'metodă didactică interactivă', b:'prezentarea a trei etape ale aplicării metodei'},
+  {m:'brainstormingul', tip:'metodă didactică interactivă', b:'prezentarea a trei etape ale aplicării metodei'},
+  {m:'dezbaterea', tip:'metodă didactică interactivă', b:'prezentarea a trei etape ale aplicării metodei'},
+  {m:'învățarea prin cooperare', tip:'metodă didactică interactivă', b:'prezentarea a trei etape ale aplicării metodei'},
+  {m:'conversația euristică', tip:'metodă didactică tradițională', b:'prezentarea a trei etape ale aplicării metodei'},
+  {m:'explicația', tip:'metodă didactică tradițională', b:'precizarea a două forme ale metodei'},
+  {m:'exercițiul', tip:'metodă didactică tradițională', b:'precizarea a două tipuri de exerciții'},
+  {m:'proiectul', tip:'metodă didactică modernă', b:'prezentarea a trei etape ale realizării proiectului'},
+  {m:'învățarea prin descoperire', tip:'metodă didactică modernă', b:'prezentarea a trei etape ale aplicării metodei'}
+];
+function s3Subiect(csx, mx){
+  const metoda=mx.m.split(' (')[0];
+  return { titlu:'Subiectul al III-lea', puncte:30,
+    text:`Secvență din programa de ${csx.prog}, clasa ${csx.cls}:\nCompetență specifică ${csx.cs}.\nConținuturi: ${csx.cont}.\n\nRealizați un demers didactic pentru dezvoltarea competenței specifice ${csx.cs.split('.').slice(0,2).join('.')}. din secvența dată, utilizând ${metoda.toUpperCase()}, ca ${mx.tip}, prin:`,
+    items:[
+      {id:'a', cer:'Explicarea metodei didactice ('+metoda+').', p:5, barem:'5p. Notă (după baremele oficiale): dacă doar precizează semnificația metodei, fără explicare – 2p.'},
+      {id:'b', cer:mx.b.charAt(0).toUpperCase()+mx.b.slice(1)+'.', p:6, barem:'2×3p sau 3×2p, după numărul de elemente cerute; câte puncte pentru fiecare element corect prezentat.'},
+      {id:'c', cer:'Specificarea a două cerințe didactice în utilizarea metodei ('+metoda+').', p:6, barem:'2×3p – câte 3p pentru fiecare cerință didactică corectă.'},
+      {id:'d', cer:'Menționarea unei activități de învățare adecvate pentru dezvoltarea competenței specifice date.', p:3, barem:'3p pentru orice activitate de învățare adecvată competenței specifice.'},
+      {id:'e', cer:'Precizarea resurselor (de timp, de loc, material didactic, forme de organizare a clasei) utilizate în activitatea de învățare de la d.', p:4, barem:'4×1p – câte 1p pentru: timp, loc, material didactic, formă de organizare.'},
+      {id:'f', cer:'Exemplificarea modului de dezvoltare a competenței specifice date, utilizând metoda ('+metoda+'), prin activitatea de învățare de la d.', p:6, barem:'Exemplificare adecvată (dezvoltă CS + folosește metoda + prin activitatea de la d.) – 6p; demers care nu respectă una dintre condiții – 2p.'}
+    ]};
+}
+function stamp(){ const d=new Date(); return d.toLocaleDateString('ro-RO')+' '+d.toLocaleTimeString('ro-RO',{hour:'2-digit',minute:'2-digit'}); }
+function addGen(o){ S.gen=(S.gen||[]); S.gen.push(o); if(S.gen.length>25) S.gen=S.gen.slice(-25); save(); }
+
+function AntrenorS3(v){
+  let csx=pickOne(CS_REALE), mx=pickOne(METODE_S3);
+  const render=()=>{
+    v.innerHTML=`<div class="card"><b>🎯 Antrenor pentru Subiectul al III-lea</b><p class="small muted" style="margin:6px 0 0">Structura e cea din baremele oficiale recente (a 5p · b 6p · c 6p · d 3p · e 4p · f 6p). Competențele specifice sunt doar cele reale, din subiectele oficiale primite; metoda se schimbă la fiecare tragere.</p></div>
+      <div class="card"><div class="small muted">Clasa ${esc(csx.cls)} · ${esc(csx.prog)}</div><b>CS ${esc(csx.cs)}</b><div class="small" style="margin-top:6px">${esc(csx.cont)}</div>
+      <div class="row" style="margin-top:12px"><span class="grow">Metoda: <b>${esc(mx.m)}</b></span></div>
+      <div class="btns" style="margin-top:12px"><button class="btn ghost" id="rm">🔀 Altă metodă</button><button class="btn ghost" id="rc">🔀 Altă CS</button></div>
+      <button class="btn block" style="margin-top:10px" id="ok">✍️ Începe subiectul</button></div>`;
+    $('#rm',v).onclick=()=>{ mx=pickOne(METODE_S3.filter(x=>x!==mx)); render(); };
+    $('#rc',v).onclick=()=>{ csx=pickOne(CS_REALE.filter(x=>x!==csx)); render(); };
+    $('#ok',v).onclick=()=>{ const o={id:'s3-'+Date.now().toString(36), tip:'Antrenament', genAI:false, titlu:'S.III – '+mx.m.split(' (')[0]+' · cl. '+csx.cls, varianta:'Antrenament', data:stamp(),
+        nota:'Subiect de antrenament construit de aplicație după structura oficială. Baremul de la fiecare item rezumă regulile din baremele oficiale recente.', subiecte:[s3Subiect(csx,mx)]};
+      addGen(o); go(x=>Oficial(x,o.id), 'Antrenor S.III'); };
+  };
+  render();
+}
+
+function genPrompt(focus, avoid){
+  const programa = CAP.map(c=>`- ${c.titlu}: ${c.sectiuni.map(s=>s.titlu.replace(/^\d+\.\s*/,'')).join('; ')}`).join('\n');
+  const csList = CS_REALE.map((c,i)=>`${i+1}) clasa ${c.cls}, ${c.prog}: CS ${c.cs} | conținuturi: ${c.cont}`).join('\n');
+  return `Ești autor de subiecte la Centrul Național de Curriculum și Evaluare (România), pentru proba scrisă CONSILIERE PSIHOPEDAGOGICĂ la concursul de titularizare. Creează O VARIANTĂ NOUĂ, INEDITĂ, de subiect, în stilul variantelor oficiale 2025–2026.
+
+TEMATICA (alege doar de aici):
+${programa}
+
+FOCUS pentru această variantă (ca să fie diferită de altele): Subiectul I pe „${focus.s1}”, Subiectul al II-lea pe „${focus.s2}”, Subiectul al III-lea cu metoda „${focus.m}” și secvența de programă nr. ${focus.cs+1} din lista de mai jos.
+${avoid.length?'EVITĂ temele acestor variante generate anterior: '+avoid.join(' | '):''}
+
+SECVENȚE DE PROGRAMĂ REALE (pentru Subiectul al III-lea folosește EXACT una dintre ele, nu inventa competențe):
+${csList}
+
+STRUCTURA OBLIGATORIE (exact ca la examen, total 90p):
+- Subiectul I (30p): un text-suport scurt, scris de tine (3–6 rânduri, fără citate atribuite unor autori reali), + cerința de a realiza o prezentare de 3 sau 4 pagini, punctată pe repere a, b, c… (8–11 repere). Ultimul reper: „respectarea numărului de pagini precizat” (1p). Suma = 30.
+- Subiectul al II-lea (30p): un text-suport scurt + itemi A–G (G poate avea a) și b)). Include un item „Redactați un text coerent de 10 rânduri…” (4p: 3p conținut + 1p număr de rânduri). Suma = 30.
+- Subiectul al III-lea (30p): secvența aleasă + „Realizați un demers didactic… utilizând [metoda], ca metodă didactică…, prin:” cu itemii a (5p, explicarea metodei), b (6p), c (6p, două cerințe didactice), d (3p, o activitate de învățare), e (4p, resurse timp/loc/material/forme de organizare), f (6p, exemplificare). Suma = 30.
+- Punctajele sunt numere întregi. Verbele cerințelor ca la CNCE: precizați, menționați, enumerați, explicați, descrieți, exemplificați, argumentați, prezentați.
+- Pentru FIECARE item scrie un „barem” scurt în stil CNCE: distribuția punctelor (ex. „2×2p”), un exemplu de răspuns corect („de exemplu: …”) și, unde e cazul, nota pentru enumerare fără explicare („câte 1p”). Fii corect științific, fără surse sau citate inventate.
+
+Răspunde DOAR cu JSON valid, fără text în afara lui, în formatul:
+{"titlu":"temă scurtă a variantei (max 6 cuvinte)","subiecte":[{"titlu":"Subiectul I","puncte":30,"text":"…","items":[{"id":"a","cer":"…","p":1,"barem":"…"}]},{"titlu":"Subiectul al II-lea","puncte":30,"text":"…","items":[…]},{"titlu":"Subiectul al III-lea","puncte":30,"text":"…","items":[…]}]}`;
+}
+function parseJSON(t){ const a=t.indexOf('{'), b=t.lastIndexOf('}'); if(a<0||b<a) throw new Error('Răspunsul AI nu conține un subiect complet. Mai încearcă o dată.'); return JSON.parse(t.slice(a,b+1)); }
+function validGen(j){ if(!j||!Array.isArray(j.subiecte)||j.subiecte.length<3) throw new Error('Subiectul generat e incomplet. Mai încearcă o dată.');
+  j.subiecte.forEach((s,i)=>{ if(!Array.isArray(s.items)||!s.items.length) throw new Error('Subiectul generat e incomplet. Mai încearcă o dată.');
+    s.items.forEach((it,k)=>{ it.id=String(it.id||String.fromCharCode(97+k)); it.p=Math.max(1,Math.round(+it.p||1)); it.cer=String(it.cer||''); it.barem=String(it.barem||''); });
+    s.puncte=s.items.reduce((a,it)=>a+it.p,0); s.text=String(s.text||''); s.titlu=String(s.titlu||['Subiectul I','Subiectul al II-lea','Subiectul al III-lea'][i]); });
+  return j; }
+function Generator(v){
+  const spec=CAP.filter(c=>c.parte&&c.parte.startsWith('Tematica'));
+  v.innerHTML=`<div class="card"><b>🎲 Subiect nou, în stil oficial</b><p class="small muted" style="margin:6px 0 0">AI-ul compune o variantă completă (I, II, III, 90p + 10 din oficiu), cu barem propus pe fiecare item, pe teme din programă. Tema principală e aleasă la întâmplare, ca să nu se repete. Durează aproximativ 1–2 minute.</p>
+    <p class="small" style="margin:8px 0 0" data-ai-status>${aiStatusText()}</p></div>
+    <div class="card"><div class="row"><span class="grow">Subiectul I despre</span><select id="s1"><option value="">🎲 la întâmplare</option>${spec.map(c=>`<option>${esc(c.scurt||c.titlu)}</option>`).join('')}</select></div>
+    <div class="row" style="margin-top:8px"><span class="grow">Subiectul al II-lea despre</span><select id="s2"><option value="">🎲 la întâmplare</option>${spec.map(c=>`<option>${esc(c.scurt||c.titlu)}</option>`).join('')}</select></div>
+    <button class="btn block" id="gen" style="margin-top:12px">✨ Generează varianta</button></div>
+    <div class="aiout" id="out" hidden></div>
+    <p class="small muted">Atenție: e un subiect de antrenament, nu unul oficial. Baremul e propus de AI după regulile oficiale; ia-l ca reper, nu ca adevăr absolut.</p>`;
+  let ctrl=null;
+  $('#gen',v).onclick=async()=>{
+    if(!aiOn()) return toast('AI nu e activ încă – vezi Setări pe Acasă');
+    const pickCap=sel=>{ const val=$(sel,v).value; return val || (pickOne(spec).scurt); };
+    const s1=pickCap('#s1'); let s2=pickCap('#s2'); if(s2===s1 && !$('#s2',v).value) s2=pickOne(spec.filter(c=>(c.scurt)!==s1)).scurt;
+    const focus={s1, s2, m:pickOne(METODE_S3).m, cs:Math.floor(Math.random()*CS_REALE.length)};
+    const avoid=(S.gen||[]).filter(g=>g.genAI).slice(-6).map(g=>g.titlu);
+    const out=$('#out',v), b=$('#gen',v); out.hidden=false; b.disabled=true;
+    out.innerHTML='<p class="small">✍️ Claude scrie subiectul… <span id="pc">0</span> caractere</p>';
+    if(ctrl) ctrl.abort(); ctrl=new AbortController();
+    try{
+      const txt=await aiAsk(genPrompt(focus,avoid), t=>{ const el=$('#pc',v); if(el) el.textContent=t.length; }, ctrl.signal, {maxTokens:9000, tier:'complex'});
+      const j=validGen(parseJSON(txt));
+      const o={id:'gen-'+Date.now().toString(36), tip:'Generat', genAI:true, titlu:'🎲 '+String(j.titlu||'Variantă nouă').slice(0,60), varianta:'Generat AI', data:stamp(),
+        nota:'Subiect generat de AI pentru antrenament (nu e oficial). Baremul de la fiecare item e propus de AI după regulile CNCE.', subiecte:j.subiecte};
+      addGen(o); tick(); go(x=>Oficial(x,o.id), 'Subiect nou');
+    }catch(e){ if(e.name!=='AbortError') out.innerHTML=`<p class="small" style="color:var(--bad)">⚠️ ${esc(e.message||e)}</p>`; b.disabled=false; }
+  };
+}
+
+/* ================= ASCULTĂ FIȘA (voce iPhone/Mac, offline) ================= */
+const TTS = { ok: 'speechSynthesis' in window, voice:null };
+function pickVoice(){ if(!TTS.ok) return null; const vs=speechSynthesis.getVoices(); return vs.find(v=>/^ro/i.test(v.lang)) || null; }
+if(TTS.ok){ TTS.voice=pickVoice(); try{ speechSynthesis.onvoiceschanged=()=>{ TTS.voice=pickVoice(); }; }catch(e){} }
+function plain(s){ return String(s).replace(/\*\*(.+?)\*\*/g,'$1').replace(/_(.+?)_/g,'$1').replace(/[→←↔]/g,', apoi ').replace(/[↑]/g,' ridicat').replace(/[↓]/g,' scăzut').replace(/[•\-–]\s/g,'').replace(/\s+/g,' ').trim(); }
+function speak(parts, onEnd){
+  if(!TTS.ok){ toast('Browserul nu are voce disponibilă'); return; }
+  speechSynthesis.cancel(); let i=0;
+  const next=()=>{ if(i>=parts.length){ onEnd&&onEnd(); return; } const u=new SpeechSynthesisUtterance(parts[i++]); u.lang='ro-RO'; if(TTS.voice) u.voice=TTS.voice; u.rate=1; u.onend=next; u.onerror=()=>{ onEnd&&onEnd(); }; speechSynthesis.speak(u); };
+  next();
+}
+function stopSpeak(){ if(TTS.ok) speechSynthesis.cancel(); }
+function secParts(s){ return [s.titlu.replace(/^\d+\.\s*/,'')].concat((s.puncte||[]).map(plain)).concat(s.retine?['De reținut: '+plain(s.retine)]:[]); }
+
+/* ================= PLANUL ZILEI ================= */
+function dayIndex(){ return Math.floor(new Date(today()+'T12:00')/864e5); }
+function planToday(){
+  const t=today(); S.plan=S.plan||{};
+  if(S.plan[t] && S.plan[t].tasks) return S.plan[t];
+  const di=dayIndex();
+  // fișa zilei: capitolul cu cel mai mic progres, prima secțiune necitită (rotativ, ca să varieze)
+  const caps=CAP.slice().sort((a,b)=>capProgress(a.id)-capProgress(b.id));
+  const cand=caps.slice(0,4); const c=cand[di%cand.length];
+  let si=c.sectiuni.findIndex((_,i)=>!(S.read[c.id]||{})[i]); if(si<0) si=di%c.sectiuni.length;
+  const due=CARDS.filter(x=>{const b=S.box[x.id]; return !b || b.due<=Date.now();}).length;
+  const kinds=['s3','oficial','af','match'];
+  const extra=kinds[di%kinds.length];
+  const tasks=[
+    {k:'fisa', cap:c.id, sec:si, label:`📖 Fișa zilei: ${c.scurt||c.titlu} – ${c.sectiuni[si].titlu.replace(/^\d+\.\s*/,'')}`},
+    {k:'carduri', label:`🃏 Carduri de repetat (${Math.min(due,20)||'câteva'})`},
+    {k:'grila', label:'✅ 10 grile amestecate'},
+    {k:extra, label:{s3:'🎯 Un Subiect III la antrenor', oficial:'🏛️ Un item dintr-un subiect oficial, cu corectare AI', af:'⏱️ Un minut de Adevărat/Fals', match:'🧩 O rundă de Potrivește'}[extra]}
+  ];
+  S.plan[t]={tasks, done:{}}; 
+  const keys=Object.keys(S.plan).sort(); while(keys.length>14){ delete S.plan[keys.shift()]; }
+  save(); return S.plan[t];
+}
+function runTask(tk){
+  const pl=planToday(); pl.done[tk.k]=true; save();
+  if(tk.k==='fisa'){ const c=capById[tk.cap]; go(x=>Capitol(x,tk.cap,tk.sec), c.scurt||c.titlu); }
+  else if(tk.k==='carduri') go(x=>Flash(x,null),'Carduri');
+  else if(tk.k==='grila') go(x=>Quiz(x,{n:10}),'Grile amestecate');
+  else if(tk.k==='s3') go(x=>AntrenorS3(x),'Antrenor Subiectul III');
+  else if(tk.k==='oficial') go(x=>OficialeList(x),'Examene oficiale');
+  else if(tk.k==='af') go(x=>AFGame(x),'Adevărat / Fals');
+  else if(tk.k==='match') go(x=>Match(x),'Potrivește');
+}
+function planHTML(){
+  const pl=planToday(); const n=pl.tasks.filter(t=>pl.done[t.k]).length; const dte=daysToExam();
+  let ritm='';
+  if(dte && dte>0){ const left=CAP.reduce((a,c)=>a+c.sectiuni.length-Object.keys(S.read[c.id]||{}).length,0);
+    ritm=left?`Mai ai ${left} fișe necitite → cam ${Math.max(1,Math.ceil(left/Math.max(1,dte-14)))}/zi, ca să-ți rămână ultimele 2 săptămâni pentru recapitulare și simulări.`:'Ai citit toate fișele 🎉 Acum: simulări și repetiție.'; }
+  return `<div class="card" id="plan"><div class="row"><b class="grow">📅 Planul de azi</b><span class="pill ${n===pl.tasks.length?'ok':''}">${n}/${pl.tasks.length}</span></div>
+    ${ritm?`<p class="small muted" style="margin:6px 0 4px">${ritm}</p>`:'<p class="small muted" style="margin:6px 0 4px">Setează data examenului (mai jos) și îți calculez ritmul.</p>'}
+    ${pl.tasks.map((t,i)=>`<div class="plantask ${pl.done[t.k]?'done':''}" data-i="${i}"><span class="ck">${pl.done[t.k]?'✔':''}</span><span class="grow">${esc(t.label)}</span><span class="muted">›</span></div>`).join('')}</div>`;
 }
 
 /* ---------------- start ---------------- */
