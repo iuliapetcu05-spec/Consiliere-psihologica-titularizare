@@ -619,3 +619,316 @@ SUBIECTE.push({nr:10, tema:'Violența școlară și bandele · Profilul de înv�
   {cer:'5. Cl. a XI-a, CS 1.1 – aspirații și planificarea carierei.', rep:['Cariera: proces dinamic de poziții, interacțiune factori individuali–organizaționali, identitate ocupațională.','J. Holland: personalitatea – factor proeminent în alegerea carierei.','Pașii planificării individuale a carierei: autoevaluarea; luarea deciziilor și stabilirea scopurilor; explorarea oportunităților; planificarea; urmărirea realizării scopurilor.','Activitate: brainstorming, studiu de caz, dezbatere, arborele profesional al familiei.']}
  ]}
 ]});
+
+/* ---- content/teste/t11.js ---- */
+SUBIECTE.push({nr:11, tema:'Consilierea în situații de criză: divorț, abuz · Conduita psihosocială · Curriculum, aptitudinea didactică, Bloom', subiecte:[
+{titlu:'Subiectul I', puncte:30,
+ text:'Enunț: eficiența consilierii școlare a fost demonstrată în numeroase studii…\nArgumentați în patru pagini necesitatea principiilor de consiliere în situații de risc/criză.',
+ items:[
+  {cer:'**Eficiența consilierii școlare**.', rep:['Trei tipuri de evaluare: a personalului (supervizare), a programului comprehensiv de consiliere, a rezultatelor/impactului intervențiilor.','Elevii cu acces la consilieri: promovabilitate mai mare, mai puține probleme de comportament.','Domenii: carieră, educațional, socio-emoțional; competențe noncognitive: perseverență, motivație, creativitate, autocontrol, metacogniție, reziliență.']},
+  {cer:'**Principiile consilierii în criză/risc**.', rep:[
+   'Focalizarea pe rezolvarea problemelor (consilierul ca intermediar cu autoritățile).',
+   'Crearea cadrului pentru restabilirea rețelei sociale (elevul acceptă ajutor).',
+   'Focalizarea pe conceptul de sine (strategii pe măsura a ceea ce elevul crede că poate).',
+   'Accent pe stima de sine, nu pe cauză și vinovăție; fiecare ședință se încheie cu o acțiune concretă.',
+   'Comportamentul consilierului: evită acțiunile impulsive, deleagă autoritatea, își gestionează stresul, e calm, pregătit, informat, supervizat.']},
+  {cer:'Consilierea elevilor cu **părinți divorțați**.', rep:['Școala = element de siguranță și stabilitate.','Copiii mici înțeleg greșit separarea; adolescenții trăiesc regret, conflicte de loialitate, depresie, anxietate; doliu, fantezii de reîntregire.','Programe pentru co-parenting pozitiv; grupuri – elevii văd că nu sunt singuri.','Tehnici: povești terapeutice (cei mici), scrisul terapeutic, scrisoarea către părinți.']},
+  {cer:'Consilierea elevilor **după abuz** și programele de prevenire.', rep:['Sprijin, siguranță; validarea emoțiilor (frică, furie, vinovăție) pentru victimă și familie.','Prevenire: tipuri de atingeri, proprietatea asupra corpului, situații potențiale de abuz, secrete „bune/rele”.','Metode: filme, benzi desenate, teatru de păpuși; parteneriate cu DGASPC, poliție etc.']}
+ ]},
+{titlu:'Subiectul al II-lea', puncte:30, text:'Conduita psihosocială.',
+ items:[
+  {cer:'A. **Stima de sine** și **cunoașterea de sine**.', rep:['Stima de sine = evaluarea propriei valori (autorespect, autoapreciere, autoacceptare); echilibru autocritică–autoapreciere.','Cunoașterea de sine = conștientizarea propriilor calități, limite, aptitudini → decizii (ex. alegerea facultății).']},
+  {cer:'B. Rolul **relațiilor interpersonale** în dezvoltarea personalității.', rep:['Instituie norme, valori, stiluri de interacțiune, modele de comportament; nevoia de afiliere, intimitate; legătura cu fericirea.']},
+  {cer:'C. **Imaginea de sine** și **percepția socială** a ei.', rep:['Percepția socială: procesul prin care ne formăm imaginea despre noi și despre alții.','W. James: sinele ca subiect (I) și ca obiect (Me).','Dimensiuni ale evoluției: concret–abstract, simplu–complex, sine public–privat, absolut–comparativ.']},
+  {cer:'D. **Atitudini sociale vs comportamente sociale**.', rep:['Atitudinea = predispoziție de a gândi, simți, acționa favorabil/nefavorabil; 3 componente: **cognitivă, afectivă, comportamentală**; funcție anticipativă.','Comportamentul = activitate observabilă; atitudinea nu prezice întotdeauna comportamentul (specificitate, presiuni situaționale, accesibilitatea atitudinii).']},
+  {cer:'E. Patru **tipuri de relații interpersonale**.', rep:['Părinți–copii','Iubire','Prietenie','Colegialitate (+ relații de comunicare, cognitive, afectiv-simpatetice, de influențare)']},
+  {cer:'F. Exemplu de comportament **prosocial / antisocial**.', rep:['Prosocial: colegii îl vizitează pe un coleg accidentat și îl țin la curent cu materia.','Antisocial: insulta, calomnia.']}
+ ]},
+{titlu:'Subiectul al III-lea', puncte:30, text:'Metodica disciplinei.',
+ items:[
+  {cer:'1. **Procesul de învățământ, conexiunea inversă, idealul educațional**.', rep:['Procesul de învățământ = subsistemul educațional bazat pe interdependența predare–învățare–evaluare.','Conexiunea inversă (feedback) = condiție a funcționării sistemului de instruire.','Idealul educațional = modelul de personalitate dezirabil într-o etapă istorică.']},
+  {cer:'2. **Tipuri de curriculum** obligatoriu.', rep:['Curriculum de bază/nucleu (trunchiul comun) – obligatoriu pentru toți.','Curriculum la decizia școlii (CDȘ).','Formal, nonformal, informal.','Curriculumul național: planuri-cadru, programe școlare, manuale alternative, ghiduri, materiale-suport.']},
+  {cer:'3. **Aptitudinea didactică vs aptitudinea psihopedagogică**.', rep:['Aptitudinea didactică: a coopera cu elevii, a proiecta, a selecta și organiza informația, a o transmite accesibil, a pune întrebări-problemă, a crea dialog.','Se sprijină pe: memorie, imaginație constructivă, inteligență, comunicare, gândire logică, spirit de observație, atenție, dicție.']},
+  {cer:'4. Listă: **taxonomia Bloom** (domeniul cognitiv).', rep:['Cunoaștere – a defini, a identifica','Înțelegere – a explica, a clasifica','Aplicare – a utiliza, a aplica','Analiză – a compara, a deduce','Sinteză – a organiza, a restructura','Evaluare – a judeca, a decide']},
+  {cer:'5. Cl. a XII-a, CS 1.1 – program de reușită personală și profesională.', rep:['G. Calò: „A orienta înseamnă a educa.”','Ginzberg: opțiunea profesională – proces de dezvoltare (peste 10 ani), compromis între capacități, valori, oportunități, în mare parte ireversibil.','Rolul familiei: elimină stereotipurile, sprijină alegerea liberă.','Activitate: studiul de caz „Matei” – dezvoltarea **autoeficacității** (Bandura).']}
+ ]}
+]});
+
+/* ---- content/teste/t12.js ---- */
+SUBIECTE.push({nr:12, tema:'Învățarea, deprinderile și motivația (Ausubel) · Consilierea și educația familiei · Didactica clasică vs modernă, stil de viață sănătos', subiecte:[
+{titlu:'Subiectul I', puncte:30,
+ text:'Enunț: _În adolescență, afirmarea puternică a eului este componenta dominantă a motivației școlare… impulsul cognitiv poate fi forma cea mai relevantă de motivare_.\nArgumentați în patru pagini necesitatea motivației învățării.',
+ items:[
+  {cer:'**Învățarea** în procesul instructiv-educativ.', rep:['Însușirea cunoștințelor și deprinderilor, cu schimbare în comportament.','Condiții: înțelegerea sensului (învățarea logică cere mai puține repetiții decât cea mecanică), legarea de cunoștințe anterioare, repetiții eșalonate, pauze de sedimentare, reproducerea activă.']},
+  {cer:'Condiții psihologice ale **formării deprinderilor**.', rep:['Deprinderea = componentă automatizată a activității, formată prin exercițiu.','Faze: familiarizare (operații necoordonate) → organizare/sistematizare → automatizare (control kinestezic) → aplicare în activități complexe.','Exercițiul trebuie să aibă scop clar; analiza greșelilor; „curba exercițiului”; reînvățarea e mai dificilă.']},
+  {cer:'Rolul **motivației** (Ausubel).', rep:[
+   'Trei componente: **impulsul cognitiv** (nevoia de a cunoaște, de a rezolva probleme – motivație intrinsecă), **afirmarea eului** (statut, respect, teama de eșec), **trebuința de afiliere** (acceptarea părinților, apoi a covârstnicilor).',
+   'În adolescență domină afirmarea eului; excesul poate duce la aspirații nerealiste, anxietate, eșec.',
+   'Legea **Yerkes-Dodson** – optimum motivațional.',
+   'Thorndike – legea secvenței temporale (recompensa/pedeapsa să fie apropiate de faptă); Claparède – interesul, baza pedagogiei raționale.']},
+  {cer:'Importanța **învățării ca strategie motivațională**.', rep:['Strategia Ausubel: perspectivă realistă și creșterea motivației intrinseci.','Elevul are dreptul să greșească; succesul fiecărui elev; climat de optimism și încredere.']}
+ ]},
+{titlu:'Subiectul al II-lea', puncte:30, text:'Consilierea familiei – educarea părinților, tipuri de familii, parteneriatul școală–familie.',
+ items:[
+  {cer:'A. **Familia** ca grup social și conceptele actuale.', rep:['Grup social cu determinări biologice și legături de atașament și sprijin.','Concepte: negocierea soluțiilor, armonia familială, responsabilizarea, eliminarea discriminărilor, parteneriatul și implicarea activă.']},
+  {cer:'B. **Nevoile familiei** contemporane.', rep:['Informaționale, economice, culturale, de orientare socială, de sănătate.','Nevoi permanente, inițiale, ocazionale.']},
+  {cer:'C. Rolul **consilierii și educației părinților**.', rep:['Un copil crește mai bine în familia lui, dacă aceasta e sprijinită; dezinstituționalizarea.','Consilierea familiei = acțiuni preventive și de sprijin; consilierea parentală vizează părinții.','Educația părinților – preventiv, unde nu sunt crize; consilierea – la cerere, pe probleme.']},
+  {cer:'D. Trei elemente de bază în **sprijinirea familiei**.', rep:['Sprijin informațional','Sprijin emoțional','Sprijin instrumental']},
+  {cer:'E. Ce urmărește **educația părinților**.', rep:['Activități educativ-formative: responsabilitate parentală, practici pozitive, rezolvarea conflictelor, comunicare, decizie, negociere.','Consiliere psihopedagogică: schimbarea atitudinilor, deprinderi parentale pentru situații-problemă (conflicte, adaptare școlară, CES).']},
+  {cer:'F. Recomandări de **implicare a părinților**.', rep:['Activități și întâlniri cu părinții','Comunicare profesională, vizite la domiciliu','Seminare, conferințe pe interese speciale','Dezvoltarea deprinderilor parentale']}
+ ]},
+{titlu:'Subiectul al III-lea', puncte:30, text:'Metodica disciplinei.',
+ items:[
+  {cer:'1. **Predarea, stilul de învățare, curriculumul**.', rep:['Predarea: acțiuni sistematice de organizare și îndrumare a învățării (nu doar transmitere).','Stilul de învățare: factori cognitivi, fiziologici, afectivi – modul relativ stabil în care elevul percepe și răspunde la mediul de învățare.','Curriculumul: oferta educațională a școlii – experiențele de învățare directe și indirecte.']},
+  {cer:'2. **Componentele procesului de învățământ**.', rep:['Agenții (profesor, elevi) – câmpul educațional','Finalitățile/obiectivele','Curriculumul și conținutul','Metodologia','Mijloacele de învățământ','Formele de organizare','Timpul','Conexiunea inversă (feedback)']},
+  {cer:'3. **Didactica clasică vs modernă**.', rep:['Clasică: esența procesului de învățământ, principii, forme, metodologie.','Modernă: include tot + autoeducația, influențele nonformale, instrucția pentru toate vârstele.']},
+  {cer:'4. Listă: **direcțiile didacticii moderne**.', rep:['Revizuirea curriculumului','Prospectiva','Intensificarea învățării prin experiențe de învățare','Noi strategii de instruire','Relații de respect și cooperare','Valorificarea dimensiunii formative','Feedback formativ și sumativ','Educația permanentă','Cercetarea științifică','Noile tehnologii (TIC)']},
+  {cer:'5. Cl. a X-a, CS 5.1 – **stilul de viață de calitate**.', rep:['Somn, mișcare, alimentație, timp liber, relații, fără substanțe; pedagogia sănătății.','Trei etape ale motivației pentru stil de viață sănătos: orientare, formare, generalizare.','Activitate: brainstorming, studii de caz, „decalogul stilului de viață sănătos”, eseul de 5 minute.']}
+ ]}
+]});
+
+/* ---- content/teste/t13.js ---- */
+SUBIECTE.push({nr:13, tema:'Consilierul școlar, CJRAE/CJAP · Stima de sine și reușita · Programa de Consiliere și orientare', subiecte:[
+{titlu:'Subiectul I', puncte:30,
+ text:'Enunț: varietatea activităților consilierului amplifică complexitatea profesiei; implicarea lui are impact asupra rezultatelor elevilor și a abilităților emoționale și sociale.\nArgumentați în patru pagini necesitatea activității consilierilor școlari și a CJRAE/cabinetelor.',
+ items:[
+  {cer:'Semnificația **consilierii psihopedagogice**.', rep:[
+   'Gh. Tomșa: consilierea școlară = „un proces intensiv de acordare a asistenței psihopedagogice elevilor și celorlalte persoane implicate în procesul educațional (părinți, profesori, autorități școlare)”.',
+   'Relație de colaborare și suport elev–consilier pentru autocunoaștere, dezvoltare personală, stare de bine, prevenție.',
+   'Caracteristici ale consilierii psihologice: cabinet, persoane normale cu dificultăți, specialiști (psihologie, pedagogie, asistență socială), fenomene psihologice (fobii, anxietate), număr limitat de ședințe.']},
+  {cer:'Șase **roluri** ale consilierului școlar.', rep:['Pregătește și susține elevii pentru respectarea normelor','Mediază relațiile elevi–școală–autorități','Sprijină politicile școlare','Orientare și consiliere în carieră','Ghidare educațională','Orientarea carierei']},
+  {cer:'Rolul și importanța **CJRAE/CJAP și a cabinetelor** (CJAP / CIAP).', rep:[
+   'Trei tipuri de activități: asistență pedagogică și educațională; asistență psihologică pentru elevi, profesori, părinți; consiliere în carieră.',
+   'Atribuții: sprijină formarea continuă a profesorilor; consiliază elevi, părinți, profesori; previn eșecul școlar; optimizează relațiile elev–profesor, școală–familie, școală–comunitate; examinează psihologic elevii.',
+   'Consilierea individuală și de grup; colaborare cu profesorul itinerant/specialiști pentru ce depășește competența.']},
+  {cer:'Caracteristici ale consilierii în **aria Consiliere și orientare**.', rep:['Se adresează elevilor, preventiv.','Realizată de consilier împreună cu dirigintele.','Informații despre sine, dezvoltare personală, acceptare de sine.','Suportivă: dezvoltare personală, carieră, stare de bine.']},
+  {cer:'Relația **consiliere – psihoterapie – educație**.', rep:['Rogers: consilierea și psihoterapia – termeni aproape echivalenți; consilierea – probleme de realitate/cognitive, psihoterapia – afective, de profunzime.','Educația privește viitorul, consilierea – prezentul; educația – relație pedagogică, consilierea – relație de consiliere.','Consilierea are poziție **intermediară** între educație și psihoterapie.']}
+ ]},
+{titlu:'Subiectul al II-lea', puncte:30, text:'Conduita psihosocială – climatul socio-afectiv favorabil.',
+ items:[
+  {cer:'A. Definiți: **învățare eficientă, consiliere vocațională, consiliere profesională**.', rep:['Învățarea eficientă: implicare conștientă, transfer al cunoștințelor și abilităților.','Consilierea vocațională: aspirații, înclinații, interese, pasiuni.','Consilierea profesională: alegerea optimă a profesiei, calificare, profesionalizare.']},
+  {cer:'B. Relația **stimă de sine – reușită**.', rep:['„Cunoaște-te pe tine însuți” (Delphi, Socrate).','Succesele timpurii consolidează Eul și o imagine de sine pozitivă; eșecurile repetate stabilizează o stimă de sine negativă.','T. Constantin: două dimensiuni – valorizarea de sine și competența de sine.']},
+  {cer:'C. Cinci **teorii ale stimei de sine**.', rep:['Teoria compensării','Teoria trebuințelor','Teoria comparării sociale (Festinger)','W. James: stima de sine = succese / pretenții','Teoria atașamentului']},
+  {cer:'D. **Factorii** reușitei/eșecului școlar.', rep:['Încrederea în sine','Nivelul de aspirație','Extraversia și nevrozismul','(+ inteligența, motivația, familia, climatul școlar)']},
+  {cer:'E. **Greșeli** care pot determina eșecul.', rep:['Erori de lapsus (memorie)','Erori de similitudine','Erori de „siguranță” (acționezi fără să gândești deși știi că nu știi)','Erori de percepție (dorința pusă înaintea realității)']},
+  {cer:'F. Rolul **personalității și competențelor consilierului** pentru climat.', rep:['Răbdare, calm, deschidere, viziune pozitivă, umor, sinceritate, acceptare.','Niveluri de competență: culegerea datelor; consiliere educațională și OSP; consiliere psihologică individuală și de grup; consultant al profesorilor și conducerii; implicare în comunitate.']}
+ ]},
+{titlu:'Subiectul al III-lea', puncte:30, text:'Metodica disciplinei.',
+ items:[
+  {cer:'1. **Direcțiile** ariei curriculare (nota de prezentare).', rep:['Facilitarea accesului la întreaga ofertă de educație și formare.','Sprijinirea inserției socio-profesionale.','Ameliorarea utilizării resurselor umane ale societății.']},
+  {cer:'2. **Competențe-cheie europene** pentru aria Consiliere și orientare + structura programei de liceu.', rep:['Competențe digitale; interpersonale, interculturale, sociale și civice; a învăța să înveți; antreprenoriale.','Structura programei: competențe generale; valori și atitudini; competențe specifice și conținuturi; sugestii metodologice.']},
+  {cer:'3. Necesitatea **valorilor și atitudinilor** în programă.', rep:['Unicitatea fiecăruia, respect și încredere în sine, valorizarea relațiilor, receptivitate la emoțiile altora, deschidere la noi tipuri de învățare, gândire critică, flexibilitate în traseul propriu, viață de calitate, învățare permanentă.']},
+  {cer:'4. Listă: **metode recomandate** (centrarea pe persoană).', rep:['Dezbaterea','Brainstormingul','Exerciții metaforice','Tehnici de gândire','Tehnici de clarificare a valorilor','Demonstrația, observația','Studiul de caz, jocul de rol','Discuțiile de grup']},
+  {cer:'5. Cl. a IX-a, CS 4.1 – pașii construirii carierei.', rep:['Găsirea traiectoriei; învățarea continuă; menținerea în evoluția carierei; plan de dezvoltare personală.','Planul de evoluție: obiective, punctele tari, oportunitățile.','Activitate: „Pașaport pentru carieră”, metoda World Café.']}
+ ]}
+]});
+
+/* ---- content/teste/t14.js ---- */
+SUBIECTE.push({nr:14, tema:'Principiile și ședința de consiliere · Fișa psihopedagogică, screening, modelul ABC · Mijloace, structura lecției', subiecte:[
+{titlu:'Subiectul I', puncte:30,
+ text:'Enunț: consilierea psihopedagogică în școală urmărește un sistem coerent de scopuri și comportament intenționat…\nArgumentați în patru pagini necesitatea consilierii psihopedagogice: principii, deschiderea/închiderea ședinței, răspunsul la conținuturile clientului, abilitățile de bază.',
+ items:[
+  {cer:'Semnificația **consilierii psihopedagogice**.', rep:['Relație de participare și colaborare; clientul își identifică emoțiile, gândurile, comportamentele, se simte plin de resurse; găsirea de alternative.']},
+  {cer:'Trei **principii și scopuri** ale consilierii în școală.', rep:[
+   '**Responsabilitatea** pentru dezvoltarea armonioasă a clientului (respect, unicitate; reușita depinde de implicarea lui).',
+   '**Relația permisivă** (oricare parte o poate încheia; libertatea de convingeri).',
+   'Consilierul **gândește CU clientul**, nu despre sau pentru el.',
+   'Scopuri pe 4 niveluri: cu aplicabilitate generală (conștientizare, stare de bine, schimbarea comportamentelor negative), formulate de părinți, stabilite de consilier, ale elevului (apar pe parcurs).']},
+  {cer:'Trei elemente-cheie la **deschiderea și închiderea** ședinței.', rep:['Deschidere: ascultă atent și construiește imaginea lumii clientului; nu vorbește prea mult; reduce anxietatea la un nivel care permite comunicarea.','Închidere: rezumarea făcută de client (feedback), sumarizarea consilierului, continuitate spre ședința următoare.']},
+  {cer:'Două moduri de **a răspunde la conținuturile clientului**.', rep:['La conținuturile **cognitive** (oameni, evenimente, lucruri): stimuli verbali minimali, tăcerea, întrebările (evitarea răspunsurilor monosilabice), repetarea.','La conținuturile **afective**: identificarea emoțiilor din indicii verbale (intensitate – „foarte”) și nonverbale (ritm, intonație, voce); reflectarea sentimentelor.']},
+  {cer:'**Deprinderile de ascultare/asistare** și **abilitățile** consilierului.', rep:['Asistare: contactul vizual, limbajul corporal atent, comportamentul verbal, stilul de vorbire; poziție relaxată, ton natural; diferențe culturale.','Calități: conștienți de propriile înclinații, sinceri, confidențiali, flexibili, nu trag concluzii din zvonuri, receptivi la critică, respectă autonomia, **empatizează, nu simpatizează**.','Abilități: ascultare, influențarea atitudinilor, comunicare eficientă, influențarea comportamentului.']}
+ ]},
+{titlu:'Subiectul al II-lea', puncte:30, text:'Conduita psihosocială – climatul educativ-suport.',
+ items:[
+  {cer:'A. **Consiliere parentală** și **screening**.', rep:['Consilierea parentală: sesiuni individuale/de grup, informare, orientare; obiectiv – implicarea activă a părinților în viața emoțională, cognitivă, comportamentală a copilului.','Screeningul psihologic: identificarea timpurie și obiectivă a elevilor cu probleme emoționale și comportamentale; reduce severitatea și impactul pe termen lung.']},
+  {cer:'B. Structura **fișei psihopedagogice**.', rep:['Date personale','Date medicale (antecedente, dezvoltare fizică)','Date școlare (parcurs, performanțe)','Integrare socială (familie, grupuri)','Profil psihologic (procese cognitive, stil de învățare, aptitudini, temperament, interese, aspirații)','Recomandări (puncte tari, intervenții, orientare)']},
+  {cer:'C. Șapte **metode** pentru controlul emoțional, distres, stimă de sine, atașament.', rep:['Exprimarea emoțională','Managementul stresului (vizualizare, respirație, relaxare)','Îmbunătățirea relaționării (atașament)','Restructurarea cognitivă (păpuși, cutia cu nisip, marionete)','Modularea emoțiilor (expunere prin jocuri terapeutice)','Managementul comportamental (fără pedeapsă, comportamente noi)','Îmbunătățirea stimei de sine (colaje, desen, lectură)']},
+  {cer:'D. **Sindromul Stockholm** vs **twice exceptional**.', rep:['Stockholm: victima ajunge să-și admire/apere agresorul; explicat prin disonanța cognitivă, dependență.','Twice exceptional (2e): elevi supradotați într-un domeniu ȘI cu o tulburare (dislexie, ADHD, TSA etc.) – ex. Edison, Churchill; au nevoie de curriculum adaptat.']},
+  {cer:'E. Intervenții **cognitiv-comportamentale**: convingeri iraționale vs raționale.', rep:['Iraționale – depresie: „Nu pot fi bun la nimic niciodată”; anxietate: „Ar fi îngrozitor să pic examenul”, „E cumplit să faci greșeli”; furie: „Profesorii ar TREBUI să…”.','Raționale – „Îmi place să am succes, dar n-ar fi o tragedie dacă aș eșua”; „Perfecțiunea nu există”; „Nu sunt de acord cu ce ai făcut, dar rămâi o persoană valoroasă.”']},
+  {cer:'F. Importanța **modelului ABC** (Ellis).', rep:['**A** = evenimentul activator, **B** = convingerile (beliefs) despre el, **C** = consecințele emoționale și comportamentale.','Nu evenimentul, ci interpretarea (B) produce emoția; tulburările vin din evaluări rigide, nerealiste → alternativa: gândirea rațională.','Situații problematice: de amenințare, de pierdere, stânjenitoare.']}
+ ]},
+{titlu:'Subiectul al III-lea', puncte:30, text:'Metodica disciplinei.',
+ items:[
+  {cer:'1. **Învățarea școlară, feedback-ul, procedeul didactic**.', rep:['Învățarea școlară: rol informativ (stocarea conținutului) și formativ (dezvoltarea sistemului cognitiv-operațional).','Funcțiile feedback-ului: întărirea imediată a rezultatelor pozitive, diagnostic, identificarea și depășirea dificultăților.','Procedeul didactic = componentă/operație particulară a metodei; procedeele se pot transforma în metode și invers.']},
+  {cer:'2. Necesitatea **mijloacelor de învățământ**.', rep:['Funcții: formativă, stimulativă, demonstrativă, de investigare, substitutivă, de evaluare, ergonomică, estetică, de orientare a intereselor.','Eficiența depinde de integrarea lor creativă, nu mecanică.']},
+  {cer:'3. **Structura procesuală a lecției** (evenimentele instruirii).', rep:['Captarea atenției','Comunicarea obiectivelor','Prezentarea materialului','Dirijarea învățării','Obținerea performanței / generalizare','Fixarea și asigurarea retenției','Transferul (aplicarea)','Asigurarea feedback-ului / evaluarea']},
+  {cer:'4. Schemă: **evaluarea la nivel micro**.', rep:['Esența: judecăți de valoare → decizii.','Rol: optimizare și reglare; feedback.','Finalitate formativă: autoevaluare, susținerea învățării.','Forme moderne: evaluarea formativă, autoevaluarea.','Etape: proiectare, realizare, evaluare, reglare.']},
+  {cer:'5. Cl. a X-a, CS 5.1/5.2 – stilul de viață și oboseala la adolescenți.', rep:['Factori sociali nocivi: sărăcia, șomajul, discriminarea.','Oboseala cronică: scăderea capacității de efort, tulburări de memorie și atenție, randament scăzut, depresie, anxietate.']}
+ ]}
+]});
+
+/* ---- content/teste/t15.js ---- */
+SUBIECTE.push({nr:15, tema:'Orientarea școlară și profesională, decizia de carieră · Abuz, familia rezilientă · Formarea profesorilor, metode de cunoaștere', subiecte:[
+{titlu:'Subiectul I', puncte:30,
+ text:'Enunț: misiunea educației – ghidarea și consilierea elevilor pentru autorealizare prin profesie.\nArgumentați în patru pagini importanța consilierii și orientării școlare și profesionale.',
+ items:[
+  {cer:'Rolul și **beneficiile** consilierii și orientării.', rep:['Apărută la începutul sec. XX (piața muncii, noile tehnologii); elevul – coparticipant la propriul traseu.','Dezvoltarea carierei cuprinde: educația și formarea, autocunoașterea și relaționarea, planificarea evenimentelor vieții, asumarea de roluri.','Beneficii: scade absenteismul și abandonul, crește motivația, performanța, adaptarea, rezultatele la examene, integrarea socio-profesională.','Contribuie la: învățarea pe tot parcursul vieții, ocuparea deplină, incluziunea socială.']},
+  {cer:'**Decizia de carieră** și etapele planificării.', rep:['Explorarea sinelui (personalitate, interese, abilități, valori)','Conștientizarea nevoii de decizie și motivarea','Explorarea generală a domeniilor ocupaționale','Explorarea detaliată a informațiilor specifice','Luarea deciziei','Angajamentul față de decizie (se pot relua etape)']},
+  {cer:'**Obiectivele educației pentru carieră** și activități.', rep:['Motivația pentru formare; imagine de sine pozitivă și evaluare realistă; reprezentări despre lumea muncii; abilități de căutare a unui loc de muncă; abilități decizionale; managementul informației.','Activități: CV, scrisoare de intenție, simulare de interviu, vizite la firme, portofolii, bilanțul competențelor, parteneriate.','Popescu-Neveanu: interesul = orientare activă a personalității spre un domeniu.']}
+ ]},
+{titlu:'Subiectul al II-lea', puncte:30, text:'Dezvoltarea individuală, competențele consilierului, abuzul, reziliența familiei.',
+ items:[
+  {cer:'A. **Experiența de viață** și **dezvoltarea individuală**.', rep:['Experiența de viață: stilul de viață, opțiunile ocupaționale, comportamentele învățate, motivația.','Dezvoltarea individuală: etapele parcurse de o persoană.']},
+  {cer:'B./C. **Competențele** consilierului școlar.', rep:['Teoretice: teoriile consilierii, ale învățării, ale carierei, consilierea familiei, consilierea de grup.','Practice: consiliere individuală, de grup, educațională, a carierei; decizii etice; evaluarea programelor; consultarea părinților și profesorilor; trimiterea către alți specialiști; consiliere multiculturală; climat suportiv.']},
+  {cer:'D. **Abuzul emoțional** și **abuzul verbal**.', rep:['Legea 272/2004: abuzul = orice acțiune voluntară a unei persoane aflate în relație de răspundere, încredere sau autoritate față de copil, care îi periclitează dezvoltarea, viața, integritatea, sănătatea.','Abuz emoțional: hărțuire, umilire, izolare; compromite atașamentul securizant.','Abuz verbal: cuvinte devastatoare – „dacă îi spui zilnic că e prost, va sfârși să se comporte așa”.']},
+  {cer:'E. **Factori de risc** pentru violență asupra copilului.', rep:['Retard de dezvoltare','Condiții precare','Probleme de sănătate','Inadaptare școlară','Conflicte în familie','Divorțul părinților','Decesul celor apropiați']},
+  {cer:'F. **Familia rezilientă**.', rep:['Capacitatea de a se implica, de a se redresa, de a depăși dificultățile; flexibilitate + stabilitate.','Procese-cheie (Walsh): sistemul de credințe (sens al adversității, optimism, transcendență), modele de organizare (flexibilitate, conexiune, resurse), comunicare (claritate, împărtășirea emoțiilor, rezolvarea colaborativă a problemelor).']}
+ ]},
+{titlu:'Subiectul al III-lea', puncte:30, text:'Metodica disciplinei.',
+ items:[
+  {cer:'1. **Competență profesională, reformă curriculară, management curricular**.', rep:['Competența profesională: capacități cognitive, afective, motivaționale, manageriale + trăsături de personalitate → atingerea obiectivelor de majoritatea elevilor.','Reforma curriculară: realizarea obiectivelor strategice, identitatea școlii, inovații curriculare.','Managementul curricular: centrat pe elev; resurse umane, materiale, formare.']},
+  {cer:'2. **Metode de cunoaștere a elevilor** în orientarea carierei.', rep:['Observația, convorbirea, analiza produselor activității, analiza datelor biografice, autocaracterizarea, chestionarele de interese, testele (de aptitudini, personalitate, inteligență).']},
+  {cer:'3. **Formarea inițială vs continuă**.', rep:['Inițială: construirea competențelor de bază pentru profesie.','Continuă: prelungirea celei inițiale, pe tot parcursul carierei (educație permanentă).']},
+  {cer:'4. Ce rezolvă aria **Consiliere și orientare**.', rep:['Informarea despre oportunitățile de educație și formare','Dezvoltarea personală, managementul propriei vieți','Inserția socio-profesională','Accesul la întreaga ofertă educațională','Utilizarea resurselor umane']},
+  {cer:'5. Cl. a XI-a, CS 3.2 – reușita și succesul școlar.', rep:['Progresul școlar = raportarea rezultatelor la performanțele anterioare; factori individuali, instituționali, de ambianță.','I. Neacșu – definiția învățării școlare.','Drumul de la motivația extrinsecă la cea intrinsecă.','Activitate: metodele „diamantul” și „explozia stelară”.']}
+ ]}
+]});
+
+/* ---- content/teste/t16.js ---- */
+SUBIECTE.push({nr:16, tema:'Consilierea centrată pe persoană (Rogers) · Factori ai reușitei, conflicte, bullying, parenting · Predare–învățare–evaluare', subiecte:[
+{titlu:'Subiectul I', puncte:30,
+ text:'Argumentați în patru pagini importanța consilierii și asistenței psihopedagogice în școală (tipuri de consiliere, priorități, atribuții, metode și tehnici, abordarea centrată pe persoană).',
+ items:[
+  {cer:'**Scopul și tipurile** de consiliere.', rep:['Scop: oferirea posibilității de a explora, descoperi, clarifica moduri de a trăi; starea de bine, promovarea sănătății, prevenția, dezvoltarea personală.','Tipuri: individuală, de grup, vocațională, a familiei, multiculturală, educațională.','„A învăța pentru a ști să faci”, nu doar pentru a ști.']},
+  {cer:'**Prioritățile** asistenței psihopedagogice.', rep:['Adaptarea școlară și socială, relațiile cu familia/școala.','Sănătatea psihică și fizică.','Orientarea școlară și profesională.','Condiții psihologice pentru acțiunile formative; asistență pentru părinți și profesori.']},
+  {cer:'**Atribuțiile** profesorului-consilier.', rep:['Identificarea nevoilor elevilor','Consiliere individuală și de grup','Culegerea datelor despre elevi, părinți, profesori','Cunoașterea oportunităților educaționale și profesionale','Recunoașterea propriilor limite','Comunicarea cu familia','Consultanță pentru conducerea școlii','Rol proactiv, preventiv']},
+  {cer:'**Metode și tehnici**; abordarea **centrată pe persoană** (Rogers).', rep:[
+   'Tehnici de stingere a comportamentelor nedorite: **expunerea** (in vivo, la stimulul fobic) și **tehnica implozivă** (imaginarea situației anxiogene până scade anxietatea).',
+   'Rogers (1942): consilierea eficientă = relație structurată, dar permisivă; fiecare om are capacitatea de a se dezvolta și de a-și rezolva problemele; individul – „rezervor de posibilități”; accent pe „aici și acum”.',
+   'Trăsături ale abordării nondirective: autonomie, accent pe proces și factori emoționali, pe prezent, relația de consiliere ca experiență de creștere.',
+   'Tehnici: clarificarea sentimentelor (reflectarea), reformularea, acceptarea necondiționată, ascultarea.']}
+ ]},
+{titlu:'Subiectul al II-lea', puncte:30, text:'Factori ai reușitei școlare, conflictele, bullyingul, parentingul, relația școală–familie.',
+ items:[
+  {cer:'A. **Factorii cognitivi** vs **noncognitivi** ai reușitei.', rep:['Cognitivi: inteligența generală și specifică, „inteligența școlară” (adaptarea la cerințele învățării), memorie, percepție, limbaj.','Noncognitivi: interese, emoții, atitudinea față de școală, motivația, relația cu profesorii, autoaprecierea.']},
+  {cer:'B. Cauze ale **conflictelor** (exemple).', rep:['Lipsa abilităților de comunicare și relaționare','Stima de sine scăzută','Presiunea timpului, proiectarea ineficientă a activităților']},
+  {cer:'C. **Strategii de rezolvare a conflictelor**.', rep:['Clarifică-ți emoțiile','Ascultă empatic (vezi conflictul din perspectiva celuilalt)','Rămâi flexibil și deschis','Identifică problema clar și concis','Observă diferența de poziție a celuilalt']},
+  {cer:'D. **Bullying și cyberbullying**.', rep:['Bullying: comportament agresiv, intenționat, repetat, cu **dezechilibru de putere**; forme – verbal, fizic, zvonuri, excludere, amenințări.','Cyberbullying (Cyberbullying Research Center): deliberat, ținta se simte amenințată, repetitiv, prin tehnologie.','Efecte: stimă de sine scăzută, performanțe scăzute, depresie, anxietate.']},
+  {cer:'E. **Parentingul** pe etape de vârstă.', rep:['Antepreșcolar: nevoi de bază, autonomie, atașament securizant.','Preșcolar: explorare, stimă de sine, standarde de comportament.','Școlar: încurajare, climat propice; pedeapsa învață doar frica și poate duce la agresivitate.','Adolescență: ascultare fără jigniri, umor, toleranță la frustrare, acceptare necondiționată, drepturi asertive.']},
+  {cer:'F. Colaborarea **școală–familie** în situații de criză.', rep:['Comunicare periodică formală și informală, cunoaștere reciprocă, toleranță, atmosferă pozitivă.','Nu refuzați dialogul, fiți deschiși la părerile părinților, explicați deciziile, armonizați punctele de vedere, decideți după consultarea familiei.']}
+ ]},
+{titlu:'Subiectul al III-lea', puncte:30, text:'Metodica disciplinei.',
+ items:[
+  {cer:'1. **Predare, învățare, evaluare**.', rep:['Predarea: a preciza, a proiecta, a organiza, a determina, a evalua; are sens doar dacă facilitează învățarea.','Învățarea: stiluri vizual, auditiv, kinestezic, tactil.','Evaluarea: verificare, măsurare, apreciere; cele trei procese sunt interdependente.']},
+  {cer:'2. **Procesul de învățământ ca act de comunicare**.', rep:['Emițător (profesor), receptor (elev), mesaj codificat, repertoriu comun; limbaj accesibil elevului.','Mesaj semantic + ectosemantic (atitudini, gesturi, trăiri).']},
+  {cer:'3. **Didactica clasică vs modernă**.', rep:['Clasică: cunoașterea = copiere a realității, prin percepții și asociații; accent informativ, cunoștințe gata elaborate.','Modernă: cunoștințele vin din acțiune; accent formativ, creativitate, îmbinarea teoriei cu practica.']},
+  {cer:'4. **Repere metodologice** în organizarea lecției.', rep:['Îmbinarea influențelor formale, nonformale, informale','Cunoașterea profundă a elevilor','Metode activizante','Îmbinarea formelor de organizare','Esențializarea conținuturilor','Feedback continuu, evaluare formativă și formatoare']},
+  {cer:'5. Cl. a IX-a, CS 1.2 – **încrederea în sine și relaționarea**.', rep:['Fiecare persoană e unică; nu ne comparăm; ne apreciem punctele forte; descoperim pasiunile; comunicarea eficientă; autocunoașterea ca reflecție.','Activitate: „Imaginea de sine și relaționarea armonioasă” – studiu de caz, dezbatere, PowerPoint, proverbe de comentat.']}
+ ]}
+]});
+
+/* ---- content/teste/t17.js ---- */
+SUBIECTE.push({nr:17, tema:'Istoria consilierii (Parsons, Williamson, Super), CJAP · Emoții, devianță, mecanisme de apărare, Johari · Metode de evaluare, forme de organizare', subiecte:[
+{titlu:'Subiectul I', puncte:30,
+ text:'Argumentați în patru pagini rolul consilierii școlare: apariție și evoluție, trăsături, rolul cabinetelor și centrelor, modalitățile de desfășurare, evoluția ariei Consiliere și orientare.',
+ items:[
+  {cer:'**Definiție și scop**.', rep:['Proces de acordare a asistenței psihopedagogice elevilor, părinților, profesorilor; relația familie–elev–școală.','Scop: clientul să devină capabil să se ajute singur, să se înțeleagă pe sine și realitatea; soluțiile le găsește el.']},
+  {cer:'**Originile** consilierii.', rep:['SUA, începutul sec. XX – imigranți, tineri fără ocupație în New York.','**Frank Parsons** – „Choosing a Vocation” (1909): punctul de plecare al psihologiei/orientării profesionale.','**E.G. Williamson** (Universitatea Minnesota) – modelul **trăsătură–factor** (domina până după al Doilea Război Mondial).','**D. Super** (1953) – teoria dezvoltării aplicată alegerii profesionale.']},
+  {cer:'Cinci **trăsături** ale consilierii școlare (P.M. Sanborn, 1974).', rep:['Proces de dezvoltare','Responsabilitatea consilierului de a optimiza modul în care școala se raportează la elevi ca indivizi','Rolul proactiv','Profesiunea – principalul mijloc de exprimare a consilierului','Variabilitatea profunzimii și intensității']},
+  {cer:'**CJAP/cabinete** și atribuții.', rep:['Trei tipuri de activități: asistență pedagogică și educațională; asistență psihologică; consiliere în carieră.','Consilierul: absolvent de psihologie, științele educației, sociologie sau master în consiliere; normă de 18 ore, din care 4 ore la clasă.','Atribuții: examinare psihopedagogică, consilierea elevilor/părinților/profesorilor, sprijin pentru formarea continuă, materiale pentru dezvoltarea personalității și orientare.','Proiectul Leonardo da Vinci MEVOC – „Manualul calității în consilierea școlară și profesională” (2003–2006).']},
+  {cer:'**Consilierea individuală vs de grup**.', rep:['Individuală: încredere reciprocă, libertate de exprimare fără judecată, confidențialitate.','De grup: elevi cu o problemă comună; scopuri măsurabile; dezvoltarea personalității, empatiei, imaginii de sine, a abilităților de rezolvare de probleme și decizie.']},
+  {cer:'**Evoluția ariei** Consiliere și orientare.', rep:['OG 103/1998 – 1–2 ore de consiliere în normă, altele decât dirigenția.','2005–2006: introducerea disciplinei la toate nivelurile; formarea continuă a profesorilor în consiliere educațională.']}
+ ]},
+{titlu:'Subiectul al II-lea', puncte:30, text:'Emoții, devianță, stima de sine, reușita, mecanisme de apărare, fereastra Johari.',
+ items:[
+  {cer:'A. **Emoția ca stare vs ca trăsătură**; **anxietatea**.', rep:['Stare: trăire subiectivă, de moment, generată de o situație.','Trăsătură: tendința generală de a reacționa emoțional într-un anumit fel.','Anxietatea: teamă/neliniște din anticiparea unor situații, cu manifestări fiziologice (transpirații, palpitații, respirație rapidă).']},
+  {cer:'B. **Devianța comportamentală** și soluții educative.', rep:['Rezultat al inadaptării la sistemul de cerințe al comunității.','Cauze individuale (ereditare) și de mediu.','Soluții: pregătirea profesorilor, accesul la cabinete de consiliere, valorificarea elementelor pozitive din comportament.']},
+  {cer:'C. Abordări ale **stimei de sine**.', rep:['Teoria trebuințelor','Teoria „sinelui în oglindă” (looking-glass self – Cooley)','Teoria atașamentului']},
+  {cer:'D. **Succesul și reușita școlară**.', rep:['Randamentul școlar ≈ productivitate; reușita școlară – prima formă de recunoaștere socială.','Corelație între stima de sine și rezultatele școlare; reușita/eșecul apar din discrepanța aspirații–capacități.']},
+  {cer:'E. **Mecanisme de apărare** (exemple).', rep:['Negarea: „Nu mă deranjează că am luat 3.”','Regresia: revenirea la comportamente dintr-o etapă anterioară (roade unghiile, suge degetul).','(alte: proiecția, raționalizarea, refularea, sublimarea, deplasarea)']},
+  {cer:'F. **Fereastra Johari** la ora de consiliere.', rep:['4 zone: **deschisă** (știu eu și știu alții), **oarbă** (știu alții, nu știu eu), **ascunsă** (știu eu, nu dezvălui), **necunoscută**.','Autodezvăluirea și feedback-ul lărgesc zona deschisă.']}
+ ]},
+{titlu:'Subiectul al III-lea', puncte:30, text:'Metodica disciplinei.',
+ items:[
+  {cer:'1. **Proiectarea pedagogică, sisteme metodologice, procedeul didactic**.', rep:['Proiectarea = ansamblul acțiunilor de anticipare a activității conform finalităților.','Sistemul metodologic = ansamblu coerent de metode și procedee care se potențează reciproc.','Procedeul = componentă/instrument al metodei.']},
+  {cer:'2. **Avantaje și limite** ale metodelor de evaluare.', rep:['Tradiționale (orale, scrise, practice): fidelitate, validitate; limită – stres, timp limitat.','Complementare (portofoliu, proiect, investigație, observare, autoevaluare): încredere, creativitate, fără stres; limită – timp și resurse, evaluare holistică.']},
+  {cer:'3. **Problematizarea vs învățarea prin descoperire**.', rep:['Problematizarea: crearea unei situații-problemă (contradicție între cunoștințe vechi și noi) care activează gândirea.','Descoperirea: elevul reconstituie adevărul prin investigație; pornește de la o problemă – cele două se intercondiționează.']},
+  {cer:'4. Listă: **forme de organizare** a activității elevilor.', rep:['Frontală','Colectivă','Individuală','Pe grupe (omogene/eterogene)','În perechi (diadică)','Combinată']},
+  {cer:'5. Cl. a XII-a, CS 1.1 – resursele personale.', rep:['Aptitudinile și talentul nu sunt suficiente: studiu, perseverență, răbdare.','D. Goleman – inteligența emoțională: autocunoașterea, gestionarea emoțiilor, motivația, empatia, abilitățile sociale.','Activitate: „Eu, cu bune și cu rele”.']}
+ ]}
+]});
+
+/* ---- content/teste/t18.js ---- */
+SUBIECTE.push({nr:18, tema:'Consilierea școlară: istorie, program, etică · Elevi talentați, consiliere centrată pe soluții, abandon · Stil de învățare, autoreglare emoțională', subiecte:[
+{titlu:'Subiectul I', puncte:30,
+ text:'Argumentați în patru pagini rolul consilierii școlare și de orientare: definire, perioade de dezvoltare, programul de consiliere, responsabilități etice.',
+ items:[
+  {cer:'Definiția și obiectivele **consilierii școlare și de orientare**.', rep:['Relație bazată pe empatie și încredere, care ajută persoana să-și înțeleagă trăirile și gândurile, să-și dezvolte strategii de rezolvare a problemelor și decizie.','Direcții: intervenție ameliorativă, în criză, de dezvoltare și formativă.','Gh. Tomșa (1999): în școală, consilierea – activitate personală intensă, axată pe descoperirea de sine.','Trei categorii de obiective: dezvoltare personală, promovarea sănătății, stare de bine.']},
+  {cer:'**Șase perioade** în dezvoltarea consilierii (copiilor).', rep:['Conceptele de bază: Freud, M. Klein, A. Freud, Adler, Jung, Lowenfeld','Teorii ale dezvoltării copilului: Piaget, Maslow, Bowlby, Erikson, Kohlberg','Abordări umaniste: Perls, V. Axline, C. Rogers, V. Oaklander','Terapia comportamentală: B.F. Skinner','Terapia cognitiv-comportamentală: A. Ellis, A.T. Beck','Noi curente: ludoterapia limitată, terapia narativă']},
+  {cer:'**Programul de consiliere școlară** – servicii.', rep:['Patru domenii: consultanță, consiliere, coordonare, evaluare.','Consilierea individuală (20 min – 1 h, scop remedial și de dezvoltare) și de grup (prevenție; adolescenții se deschid mai ușor între ei; economică).','Consultanța: consilierul ca facilitator, relație de egalitate cu profesorul.','Evaluarea: teste standardizate, inventare de interese, scale comportamentale, observația, interviuri.','Intervenții colaborative în clasă: ton calm, așteptări pozitive, rutine, limite ferme, feedback.']},
+  {cer:'**Responsabilități etice**.', rep:['Confidențialitatea (divulgarea doar justificat); părinții minorilor informați despre intervenții.','Protejarea adolescenților de prejudicii; tehnici potrivite vârstei; respectarea demnității și autonomiei.','Practică doar în limitele competenței; trimitere către alți specialiști.','Evitarea **relațiilor duale/multiple** care pot exploata sau prejudicia clientul.']}
+ ]},
+{titlu:'Subiectul al II-lea', puncte:30, text:'Elevi talentați, criza de identitate, consilierea centrată pe soluții, familia funcțională, adolescentul izolat/timid, abandonul școlar.',
+ items:[
+  {cer:'A. Consilierea **elevilor talentați** și **criza identitară**.', rep:['Elevii talentați au nevoi specifice, adesea neglijate → frustrări; profil cu puncte forte și vulnerabilități; colaborare cu familia, curriculum extins.','Criza identitară (Erikson): „Cine sunt eu?”, încheiată în jurul vârstei de 24 de ani; eșecul → confuzie de rol.']},
+  {cer:'B. Principii ale **consilierii centrate pe soluții** în școli.', rep:['Interviul centrat pe soluții: accent pe elementele pozitive și resurse; elevul participă până la evaluare.','Implicarea părinților: atenția pe **excepții** (când problema nu apare).','Tratarea cu respect a dificultăților clientului.']},
+  {cer:'C. **Familia funcțională**.', rep:['Istorie comună, legături emoționale; funcții: supraviețuire, educație, protecție, dezvoltare, apartenență, atașament.','Caracteristici: comunicare deschisă și frecventă, adaptabilitate, angajament.']},
+  {cer:'D. Adolescentul **izolat** și adolescentul **timid**.', rep:['Izolat: încurajarea socializării, jocuri de rol, întărirea comportamentului prosocial.','Timid: centrare pe sine, convingerea că e mereu judecat; mutarea atenției de la stări interne la stimulii sociali, descoperirea dirijată, joc de rol, analiza critică a gândurilor.']},
+  {cer:'E./F. Prevenirea **abandonului școlar**.', rep:['Dockery (2012): strategii de reformă la nivel de școală, sprijin la tranziția între cicluri, sisteme de monitorizare a factorilor de risc.','Promovarea abilităților sociale, intervenții la nivel de școală, așteptări înalte pentru toți, echipe multidisciplinare (asistenți sociali, psihologi, mediatori).']}
+ ]},
+{titlu:'Subiectul al III-lea', puncte:30, text:'Metodica disciplinei.',
+ items:[
+  {cer:'1. **Trunchi comun, curriculum nucleu, învățare eficientă**.', rep:['Trunchiul comun = curriculum nucleu: disciplinele și numărul minim de ore obligatorii.','Învățarea eficientă: orientată spre scop, integrarea noilor cunoștințe în cele existente.']},
+  {cer:'2. **Predarea și stilul cognitiv/de învățare**.', rep:['Predarea modernă: organizarea și îndrumarea învățării, mediere, operaționalizare.','Stil cognitiv deschis vs închis; stilul de învățare = factori cognitivi, fiziologici, afectivi relativ stabili.']},
+  {cer:'3. **Legi și reguli ale învățării**.', rep:['Legea transferului, a motivației, a repetiției, a conexiunii inverse (feedback).','Învățarea începe cu un scop, e influențată de afectivitate, de experiența anterioară, de personalitatea profesorului; participarea activă e mai eficientă decât pasivă; cunoașterea rezultatului susține succesul.']},
+  {cer:'5. **Autoreglarea emoțională** (CS 2.2).', rep:['Abilitatea de a face față emoțiilor și de a ne comporta conform cerințelor; combinație temperament + comportament învățat.','Copilul învață autoreglarea fiind expus treptat situațiilor, cu suport (nu evitare); părinții modelează valorile (Th. Gordon).','Activitate: „Stresul înainte de examen – autoreglare și autocontrol”.']}
+ ]}
+]});
+
+/* ---- content/teste/t19.js ---- */
+SUBIECTE.push({nr:19, tema:'Educația, autocunoașterea, eșecul școlar, familia · Educația adulților, medierea, reglarea emoțională · Cunoașterea elevului', subiecte:[
+{titlu:'Subiectul I', puncte:30,
+ text:'Argumentați în patru pagini rolul educației în dezvoltarea personală și profesională, factorii reușitei/eșecului școlar și rolul familiei.',
+ items:[
+  {cer:'Rolul **educației** și **învățarea activă**.', rep:['Democrit: educația creează „a doua natură”; Kant: în educație stă marele secret al perfecționării naturii umane.','Educația progresivă (sf. sec. XIX; rădăcini la Locke și Rousseau) – învățarea din experiență.','Constructivismul: învățarea = construcție activă a cunoașterii.','Gândirea critică: reflecție, situații noi, colaborare, acceptarea diversității de idei.']},
+  {cer:'**Autocunoașterea** și identitatea profesională.', rep:['P. Popescu-Neveanu – trei planuri ale conștiinței de sine: imaginea de sine fizică, psihică, socială.','Alegerea carierei → identitate profesională; motivații extrinseci (statut, securitate) vs intrinseci; o profesie nepotrivită deformează stima de sine.']},
+  {cer:'**Eșecul școlar** – etape și factori.', rep:['Etapa premergătoare: primele scăderi ale prestației, nemulțumire, lipsa motivației.','Etapa a doua: lacune mari, evitarea efortului, aversiune față de școală, absențe nemotivate.','Etapa a treia: repetenția, cu efecte traumatizante.','Reușita = interacțiunea factorilor pedagogici, psihofiziologici, sociali; supraestimarea și subestimarea sunt ambele dăunătoare.']},
+  {cer:'Rolul **familiei** și **școlii**.', rep:['Familia – prima școală; influențe directe și indirecte (modele, climat); M. Golu – pecetea familiei asupra profilului moral rămâne toată viața.','Legea educației: școala conlucrează cu familia, rolul conducător revenind școlii.','Metodele activ-participative transformă elevul din obiect în subiect al formării.']}
+ ]},
+{titlu:'Subiectul al II-lea', puncte:30, text:'Educația adulților, comunicarea nonverbală, cauzele dificultăților de învățare, softuri educaționale, reglarea emoțională, medierea.',
+ items:[
+  {cer:'A. **Educația adulților** și **comunicarea nonverbală** cu clasa.', rep:['Educația adulților: prima școală – Grundtvig (Danemarca); 1925 – Organizația Mondială pentru Educația Adulților; calificare, inițiere, specializare, recalificare, perfecționare.','Nonverbal: expresia feței, gesturi, contact vizual, postură, aspect exterior; persuasiunea însoțește convingerea.']},
+  {cer:'B. **Cauze psihologice** ale dificultăților școlare.', rep:['Probleme discrete de percepție','Nivel intelectual minimal-normal','Ușoară dezorientare spațio-temporală','Schemă corporală insuficient elaborată','Fobie școlară, timiditate excesivă, lexofobie, grafofobie','Complexe de inferioritate','Ritm de dezvoltare lent, inegal']},
+  {cer:'C. **Tipuri de softuri educaționale**.', rep:['De prezentare interactivă a noilor cunoștințe','Demonstrative','De simulare (modele ale fenomenelor reale)','De testare a cunoștințelor','(+ de exersare, jocuri educaționale)']},
+  {cer:'D. **Reglarea emoțională** și strategiile emoționale.', rep:['Procesul de inițiere, menținere și modulare a intensității și duratei emoțiilor, în scopul atingerii obiectivelor.','Controlul voluntar (effortful control) – inhibarea răspunsului dominant; control scăzut → anxietate, depresie.','Strategiile emoționale nu rezolvă problema, ci ameliorează trăirea.']},
+  {cer:'E. **Medierea conflictelor**.', rep:['Intervenția unui terț neutru, care nu impune soluția; educație durabilă pentru rezolvarea autonomă a conflictelor.','Recomandată când: ostilitatea blochează colaborarea, părțile nu reușesc singure, vor să discute, e nevoie de decizie rapidă.','Profesorul evită confruntarea în fața clasei și amenințările; ascultă percepția elevului; reguli simple, consecințe logice, plan pentru urgențe.']},
+  {cer:'F. Importanța **cunoașterii personalității elevului**.', rep:['Permite adaptarea metodelor, orientarea școlară potrivită, depistarea timpurie a elevilor dotați.']}
+ ]},
+{titlu:'Subiectul al III-lea', puncte:30, text:'Metodica disciplinei.',
+ items:[
+  {cer:'1. **Cunoașterea elevului**, **elevul creativ**, **puterea exemplului**.', rep:['Școala = cadru de viață și muncă în care solicitările scot la iveală aptitudinile; elevul = rezultatul interacțiunii ereditate–mediu.','Elevul creativ: fiecare om are potențial creativ; educația protejează originalitatea prin metode variate.','Exemplul – unul dintre cele mai eficiente mijloace educative (direct, convingător).']},
+  {cer:'2. Necesitatea **învățării prin cooperare**.', rep:['Fiecare membru își îmbunătățește performanța și învață să colaboreze; responsabilitate individuală, relaționare, ascultare, gândire critică.']},
+  {cer:'3. **Copacul ideilor vs metoda R.A.I.**', rep:['Copacul ideilor: tehnică grafică de grup – cuvântul-cheie la bază, ideile ca ramuri.','R.A.I. (Răspunde – Aruncă – Interoghează): joc cu mingea pentru fixare și feedback; cine nu știe sau nu formulează corect iese din joc.']},
+  {cer:'4. Listă: **metode de cunoaștere a elevului**.', rep:['Observația (spontană, sistematică)','Convorbirea','Testele (ex. proiectiv „Desenul familiei”)','Metoda aprecierii','Analiza rezultatelor și a produselor activității','Metoda biografică','Metodele sociometrice: testul sociometric, matricea sociometrică, sociograma']},
+  {cer:'5. **Stilul de viață al adolescenților** și voluntariatul.', rep:['Adolescența – perioada formării atitudinilor; nevoia de afirmare poate degenera.','Voluntariatul – cale de autodescoperire și de promovare a valorilor.']}
+ ]}
+]});
+
+/* ---- content/teste/t20.js ---- */
+SUBIECTE.push({nr:20, tema:'Consilierea și educația familiei, situații de risc · Conflicte, CES, educație incluzivă · Metodică, creativitate, metode de învățare', subiecte:[
+{titlu:'Subiectul I', puncte:30,
+ text:'Argumentați în patru pagini importanța consilierii și educației familiei/părinților.',
+ items:[
+  {cer:'**Rolul familiei** în dezvoltare.', rep:['Educația – flux continuu de influențe; școala are nevoie de familie și comunitate.','Familia oferă: climat de siguranță afectivă, modele de comportament, mediul de dezvoltare intelectuală, motivațională, afectivă.','Cei **4 C** ai familiei: Compromis, Considerație, Cooperare, Comunicare.']},
+  {cer:'**Consilierea familiei vs consilierea parentală**.', rep:['Consilierea familiei: acțiuni directe și preventive de sprijin pentru îngrijirea, creșterea, educarea copiilor.','Consilierea parentală: pentru actualii și viitorii părinți; punți între părinți și copii.','Activități formative; cunoștințe de psihologie, pedagogie, sociologie, psihopedagogie specială.']},
+  {cer:'**Situații de risc** pentru dezvoltare.', rep:['Riscuri prestabilite (deficiențe senzoriale, mintale severe, neurologice).','Riscuri biologice (probleme la naștere care pot fi remediate).','Riscuri de mediu (mediu nesuportiv).','OCDE: copii fără familie potrivită, în mediu social nefavorabil.','Eșecul integrării în adolescență: alcoolism, delincvență, șomaj, sarcini timpurii.']},
+  {cer:'**Programele de educație a părinților** – variabile și principii.', rep:['Variabile: experiența personală și a propriei familii, caracteristicile copiilor, motivația părinților, condițiile socio-economice, gestionarea stresului.','Tipuri de activități: în grupuri mici, personalizate, în grupuri mari (jocuri de rol, discuții); sporadice, de durată, periodice.','Principii: respectul individualității, recunoașterea propriilor limite, negocierea soluțiilor și respectarea deciziilor beneficiarului, servicii integrate; echipă pluridisciplinară.','Teme (Convenția ONU privind drepturile copilului): reducerea abuzului, sprijin pentru părinții copiilor cu CES, conflictul între generații, prevenirea devianței, participarea copiilor.']}
+ ]},
+{titlu:'Subiectul al II-lea', puncte:30, text:'Conflicte, comunicarea cu persoanele cu dizabilități, CES și educația incluzivă, negociere și compromis.',
+ items:[
+  {cer:'A. Stadiile conflictului: **disconfort, incident, neînțelegere**.', rep:['Disconfortul: senzația că ceva nu e în regulă – moment bun de prevenție.','Incidentul: un fapt simplu (o replică) care deranjează, dar se rezolvă repede prin comunicare.','Neînțelegerea: din comunicare defectuoasă; apar concluzii greșite, prejudecăți, agresivitate.','(urmează tensiunea și criza)']},
+  {cer:'B. **Comunicarea** în contextul dizabilității.', rep:['Deficiența de auz: perturbă funcția receptivă și expresivă; cunoaștere lacunară, labiolectură.','Comunicarea prin simboluri/augmentativă (ex. sintetizatorul de voce) pentru persoanele nonverbale.']},
+  {cer:'C. **CES** și principiile educației integrate.', rep:['CES = necesități educaționale ce cer școlarizare adaptată: tulburări de limbaj, dificultăți de învățare, deficiențe fizice/motorii, senzoriale, tulburări afectiv-comportamentale.','Principii: egalizarea șanselor; dreptatea socială; non-categorizarea; opțiuni și decizii reale; dezinstituționalizarea; normalizarea.']},
+  {cer:'D. **Negocierea vs compromisul**.', rep:['Negocierea: părțile discută direct, fără terț, până la o soluție acceptată de ambele.','Compromisul: fiecare cedează parțial; risc de supraevaluare a poziției.','Etapele deciziei: definirea conflictului, cauzele, anticiparea efectelor, soluții.']},
+  {cer:'E. Educarea **deprinderilor de comunicare interpersonală**.', rep:['Exprimarea sentimentelor neplăcute: privești persoana, postură relaxată, calm și fermitate, spui cum te simți, oferi o sugestie.','Solicitările pozitive: descrii clar ce dorești, contact vizual, ton ferm dar cald, spui cum te vei simți când se schimbă comportamentul.']},
+  {cer:'F. **Asistența persoanelor cu CES** și școala incluzivă.', rep:['Depistare, prevenție, terapie, educare, diagnostic, orientare, monitorizare.','Dreptul la valorificarea maximă a capacităților; menținerea copilului în familie; principiul normalizării.']}
+ ]},
+{titlu:'Subiectul al III-lea', puncte:30, text:'Metodica disciplinei.',
+ items:[
+  {cer:'1. **Metodica, evaluarea cumulativă, interdisciplinaritatea**.', rep:['Metodica = didactica specială a unei discipline (St. Bârsănescu).','Evaluarea cumulativă (sumativă): de bilanț, la final, compară performanțele cu obiectivele.','Interdisciplinaritatea: cooperare între discipline → imagine unitară a realității.']},
+  {cer:'2. **Învățarea creativă** – procedee.', rep:['Profunzime, fluiditate ideatică, originalitate, investigarea problemei, experiment mintal prin întrebări, transformarea problemelor.']},
+  {cer:'3. **Metoda 6-3-5 vs brainstorming**.', rep:['6-3-5 (brainwriting): 6 elevi, câte 3 idei, în 5 minute, foaia circulă; avantaj – îi implică pe cei timizi.','Brainstorming: gândire divergentă, amânarea criticii; variante – cu schimbare de roluri, metoda Frisco.']},
+  {cer:'4. Procedee de **eficientizare a învățării**.', rep:['Obiective clare, sistematizarea cunoștințelor, înțelegerea progresivă.','Metode de studiu individual: RICAR (Răsfoire, Întrebări, Citire activă, Amintire, Recapitulare); SQ3R.','Învățarea asistată de calculator; învățarea anticipativă.']},
+  {cer:'5. CS 2.2 – **autocontrolul emoțional** la adolescenți.', rep:['Autocontrol: stăpânirea reacțiilor emoționale, voință, autodisciplină, perseverență; predictor al succesului.','Formarea răbdării, rezistența la tentații; mijloace: relaxare, gândire pozitivă, autosugestie, exerciții de respirație.','Activitate: „Să conștientizăm emoțiile noastre” – studii de caz, ciorchine, jurnalul emoțiilor.']}
+ ]}
+]});

@@ -1,0 +1,29 @@
+SUBIECTE.push({nr:17, tema:'Istoria consilierii (Parsons, Williamson, Super), CJAP · Emoții, devianță, mecanisme de apărare, Johari · Metode de evaluare, forme de organizare', subiecte:[
+{titlu:'Subiectul I', puncte:30,
+ text:'Argumentați în patru pagini rolul consilierii școlare: apariție și evoluție, trăsături, rolul cabinetelor și centrelor, modalitățile de desfășurare, evoluția ariei Consiliere și orientare.',
+ items:[
+  {cer:'**Definiție și scop**.', rep:['Proces de acordare a asistenței psihopedagogice elevilor, părinților, profesorilor; relația familie–elev–școală.','Scop: clientul să devină capabil să se ajute singur, să se înțeleagă pe sine și realitatea; soluțiile le găsește el.']},
+  {cer:'**Originile** consilierii.', rep:['SUA, începutul sec. XX – imigranți, tineri fără ocupație în New York.','**Frank Parsons** – „Choosing a Vocation” (1909): punctul de plecare al psihologiei/orientării profesionale.','**E.G. Williamson** (Universitatea Minnesota) – modelul **trăsătură–factor** (domina până după al Doilea Război Mondial).','**D. Super** (1953) – teoria dezvoltării aplicată alegerii profesionale.']},
+  {cer:'Cinci **trăsături** ale consilierii școlare (P.M. Sanborn, 1974).', rep:['Proces de dezvoltare','Responsabilitatea consilierului de a optimiza modul în care școala se raportează la elevi ca indivizi','Rolul proactiv','Profesiunea – principalul mijloc de exprimare a consilierului','Variabilitatea profunzimii și intensității']},
+  {cer:'**CJAP/cabinete** și atribuții.', rep:['Trei tipuri de activități: asistență pedagogică și educațională; asistență psihologică; consiliere în carieră.','Consilierul: absolvent de psihologie, științele educației, sociologie sau master în consiliere; normă de 18 ore, din care 4 ore la clasă.','Atribuții: examinare psihopedagogică, consilierea elevilor/părinților/profesorilor, sprijin pentru formarea continuă, materiale pentru dezvoltarea personalității și orientare.','Proiectul Leonardo da Vinci MEVOC – „Manualul calității în consilierea școlară și profesională” (2003–2006).']},
+  {cer:'**Consilierea individuală vs de grup**.', rep:['Individuală: încredere reciprocă, libertate de exprimare fără judecată, confidențialitate.','De grup: elevi cu o problemă comună; scopuri măsurabile; dezvoltarea personalității, empatiei, imaginii de sine, a abilităților de rezolvare de probleme și decizie.']},
+  {cer:'**Evoluția ariei** Consiliere și orientare.', rep:['OG 103/1998 – 1–2 ore de consiliere în normă, altele decât dirigenția.','2005–2006: introducerea disciplinei la toate nivelurile; formarea continuă a profesorilor în consiliere educațională.']}
+ ]},
+{titlu:'Subiectul al II-lea', puncte:30, text:'Emoții, devianță, stima de sine, reușita, mecanisme de apărare, fereastra Johari.',
+ items:[
+  {cer:'A. **Emoția ca stare vs ca trăsătură**; **anxietatea**.', rep:['Stare: trăire subiectivă, de moment, generată de o situație.','Trăsătură: tendința generală de a reacționa emoțional într-un anumit fel.','Anxietatea: teamă/neliniște din anticiparea unor situații, cu manifestări fiziologice (transpirații, palpitații, respirație rapidă).']},
+  {cer:'B. **Devianța comportamentală** și soluții educative.', rep:['Rezultat al inadaptării la sistemul de cerințe al comunității.','Cauze individuale (ereditare) și de mediu.','Soluții: pregătirea profesorilor, accesul la cabinete de consiliere, valorificarea elementelor pozitive din comportament.']},
+  {cer:'C. Abordări ale **stimei de sine**.', rep:['Teoria trebuințelor','Teoria „sinelui în oglindă” (looking-glass self – Cooley)','Teoria atașamentului']},
+  {cer:'D. **Succesul și reușita școlară**.', rep:['Randamentul școlar ≈ productivitate; reușita școlară – prima formă de recunoaștere socială.','Corelație între stima de sine și rezultatele școlare; reușita/eșecul apar din discrepanța aspirații–capacități.']},
+  {cer:'E. **Mecanisme de apărare** (exemple).', rep:['Negarea: „Nu mă deranjează că am luat 3.”','Regresia: revenirea la comportamente dintr-o etapă anterioară (roade unghiile, suge degetul).','(alte: proiecția, raționalizarea, refularea, sublimarea, deplasarea)']},
+  {cer:'F. **Fereastra Johari** la ora de consiliere.', rep:['4 zone: **deschisă** (știu eu și știu alții), **oarbă** (știu alții, nu știu eu), **ascunsă** (știu eu, nu dezvălui), **necunoscută**.','Autodezvăluirea și feedback-ul lărgesc zona deschisă.']}
+ ]},
+{titlu:'Subiectul al III-lea', puncte:30, text:'Metodica disciplinei.',
+ items:[
+  {cer:'1. **Proiectarea pedagogică, sisteme metodologice, procedeul didactic**.', rep:['Proiectarea = ansamblul acțiunilor de anticipare a activității conform finalităților.','Sistemul metodologic = ansamblu coerent de metode și procedee care se potențează reciproc.','Procedeul = componentă/instrument al metodei.']},
+  {cer:'2. **Avantaje și limite** ale metodelor de evaluare.', rep:['Tradiționale (orale, scrise, practice): fidelitate, validitate; limită – stres, timp limitat.','Complementare (portofoliu, proiect, investigație, observare, autoevaluare): încredere, creativitate, fără stres; limită – timp și resurse, evaluare holistică.']},
+  {cer:'3. **Problematizarea vs învățarea prin descoperire**.', rep:['Problematizarea: crearea unei situații-problemă (contradicție între cunoștințe vechi și noi) care activează gândirea.','Descoperirea: elevul reconstituie adevărul prin investigație; pornește de la o problemă – cele două se intercondiționează.']},
+  {cer:'4. Listă: **forme de organizare** a activității elevilor.', rep:['Frontală','Colectivă','Individuală','Pe grupe (omogene/eterogene)','În perechi (diadică)','Combinată']},
+  {cer:'5. Cl. a XII-a, CS 1.1 – resursele personale.', rep:['Aptitudinile și talentul nu sunt suficiente: studiu, perseverență, răbdare.','D. Goleman – inteligența emoțională: autocunoașterea, gestionarea emoțiilor, motivația, empatia, abilitățile sociale.','Activitate: „Eu, cu bune și cu rele”.']}
+ ]}
+]});
