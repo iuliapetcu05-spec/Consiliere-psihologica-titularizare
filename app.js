@@ -683,10 +683,12 @@ function validGen(j){ if(!j||!Array.isArray(j.subiecte)||j.subiecte.length<3) th
   return j; }
 function Generator(v){
   const spec=CAP.filter(c=>c.parte&&c.parte.startsWith('Tematica'));
-  v.innerHTML=`<div class="card"><b>🎲 Subiect nou, în stil oficial</b><p class="small muted" style="margin:6px 0 0">AI-ul compune o variantă completă (I, II, III, 90p + 10 din oficiu), cu barem propus pe fiecare item, pe teme din programă. Tema principală e aleasă la întâmplare, ca să nu se repete. Durează aproximativ 1–2 minute.</p>
+  v.innerHTML=`<div class="card"><b>🎲 Subiect nou, în stil oficial</b><p class="small muted" style="margin:6px 0 0">AI-ul compune o variantă completă – Subiectele I, II și III (90p + 10 din oficiu), cu barem propus pe fiecare item, pe teme din programă. Tema principală e aleasă la întâmplare, ca să nu se repete. Durează aproximativ 1–2 minute.</p>
     <p class="small" style="margin:8px 0 0" data-ai-status>${aiStatusText()}</p></div>
-    <div class="card"><div class="row"><span class="grow">Subiectul I despre</span><select id="s1"><option value="">🎲 la întâmplare</option>${spec.map(c=>`<option>${esc(c.scurt||c.titlu)}</option>`).join('')}</select></div>
-    <div class="row" style="margin-top:8px"><span class="grow">Subiectul al II-lea despre</span><select id="s2"><option value="">🎲 la întâmplare</option>${spec.map(c=>`<option>${esc(c.scurt||c.titlu)}</option>`).join('')}</select></div>
+    <div class="card"><div class="row"><span class="grow">Subiectul I</span><select id="s1"><option value="">🎲 la întâmplare</option>${spec.map(c=>`<option>${esc(c.scurt||c.titlu)}</option>`).join('')}</select></div>
+    <div class="row" style="margin-top:8px"><span class="grow">Subiectul II</span><select id="s2"><option value="">🎲 la întâmplare</option>${spec.map(c=>`<option>${esc(c.scurt||c.titlu)}</option>`).join('')}</select></div>
+    <div class="row" style="margin-top:8px"><span class="grow">Subiectul III · metoda</span><select id="m3"><option value="">🎲 la întâmplare</option>${METODE_S3.map((m,i)=>`<option value="${i}">${esc(m.m)}</option>`).join('')}</select></div>
+    <div class="row" style="margin-top:8px"><span class="grow">Subiectul III · clasa</span><select id="cs3"><option value="">🎲 la întâmplare</option>${CS_REALE.map((c,i)=>`<option value="${i}">cl. ${esc(c.cls)} · CS ${esc(c.cs.split(' ')[0])} ${esc(c.cont.split(/[.:]/)[0].slice(0,40))}</option>`).join('')}</select></div>
     <button class="btn block" id="gen" style="margin-top:12px">✨ Generează varianta</button></div>
     <div class="aiout" id="out" hidden></div>
     <p class="small muted">Atenție: e un subiect de antrenament, nu unul oficial. Baremul e propus de AI după regulile oficiale; ia-l ca reper, nu ca adevăr absolut.</p>`;
@@ -695,7 +697,8 @@ function Generator(v){
     if(!aiOn()) return toast('AI nu e activ încă – vezi Setări pe Acasă');
     const pickCap=sel=>{ const val=$(sel,v).value; return val || (pickOne(spec).scurt); };
     const s1=pickCap('#s1'); let s2=pickCap('#s2'); if(s2===s1 && !$('#s2',v).value) s2=pickOne(spec.filter(c=>(c.scurt)!==s1)).scurt;
-    const focus={s1, s2, m:pickOne(METODE_S3).m, cs:Math.floor(Math.random()*CS_REALE.length)};
+    const mv=$('#m3',v).value, cv=$('#cs3',v).value;
+    const focus={s1, s2, m:(mv!==''?METODE_S3[+mv]:pickOne(METODE_S3)).m, cs:(cv!==''?+cv:Math.floor(Math.random()*CS_REALE.length))};
     const avoid=(S.gen||[]).filter(g=>g.genAI).slice(-6).map(g=>g.titlu);
     const out=$('#out',v), b=$('#gen',v); out.hidden=false; b.disabled=true;
     out.innerHTML='<p class="small">✍️ Claude scrie subiectul… <span id="pc">0</span> caractere</p>';
