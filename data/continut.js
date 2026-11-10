@@ -682,6 +682,248 @@ AF.push(
  {c:'s06', s:'Conflictul este întotdeauna negativ în școală.', v:false, e:'Gestionat constructiv crește motivația și coeziunea.'}
 );
 
+/* ---- content/capitole/s07.js ---- */
+/* CAPITOLUL VII (Specialitate) – Managementul comportamentelor și situațiilor de risc */
+CAPITOLE.push({id:'s07', parte:'Tematica de specialitate', nr:'VII', emoji:'🚨', scurt:'Comportamente și situații de risc',
+titlu:'Managementul comportamentelor și situațiilor de risc',
+sectiuni:[
+{titlu:'Consilierea ca relație, conversație, sfătuire, intervenție', puncte:[
+ 'Conversația e eficientă dacă: receptivitatea partenerilor, intenționalitatea consiliatului (eficiența scade dacă e constrâns), evitarea tendințelor de fațadă, atitudine stimulativă, empatie, ascultare activă.',
+ 'Forme de conversație: structurată, semistructurată, liberă – cea liberă e cea mai adecvată, dar cea mai dificilă.',
+ 'Sfătuirea: sfatul **directiv** – pentru probleme concrete, imediate și persoane mai puțin voluntare; sfatul **non-directiv, sugerat** – pentru probleme generale și persoane cu voință puternică.',
+ 'Consilierea ca intervenție: activismul partenerilor, **emoția corectoare**, modificări adaptativ-progresive.']},
+{titlu:'1. Eșecul școlar, absenteismul, abandonul', puncte:[
+ '**S. Cristea**: eșecul școlar = imposibilitatea momentană a elevului de a realiza obiectivele pedagogice.',
+ 'Taxonomii: după extindere (general, parțial, la început/pe parcursul ciclului); după cauză (aptitudinal-intelectual, atitudinal – afectiv-motivațional, didactic).',
+ 'Patru forme de manifestare: **rezultate academice scăzute**, **absențe/chiul**, **repetenția**, **abandonul** (părăsirea școlii înainte de finalizare – mai frecvent la copiii săraci și din minorități, din cauza așteptărilor scăzute, sprijinului insuficient, programei neadaptate).',
+ '**Modelul socioecologic** – trei componente: mediul familial, caracteristicile elevului, mediul școlar.',
+ 'Familia: implicare, program clar, statut socioeconomic, așteptări; **capitalul social** poate compensa sărăcia; stilul parental orientat spre autonomie și motivație intrinsecă favorizează succesul, cel dictatorial (control excesiv, recompense externe) – eșecul.',
+ 'Elevul: **autoeficacitatea**, autodisciplina (prezice rezultatele mai bine decât IQ-ul), motivația intrinsecă.',
+ 'Școala: mediu organizat, sigur, participare la stabilirea regulilor; **bullyingul** – anxietate, depresie, ideație suicidară, eșec.',
+ 'Strategii de consiliere: **identificarea timpurie** a elevilor la risc (absențe, note, comportamente), perspectiva ecologică (familie, școală, comunitate), **grupuri psihoeducaționale** (abilități de studiu, obiective), **tutorat** (beneficii cognitive și afective pentru ambele părți), **implicarea familiei**.']},
+{titlu:'1. Conflictul', puncte:[
+ 'Tipuri: **cognitiv** (între două concepte/reguli incompatibile), **intercultural**, **perceptiv** (indici contradictorii), **psihic/intrapsihic** (datorie vs dorință; crizele de dezvoltare), **social** (interese, putere, scopuri).',
+ 'Factori care exacerbează: implicarea altor persoane, lipsa abilităților, exagerarea problemei, desconsiderarea celuilalt, dezinteresul pentru relație.',
+ 'Factori care diminuează: imparțialitatea, evitarea etichetelor, focus pe problemă, dorința de a păstra relația, negocierea intereselor.',
+ 'Conflictele interpersonale se rezolvă după cele **intrapersonale** (autocunoaștere, stimă de sine).',
+ 'Tehnici: mentale (cadru nou, empatie, dialog interior pozitiv, sincronizare), senzoriale (ascultare, privire, voce), de mișcare (ținută, distanță).',
+ '**Negocierea**: distributivă („sumă zero” – ce câștigă unul pierde celălalt) vs integrativă („sumă nonzero” – cooperare). **Medierea**: un terț neutru conduce părțile spre soluție.']},
+{titlu:'1. Abuzul', puncte:[
+ 'Abuz = comportament agresiv asupra unei persoane aflate în poziție inferioară, cu consecințe fizice/emoționale.',
+ '**Legea 272/2004**: orice acțiune voluntară a unei persoane aflate în relație de răspundere, încredere sau autoritate față de copil, prin care îi este periclitată viața, dezvoltarea, integritatea, sănătatea.',
+ 'Forme: **fizic** (lovire, ardere, orice pedeapsă corporală), **emoțional** (abuz verbal, standarde nerealiste, amenințări, terorizare), **sexual**, **neglijarea** (nevoi fizice/emoționale neîndeplinite, nesupraveghere).',
+ 'Consecințe: imagine de sine scăzută (copilul crede că a meritat), probleme emoționale și de relaționare (unii devin abuzatori), simptome somatice, performanțe școlare scăzute.',
+ 'Prevenție: cunoașterea **drepturilor copilului**; poliție, medici, asistență socială (oricine, chiar copilul, poate sesiza).',
+ 'Prevenirea abuzului emoțional (A. Băban): ascultare activă, copilul văzut ca valoros, sprijin în asumarea deciziilor, fără etichete și critici la persoană, dezvoltarea stimei de sine, gestionarea stresului.']},
+{titlu:'1. Violența și agresivitatea în școală', puncte:[
+ '**OMS**: violența = folosirea intenționată a forței sau puterii (reale sau ca amenințare) care poate provoca vătămare, moarte, traumă, dezvoltare deficitară, deprivare.',
+ 'Agresivitatea: fizică, verbală, socială (excludere, bârfă).',
+ 'Tipologie (plan, deschidere, implicare): activă fizică directă (lovirea), activă fizică indirectă (lovirea unui substitut), activă verbală directă (injuria), activă verbală indirectă (calomnia), pasivă fizică directă (împiedicarea), pasivă fizică indirectă (refuzul sarcinii), pasivă verbală directă (refuzul de a vorbi), pasivă verbală indirectă (negativismul).',
+ 'Factori de risc: impulsivitate, performanțe slabe, implicare timpurie în comportamente problematice, disciplină parentală dură/inconsecventă, deprivare, prieteni deviante, dezorganizare școlară (moral scăzut, pedepse frecvente).',
+ 'Factori protectivi: autoeficacitate, inteligență, părinți interesați, modele prosociale, recunoaștere și laudă, implicare în viața școlii.',
+ 'Programe: **PATHS** (strategii de gândire alternativă), **TSPS** (rezolvarea problemelor – frustrare și furie), **Second Step** (empatie, controlul impulsurilor, gestionarea furiei), **Coping Power Program** (din Anger Coping Program; componentă pentru copii și pentru părinți).']},
+{titlu:'1. Bullying și cyberbullying', puncte:[
+ '„Salvați Copiii”: 7 din 10 copii au fost martori la bullying în școală.',
+ 'Bullying: comportament care rănește intenționat, **repetat**, cu **dezechilibru de putere**; termen introdus în anii ’70 de **Dan Olweus** (Norvegia). **Mobbing** = agresiunea unui grup.',
+ 'Forme: fizic, verbal, etichetare, porecle, zvonuri, excludere, amenințări, șantaj, ascunderea lucrurilor. Motivație: putere și control; modele greșite; agresorii pot fi foști agresați.',
+ 'Roluri: victimă, agresor, martori/spectatori – toți sunt afectați.',
+ 'Mituri care sabotează intervenția: „clădește caractere”, „e un ritual de maturizare”, „dispare dacă îl ignori”, „victimele trebuie să se apere singure”, „lovește-l înapoi”, „la noi nu există”.',
+ 'Intervenție: terapie cognitiv-comportamentală; consiliere **remedială** (victime și agresori), **preventivă** (conștientizare), **pentru dezvoltare** (la nivel de clasă/școală).',
+ '**Cyberbullying** (termen Bill Belsey, 2005): deliberat, repetat, ținta se simte amenințată, prin tehnologie; anonimatul accentuează neajutorarea.',
+ 'Forme: **flaming** (insulte în public online), **harassment** (hărțuire), **denigrarea**, **masquerading** (impersonare), **outing and trickery** (dezvăluirea secretelor), **excluderea**, **cyberthreats**. Cazul extrem: „cyberbullicide”.',
+ 'Semnale: scăderea bruscă a stimei de sine, mult timp online, depresie, refuzul școlii. Măsuri: protejarea parolelor, a nu răspunde, blocare, salvarea dovezilor, raportare, monitorizare fără a încălca intimitatea.']},
+{titlu:'1. Adicția de substanțe', puncte:[
+ 'Dependența = dorință puternică, compulsivă de a consuma, dificultatea de a controla consumul; **fizică** (evitarea sevrajului) și **psihică** (craving, căutarea senzațiilor plăcute).',
+ 'Patru direcții de intervenție ale consilierului: identificarea semnelor; intervenția individualizată; sprijinirea familiei; rol de **liant** între elev, familie, școală și specialiști.',
+ 'Semne: miros, stare alterată, dezinteres, pupile modificate, somnolență, schimbarea prietenilor.',
+ 'Tipuri de consum: **experimental** (curiozitate), **ocazional**, **abuziv (de risc)**, **dependent**.',
+ 'Nevoia din spatele consumului: la primar/gimnaziu – experimentarea; la liceu – afirmarea personală.',
+ '**Prochaska și DiClemente – stadiile schimbării**: precontemplare, contemplare, pregătire/decizie, acțiune, menținere (min. 6 luni), terminare; recăderile sunt frecvente.',
+ '**Interviul motivațional**: empatie și ascultare reflexivă, evidențierea discrepanței dintre consum și obiective, evitarea confruntării, creșterea autoeficacității; 3 faze – rezolvarea ambivalenței, consolidarea angajamentului, monitorizarea și abordarea recăderilor.',
+ 'Situații de risc: stări emoționale negative, conflicte interpersonale, presiunea socială (chiar și emoțiile pozitive intense).',
+ 'Structuri: Centrele de Prevenire, Evaluare și Consiliere Antidrog; ONG-uri (ALIAT, UNICEF, ARAS). Exagerările și catastrofizarea cresc atractivitatea drogurilor.']},
+{titlu:'1. Dependența de internet', puncte:[
+ 'Pierderea compulsivă a controlului impulsurilor legate de internet (jocuri, rețele, navigare); cel mai apropiat de jocurile de noroc; adolescenții sunt cei mai vulnerabili.',
+ 'Tipuri: dependența de sex virtual, de **relații virtuale** (rețele sociale – cea mai severă), compulsii online (jocuri de noroc, cumpărături, licitații), **supraîncărcarea informațională**, dependența de calculator (jocuri offline).',
+ '**Neuroplasticitatea** – crescută în adolescență; „use it or lose it” – conexiunile folosite repetat se întăresc.',
+ 'Semne: confort mai mare cu prietenii online, euforie online, simptome de sevraj (neliniște, iritabilitate), pierderea controlului timpului, neglijarea intereselor și sarcinilor.',
+ 'Prevenție: tratarea problemelor de fond (depresie, stres), coping, rețea de sprijin reală, evidența timpului, obiective clare pentru utilizare, activități alternative. Prima clinică pentru dependenți de internet în Europa: Amsterdam, 2007.']},
+{titlu:'2. Managementul stresului', puncte:[
+ '**Anxietatea** = „teamă fără obiect”; **angoasa** = fața somatică a aceleiași stări.',
+ '**Stresul** = reacție complexă, nespecifică a organismului la stimuli percepuți ca dificili, cărora persoana crede că nu le poate face față. Rezultă din: **factori stresori** + **resursele persoanei** + **reacțiile la stres**.',
+ 'Stresori: boala, abuzul, problemele financiare, familiale, cu prietenii, școlare, dezastre, accidente, nemulțumirea de sine.',
+ 'Factori protectori: stimă de sine realistă, optimism, autoeficacitate, internalism.',
+ 'Reacții: fiziologice, cognitive, emoționale, comportamentale.',
+ '**Eustresul** (stres pozitiv, tonifiant) vs **distresul** (negativ). „Viața fără stres înseamnă moarte.”',
+ 'Managementul stresului (A. Băban): identificarea surselor, anticiparea perioadelor de stres, strategii de adaptare, exprimarea emoțiilor, evitarea autoblamării, reevaluarea pozitivă; asertivitatea, a spune NU, rezolvarea conflictelor, relaxare; suport social; stil de viață sănătos; stimă de sine.',
+ '**Coping** (Lazarus) = mecanisme de prevenție și adaptare la stres; M. Miclea – **comportamental**, **cognitiv** (reevaluarea), **neurobiologic** (relaxare, antrenament autogen, biofeedback).',
+ '**Reziliența** = abilitatea de a reveni la nivelul funcțional anterior (sau superior) după un stres major.']},
+{titlu:'3. Stilul de viață sănătos', puncte:[
+ 'Stilul de viață = totalitatea deciziilor și acțiunilor voluntare care afectează sănătatea; rol-cheie – credința în autoeficacitate și modelele.',
+ 'Comportamente sănătoase (Sarafino): 7–9 ore de somn, micul dejun regulat, fără gustări între mese, greutate normală, fără fumat (activ și pasiv), alcool doar ocazional, exerciții regulate.',
+ 'Peste 25% din bolile cardiovasculare ar putea fi evitate prin renunțarea la fumat.',
+ 'Comportamentele de sănătate sunt determinate de factori diferiți, diferă de la o persoană la alta și se schimbă în timp.',
+ '**Prevenția**: **primară** (reducerea riscului de îmbolnăvire – educație pentru sănătate), **secundară** (reducerea factorilor de risc deja existenți), **terțiară** (creșterea calității vieții bolnavilor – voluntariat).',
+ '**Health Belief Model**: comportamentul depinde de percepția amenințării (valori, vulnerabilitate, consecințe) și de raportul costuri–beneficii.']}
+]});
+
+CARDURI.push(
+ {c:'s07', q:'Cele 4 forme de manifestare ale eșecului școlar', a:'- Rezultate academice scăzute\n- Absențe/chiul\n- Repetenția\n- Abandonul școlar'},
+ {c:'s07', q:'Componentele modelului socioecologic al succesului/eșecului', a:'- Mediul familial\n- Caracteristicile elevului\n- Mediul școlar'},
+ {c:'s07', q:'Ce prezice mai bine rezultatele la teste: IQ-ul sau autodisciplina?', a:'**Autodisciplina** (conform cercetării citate).'},
+ {c:'s07', q:'Strategii de consiliere împotriva eșecului școlar', a:'- Identificarea timpurie a elevilor la risc\n- Perspectiva ecologică\n- Grupuri psihoeducaționale\n- Tutorat\n- Implicarea familiei'},
+ {c:'s07', q:'Negociere distributivă vs integrativă', a:'- **Distributivă:** „sumă zero” – ce câștigă unul pierde celălalt\n- **Integrativă:** „sumă nonzero” – cooperare, soluție mai bună pentru ambii'},
+ {c:'s07', q:'Formele abuzului asupra copilului', a:'- Fizic\n- Emoțional\n- Sexual\n- Neglijarea'},
+ {c:'s07', q:'Ce lege definește abuzul asupra copilului?', a:'**Legea 272/2004** privind protecția și promovarea drepturilor copilului.'},
+ {c:'s07', q:'Definiția violenței (OMS)', a:'Folosirea intenționată a forței fizice sau a puterii, reale sau ca amenințare, care poate provoca vătămare, moarte, traumă psihologică, dezvoltare deficitară sau deprivare.'},
+ {c:'s07', q:'Exemple: agresiune activă verbală indirectă vs pasivă verbală indirectă', a:'- Activă verbală indirectă: **calomnia**\n- Pasivă verbală indirectă: **negativismul**'},
+ {c:'s07', q:'Programe de reducere a agresivității', a:'- PATHS\n- TSPS (rezolvarea problemelor)\n- Second Step\n- Coping Power Program'},
+ {c:'s07', q:'Cele trei criterii ale bullyingului', a:'- Intenția de a răni\n- Repetiția\n- Dezechilibrul de putere', term:'Bullyingul', short:'agresiune intenționată, repetată, cu dezechilibru de putere'},
+ {c:'s07', q:'Cine a introdus termenul „bullying”?', a:'**Dan Olweus**, Universitatea din Bergen (Norvegia), în anii ’70.'},
+ {c:'s07', q:'Bullying vs mobbing', a:'- **Bullying:** agresor individual\n- **Mobbing:** un grup declanșează comportamentul agresiv', term:'Mobbingul', short:'agresiune exercitată de un grup'},
+ {c:'s07', q:'Formele cyberbullyingului', a:'Flaming, harassment (hărțuire), denigrare, masquerading (impersonare), outing and trickery, excludere/ostracizare, cyberthreats (amenințări).'},
+ {c:'s07', q:'Ce este „flaming”?', a:'Schimb de insulte între utilizatori, de regulă într-un context public online (forum).', term:'Flaming', short:'schimb de insulte în spațiul public online'},
+ {c:'s07', q:'Tipuri de consum de substanțe', a:'- Experimental\n- Ocazional\n- Abuziv (de risc)\n- Dependent'},
+ {c:'s07', q:'Stadiile schimbării (Prochaska și DiClemente)', a:'- Precontemplare\n- Contemplare\n- Pregătire/decizie\n- Acțiune\n- Menținere (min. 6 luni)\n- Terminare', term:'Modelul transteoretic', short:'Prochaska & DiClemente: stadiile schimbării'},
+ {c:'s07', q:'Principiile interviului motivațional', a:'- Empatie și ascultare reflexivă\n- Evidențierea discrepanței consum–obiective\n- Evitarea argumentării și confruntării\n- Creșterea autoeficacității', term:'Interviul motivațional', short:'crește motivația pentru schimbare, fără confruntare'},
+ {c:'s07', q:'Dependența fizică vs psihică', a:'- **Fizică:** consumul pentru a evita sevrajul\n- **Psihică:** nevoia de a retrăi senzațiile plăcute, craving'},
+ {c:'s07', q:'Eustres vs distres', a:'- **Eustres:** stres pozitiv, tonifiant (și evenimentele fericite)\n- **Distres:** stres negativ, trăit ca disconfort, anxietate', term:'Eustresul', short:'stresul pozitiv, tonifiant'},
+ {c:'s07', q:'Tipurile de coping (M. Miclea)', a:'- Comportamental\n- Cognitiv\n- Neurobiologic', term:'Copingul', short:'mecanisme de prevenție și adaptare la stres'},
+ {c:'s07', q:'Ce este reziliența?', a:'Abilitatea de a-ți redobândi nivelul funcțional anterior (sau unul superior) după o experiență de stres major.', term:'Reziliența', short:'revenirea la funcționare după un stres major'},
+ {c:'s07', q:'Prevenția primară, secundară, terțiară', a:'- **Primară:** reducerea riscului de îmbolnăvire\n- **Secundară:** reducerea factorilor de risc existenți\n- **Terțiară:** creșterea calității vieții bolnavilor'},
+ {c:'s07', q:'Componentele Health Belief Model', a:'- Percepția amenințării bolii (valori, vulnerabilitate, consecințe)\n- Evaluarea costurilor și beneficiilor comportamentului'}
+);
+
+GRILE.push(
+ {c:'s07', q:'Termenul „bullying” a fost introdus de:', o:['Bill Belsey','Dan Olweus','Prochaska','A. Ellis'], r:1},
+ {c:'s07', q:'Termenul „cyberbullying” a fost folosit prima dată de:', o:['Dan Olweus','Bill Belsey','Rigby','Lazarus'], r:1},
+ {c:'s07', q:'Stadiul în care aspectele negative ale adicției sunt ignorate:', o:['Contemplare','Precontemplare','Acțiune','Menținere'], r:1},
+ {c:'s07', q:'Calomnia este o agresiune:', o:['Activă fizică directă','Activă verbală indirectă','Pasivă verbală directă','Pasivă fizică indirectă'], r:1},
+ {c:'s07', q:'Prevenția terțiară vizează:', o:['Evitarea îmbolnăvirii','Reducerea factorilor de risc','Creșterea calității vieții bolnavilor','Educația pentru sănătate'], r:2},
+ {c:'s07', q:'Impersonarea altei persoane online se numește:', o:['Flaming','Masquerading','Outing','Harassment'], r:1},
+ {c:'s07', q:'Elevul care chiulește special ca să fumeze se află în consumul:', o:['Experimental','Ocazional','Abuziv (de risc)','Dependent'], r:2},
+ {c:'s07', q:'Mecanismele de coping au fost descrise inițial de:', o:['Lazarus','Freud','Rogers','Piaget'], r:0},
+ {c:'s07', q:'Ce NU este un mit despre bullying?', o:['„Clădește caractere”','„Dispare dacă îl ignori”','„Implică un dezechilibru de putere”','„Victima trebuie să se apere singură”'], r:2},
+ {c:'s07', q:'Câte ore de somn recomandă lista Sarafino?', o:['5–6','7–9','10–12','Oricâte'], r:1},
+ {c:'s07', q:'Tipul de dependență de internet considerat cel mai sever:', o:['De calculator offline','De relații virtuale (rețele sociale)','Supraîncărcarea informațională','Cumpărăturile online'], r:1},
+ {c:'s07', q:'Agresivitatea unui grup asupra unei persoane:', o:['Bullying individual','Mobbing','Flaming','Coping'], r:1}
+);
+
+AF.push(
+ {c:'s07', s:'Abandonul școlar e mai frecvent la elevii din comunități sărace și din minorități.', v:true},
+ {c:'s07', s:'Stilul parental dictatorial favorizează succesul școlar.', v:false},
+ {c:'s07', s:'În programele de tutorat, beneficiază atât elevii ajutați, cât și tutorii.', v:true},
+ {c:'s07', s:'Copilul nu poate sesiza singur autoritățile în caz de abuz.', v:false, e:'Oricine, chiar copilul, poate sesiza.'},
+ {c:'s07', s:'Emoțiile pozitive intense pot fi și ele factori de risc pentru consum.', v:true},
+ {c:'s07', s:'Catastrofizarea în prevenția consumului de droguri le scade atractivitatea.', v:false, e:'Riscă să le crească atractivitatea.'},
+ {c:'s07', s:'Evenimentele fericite pot genera stres (eustres).', v:true},
+ {c:'s07', s:'Interviul motivațional folosește confruntarea directă și argumentarea insistentă.', v:false},
+ {c:'s07', s:'Anonimatul face ca neajutorarea victimei să fie mai accentuată în cyberbullying.', v:true},
+ {c:'s07', s:'Conflictele interpersonale se rezolvă mai ușor după soluționarea celor intrapersonale.', v:true}
+);
+
+/* ---- content/capitole/s08.js ---- */
+/* CAPITOLUL VIII (Specialitate) – Managementul clasei de elevi */
+CAPITOLE.push({id:'s08', parte:'Tematica de specialitate', nr:'VIII', emoji:'🏫', scurt:'Managementul clasei, CES',
+titlu:'Managementul clasei de elevi. Incluziunea (CES, TSA, ADHD, TSI)',
+sectiuni:[
+{titlu:'1. Managementul clasei – delimitări', puncte:[
+ '**Managementul educațional** = la nivelul întregului sistem/instituții; **managementul clasei** = coordonarea resurselor umane, instrucționale și materiale din clasă pentru eficiența actului didactic (componentă a celui educațional).',
+ 'R. Iucu: domeniu care studiază dimensiunile clasei – **ergonomică, psihologică, psihosocială, normativă, relațională, operațională, creativă (inovatoare)** – pentru intervenții prin „microdecizii educaționale”.',
+ '**Ergonomică**: mobilier (simplitate, funcționalitate, modularitate), vizibilitate, pavoazare.',
+ '**Psihologică**: capacitatea de muncă – nominală, funcțională, disponibilă, auxiliară; capacitatea de învățare.',
+ '**Socială**: clasa ca grup – mărime (ideal 20–22), interacțiune, scopuri, structură, coeziune, **sintalitate** (personalitatea grupului), lideri formali și informali.',
+ '**Normativă**: norme **explicite** (prescrise) și **implicite** (create de viața grupului); cultura implicită **proșcoală** vs **antișcoală**.',
+ '**Inovatoare**: schimbarea, învingerea rezistenței la schimbare.']},
+{titlu:'2. Prevenirea și rezolvarea situațiilor critice', puncte:[
+ 'Reguli comunicate clar la începutul anului: puține, simple, pe comportamente specifice, discutate, cu consecințe și recompense precizate; o parte stabilite împreună cu elevii.',
+ 'Organizarea clasei; cunoașterea elevilor (respect prin atenție).',
+ '**Metode active**: 80% dintre problemele de disciplină se datorează metodelor ineficiente; ordinea se menține prin implicarea elevilor.',
+ 'Rezolvarea imediată: comunicare asertivă („Mi-ar plăcea să…”), **controlul proximității**, controlul vocii și vizual.',
+ '**Modificarea comportamentală**: modelul A-B-C (**antecedente – comportament – consecințe**); monitorizarea (zi, moment, comportament, consecințe); analiza funcțională (formă, frecvență, durată, intensitate, latență).',
+ '**Întăririle** (cresc frecvența): obiectuale, simbolice, activități, sociale, puncte; aplicate imediat, cu motivul precizat, consecvent; programe pe bază de rată (fixă/variabilă) sau de intervale.',
+ '**Pedepsele** (scad frecvența): imediate, calme, în particular, precedate de avertisment, pe comportament nu pe persoană; **fără pedepse corporale**.',
+ '**Modelarea**, **contractul comportamental** (profesor–părinte–consilier–elev: comportamentul dorit, cel nedorit, consecințele), **prompterul**, **ghidajul** (fizic, verbal, prin întrebări).']},
+{titlu:'3. Integrare, incluziune, CES', puncte:[
+ '**Integrarea** (anii ’70–’90): reacție la segregare – includerea copiilor cu dizabilități/CES în școlile de masă; integrarea e precedată de **adaptare**.',
+ 'U. Șchiopu (citată de A. Gherguț): integrarea = cuprinderea unui element într-un întreg, cu care interacționează.',
+ '**Incluziunea** (din anii ’90; UNESCO „Educație pentru toți”, 1990): școala se transformă ca să răspundă diversității tuturor copiilor (dizabilități, dificultăți de învățare, medii defavorizate, instituționalizați).',
+ 'Incluziunea înseamnă: valorizarea egală a tuturor; creșterea participării; eliminarea barierelor pentru toți; diferențele ca **resursă**; dreptul la educație în propria localitate; parteneriat cu familia și comunitatea.',
+ '**CES** = spectru larg de dificultăți (de la deficiențe profunde la tulburări de învățare), accent pe dimensiunea psihopedagogică a nevoilor (E. Bonchiș); îl plasează pe copil într-o stare de dificultate și îi pot induce sentiment de inferioritate (A. Gherguț).',
+ 'Termeni înrudiți: nevoi speciale/excepționale, nevoi sociale, persoană în dificultate.']},
+{titlu:'3. Elevii cu TSA (tulburări din spectrul autist)', puncte:[
+ 'Dificultăți: interacțiunea socială, comunicarea, comportamentul stereotip; reglare emoțională, particularități ale gândirii.',
+ 'Dificultăți școlare: schimbări imprevizibile de orar, nevoia de timp suplimentar și la tranziții, experiențe senzoriale intense (clasa zgomotoasă).',
+ 'Forme de școlarizare: clasă obișnuită (cu/fără însoțitor), grupuri mici, clase speciale integrate, școală specială, acasă, centre rezidențiale.',
+ 'Beneficii ale integrării cu elevi tipici: ameliorarea interacțiunii sociale, generalizarea comportamentelor sociale. Riscuri: victimizare, excludere, anxietate, depresie.',
+ 'Comorbidități: **ADHD** (30–50%), tulburări anxioase (11–84%), depresie (10–53%, atipică – afect plat, iritabilitate; mai ales în Asperger).',
+ 'Rolul consilierului/profesorului: **construirea relației** (recompensarea comportamentelor adecvate, activități agreate); **adaptarea mediului** (tranziție prin joc); managementul comportamentelor înaintea procesului cognitiv; **explicarea clară a regulilor** (deficit de teoria minții – pictograme, orar vizual); **zona de confort**; **pauze** anticipate (≠ time-out); prevenirea bullyingului; abordarea refuzului școlar; colaborarea cu echipa multidisciplinară.']},
+{titlu:'3. Elevii cu ADHD', puncte:[
+ 'ADHD = tulburare de **neurodezvoltare**: deficit de atenție, dezorganizare și/sau hiperactivitate-impulsivitate; 5–7% dintre copii; băieții – mai des hiperactivi-impulsivi, fetele – mai des neatente.',
+ 'Tratament optim: medicație + ajustări educaționale + intervenții psihosociale consecvente acasă și la școală.',
+ '**Ajustări educaționale** (aceleași standarde, circumstanțe preferențiale): ale **prezentării**, ale **răspunsului** (examen oral, timp suplimentar), de **orar**, ale **spațiului**.',
+ 'Strategii: instrucțiuni directe, scurte, reformulate de elev; **meditații de la colegi** (același gen, rezultate mai bune); sarcinile grele **dimineața**; noutate și stimulare variată; structură, rutină, reguli afișate; automonitorizare; ritm propriu; alegerea sarcinilor; **pauze de mișcare**; responsabilități (videoproiector, tabla); așezare lângă profesor, departe de ferestre.',
+ 'Intervenții comportamentale: **pe antecedente** (prevenție prin mediu) și **pe consecințe**: **programe cu jetoane** (token economy), suspendarea întăririlor, **contractul comportamental**, extinderea programului acasă, **rapoarte zilnice** școală–familie.',
+ '**Analiza funcțională**: ce câștig îi aduce comportamentul (atenția profesorului/colegilor, evitarea sarcinii) → oferă același câștig pentru comportamente adecvate (atenție când lucrează, ignorare când se abate).',
+ 'Jetoane: sub 9 ani – tangibile (abțibilduri); mai mari – puncte pe card; standarde inițial ușor de atins; schimbarea în privilegii zilnic; rărirea treptată. **Costul răspunsului** = retragerea de puncte (cu grijă, într-o atmosferă caldă).',
+ 'Intervenții multimodale: **Challenging Horizons Program (CHP)** – after-school sau mentorat; dezvoltă abilități academice, interpersonale, sportive, mentorat + întâlniri lunare cu părinții.']},
+{titlu:'3. Tulburările specifice de învățare (TSI)', puncte:[
+ 'Criterii: dificultăți persistente (citire, scriere, calcul) cel puțin 6 luni, performanțe neașteptat de scăzute, debut în anii școlari, nu se explică prin alte cauze.',
+ 'Terminologie: „tulburare de învățare” (DSM-4), „tulburare specifică de învățare” (DSM-5), „tulburare specifică de dezvoltare a abilităților școlare” (ICD-10). Primare vs secundare (cu o cauză evidentă).',
+ '**Dislexia**: dificultăți de recunoaștere a cuvintelor, decodare deficitară; problema-cheie – corespondența **fonem–grafem**.',
+ '**Disgrafia**: afectarea calității scrisului (litere, gramatică, punctuație, organizare), fără deficit neurologic sau intelectual.',
+ '**Discalculia**: deficit specific al abilităților aritmetice.',
+ 'Intervenții în dislexie: reeducare logopedică (în România cea mai frecventă); **terapia Meixner** (asociația triplă: vorbire–cuvânt scris–cuvânt citit); antrenarea atenției vizuale; procesare auditivă temporală (Tallal, FastForWord); stimulare emisferică; PASS Remedial Program; intervenții fonologice și metafonologice; metoda Tomatis, semiofonia (lexifon); repetarea cuvintelor; strategii de comprehensiune.',
+ 'Disgrafie: grafoterapie (motorie), intervenție logopedică; cele mai eficiente – autoreglarea și monitorizarea erorilor, scrisul în colaborare, scopuri concrete.',
+ 'Discalculie: intervenție individualizată – abilități numerice de bază, reprezentări numeric-spațiale, raționament aritmetic.']}
+]});
+
+CARDURI.push(
+ {c:'s08', q:'Dimensiunile managementului clasei (R. Iucu)', a:'Ergonomică, psihologică, psihosocială, normativă, relațională, operațională, creativă/inovatoare.'},
+ {c:'s08', q:'Ce este sintalitatea?', a:'„Personalitatea” grupului – trăsăturile care caracterizează clasa ca întreg.', term:'Sintalitatea', short:'personalitatea unui grup'},
+ {c:'s08', q:'Norme explicite vs implicite în clasă', a:'- **Explicite:** prescrise, cunoscute, clar exprimate\n- **Implicite:** create de viața în comun a grupului'},
+ {c:'s08', q:'Ce procent din problemele de disciplină se datorează metodelor ineficiente?', a:'Aproximativ **80%**. Ordinea se menține prin implicarea activă a elevilor.'},
+ {c:'s08', q:'Cele trei componente ale unui comportament (modificare comportamentală)', a:'- Antecedentele\n- Comportamentul propriu-zis\n- Consecințele'},
+ {c:'s08', q:'Reguli de aplicare a pedepselor', a:'- imediat\n- calm, în particular\n- precedată de avertisment\n- criticat comportamentul, nu persoana\n- fără pedepse corporale'},
+ {c:'s08', q:'Ce este contractul comportamental?', a:'Înțelegere scrisă între profesor, părinte, consilier și elev care precizează comportamentul dorit, comportamentele nedorite și consecințele (întăriri și sancțiuni).', term:'Contractul comportamental', short:'înțelegere scrisă despre comportamente și consecințe'},
+ {c:'s08', q:'Integrare vs incluziune', a:'- **Integrarea:** copilul cu CES e adus în școala de masă și trebuie să se adapteze\n- **Incluziunea:** școala se transformă ca să răspundă diversității tuturor copiilor', term:'Incluziunea', short:'școala se adaptează diversității tuturor elevilor'},
+ {c:'s08', q:'Ce sunt CES?', a:'Cerințe educaționale speciale – un spectru larg de dificultăți (de la deficiențe profunde la tulburări de învățare) care cer școlarizare adaptată.', term:'CES', short:'cerințe educaționale speciale'},
+ {c:'s08', q:'Sfaturi pentru lucrul cu un elev cu TSA', a:'- construirea relației\n- adaptarea mediului (tranziție prin joc)\n- managementul comportamentelor\n- reguli explicite, pictograme\n- zona de confort\n- pauze anticipate\n- prevenirea bullyingului\n- abordarea refuzului școlar'},
+ {c:'s08', q:'De ce trebuie explicate explicit regulile unui elev cu TSA?', a:'Din cauza deficitelor de **teoria minții** – nu ne putem baza că „ar trebui să știe”.'},
+ {c:'s08', q:'Prevalența ADHD și diferențele de gen', a:'5–7% dintre copii; băieții mai des hiperactivi-impulsivi, fetele mai des neatente.'},
+ {c:'s08', q:'Cele 4 categorii de ajustări educaționale (ADHD)', a:'- ale prezentării\n- ale răspunsului\n- de orar\n- ale spațiului'},
+ {c:'s08', q:'Când se programează sarcinile solicitante pentru elevii cu ADHD?', a:'În **prima parte a zilei** – concentrarea scade pe parcursul zilei școlare.'},
+ {c:'s08', q:'Ce este analiza funcțională a comportamentului?', a:'Identificarea beneficiului pe care i-l aduce comportamentul (atenție, evitarea sarcinii) și oferirea aceluiași beneficiu pentru comportamente adecvate.', term:'Analiza funcțională', short:'ce „câștigă” elevul prin comportamentul problematic'},
+ {c:'s08', q:'Ce este „costul răspunsului”?', a:'Retragerea unor puncte/privilegii pentru comportamente nedorite – complementar programului cu jetoane; se aplică consecvent și cu empatie.', term:'Costul răspunsului', short:'retragerea de puncte pentru comportamente nedorite'},
+ {c:'s08', q:'Dislexie, disgrafie, discalculie', a:'- **Dislexia:** citire – recunoașterea cuvintelor, corespondența fonem–grafem\n- **Disgrafia:** calitatea scrisului\n- **Discalculia:** abilitățile aritmetice'},
+ {c:'s08', q:'Ce este terapia Meixner?', a:'Metodă fonetico-analitico-sintetico-logopedică pentru dislexie, bazată pe **asociația triplă**: vorbire – cuvânt scris – cuvânt citit (auditiv, vizual, tactil).'}
+);
+
+GRILE.push(
+ {c:'s08', q:'Componenta managementului clasei care se ocupă de mobilier și vizibilitate:', o:['Normativă','Ergonomică','Psihologică','Inovatoare'], r:1},
+ {c:'s08', q:'Paradigma „Educație pentru toți” a fost lansată de UNESCO în:', o:['1970','1990','2000','2010'], r:1},
+ {c:'s08', q:'Ce procent dintre copiii cu TSA îndeplinesc și criteriile ADHD?', o:['5%','10%','30–50%','90%'], r:2},
+ {c:'s08', q:'Pentru copiii sub 9 ani, într-un program cu jetoane sunt preferate:', o:['Puncte pe card','Recompense tangibile (abțibilduri)','Note','Bani'], r:1},
+ {c:'s08', q:'Colegul care oferă meditații unui elev cu ADHD ar trebui să fie:', o:['De gen opus','De același gen, cu rezultate mai bune','Mai mic','Oricine'], r:1},
+ {c:'s08', q:'Problema-cheie în dislexie este corespondența:', o:['Cifră–cantitate','Fonem–grafem','Cuvânt–imagine','Literă–culoare'], r:1},
+ {c:'s08', q:'„Zona de confort” pentru elevul cu TSA este:', o:['O formă de pedeapsă (time-out)','Un spațiu de retragere când stimulii devin prea intenși','O recompensă','Banca din spate'], r:1},
+ {c:'s08', q:'Pedeapsa trebuie să vizeze:', o:['Persoana','Comportamentul','Familia','Clasa'], r:1},
+ {c:'s08', q:'Cultura implicită „antișcoală” presupune:', o:['Valori conforme școlii','Valori nonconformiste, deviante','Note mari','Implicare'], r:1},
+ {c:'s08', q:'Challenging Horizons Program se adresează elevilor cu:', o:['TSA','ADHD','Dislexie','Deficiență de auz'], r:1}
+);
+
+AF.push(
+ {c:'s08', s:'Managementul clasei este o componentă a managementului educațional.', v:true},
+ {c:'s08', s:'Pedepsele corporale sunt acceptate dacă sunt aplicate imediat.', v:false},
+ {c:'s08', s:'Integrarea este precedată de adaptare.', v:true},
+ {c:'s08', s:'Incluziunea vizează doar copiii cu dizabilități.', v:false, e:'Vizează toți copiii, inclusiv din medii defavorizate.'},
+ {c:'s08', s:'Pauzele pentru elevul cu TSA trebuie acordate după apariția crizei.', v:false, e:'Înainte de apariția comportamentelor indezirabile.'},
+ {c:'s08', s:'Ajustările educaționale pentru ADHD scad standardele de performanță.', v:false, e:'Mențin aceleași standarde, dar creează circumstanțe preferențiale.'},
+ {c:'s08', s:'Simpla monitorizare a unui comportament poate duce uneori la ameliorarea lui.', v:true},
+ {c:'s08', s:'Fetele cu ADHD manifestă mai frecvent simptome de neatenție.', v:true},
+ {c:'s08', s:'Disgrafia se datorează unui deficit intelectual.', v:false}
+);
+
 /* ---- content/teste/t01.js ---- */
 SUBIECTE.push({nr:1, tema:'Comunicarea și feedback-ul · Consilierea · Brainstorming (carieră)', subiecte:[
 {titlu:'Subiectul I', puncte:30,
