@@ -114,7 +114,7 @@ function Home(v){
     <div class="tile" id="tMatch"><div class="ic">🧩</div><b>Potrivește</b><small>concept ↔ definiție</small></div>
     <div class="tile" id="tDue"><div class="ic">🃏</div><b>Carduri de azi</b><small>${due} de repetat</small></div>
     <div class="tile" id="tWrong"><div class="ic">🔁</div><b>Greșelile mele</b><small>${wrongN} de reluat</small></div>
-    <div class="tile" id="tRand"><div class="ic">🎲</div><b>Surprinde-mă</b><small>o fișă la întâmplare</small></div>
+    <div class="tile" id="tRand"><div class="ic">✨</div><b>Surprinde-mă</b><small>o fișă la întâmplare</small></div>
     <div class="tile" id="tSim"><div class="ic">📝</div><b>Simulare examen</b><small>un test complet, cronometrat</small></div>
   </div>
   <div class="grid2"><div class="tile" id="tGen"><div class="ic">🎲</div><b>Subiect nou (AI)</b><small>variantă inedită</small></div>
