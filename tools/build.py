@@ -3,7 +3,7 @@
 import os, glob
 root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 files = sorted(glob.glob(os.path.join(root, 'content', '*.js'))) + \
-        sorted(glob.glob(os.path.join(root, 'content', 'capitole', '*.js'))) + \
+        sorted(glob.glob(os.path.join(root, 'content', 'capitole', '*.js')), key=lambda f: (os.path.basename(f)[0] != 's', f)) + \
         sorted(glob.glob(os.path.join(root, 'content', 'teste', '*.js'))) + \
         sorted(glob.glob(os.path.join(root, 'content', 'oficiale', '*.js')))
 os.makedirs(os.path.join(root, 'data'), exist_ok=True)
