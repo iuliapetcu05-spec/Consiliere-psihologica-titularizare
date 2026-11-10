@@ -1038,6 +1038,273 @@ AF.push(
  {c:'s09', s:'Există întotdeauna o alternativă ideală în deciziile de carieră.', v:false}
 );
 
+/* ---- content/capitole/s10.js ---- */
+/* CAPITOLUL X (Specialitate) – Consilierea familiei */
+CAPITOLE.push({id:'s10', parte:'Tematica de specialitate', nr:'X', emoji:'🏡', scurt:'Consilierea familiei',
+titlu:'Consilierea familiei',
+sectiuni:[
+{titlu:'1. Tipuri de familii', puncte:[
+ '**Familia nucleu (nucleară)** = doi adulți de sex opus, într-o relație aprobată de societate, cu copiii proprii sau adoptați. Poate fi: **de orientare** (familia în care te naști, statut de fiu/fiică) sau **de procreare** (familia pe care o creezi prin căsătorie, statut de soț/părinte).',
+ '**Familia extinsă (consangvină)** = două sau mai multe familii nucleare unite prin legătura părinte–copil (frați, bunici, unchi, mătuși, veri).',
+ '**Familia mixtă (compusă)** = căsătoria dintre doi părinți (singuri sau divorțați), cu copii proprii sau comuni. Poate fi: **simplă compusă** (unul aduce copii dintr-o căsătorie anterioară), **dublu compusă** (amândoi aduc copii), **cuplu compus complex** (copii aduși + copii comuni).',
+ 'Riscuri în familia compusă: intoleranță între frații vitregi și cei naturali, relație tensionată cu părintele vitreg; copilul „își împarte” afectiv părintele, renunță la visul reunirii părinților și poate deveni ostil sau poate sabota noul mariaj.',
+ '**Familia monoparentală** = structură asimetrică, un părinte + copil/copii (deces, divorț, abandon, adopție de către o singură persoană, naștere în afara căsătoriei). Cele mai multe provin din familii nucleare dezorganizate.',
+ '**Coabitarea consensuală** = cuplu fără căsătorie. **Familia poligamă** = două sau mai multe familii unite prin legături maritale (în unele societăți).',
+ 'Rolurile: mama începe educația (căldura afectivă, deprinderile), tatăl preia mai mult pe măsură ce copilul crește. **Bunicii** ajută când rămân colaboratori ai părinților; în exces de zel le știrbesc autoritatea.',
+ 'De ce contează pentru consilier: fiecare structură familială creează un **climat educativ** specific; cunoașterea tipului de familie ajută intervenția.'
+], retine:'Nucleară (de orientare / de procreare), extinsă, mixtă (simplă, dublu compusă, complexă), monoparentală, coabitare consensuală.'},
+{titlu:'2. Stiluri parentale (D. Baumrind)', puncte:[
+ '**Stilul de parenting** = pattern general de creștere a copilului, definit prin combinația de **căldură** și **control**. În practică nu există stiluri pure, ci stiluri **predominante**. Depind de personalitatea părintelui, modelul educativ, cultură, tradiții, condiții sociale, structura familiei, profesie.',
+ '**Căldura** (acceptare, receptivitate) = centrare pe copil, suport afectiv, încurajare, atenție la nevoile lui. **Controlul** (exigență) = comportamentele de disciplină impuse copilului.',
+ '**Exigent (autoritativ)** = căldură ↑ + control ↑. Standarde înalte, explicate; control ferm într-o relație caldă. Copiii au stimă de sine ridicată, curiozitate, sunt prietenoși, populari, cooperanți și se descurcă bine la școală. Este stilul cu cele mai bune rezultate.',
+ '**Autoritar** = control ↑ + căldură ↓. Reguli multe și stricte, amenințări, pedepse, frică. Copiii au competențe și responsabilitate moderate, sunt lipsiți de spontaneitate. Hiperprotecția transmite neîncredere: copiii ajung timizi și inhibați sau, invers, rebeli.',
+ '**Permisiv (indulgent)** = căldură ↑ + control ↓. Puține reguli, inconsecvență, cedare la insistențe. Copiii sunt bine dispuși și vitali, dar au încredere scăzută în sine, sunt iresponsabili social, impulsivi, imaturi, dependenți și nu perseverează.',
+ '**Neimplicat (neglijent)** = căldură ↓ + control ↓. Detașare emoțională, părintele e centrat pe sine. Rezultă atașament insecurizant, competență socială slabă și risc de consum de droguri, delincvență, probleme de sănătate psihică.',
+ 'Stilul exigent sprijină: **acceptarea de sine**, acceptarea celorlalți (toleranță, empatie), **autodisciplina** (autonomie, rezistență la presiunea grupului), **sentimentul de competență și control personal**, scopurile în viață, dezvoltarea personală.',
+ 'Etichetele puse copilului sunt „pietre legate de picioarele unui copil care trebuie să înoate”. Pedeapsa trebuie precedată de avertisment, fără sarcasm și fără ton ridicat.'
+], retine:'Căldură × control: exigent (↑↑), autoritar (control↑), permisiv (căldură↑), neimplicat (↓↓).'},
+{titlu:'3. Practici parentale pozitive', puncte:[
+ 'Fundamente teoretice: **teoria behavioristă** (Skinner: comportamentele întărite cresc ca frecvență, cele pedepsite sau ignorate scad), **teoria atașamentului** (Bowlby: atașamentul primar se formează între 0 și 3 ani; modelele interne de lucru prezic relațiile apropiate) și **teoria stilurilor parentale** (Baumrind).',
+ '**Parentingul pozitiv** pune accent pe ce **pot face** părinții, nu pe ce nu trebuie să facă: întărește stima de sine, starea de bine și sentimentul de apartenență.',
+ 'Pe vârste: la preșcolar, îngrijire și răspuns la nevoile de bază; la școlar, monitorizare, așteptări comunicate clar, socializare proactivă (cresc autoreglarea); la adolescent (Steinberg): **acceptare și implicare, control comportamental, susținerea autonomiei psihologice**.',
+ 'Puncte forte ale caracterului legate de parentingul pozitiv: **urmărirea scopurilor** (eudaimonice = sens, autorealizare; hedonice = plăcere), **speranța**, **optimismul**, **autoeficacitatea** (Bandura: încrederea că poți realiza comportamentele necesare scopului; crește când primești sarcini realizabile, duse la capăt singur), **empatia, compasiunea și judecata morală**.',
+ '**Model bidirecțional**: părintele modelează copilul, dar și copilul (de exemplu prin temperament dificil) modelează părintele. **Moderatori/mediatori**: optimismul, autocontrolul și empatia copilului.',
+ 'Concluzie: un stil **blând, dar ferm** și emoțiile pozitive exprimate în familie se asociază cu sănătatea mintală și adaptarea copiilor.'
+], retine:'Parenting pozitiv = căldură + structură + autonomie; teorii: behavioristă, atașament, stiluri parentale.'},
+{titlu:'4. Familia în criză', puncte:[
+ '**Intervenția în criză** vizează rezolvarea problemelor interne și urgente care depășesc capacitatea de adaptare (deces, divorț, abandon, boală gravă) și alinarea suferinței. Seamănă cu consilierea, dar e mai profund legată de context.',
+ '**Divorțul**, recomandări pentru părinți: divorțul nu se ține secret; vestea se dă **împreună**; copilul e asigurat că e iubit **întotdeauna**; nu se discută cu copilul greșelile celuilalt părinte. Semne de stres: la copiii mici, agresivitate sau retragere; la cei mai mari, scădere școlară și tulburări de comportament; mai târziu, probleme de relație și stimă de sine.',
+ '**Decesul / doliul**: întâi negare și protest, apoi disperare (sensul vieții se clatină), apoi ieșirea din doliu în timp, cu sprijin. Copiii mici văd moartea ca temporară și reversibilă; între 5 și 9 ani o înțeleg, dar cred că nu li se va întâmpla lor.',
+ 'Semne de doliu complicat la copil: depresie prelungită, insomnie, lipsa poftei de mâncare, teama de a rămâne singur, comportament infantil prelungit, imitarea excesivă a celui decedat, dorința de a i se alătura, scăderea bruscă la școală sau refuzul școlii.',
+ '**Abandonul**, cauze: dificultăți financiare, părinte singur, depresie postnatală, lipsa educației sexuale și a planificării familiale, dizabilitatea copilului, sarcină în urma violului, servicii de sprijin precare. **Prevenire**: centre de zi, planificare familială, consiliere pentru mamă/familie, asistenți sociali în maternități, personal instruit.',
+ '**Abuzul de substanțe**: implicare comună (părinți, școală, elevi, autorități, comunitate), cu mesaj consistent. Dependența poate fi **psihologică** (nu poți funcționa fără substanță) sau **fizică** (corpul are nevoie de ea; lipsa duce la sevraj).',
+ '**Bolile cronice**: program de management și consiliere (definirea bolii, echipa, întrebări-cheie, evaluarea dovezilor, beneficii/costuri, ghiduri clinice, sistem de măsurare).',
+ '**Părinți plecați în străinătate**: sentiment de abandon, anxietate de separare, tulburări afective, compensare prin bani și cheltuieli, probleme școlare, introversie, abandon școlar. Se recomandă să nu plece ambii părinți și să existe **contact permanent**.'
+], retine:'Divorț: vestea dată împreună, copilul iubit mereu, fără reproșuri despre celălalt. Doliu: negare → disperare → ieșire.'},
+{titlu:'5. Strategii de consiliere în criză', puncte:[
+ '**Deces în familia unui elev**: dirigintele sau consilierul anunță clasa cu sensibilitate. Urmează un cerc de discuție, cu participare liberă și întrebări pe bilețel: „Cum te-ai simțit când ai aflat?”, „Ai mai trăit așa ceva?”, „Cum ne comportăm acum ca și colegi?”, „Cum îl putem ajuta acum și când se întoarce?”.',
+ 'Reacțiile tinerilor la deces sunt diferite, chiar contradictorii: veselie exagerată, hiperactivitate, furie, apatie, dorința de a deveni una cu persoana decedată, idealizarea amintirii, negarea, regresii, pierderea trăită ca eliberare. Comportamentul poate fi **mascat**.',
+ '**Copiii cu părinți divorțați**: se adaptează mai bine cei cu suport material, puține schimbări de mediu, imagine de sine pozitivă și părinți cu abilități de comunicare bune.',
+ 'Între 6 și 8 ani: tristețe, sentiment de abandon, anxietate, coșmaruri, conflict de loialitate, vinovăție, fantezii de reunire. Între 8 și 12 ani: predomină **furia**, care e îndreptată spre un părinte; apar simptome somatice și conflicte cu colegii. Adolescenții pot recurge la alcool sau droguri.',
+ '**Obiectivele consilierului** cu acești elevi: **acceptarea** faptului că divorțul s-a întâmplat; ieșirea din conflictul părinților și **reîntoarcerea la propriile preocupări**; rezolvarea **furiei și a vinovăției**; acceptarea că divorțul e **permanent**. Consilierul lucrează și cu părinții, și cu profesorii.'
+], retine:'Copii cu părinți divorțați: acceptare, ieșire din conflictul părinților, rezolvarea furiei și vinovăției, acceptarea permanenței.'},
+{titlu:'6. Parteneriatul școală–familie', puncte:[
+ '**Bariere în comunicarea profesor–părinți** (și corecturi): probleme de **ascultare** (profesorul vrea doar să informeze), **lipsa feedback-ului**, **feedback fals** (tăcerea părea acord), **rezistența la critică**, **percepția selectivă și subiectivitatea**, obținerea informației prin manipulare discretă, **ascultarea afectivă**, alegerea momentului și locului, **inadvertențele de limbaj** (jargon; soluția e un limbaj simplu, adaptat), **barierele culturale**.',
+ 'În discuția cu părintele: tact, atitudine de prieten, nu de șef. Se încep cu **aspectele pozitive**, apoi dificultățile și cauzele lor, apoi posibilitățile de dezvoltare și măsurile comune.',
+ 'De ce colaborează școala cu familia (raport CE): părinții sunt **juridic responsabili** de educație; școala e doar o parte a educației; atitudinea părinților influențează rezultatele și motivația; părinții și profesorii au dreptul să influențeze gestiunea școlară.',
+ 'Reproșuri aduse părinților: apatie, timiditate, ingerințe, preocupare excesivă pentru note, contacte limitate, conservatorism. Reproșuri aduse profesorilor: îi tratează pe părinți ca pe copii, decid autoritar, nu au pregătire pentru relația cu familia.',
+ '**Asociațiile de părinți** pot funcționa ca grup de susținere, grup de cooperare (parteneri) sau grup de apărare a intereselor. Obiective: sensibilizarea părinților, informarea lor, formarea lor, reprezentarea lor.',
+ 'Teorii: a **profesionalismului** (serviciul făcut altora, competență, etică) și a **schimbului** (câștigul personal; profesorul câștigă statut și eficacitate).',
+ '**Trei etape** ale relației școală–familie: **școala autosuficientă** (închisă, contacte rare și formale) → **incertitudinea profesională** (se recunoaște influența familiei, dar familia e acuzată) → **dezvoltarea încrederii mutuale** (părinții în consilii, cu rol decizional, iar cazurile dificile sunt tratate de specialiști). Tendința europeană: **contractul școală–familie**.',
+ 'Soluția ideală: **toți** profesorii au relații obișnuite cu familiile, iar consilierii și psihologii se ocupă de cazurile dificile și de vizitele în familie.'
+], retine:'Etape: școala autosuficientă → incertitudine profesională → încredere mutuală (→ contract școală–familie).'},
+{titlu:'7. Educația parentală', puncte:[
+ '**Educația parentală**: în sens larg, programe, servicii și resurse pentru părinți și îngrijitori; în sens restrâns, programe care dezvoltă **abilitățile parentale**, înțelegerea dezvoltării copilului, reducerea stresului și modalități alternative de rezolvare a situațiilor dificile.',
+ '**Beneficii**: părinții cunosc mai bine dezvoltarea și nevoile copilului, cunosc drepturile copilului, comunică mai bine și își ajustează așteptările, au atitudini responsive și suportive și folosesc **disciplinarea pozitivă**.',
+ 'Activitățile parentale au trei dimensiuni: **îngrijire, control, dezvoltare**. Părinții au nevoie de resurse: cunoștințe, timp, motivație.',
+ 'În România: Fundația Copiii Noștri (după un model olandez, NIZW, împreună cu MEC); Holt („Cum să devenim părinți mai buni”, 0–3 ani, 2000); „Educația viitorilor părinți” (2004, opțional pentru clasele IX–XII); **Salvați Copiii – Triple P** (2010); **Strategia Națională Integrată pentru Formarea și Dezvoltarea Competențelor Parentale**.',
+ 'Probleme ale programelor: conținuturi foarte diverse (e nevoie de un nucleu comun de competențe) și orientare predominantă spre **mame**, cu participare slabă a **taților**.'
+], retine:'Educația parentală: îngrijire, control, dezvoltare. Exemplu de program: Triple P (Salvați Copiii).'}
+]});
+
+CARDURI.push(
+ {c:'s10', q:'Familia nucleară de orientare vs de procreare', a:'- **De orientare:** familia în care te naști (statut de fiu/fiică)\n- **De procreare:** familia pe care o creezi prin căsătorie (statut de soț/părinte)'},
+ {c:'s10', q:'Cele trei forme ale familiei mixte (compuse)', a:'- **Simplă compusă:** unul dintre parteneri aduce copii\n- **Dublu compusă:** amândoi aduc copii\n- **Cuplu compus complex:** copii aduși + copii comuni'},
+ {c:'s10', q:'Familia monoparentală', a:'Structură asimetrică: un părinte + copil/copii (deces, divorț, abandon, adopție de către o singură persoană, naștere în afara căsătoriei).', term:'Familia monoparentală', short:'un părinte + copii, structură asimetrică'},
+ {c:'s10', q:'Cele 2 dimensiuni ale stilurilor parentale (Baumrind)', a:'**Căldura** (acceptare, receptivitate, suport afectiv) și **controlul** (exigență, disciplină).'},
+ {c:'s10', q:'Stilul exigent (autoritativ)', a:'Căldură ridicată + control ridicat. Standarde înalte, explicate, într-o relație caldă. Copiii au stimă de sine, sunt cooperanți și au rezultate bune.', term:'Stil exigent (autoritativ)', short:'căldură ↑ + control ↑'},
+ {c:'s10', q:'Stilul autoritar', a:'Control ridicat + căldură scăzută: reguli stricte, amenințări, pedepse, frică. Copiii sunt lipsiți de spontaneitate, timizi sau rebeli.', term:'Stil autoritar', short:'control ↑, căldură ↓'},
+ {c:'s10', q:'Stilul permisiv', a:'Căldură ridicată + control scăzut: puține reguli, cedare la insistențe. Copiii sunt impulsivi, imaturi, dependenți și nu perseverează.', term:'Stil permisiv', short:'căldură ↑, control ↓'},
+ {c:'s10', q:'Stilul neimplicat (neglijent)', a:'Căldură și control scăzute: detașare emoțională, părinte centrat pe sine. Rezultă atașament insecurizant și risc de delincvență și consum de droguri.', term:'Stil neimplicat', short:'căldură ↓, control ↓'},
+ {c:'s10', q:'Cele 3 teorii care fundamentează parentingul pozitiv', a:'- **Behavioristă** (Skinner: întărire / pedeapsă)\n- **Atașamentului** (Bowlby: 0–3 ani, modele interne de lucru)\n- **Stilurilor parentale** (Baumrind)'},
+ {c:'s10', q:'Parentingul pozitiv la adolescență (Steinberg)', a:'Acceptare și implicare + control comportamental + susținerea autonomiei psihologice.'},
+ {c:'s10', q:'Autoeficacitatea (Bandura)', a:'Încrederea persoanei că poate realiza comportamentele necesare atingerii scopurilor. Părinții o cresc prin sarcini realizabile, lăsate duse la capăt de copil.', term:'Autoeficacitatea', short:'încrederea că poți realiza ce îți propui'},
+ {c:'s10', q:'4 reguli pentru părinți la divorț', a:'- Divorțul nu se ține secret\n- Vestea se dă **împreună**\n- Copilul e asigurat că e iubit întotdeauna\n- Nu se discută cu copilul greșelile celuilalt părinte'},
+ {c:'s10', q:'Etapele doliului', a:'Negare și protest → disperare (sensul vieții se clatină) → ieșirea din doliu în timp, cu sprijin.'},
+ {c:'s10', q:'Semne de doliu complicat la copil', a:'Depresie prelungită, insomnie, lipsa poftei de mâncare, teama de a rămâne singur, comportament infantil, imitarea excesivă a decedatului, dorința de a i se alătura, scădere școlară sau refuzul școlii.'},
+ {c:'s10', q:'Obiectivele consilierului cu elevii cu părinți divorțați', a:'- Acceptarea că divorțul s-a întâmplat\n- Ieșirea din conflictul părinților, revenirea la propriile preocupări\n- Rezolvarea furiei și a vinovăției\n- Acceptarea că divorțul e permanent'},
+ {c:'s10', q:'Dependența psihologică vs fizică', a:'- **Psihologică:** simți că nu poți gândi sau funcționa fără substanță\n- **Fizică:** organele au nevoie de substanță; lipsa ei duce la **sevraj**'},
+ {c:'s10', q:'Efecte ale plecării părinților în străinătate', a:'Sentiment de abandon, anxietate de separare, tulburări afective, compensare prin bani, probleme școlare, introversie, abandon școlar. Se recomandă contact permanent și să nu plece ambii părinți.'},
+ {c:'s10', q:'5 bariere în comunicarea profesor–părinți', a:'Probleme de ascultare, lipsa feedback-ului, feedback fals, rezistența la critică, percepția selectivă, ascultarea afectivă, inadvertențele de limbaj, barierele culturale (oricare 5).'},
+ {c:'s10', q:'Cele 3 etape ale relației școală–familie', a:'1. Școala **autosuficientă**\n2. **Incertitudinea** profesională\n3. Dezvoltarea **încrederii mutuale** (→ contractul școală–familie)'},
+ {c:'s10', q:'Tipuri de asociații de părinți (după scop)', a:'Grup de **susținere** a școlii, grup de **cooperare** (parteneri), grup de **apărare** a intereselor părinților.'},
+ {c:'s10', q:'Educația parentală (sens restrâns)', a:'Programe care ajută părinții să-și dezvolte abilitățile parentale, să înțeleagă dezvoltarea copilului, să reducă stresul și să găsească modalități alternative pentru situațiile dificile.', term:'Educația parentală', short:'programe pentru abilitățile părinților'},
+ {c:'s10', q:'Cele 3 dimensiuni ale activităților parentale', a:'Îngrijire, control, dezvoltare.'}
+);
+
+GRILE.push(
+ {c:'s10', q:'Familia în care ambii parteneri aduc copii din căsătorii anterioare este:', o:['simplă compusă','dublu compusă','extinsă','monoparentală'], r:1},
+ {c:'s10', q:'Stilul parental cu control ridicat și căldură scăzută este:', o:['exigent','permisiv','autoritar','neimplicat'], r:2},
+ {c:'s10', q:'Stilul asociat cu cele mai bune rezultate ale copilului (Baumrind):', o:['autoritar','exigent (autoritativ)','permisiv','neimplicat'], r:1},
+ {c:'s10', q:'Teoria atașamentului îi aparține lui:', o:['Skinner','Bandura','Bowlby','Baumrind'], r:2},
+ {c:'s10', q:'Copiii cu părinți permisivi tind să fie:', o:['inhibați și timizi','impulsivi, imaturi, dependenți','foarte responsabili social','fără vitalitate'], r:1},
+ {c:'s10', q:'Între 8 și 12 ani, reacția predominantă la divorțul părinților este:', o:['negarea','furia','euforia','indiferența'], r:1, e:'La 6–8 ani predomină tristețea; la 8–12 ani, furia.'},
+ {c:'s10', q:'Programul Triple P a fost implementat în România de:', o:['Holt','Salvați Copiii','UNICEF','Fundația Copiii Noștri'], r:1},
+ {c:'s10', q:'Prima etapă a relației școală–familie:', o:['încrederea mutuală','incertitudinea profesională','școala autosuficientă','contractul școală–familie'], r:2},
+ {c:'s10', q:'Parentingul pozitiv la adolescență NU include:', o:['acceptare și implicare','control comportamental','susținerea autonomiei psihologice','pedeapsa fizică consecventă'], r:3},
+ {c:'s10', q:'Bariera în care tăcerea părintelui pare acord, dar ascunde neînțelegere:', o:['rezistența la critică','feedback-ul fals','percepția selectivă','bariera culturală'], r:1}
+);
+
+AF.push(
+ {c:'s10', s:'În practică, stilurile parentale apar de obicei în formă pură.', v:false, e:'Nu există stiluri pure, ci stiluri predominante.'},
+ {c:'s10', s:'Vestea divorțului trebuie dată copilului de ambii părinți, împreună.', v:true},
+ {c:'s10', s:'Copiii mici văd adesea moartea ca fiind temporară și reversibilă.', v:true},
+ {c:'s10', s:'Parentingul neimplicat se asociază cu atașament securizant.', v:false, e:'Se asociază cu atașament insecurizant.'},
+ {c:'s10', s:'Parentingul este un proces bidirecțional: și copilul îl modelează pe părinte.', v:true},
+ {c:'s10', s:'În discuția cu părintele, profesorul începe cu dificultățile elevului.', v:false, e:'Se începe cu aspectele pozitive.'},
+ {c:'s10', s:'Programele de educație parentală se adresează în mod egal mamelor și taților.', v:false, e:'Sunt orientate predominant spre mame; tații participă puțin.'},
+ {c:'s10', s:'Dependența fizică presupune apariția sevrajului la lipsa substanței.', v:true}
+);
+
+/* ---- content/capitole/s11.js ---- */
+/* CAPITOLUL XI (Specialitate) – Consilierea cadrelor didactice */
+CAPITOLE.push({id:'s11', parte:'Tematica de specialitate', nr:'XI', emoji:'👩‍🏫', scurt:'Consilierea cadrelor didactice',
+titlu:'Consilierea cadrelor didactice',
+sectiuni:[
+{titlu:'1. Educația adulților și formarea continuă', puncte:[
+ '**Educația permanentă** cuprinde educația adulților și acoperă dezvoltarea umană de la copilărie la bătrânețe. Caracteristici: e **continuă**, e **integrantă** (se sprijină și pe resursele familiei, comunității, societății), are **caracter universal**, permite **forme alternative și complementare** și urmărește creșterea **calității vieții** (Golu F.).',
+ 'Adulții nu învață mai greu decât tinerii, dar mulți subestimează propriile resurse de învățare și se blochează în stereotipuri legate de vârstă (de teama eșecului).',
+ '**Particularitățile învățării la adulți**: e **motivată intrinsec** (nevoia de a ști); se bazează pe **responsabilitatea** pentru propriile decizii; **valorifică experiențele anterioare**; e **centrată pe viață**, pe aplicarea imediată.',
+ '**Formarea continuă** răspunde nevoilor personale și profesionale și dă coerență sistemului educațional (redefinirea scopurilor, conținuturi reorganizate, forme noi de instruire).'
+], retine:'Învățarea la adulți: motivată intrinsec, responsabilă, bazată pe experiență, centrată pe aplicare.'},
+{titlu:'2. Principiile lucrului cu adulții', puncte:[
+ '**1. Experiența participanților** e importantă și e inclusă în instruire.',
+ '**2. Activitățile sunt centrate pe dezvoltarea abilităților**: prezentările formatorului ocupă doar **10–15%** din timp, restul înseamnă exerciții practice și aplicații.',
+ '**3. Implicarea activă**: participanții compară experiențele anterioare cu cele noi și au control asupra procesului.',
+ '**4. Strategiile și tehnicile sunt semnificative pentru adulți**: valorifică experiența, încurajează schimbul de idei și vizează aplicarea în practică.',
+ '**5. Adaptarea la stilurile de învățare** diferite.',
+ '**6. Materiale vizuale**: implicarea mai multor canale de percepție crește asimilarea.',
+ '**7. Consolidarea prin exersare** în activități practice (altfel informația nu e folosită ulterior).',
+ '**8. Învățarea reciprocă**: participanții învață unii de la alții, uneori mai mult decât de la formator.',
+ 'Rolul formatorului este să **faciliteze** învățarea, **nu s-o impună**. Consilierul care lucrează cu adulții: folosește empatia și introspecția, reflectează asupra propriei experiențe, colaborează cu colegii, îi tratează pe cursanți ca personalități distincte, încurajează studiul individual după curs.',
+ 'Motivele dominante ale învățării la adulți: dobândirea de abilități și competențe, autorealizarea, progresul în carieră, recunoașterea socială.'
+], retine:'Principii: experiență, abilități (formatorul vorbește 10–15% din timp), implicare activă, relevanță, stiluri de învățare, vizual, exersare, învățare reciprocă.'},
+{titlu:'3. Educația pozitivă în școală', puncte:[
+ '**Educația pozitivă** îmbină dezvoltarea cognitivă cu optimizarea **stării de bine**, a fericirii și a trăsăturilor pozitive de caracter. Psihologia pozitivă pornește de la ideea că **toți copiii au puncte forte** care pot fi mobilizate pentru schimbare.',
+ 'Intervențiile pe puncte forte îi ajută pe copii să-și identifice resursele, să schimbe cognițiile disfuncționale (lipsa de speranță, evaluarea globală negativă) și uneori rezolvă comportamente problematice.',
+ '**Fericirea** are trei componente: **viața plăcută** (rezultatul a ceea ce faci), **viața angajată** (exprimarea punctelor forte), **viața cu sens** (punctele forte puse în slujba unor valori asumate).',
+ '**Evaluarea fericirii**: Scala fețelor (7 fețe, de la „cel mai nefericit” la „cel mai fericit”), Scala fericirii subiective (4 itemi, Likert), Scala Piers-Harris a conceptului de sine (60 de itemi da/nu, 7–18 ani, 6 dimensiuni), eșantionarea experiențelor (copiii sunt cei mai fericiți cu prietenii, cei mai puțin fericiți singuri sau la activitățile școlare).',
+ '**Empatia** = abilitatea de a înțelege și de a împărtăși emoțiile celorlalți. Are o componentă **afectivă** (simți ce simte celălalt) și una **cognitivă** (înțelegi emoțiile celuilalt). Stadii: plânsul reactiv al nou-născutului, distresul empatic egocentric, apoi, din al doilea an, empatia orientată spre ceilalți.',
+ 'Empatia se leagă de succesul școlar, comportamentul prosocial, limbaj și cooperare. Se dezvoltă prin imitarea modelelor și învățare socială. Programe: The Empathy Training Program, Incredible Years Dinosaur, Talking-Feeling-Doing Game.',
+ '**Optimismul** = tendința de a aștepta rezultate pozitive și de a persevera, sau un stil de atribuire pozitiv. E **factor de protecție** împotriva anxietății, depresiei și consumului de substanțe. Are o parte ereditară (25–36%), dar **poate fi învățat** prin modelare și întăriri. Programe: Penn Prevention/Resiliency, Aussie Optimism, Friends, Resourceful Adolescent.',
+ 'Programele de **învățare socio-emoțională** sunt de lungă durată, integrate în curriculum, atente la emoții și la generalizarea învățării, cu evaluare multiplă. Intervențiile pozitive vizează recunoștința, speranța, reziliența, punctele forte, optimismul și empatia.'
+], retine:'Fericirea: viața plăcută, angajată, cu sens. Empatia: afectivă + cognitivă. Optimismul se poate învăța.'},
+{titlu:'4. Relația școală–elevi–părinți', puncte:[
+ '**Școala și familia** sunt cei doi piloni ai educației. Lipsa colaborării duce la abandon și insucces școlar, violență, indisciplină, delincvență.',
+ '**Consilierea părinților** = intervenție socio-educațională pentru găsirea unor noi căi de comunicare și colaborare între părinți și educatori.',
+ 'Nevoi psihosociale ale copilului de care ține cont educația: **identitate, apartenență, acceptare și apreciere, statut, participare**.',
+ 'Forme de comunicare cadru didactic–familie: activități de informare și consiliere a părinților, vizite la domiciliu, ședințe lunare, activități comune părinți–elevi, comitetul de părinți, scrisori, e-mail, telefon.',
+ '**Semne că relația funcționează**: elevii vin cu drag la profesor, nu contestă calificativele, se comportă civilizat și în libertate, au rezultate bune, își apără profesorul, păstrează legătura în vacanțe, iar părinții vin la ședințe și apreciază activitatea.'
+], retine:'Școala + familia = piloni ai educației; colaborarea previne abandonul, violența, delincvența.'},
+{titlu:'5. Optimizarea climatului școlar', puncte:[
+ 'Pentru ca o clasă să devină **grup**, profesorul creează ocazii de cunoaștere reciprocă, favorizează comunicarea, folosește lucrul în grupuri mici și ajutorul între colegi.',
+ 'Clasa e o **microsocietate** cu **reguli clare**: reguli școlare (ținută, teme, prezență) și reguli de **civilitate** (limbaj, adresare, respect, toleranță, solidaritate). Respectarea regulilor e condiție a **socializării**.',
+ '**Intervenția primară** se adresează **tuturor** elevilor, înainte să apară problema (de exemplu, abilități de comunicare părinți–copii dezvoltate dinainte). **Intervenția secundară** vizează **grupurile de risc** (de exemplu, copiii din medii defavorizate, cu risc de tulburări de citire sau scriere).',
+ 'Pentru orice intervenție: **analiza nevoilor**. Indici **cantitativi** (număr de elevi, abandon, delincvență, resurse, personal), indici **calitativi** (ambianță, relații, comunicare), analiza comunității, contextul politic, economic, social și tehnologic.',
+ '**Analiza SWOT**: puncte **tari** (S) și **slabe** (W), care sunt **interne**; **oportunități** (O) și **amenințări** (T), care sunt **externe**.',
+ 'Metode pentru analiza nevoilor: discuții individuale cu persoane-cheie, chestionare, analiza documentelor școlii, discuții cu experți, întâlniri comunitare.'
+], retine:'Intervenție primară (toți elevii) vs secundară (grupuri de risc); SWOT: S,W interne / O,T externe.'}
+]});
+
+CARDURI.push(
+ {c:'s11', q:'Caracteristicile educației permanente', a:'Continuă, integrantă, universală, permite forme alternative/complementare, urmărește calitatea vieții.'},
+ {c:'s11', q:'4 particularități ale învățării la adulți', a:'- Motivată intrinsec\n- Bazată pe responsabilitatea pentru propriile decizii\n- Valorifică experiența anterioară\n- Centrată pe viață, pe aplicare imediată'},
+ {c:'s11', q:'Principiile lucrului cu adulții (oricare 4)', a:'Experiența participanților contează; centrare pe abilități (formatorul vorbește 10–15% din timp); implicare activă; strategii semnificative; adaptare la stilurile de învățare; materiale vizuale; consolidare prin exersare; învățare reciprocă.'},
+ {c:'s11', q:'Cât din timpul unei instruiri pentru adulți ar trebui să fie prezentare a formatorului?', a:'**10–15%**. Restul timpului e pentru exerciții practice și aplicații.'},
+ {c:'s11', q:'Rolul formatorului în lucrul cu adulții', a:'Să **faciliteze** învățarea, nu s-o impună.'},
+ {c:'s11', q:'Educația pozitivă', a:'Îmbină dezvoltarea cognitivă cu optimizarea stării de bine, a fericirii și a trăsăturilor pozitive de caracter; pornește de la punctele forte ale fiecărui copil.', term:'Educația pozitivă', short:'cognitiv + stare de bine + puncte forte'},
+ {c:'s11', q:'Cele 3 componente ale fericirii', a:'- **Viața plăcută** (ce faci)\n- **Viața angajată** (îți exprimi punctele forte)\n- **Viața cu sens** (punctele forte puse în slujba unor valori)'},
+ {c:'s11', q:'Componentele empatiei', a:'- **Afectivă:** simți ce simte persoana în distres\n- **Cognitivă:** înțelegi emoțiile celuilalt (depinde de dezvoltarea gândirii)'},
+ {c:'s11', q:'Optimismul', a:'Tendința generală de a aștepta rezultate pozitive și de a persevera până la atingerea scopului (sau un stil de atribuire pozitiv). E factor de protecție și **se poate învăța**.', term:'Optimismul', short:'aștepți rezultate pozitive și perseverezi'},
+ {c:'s11', q:'Nevoile psihosociale ale copilului', a:'Identitate, apartenență la grup, acceptare și apreciere, statut, participare.'},
+ {c:'s11', q:'Intervenția primară vs secundară', a:'- **Primară:** toată populația școlară, înainte să apară problema\n- **Secundară:** grupurile cu predispoziție (de risc)'},
+ {c:'s11', q:'Analiza SWOT a școlii', a:'**S**trengths, **W**eaknesses = interne (resurse, motivație, expertiză)\n**O**pportunities, **T**hreats = externe (administrație, comunitate, economie)'},
+ {c:'s11', q:'Metode pentru analiza nevoilor școlii', a:'Discuții individuale cu persoane-cheie, chestionare, analiza documentelor, discuții cu experți, întâlniri comunitare.'},
+ {c:'s11', q:'5 responsabilități ale consilierului pentru un climat suportiv', a:'Exemple: facilitează cunoașterea reciprocă și coeziunea clasei; sprijină stabilirea unor reguli clare și a civilității; consiliază părinții și profesorii; derulează programe de prevenție (primară/secundară); face analiza nevoilor; promovează educația pozitivă (empatie, optimism).'}
+);
+
+GRILE.push(
+ {c:'s11', q:'Prezentările formatorului ar trebui să ocupe din timpul instruirii adulților:', o:['50%','30–40%','10–15%','sub 5%'], r:2},
+ {c:'s11', q:'Învățarea la adulți este în principal:', o:['motivată extrinsec','motivată intrinsec','centrată pe teorie','independentă de experiență'], r:1},
+ {c:'s11', q:'Componenta fericirii care rezultă din exprimarea punctelor forte personale:', o:['viața plăcută','viața angajată','viața cu sens','viața hedonică'], r:1},
+ {c:'s11', q:'Intervenția care se adresează întregii populații școlare este:', o:['primară','secundară','terțiară','individuală'], r:0},
+ {c:'s11', q:'În analiza SWOT, oportunitățile și amenințările sunt:', o:['interne','externe','doar financiare','doar umane'], r:1},
+ {c:'s11', q:'Scala Piers-Harris evaluează:', o:['inteligența','conceptul de sine','stilul de învățare','anxietatea de examen'], r:1},
+ {c:'s11', q:'Optimismul:', o:['este exclusiv ereditar','poate fi învățat','crește riscul de depresie','nu influențează reușita școlară'], r:1}
+);
+
+AF.push(
+ {c:'s11', s:'Adulții au o capacitate de învățare inferioară tinerilor.', v:false, e:'Nu sunt inferiori; mulți își subestimează resursele.'},
+ {c:'s11', s:'Rolul formatorului de adulți este să faciliteze învățarea, nu să o impună.', v:true},
+ {c:'s11', s:'Copiii sunt cei mai fericiți atunci când sunt singuri.', v:false, e:'Sunt cei mai fericiți cu prietenii.'},
+ {c:'s11', s:'Empatia are atât o componentă afectivă, cât și una cognitivă.', v:true},
+ {c:'s11', s:'Intervenția secundară vizează grupurile cu risc crescut.', v:true},
+ {c:'s11', s:'Punctele tari și slabe din analiza SWOT țin de mediul extern al școlii.', v:false, e:'Sunt interne; O și T sunt externe.'}
+);
+
+/* ---- content/capitole/s12.js ---- */
+/* CAPITOLUL XII (Specialitate) – Consilierea asistată de calculator */
+CAPITOLE.push({id:'s12', parte:'Tematica de specialitate', nr:'XII', emoji:'💻', scurt:'Consiliere asistată de calculator',
+titlu:'Consilierea asistată de calculator',
+sectiuni:[
+{titlu:'1. Internetul în consiliere', puncte:[
+ '**Internetul** = rețea mondială de calculatoare legate printr-un **protocol comun de comunicație** (de exemplu http, ftp, IMAP, POP, SMTP). Coordonarea generală se face prin Internet Society.',
+ 'Servicii folosite: **WWW**, **e-mail**, **IRC/chat**, **ftp**. Chatul e comunicare **sincronă**, în timp real; e-mailul e **asincron** (cu o latență de la minute la ore).',
+ 'Prin internet, consilierul și clientul se pot documenta „la zi”, pot explora o lume reală și una **virtuală** (simulare), își pot îmbogăți vocabularul de specialitate, își pot exersa abilitățile de comunicare și își pot dezvolta strategii de procesare a informației.',
+ '**Motoarele de căutare** găsesc resurse după cuvinte-cheie. Există **indexuri** de căutare (baze de date cu conținut catalogat) și **directoare** de căutare (structură ierarhică de categorii).',
+ '**E-mailul**: adresa are forma utilizator@domeniu; mesajul are **antet** (destinatar, autor, subiect), **corp** (cu atașamente) și **semnătură**; cutiile poștale sunt Inbox, Outbox, Sent, Deleted, Spam.',
+ '**Forumurile de discuții** sunt fie liste de difuzare, fie grupuri de discuții structurate pe fire (threaded). Pot deveni **grupuri de sprijin virtuale**; cele moderate au experți care elimină comentariile nepotrivite.',
+ '**Rețelele sociale** (Web 2.0) leagă informal persoane cu scopuri comune (de exemplu Facebook, LinkedIn, Instagram).'
+], retine:'Chat = sincron; e-mail = asincron. Forumurile pot deveni grupuri de sprijin virtuale.'},
+{titlu:'2. Avantaje și dezavantaje', puncte:[
+ '**Avantaje** (Jigău): un raport mai bun între **numărul de clienți și consilier**; **costuri sociale** mai mici; stocarea, regăsirea și combinarea rapidă a datelor; **autonomie** mai mare a beneficiarilor; **personalizarea timpului** de acces la informații; **experiență repetabilă** (facilitează reținerea); **realism** sporit prin simulare; informare extinsă; prezentare flexibilă, cu selecție după mai multe criterii.',
+ '**Dezavantaje**: **perisabilitatea** informațiilor (trebuie actualizate de consilieri și informaticieni); programele nu răspund mereu cererilor reale; **flexibilitate redusă** la nevoile clienților; programele nu pot învăța, nu se pot adapta și **nu au empatie**; **receptare pasivă** a informației; **sensibilitate redusă la diferențele individuale**.',
+ 'Concluzie: tehnologiile sunt instrumente **suplimentare, complementare** consilierii față în față, **nu o înlocuiesc**. Oferă interviuri față în față prin videoconferință, interviuri mijlocite (telefon, online), muncă în echipă (e-mail, forum), acces la informații (biblioteci virtuale, baze de date).',
+ 'Argumente pentru programele informatice în consilierea carierei: puțini specialiști față de cerere; teorii consistente; nevoia de acces pentru tot mai mulți oameni; **imparțialitate, precizie, stabilitate, operativitate, neutralitate** a răspunsurilor.'
+], retine:'Avantaj-cheie: mai mulți clienți per consilier, costuri mai mici. Dezavantaj-cheie: fără empatie, informații perisabile.'},
+{titlu:'3. Tipuri de programe informatice', puncte:[
+ 'Criterii de clasificare: scopul, structura și conținutul informației, procedura (**autonomă sau asistată** de consilier), modelul teoretic, suportul tehnic, populația-țintă.',
+ 'Tipuri (Jigău): **jocuri și simulări**; programe de **„punere în corespondență”** (potrivesc ocupația cu caracteristicile persoanei); **profile personale** prin autoevaluare; programe de **căutare și furnizare** a informațiilor; programe de **sprijin în luarea deciziilor**; programe de sprijin pentru **CV, scrisori, formulare**; programe pentru **aptitudinile de căutare a unui loc de muncă**; aplicații cross-curriculare; **teste** informatizate; sisteme **multimedia**.',
+ 'Pe domenii: consiliere **personală** (droguri, valori, stres, timp, decizie, comunicare), consilierea **carierei**, **îndrumare academică**, **testare/evaluare**, gestiunea documentelor, **formarea consilierilor** (interviuri clinice, jocuri de rol).',
+ 'După scop (Watts): **cunoașterea de sine** (profile de autoevaluare, teste), **cunoașterea oportunităților** (baze de date despre studii și locuri de muncă, jocuri și simulări), **învățarea luării deciziilor**, **pregătirea pentru tranziție** (interviu, CV, scrisoare de intenție). Sistemele de „punere în corespondență” combină primele două scopuri.',
+ 'Câștigul pentru consilier: face mai puține sarcini repetitive și se concentrează pe aspectele **specific umane** ale consilierii.'
+], retine:'Scopuri (Watts): cunoașterea de sine, cunoașterea oportunităților, luarea deciziilor, pregătirea pentru tranziție.'},
+{titlu:'4. Consilierea prin telefon și online', puncte:[
+ '**Consilierea prin telefon**: avantaje – eficiență, promptitudine, disponibilitate permanentă, contact cu beneficiari îndepărtați, **identitate ascunsă** (depășirea inhibițiilor, ajută persoanele emotive). Dezavantaje – fără contact direct, impersonală, **confidențialitate** vulnerabilă, posibilități reduse de feedback (Lemeni, Miclea).',
+ '**Consilierea online** = consiliere în timp real, prin internet. Se adresează elevilor cu confuzii, incertitudini, ambivalențe, îngrijorări, frică, furie, dar și celor care vor doar să se dezvolte și să fie mai optimiști.',
+ 'Avantaje ale consilierii online: **program flexibil**, **mediu confortabil** (fără deplasare), **mai puțină teamă** (întâlnirea pare mai puțin formală), **confidențialitate** cu aceleași standarde de calitate ca în consilierea clasică.'
+], retine:'Telefon: anonimat, promptitudine / impersonal, feedback redus. Online: flexibil, confortabil, mai puțin intimidant.'}
+]});
+
+CARDURI.push(
+ {c:'s12', q:'Comunicare sincronă vs asincronă online', a:'- **Sincronă:** chat/IRC, în timp real\n- **Asincronă:** e-mail, forum (cu întârziere)'},
+ {c:'s12', q:'Structura unui e-mail', a:'**Antet** (destinatar, autor, subiect), **corp** (mesajul + atașamente), **semnătură**.'},
+ {c:'s12', q:'Index de căutare vs director de căutare', a:'- **Index:** catalog al conținutului, într-o bază de date\n- **Director:** structură ierarhică de categorii, cu înregistrări de la utilizatori'},
+ {c:'s12', q:'4 avantaje ale tehnologiilor informatice în consiliere', a:'Mai mulți clienți per consilier; costuri sociale mai mici; autonomie mai mare a beneficiarilor; personalizarea timpului de acces; experiență repetabilă; realism prin simulare; prezentare flexibilă a datelor.'},
+ {c:'s12', q:'4 dezavantaje ale programelor informatice în consiliere', a:'Perisabilitatea informațiilor; flexibilitate redusă; nu au empatie și nu se adaptează; receptare pasivă; sensibilitate redusă la diferențele individuale.'},
+ {c:'s12', q:'Tehnologia înlocuiește consilierea față în față?', a:'Nu. E un instrument **suplimentar, complementar** consilierii directe.'},
+ {c:'s12', q:'Programele de „punere în corespondență”', a:'Corelează profilul individului cu ocupațiile sau locurile de muncă existente și oferă o listă de posibilități potrivite.', term:'Punere în corespondență', short:'profilul persoanei ↔ ocupații potrivite'},
+ {c:'s12', q:'Clasificarea după scop (Watts)', a:'1. Cunoașterea de sine\n2. Cunoașterea oportunităților\n3. Învățarea luării deciziilor\n4. Pregătirea pentru tranziție'},
+ {c:'s12', q:'Consilierea prin telefon: 2 avantaje + 2 dezavantaje', a:'**+** promptitudine și disponibilitate permanentă; anonimatul reduce inhibițiile\n**−** fără contact direct, impersonală; confidențialitate vulnerabilă, feedback redus'},
+ {c:'s12', q:'Avantajele consilierii online', a:'Program flexibil, mediu confortabil, mai puțină teamă (mai puțin formal), confidențialitate cu aceleași standarde.'}
+);
+
+GRILE.push(
+ {c:'s12', q:'Comunicarea prin e-mail este:', o:['sincronă','asincronă','exclusiv vocală','în timp real garantat'], r:1},
+ {c:'s12', q:'Un dezavantaj al programelor informatice de consiliere:', o:['costuri sociale reduse','perisabilitatea informațiilor','autonomia beneficiarului','experiența repetabilă'], r:1},
+ {c:'s12', q:'Programele care corelează profilul persoanei cu ocupațiile sunt de tip:', o:['simulare','punere în corespondență','editare text','forum'], r:1},
+ {c:'s12', q:'Un avantaj specific consilierii prin telefon:', o:['contactul vizual','identitatea poate rămâne ascunsă','feedback-ul nonverbal complet','confidențialitate absolută garantată'], r:1},
+ {c:'s12', q:'Clasificarea Watts NU include scopul:', o:['cunoașterea de sine','cunoașterea oportunităților','pregătirea pentru tranziție','diagnosticul medical'], r:3}
+);
+
+AF.push(
+ {c:'s12', s:'Tehnologiile informatice pot înlocui complet consilierea față în față.', v:false, e:'Sunt complementare, nu o înlocuiesc.'},
+ {c:'s12', s:'Chatul (IRC) permite comunicare sincronă, în timp real.', v:true},
+ {c:'s12', s:'Forumurile de discuții pot deveni grupuri de sprijin virtuale.', v:true},
+ {c:'s12', s:'Programele informatice au o sensibilitate ridicată la diferențele individuale.', v:false, e:'Sensibilitatea lor e relativ redusă.'},
+ {c:'s12', s:'Folosirea tehnologiei îl eliberează pe consilier de sarcini repetitive.', v:true}
+);
+
 /* ---- content/teste/t01.js ---- */
 SUBIECTE.push({nr:1, tema:'Comunicarea și feedback-ul · Consilierea · Brainstorming (carieră)', subiecte:[
 {titlu:'Subiectul I', puncte:30,
