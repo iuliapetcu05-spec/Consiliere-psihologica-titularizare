@@ -1,5 +1,5 @@
 // Service worker: aplicația merge și fără internet după prima deschidere.
-const CACHE = 'titularizare-v6';
+const CACHE = 'titularizare-v7';
 const FILES = ['./','index.html','style.css','app.js','manifest.webmanifest',
   'data/continut.js',
   'icons/icon-180.png','icons/icon-192.png','icons/icon-512.png'];

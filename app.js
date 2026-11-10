@@ -408,9 +408,11 @@ async function aiAsk(prompt, onText, signal, opt={}){
   if(AI.sample){
     try {
       const r = await AI.sample(prompt, { onText: ({text}) => onText && onText(text), signal, modelTier:opt.tier||'default', cache:false });
+      if(r.truncated && opt.strict) throw new Error('Răspunsul a fost tăiat (prea lung). Mai încearcă o dată.');
       return r.text;
     } catch(e){
       if(e && e.code==='not_granted'){ AI.sample=null; throw new Error('Nu ai permis accesul la Claude pentru pagina asta. Îl poți activa din meniul Permissions al paginii.'); }
+      if(e && e.code==='cancelled'){ const x=new Error('Oprit.'); x.name='AbortError'; throw x; }
       if(e && e.code==='rate_limited') throw new Error('Prea multe cereri într-un timp scurt. Mai încearcă peste un minut. ☕');
       throw new Error((e && e.message) || 'Eroare AI');
     }
@@ -651,31 +653,30 @@ function AntrenorS3(v){
   render();
 }
 
-function genPrompt(focus, avoid){
-  const programa = CAP.map(c=>`- ${c.titlu}: ${c.sectiuni.map(s=>s.titlu.replace(/^\d+\.\s*/,'')).join('; ')}`).join('\n');
-  const csList = CS_REALE.map((c,i)=>`${i+1}) clasa ${c.cls}, ${c.prog}: CS ${c.cs} | conținuturi: ${c.cont}`).join('\n');
-  return `Ești autor de subiecte la Centrul Național de Curriculum și Evaluare (România), pentru proba scrisă CONSILIERE PSIHOPEDAGOGICĂ la concursul de titularizare. Creează O VARIANTĂ NOUĂ, INEDITĂ, de subiect, în stilul variantelor oficiale 2025–2026.
+function genPrompt(focus, avoid, part){
+  const programa = CAP.filter(c=>c.parte&&c.parte.startsWith('Tematica')).map(c=>`- ${c.titlu}: ${c.sectiuni.map(s=>s.titlu.replace(/^\d+\.\s*/,'')).join('; ')}`).join('\n');
+  const tema = part===0 ? focus.s1 : focus.s2;
+  const struct = part===0
+    ? `SUBIECTUL I (30p): un text-suport scurt scris de tine (3–6 rânduri, fără citate atribuite unor autori reali) + cerința „Realizați, în aproximativ trei/patru pagini, o prezentare…”, punctată pe repere a, b, c… (8–11 repere). Ultimul reper: „respectarea numărului de pagini precizat” (1p). Suma exactă = 30.`
+    : `SUBIECTUL AL II-LEA (30p): un text-suport scurt + itemi A, B, C, D, E, F, G (G poate avea a) și b), ca id "Ga", "Gb"). Include un item „Redactați un text coerent, semnificativ științific, de 10 rânduri…” (4p: 3p conținut + 1p număr de rânduri). Suma exactă = 30.`;
+  return `Ești autor de subiecte la Centrul Național de Curriculum și Evaluare (România), proba scrisă CONSILIERE PSIHOPEDAGOGICĂ, concursul de titularizare. Scrie UN SINGUR subiect, nou și inedit, în stilul variantelor oficiale 2025–2026.
 
-TEMATICA (alege doar de aici):
+TEMA PRINCIPALĂ: „${tema}” (poți lega 1–2 itemi și de alte teme din tematica de mai jos).
+TEMATICA OFICIALĂ:
 ${programa}
+${avoid.length?'EVITĂ formulările din aceste variante anterioare: '+avoid.join(' | '):''}
 
-FOCUS pentru această variantă (ca să fie diferită de altele): Subiectul I pe „${focus.s1}”, Subiectul al II-lea pe „${focus.s2}”, Subiectul al III-lea cu metoda „${focus.m}” și secvența de programă nr. ${focus.cs+1} din lista de mai jos.
-${avoid.length?'EVITĂ temele acestor variante generate anterior: '+avoid.join(' | '):''}
+${struct}
+- Punctaje întregi. Verbe ca la CNCE: precizați, menționați, enumerați, explicați, descrieți, exemplificați, argumentați, prezentați.
+- Pentru FIECARE item, un „barem” scurt în stil CNCE: distribuția punctelor (ex. „2×2p”), un exemplu de răspuns corect („de exemplu: …”) și, unde e cazul, „Notă: dacă doar enumeră, câte 1p”. Corect științific, fără surse inventate.
 
-SECVENȚE DE PROGRAMĂ REALE (pentru Subiectul al III-lea folosește EXACT una dintre ele, nu inventa competențe):
-${csList}
-
-STRUCTURA OBLIGATORIE (exact ca la examen, total 90p):
-- Subiectul I (30p): un text-suport scurt, scris de tine (3–6 rânduri, fără citate atribuite unor autori reali), + cerința de a realiza o prezentare de 3 sau 4 pagini, punctată pe repere a, b, c… (8–11 repere). Ultimul reper: „respectarea numărului de pagini precizat” (1p). Suma = 30.
-- Subiectul al II-lea (30p): un text-suport scurt + itemi A–G (G poate avea a) și b)). Include un item „Redactați un text coerent de 10 rânduri…” (4p: 3p conținut + 1p număr de rânduri). Suma = 30.
-- Subiectul al III-lea (30p): secvența aleasă + „Realizați un demers didactic… utilizând [metoda], ca metodă didactică…, prin:” cu itemii a (5p, explicarea metodei), b (6p), c (6p, două cerințe didactice), d (3p, o activitate de învățare), e (4p, resurse timp/loc/material/forme de organizare), f (6p, exemplificare). Suma = 30.
-- Punctajele sunt numere întregi. Verbele cerințelor ca la CNCE: precizați, menționați, enumerați, explicați, descrieți, exemplificați, argumentați, prezentați.
-- Pentru FIECARE item scrie un „barem” scurt în stil CNCE: distribuția punctelor (ex. „2×2p”), un exemplu de răspuns corect („de exemplu: …”) și, unde e cazul, nota pentru enumerare fără explicare („câte 1p”). Fii corect științific, fără surse sau citate inventate.
-
-Răspunde DOAR cu JSON valid, fără text în afara lui, în formatul:
-{"titlu":"temă scurtă a variantei (max 6 cuvinte)","subiecte":[{"titlu":"Subiectul I","puncte":30,"text":"…","items":[{"id":"a","cer":"…","p":1,"barem":"…"}]},{"titlu":"Subiectul al II-lea","puncte":30,"text":"…","items":[…]},{"titlu":"Subiectul al III-lea","puncte":30,"text":"…","items":[…]}]}`;
+Răspunde DOAR cu JSON valid, fără alt text:
+{"titlu":"tema variantei în max 6 cuvinte","text":"textul-suport + cerința generală","items":[{"id":"${part===0?'a':'A'}","cer":"…","p":2,"barem":"…"}]}`;
 }
 function parseJSON(t){ const a=t.indexOf('{'), b=t.lastIndexOf('}'); if(a<0||b<a) throw new Error('Răspunsul AI nu conține un subiect complet. Mai încearcă o dată.'); return JSON.parse(t.slice(a,b+1)); }
+function validOne(j,titlu){ if(!j||!Array.isArray(j.items)||!j.items.length) throw new Error('Subiectul generat e incomplet. Mai încearcă o dată.');
+  j.items.forEach((it,k)=>{ it.id=String(it.id||String.fromCharCode(97+k)); it.p=Math.max(1,Math.round(+it.p||1)); it.cer=String(it.cer||''); it.barem=String(it.barem||''); });
+  return {titlu, puncte:j.items.reduce((a,it)=>a+it.p,0), text:String(j.text||''), items:j.items}; }
 function validGen(j){ if(!j||!Array.isArray(j.subiecte)||j.subiecte.length<3) throw new Error('Subiectul generat e incomplet. Mai încearcă o dată.');
   j.subiecte.forEach((s,i)=>{ if(!Array.isArray(s.items)||!s.items.length) throw new Error('Subiectul generat e incomplet. Mai încearcă o dată.');
     s.items.forEach((it,k)=>{ it.id=String(it.id||String.fromCharCode(97+k)); it.p=Math.max(1,Math.round(+it.p||1)); it.cer=String(it.cer||''); it.barem=String(it.barem||''); });
@@ -683,7 +684,7 @@ function validGen(j){ if(!j||!Array.isArray(j.subiecte)||j.subiecte.length<3) th
   return j; }
 function Generator(v){
   const spec=CAP.filter(c=>c.parte&&c.parte.startsWith('Tematica'));
-  v.innerHTML=`<div class="card"><b>🎲 Subiect nou, în stil oficial</b><p class="small muted" style="margin:6px 0 0">AI-ul compune o variantă completă – Subiectele I, II și III (90p + 10 din oficiu), cu barem propus pe fiecare item, pe teme din programă. Tema principală e aleasă la întâmplare, ca să nu se repete. Durează aproximativ 1–2 minute.</p>
+  v.innerHTML=`<div class="card"><b>🎲 Subiect nou, în stil oficial</b><p class="small muted" style="margin:6px 0 0">AI-ul compune o variantă completă – Subiectele I, II și III (90p + 10 din oficiu), cu barem propus pe fiecare item, pe teme din programă. Durează 1–3 minute: la început Claude „se gândește” fără să scrie nimic pe ecran, e normal. Nu închide pagina între timp.</p>
     <p class="small" style="margin:8px 0 0" data-ai-status>${aiStatusText()}</p></div>
     <div class="card"><div class="row"><span class="grow">Subiectul I</span><select id="s1"><option value="">🎲 la întâmplare</option>${spec.map(c=>`<option>${esc(c.scurt||c.titlu)}</option>`).join('')}</select></div>
     <div class="row" style="margin-top:8px"><span class="grow">Subiectul II</span><select id="s2"><option value="">🎲 la întâmplare</option>${spec.map(c=>`<option>${esc(c.scurt||c.titlu)}</option>`).join('')}</select></div>
@@ -701,15 +702,33 @@ function Generator(v){
     const focus={s1, s2, m:(mv!==''?METODE_S3[+mv]:pickOne(METODE_S3)).m, cs:(cv!==''?+cv:Math.floor(Math.random()*CS_REALE.length))};
     const avoid=(S.gen||[]).filter(g=>g.genAI).slice(-6).map(g=>g.titlu);
     const out=$('#out',v), b=$('#gen',v); out.hidden=false; b.disabled=true;
-    out.innerHTML='<p class="small">✍️ Claude scrie subiectul… <span id="pc">0</span> caractere</p>';
-    if(ctrl) ctrl.abort(); ctrl=new AbortController();
+    if(ctrl) ctrl.abort(); ctrl=new AbortController(); const my=ctrl;
+    const steps=[{t:'Subiectul I',st:'…'},{t:'Subiectul al II-lea',st:'așteaptă'},{t:'Subiectul al III-lea',st:'așteaptă'}];
+    let t0=Date.now(), chars=0, cur=0;
+    const draw=()=>{ const sec=Math.round((Date.now()-t0)/1000);
+      out.innerHTML=`<div class="row"><b class="grow">✍️ Se generează varianta</b><span class="timer" style="font-size:16px">${Math.floor(sec/60)}:${String(sec%60).padStart(2,'0')}</span></div>
+        ${steps.map((x,i)=>`<div class="small" style="margin-top:6px">${x.st==='gata'?'✅':(i===cur?'⏳':'▫️')} ${x.t} ${i===cur&&x.st!=='gata'?(chars?`– scrie (${chars} caractere)`:'– Claude se gândește (poate dura 1–2 minute, e normal)'):(x.st==='gata'?'– gata':'')}</div>`).join('')}
+        <button class="btn ghost block" id="stopg" style="margin-top:10px">⏹ Oprește</button>`;
+      const sb=$('#stopg',v); if(sb) sb.onclick=()=>my.abort(); };
+    const timer=setInterval(draw,1000); draw();
+    setTimeout(()=>out.scrollIntoView({behavior:'smooth',block:'center'}),50);
+    const prevCleanup=cleanup; cleanup=()=>{ clearInterval(timer); my.abort(); if(prevCleanup) prevCleanup(); };
     try{
-      const txt=await aiAsk(genPrompt(focus,avoid), t=>{ const el=$('#pc',v); if(el) el.textContent=t.length; }, ctrl.signal, {maxTokens:9000, tier:'complex'});
-      const j=validGen(parseJSON(txt));
-      const o={id:'gen-'+Date.now().toString(36), tip:'Generat', genAI:true, titlu:'🎲 '+String(j.titlu||'Variantă nouă').slice(0,60), varianta:'Generat AI', data:stamp(),
-        nota:'Subiect generat de AI pentru antrenament (nu e oficial). Baremul de la fiecare item e propus de AI după regulile CNCE.', subiecte:j.subiecte};
+      const subs=[]; let titlu='';
+      for(const part of [0,1]){
+        cur=part; chars=0; t0=Date.now(); draw();
+        const txt=await aiAsk(genPrompt(focus,avoid,part), t=>{ chars=t.length; }, my.signal, {maxTokens:4000, tier:'default', strict:true});
+        const j=parseJSON(txt); if(part===0) titlu=String(j.titlu||'');
+        subs.push(validOne(j, part===0?'Subiectul I':'Subiectul al II-lea')); steps[part].st='gata'; if(part===0) steps[1].st='…';
+      }
+      cur=2; draw();
+      subs.push(s3Subiect(CS_REALE[focus.cs], METODE_S3.find(m=>m.m===focus.m)||METODE_S3[0])); steps[2].st='gata';
+      clearInterval(timer);
+      const o={id:'gen-'+Date.now().toString(36), tip:'Generat', genAI:true, titlu:'🎲 '+(titlu||'Variantă nouă').slice(0,60), varianta:'Generat AI', data:stamp(),
+        nota:'Subiect de antrenament (nu e oficial). Subiectele I și II sunt generate de AI, cu barem propus după regulile CNCE; Subiectul III folosește o competență reală și structura din baremele oficiale.', subiecte:subs};
       addGen(o); tick(); go(x=>Oficial(x,o.id), 'Subiect nou');
-    }catch(e){ if(e.name!=='AbortError') out.innerHTML=`<p class="small" style="color:var(--bad)">⚠️ ${esc(e.message||e)}</p>`; b.disabled=false; }
+    }catch(e){ clearInterval(timer); const code=e&&e.code; const msg=(e.name==='AbortError'||code==='cancelled')?'Oprit. Poți reîncerca oricând.':(e.message||String(e));
+      out.innerHTML=`<p class="small" style="color:var(--bad)">⚠️ ${esc(msg)}</p>`; b.disabled=false; }
   };
 }
 
