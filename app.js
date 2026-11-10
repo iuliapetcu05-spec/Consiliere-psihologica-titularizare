@@ -102,6 +102,7 @@ function Home(v){
   const wrongN = Object.keys(S.wrong).length;
   v.innerHTML = `
   <div class="card hero">
+    <div class="motto">🍀 A 5-a oară e cu noroc, Iulica!</div>
     <div class="muted small">${dte===null?'Setează data examenului mai jos':(dte>0?'Mai sunt':'Examenul')}</div>
     <div class="big">${dte===null?'🎯':(dte>0?dte+' zile':'e azi / a trecut 💜')}</div>
     <div class="muted small" style="margin-top:6px">Azi: ${todayN} / ${S.goal} răspunsuri · Progres total ${totalProgress()}%</div>

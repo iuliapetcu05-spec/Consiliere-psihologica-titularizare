@@ -155,3 +155,4 @@ textarea:focus,input:focus,select:focus{outline:none;border-color:var(--accent);
 #plan{border-color:color-mix(in srgb,var(--accent) 22%,var(--line))}
 .toast{border-radius:14px;box-shadow:0 10px 30px -10px rgba(0,0,0,.4)}
 @media (prefers-reduced-motion: reduce){*{transition:none!important;animation:none!important}}
+.motto{font-family:var(--f-display);font-weight:700;font-size:20px;line-height:1.25;margin:0 0 12px;color:#fff;text-wrap:balance}
