@@ -31,7 +31,7 @@ function load(){
     answers:{},     // răspunsuri scrise {testNr-sub-item: text}
     checks:{},      // repere bifate
     days:{},        // activitate pe zile {YYYY-MM-DD: n}
-    examDate:'', goal:30, best:{af:0}
+    examDate:'', goal:30, best:{af:0}, ai:{}
   }, d || {});
 }
 function save(){ try { localStorage.setItem(KEY, JSON.stringify(S)); } catch(e){} }
@@ -116,6 +116,8 @@ function Home(v){
     <div class="tile" id="tRand"><div class="ic">🎲</div><b>Surprinde-mă</b><small>o fișă la întâmplare</small></div>
     <div class="tile" id="tSim"><div class="ic">📝</div><b>Simulare examen</b><small>un test complet, cronometrat</small></div>
   </div>
+  <div class="card tap aihero" id="tOfi"><div class="row"><span style="font-size:28px">🤖</span><div class="grow"><b>Examen oficial + corectare AI</b>
+    <div class="small muted">Subiecte reale 2021–2026, corectate după barem, item cu item</div><div class="small" style="margin-top:4px" data-ai-status>${aiStatusText()}</div></div><span style="font-size:20px">›</span></div></div>
   <h3>Unde ești pe capitole</h3>
   <div id="caps"></div>
   <div class="card">
@@ -123,6 +125,9 @@ function Home(v){
     <div class="row" style="margin-top:10px"><span class="grow">Data examenului</span><input type="date" id="exam" value="${S.examDate}"></div>
     <div class="row" style="margin-top:10px"><span class="grow">Țintă zilnică (răspunsuri)</span>
       <select id="goal">${[15,30,50,80,120].map(n=>`<option ${n==S.goal?'selected':''}>${n}</option>`).join('')}</select></div>
+    <div style="margin-top:14px"><b class="small">🤖 AI</b> <span class="small" data-ai-status>${aiStatusText()}</span>
+      <p class="small muted" style="margin:6px 0">Pe claude.ai merge singur. În aplicația instalată poți pune o cheie API Anthropic (console.anthropic.com); rămâne doar pe dispozitivul ăsta și nu intră în export.</p>
+      <div class="row"><input type="password" id="akey" class="grow" placeholder="sk-ant-…" value="${esc(apiKey())}" autocomplete="off"><button class="btn ghost" id="akeyS">Salvează</button></div></div>
     <div class="btns" style="margin-top:14px"><button class="btn ghost" id="exp">Exportă progresul</button><button class="btn ghost" id="imp">Importă</button></div>
     <p class="small muted">Progresul se salvează doar pe dispozitivul ăsta. Cu export/import îl muți între iPhone și Mac.</p>
   </div>`;
@@ -139,6 +144,8 @@ function Home(v){
   $('#tSim',v).onclick=()=>{ const t=TESTE[Math.floor(Math.random()*TESTE.length)]; go(x=>Test(x,t.nr,true),'Simulare – Testul '+t.nr); };
   $('#exam',v).onchange=e=>{S.examDate=e.target.value;save();go(Home,'Titularizare',false)};
   $('#goal',v).onchange=e=>{S.goal=+e.target.value;save();go(Home,'Titularizare',false)};
+  $('#tOfi',v).onclick=()=>go(x=>OficialeList(x),'Examene oficiale');
+  $('#akeyS',v).onclick=()=>{ setApiKey($('#akey',v).value.trim()); toast(apiKey()?'Cheie salvată 🔑':'Cheie ștearsă'); document.querySelectorAll('[data-ai-status]').forEach(el=>el.textContent=aiStatusText()); };
   $('#exp',v).onclick=exportData; $('#imp',v).onclick=importData;
 }
 function exportData(){
@@ -186,7 +193,16 @@ function Capitol(v,id,focus){
     const done=!!S.read[id][i];
     el.innerHTML=`<h3 style="margin-top:0">${esc(s.titlu)}</h3>${(s.puncte||[]).length?'<ul class="pts">'+s.puncte.map(p=>'<li>'+fmtInline(p)+'</li>').join('')+'</ul>':''}
       ${s.retine?`<div class="key">💡 <b>De reținut:</b> ${inline(s.retine)}</div>`:''}
-      <button class="btn ${done?'ok':'ghost'} block" style="margin-top:10px">${done?'✔ Citit':'Marchează ca citit'}</button>`;
+      <button class="btn ${done?'ok':'ghost'} block" style="margin-top:10px">${done?'✔ Citit':'Marchează ca citit'}</button>
+      <details class="ask" style="margin-top:8px"><summary class="small" style="cursor:pointer;color:var(--accent);font-weight:600">🤖 Întreabă AI despre fișa asta</summary>
+        <div class="chips" style="margin-top:8px"><button data-q="Explică-mi fișa asta mai simplu, ca unui prieten.">🧸 Explică simplu</button><button data-q="Dă-mi un exemplu concret din școală pentru ideile din fișă.">🏫 Exemplu din școală</button><button data-q="Cum ar putea apărea asta la subiectul de titularizare? Dă-mi o cerință posibilă și reperele de punctaj.">🎯 Cum pică la examen</button><button data-q="Dă-mi un truc de memorare (mnemonic) pentru fișa asta.">🧠 Truc de memorare</button></div>
+        <div class="row"><input class="grow" placeholder="sau scrie întrebarea ta…"><button class="btn">Întreabă</button></div><div class="aiout" hidden></div></details>`;
+    const ask=el.querySelector('.ask'), aout=ask.querySelector('.aiout'), ain=ask.querySelector('input'); let actl=null;
+    const doAsk=async q=>{ if(!q) return; if(!aiOn()) return toast('AI nu e activ încă – vezi Setări pe Acasă'); if(actl) actl.abort(); actl=new AbortController();
+      aout.hidden=false; aout.innerHTML='<p class="muted small">🤔 …</p>';
+      try{ const t=await aiAsk(askPrompt(c,s,q), t=>aout.innerHTML=fmt(t), actl.signal); aout.innerHTML=fmt(t); tick(); }catch(e){ if(e.name!=='AbortError') aout.innerHTML=`<p class="small" style="color:var(--bad)">⚠️ ${esc(e.message||e)}</p>`; } };
+    ask.querySelectorAll('.chips button').forEach(b=>b.onclick=()=>doAsk(b.dataset.q));
+    ask.querySelector('.row .btn').onclick=()=>doAsk(ain.value.trim()); ain.onkeydown=e=>{ if(e.key==='Enter') doAsk(ain.value.trim()); };
     el.querySelector('button').onclick=e=>{ S.read[id][i]=!S.read[id][i]; if(!S.read[id][i]) delete S.read[id][i]; else tick(); save();
       e.target.className='btn '+(S.read[id][i]?'ok':'ghost')+' block'; e.target.textContent=S.read[id][i]?'✔ Citit':'Marchează ca citit'; };
     secs.appendChild(el); });
@@ -329,7 +345,8 @@ function Match(v){
 
 /* ================= SUBIECTE ================= */
 function Subiecte(v){
-  v.innerHTML=`<div class="card"><b>Cum le folosești</b><p class="small muted" style="margin:6px 0 0">Citești cerința, îți scrii răspunsul (sau doar planul lui), apoi deschizi reperele din „Sugestii de rezolvare” și bifezi ce ai acoperit. Așa vezi exact ce ți-ar lipsi la examen. Ce scrii se salvează automat.</p></div><div id="l"></div>`;
+  v.innerHTML=`<div class="card tap aihero" id="ofi"><div class="row"><span style="font-size:28px">🏛️</span><div class="grow"><b>Examene oficiale (cu AI)</b><div class="small muted">${OFI.length} variante reale · corectare după barem</div></div><span style="font-size:20px">›</span></div></div><h3>Cele 20 de teste rezolvate</h3><div class="card"><b>Cum le folosești</b><p class="small muted" style="margin:6px 0 0">Citești cerința, îți scrii răspunsul (sau doar planul lui), apoi deschizi reperele din „Sugestii de rezolvare” și bifezi ce ai acoperit. Așa vezi exact ce ți-ar lipsi la examen. Ce scrii se salvează automat.</p></div><div id="l"></div>`;
+  $('#ofi',v).onclick=()=>go(x=>OficialeList(x),'Examene oficiale');
   const l=$('#l',v);
   TESTE.forEach(t=>{ const tot=t.subiecte.reduce((a,s)=>a+s.items.reduce((b,it)=>b+(it.rep||[]).length,0),0);
     const chk=Object.keys(S.checks).filter(k=>k.startsWith(t.nr+'-')&&S.checks[k]).length;
@@ -353,9 +370,206 @@ function Test(v,nr,sim){
           <div style="margin-top:8px">${it.rep.map((r,k)=>`<label class="check"><input type="checkbox" data-k="${key}-${k}" ${S.checks[key+'-'+k]?'checked':''}><span>${fmtInline(r)}</span></label>`).join('')}</div></details>`:''}`;
       const ta=el.querySelector('textarea'); let tmr; ta.oninput=()=>{clearTimeout(tmr);tmr=setTimeout(()=>{S.answers[key]=ta.value;save();},400)};
       el.querySelectorAll('input[type=checkbox]').forEach(cb=>cb.onchange=()=>{ S.checks[cb.dataset.k]=cb.checked; if(cb.checked) tick(); save(); });
+      const pm=/(\d+)\s*(?:de\s*)?puncte?/i.exec(it.cer); const mx=pm?+pm[1]:(s.items.length===1?(s.puncte||30):10);
+      aiPanel(el, ()=>{ S.answers[key]=ta.value; save(); return { examen:'concursul național de titularizare (test de antrenament din culegere)', text:s.text||'', cer:it.cer, max:mx,
+        barem:(it.rep||[]).length?'Reperele din rezolvarea culegerii (nu barem oficial; folosește-le ca bază de corectare, punctajul e estimativ):\n- '+it.rep.join('\n- '):'', raspuns:ta.value, totalWords:words(ta.value) }; }, 't:'+key);
       its.appendChild(el); });
   };
   v.querySelectorAll('#ch button').forEach(b=>b.onclick=()=>{ v.querySelectorAll('#ch button').forEach(x=>x.classList.remove('on')); b.classList.add('on'); cur=+b.dataset.i; render(); });
+  render();
+}
+
+/* ================= AI (corectare și explicații în timp real) =================
+   1) Pe claude.ai (Artifact): folosește Claude direct, fără cheie.
+   2) Ca aplicație instalată: cu o cheie API Anthropic pusă în Setări (rămâne doar pe dispozitiv). */
+const OFI = window.OFICIALE || [];
+const AIKEY = 'titularizare-ai-key';
+const AI = { sample:null, checked:false };
+function apiKey(){ try { return localStorage.getItem(AIKEY)||''; } catch(e){ return ''; } }
+function setApiKey(k){ try { k?localStorage.setItem(AIKEY,k):localStorage.removeItem(AIKEY); } catch(e){} }
+function aiOn(){ return !!(AI.sample || apiKey()); }
+function aiSource(){ return AI.sample ? 'Claude (prin claude.ai)' : (apiKey() ? 'cheia ta API' : ''); }
+(async()=>{ try { if(window.claude && typeof window.claude.use==='function'){ AI.sample = await window.claude.use('sample'); } } catch(e){}
+  AI.checked=true; document.querySelectorAll('[data-ai-status]').forEach(el=>el.textContent=aiStatusText()); })();
+function aiStatusText(){ return aiOn() ? '🟢 AI activ – ' + aiSource() : (AI.checked||!window.claude ? '⚪ AI inactiv – adaugă o cheie API în Setări (Acasă)' : '⏳ verific dacă AI e disponibil…'); }
+
+async function aiAsk(prompt, onText, signal){
+  if(AI.sample){
+    try {
+      const r = await AI.sample(prompt, { onText: ({text}) => onText && onText(text), signal, modelTier:'default', cache:false });
+      return r.text;
+    } catch(e){
+      if(e && e.code==='not_granted'){ AI.sample=null; throw new Error('Nu ai permis accesul la Claude pentru pagina asta. Îl poți activa din meniul Permissions al paginii.'); }
+      if(e && e.code==='rate_limited') throw new Error('Prea multe cereri într-un timp scurt. Mai încearcă peste un minut. ☕');
+      throw new Error((e && e.message) || 'Eroare AI');
+    }
+  }
+  const key = apiKey(); if(!key) throw new Error('AI nu e activ. Pune o cheie API în Setări (pe Acasă) sau deschide aplicația de pe claude.ai.');
+  const res = await fetch('https://api.anthropic.com/v1/messages', { method:'POST', signal,
+    headers:{ 'content-type':'application/json', 'x-api-key':key, 'anthropic-version':'2023-06-01', 'anthropic-dangerous-direct-browser-access':'true' },
+    body: JSON.stringify({ model:'claude-sonnet-5-5', max_tokens:2500, stream:true, messages:[{role:'user',content:prompt}] }) });
+  if(!res.ok){ let m=''; try{ m=(await res.json()).error.message; }catch(e){}
+    throw new Error(res.status===401?'Cheia API nu e validă.':(res.status===429?'Limită de cereri atinsă. Mai încearcă puțin mai târziu.':'Eroare API ('+res.status+') '+m)); }
+  const rd = res.body.getReader(); const dec = new TextDecoder(); let buf='', text='';
+  for(;;){ const {done,value} = await rd.read(); if(done) break; buf += dec.decode(value,{stream:true});
+    let i; while((i=buf.indexOf('\n'))>=0){ const line=buf.slice(0,i).trim(); buf=buf.slice(i+1);
+      if(!line.startsWith('data:')) continue; let ev; try{ ev=JSON.parse(line.slice(5)); }catch(e){ continue; }
+      if(ev.type==='content_block_delta' && ev.delta && ev.delta.type==='text_delta'){ text+=ev.delta.text; onText && onText(text); }
+      if(ev.type==='error') throw new Error(ev.error && ev.error.message || 'Eroare API'); } }
+  return text;
+}
+
+const REGULI = `Reguli oficiale de evaluare (CNCE): se punctează orice modalitate de rezolvare corectă a cerințelor; nu se acordă punctaje intermediare, altele decât cele precizate explicit în barem; nu se acordă fracțiuni de punct (doar numere întregi).`;
+function words(s){ return (String(s||'').trim().match(/\S+/g)||[]).length; }
+function gradePrompt(ctx){
+  return `Ești membru al comisiei de evaluare la ${ctx.examen}, proba scrisă CONSILIERE PSIHOPEDAGOGICĂ (România). Corectezi UN SINGUR item din lucrarea unei candidate.
+
+${REGULI}
+${ctx.barem ? 'BAREMUL OFICIAL pentru acest item:\n' + ctx.barem : 'Pentru acest item NU avem baremul oficial. Aplică logica baremelor oficiale recente: punctajul se împarte egal pe elementele cerute (ex. „două abilități” pentru 2p = câte 1p); când cerința e de descriere/explicare/exemplificare/argumentare iar candidata doar enumeră, acordă punctaj parțial redus (de regulă câte 1p pe element); la eseuri structurate, distribuie punctajul rezonabil pe reperele din structură. Spune explicit că punctajul este ESTIMATIV, nu după barem oficial.'}
+
+CONTEXTUL SUBIECTULUI:
+${ctx.text||'(fără text suport)'}
+
+CERINȚA (${ctx.max} puncte):
+${ctx.cer}
+
+RĂSPUNSUL CANDIDATEI (${words(ctx.raspuns)} cuvinte la acest item; ${ctx.totalWords} cuvinte în tot subiectul; o pagină de examen scrisă de mână ≈ 250–300 de cuvinte):
+"""
+${ctx.raspuns||'(gol)'}
+"""
+
+Instrucțiuni:
+- Fii corect și realist, ca o comisie reală: nici generos, nici zgârcit. Nu inventa cerințe în plus. Nu inventa surse, autori sau citate.
+- Dacă răspunsul e gol sau în afara subiectului, punctajul e 0.
+- Scrie în limba română, pe ton cald și direct (te adresezi candidatei cu „tu”), concis.
+
+Formatul răspunsului (respectă-l exact):
+PUNCTAJ: <număr întreg>/${ctx.max}
+**Ce ai luat:**
+- …
+**Ce lipsește / unde ai pierdut puncte:**
+- …
+**Ca să iei punctajul maxim:**
+(2–6 rânduri concrete: ce ai adăuga sau reformula)`;
+}
+function modelPrompt(ctx){
+  return `Ești profesor consilier școlar cu experiență în pregătirea candidaților pentru ${ctx.examen}, proba CONSILIERE PSIHOPEDAGOGICĂ (România).
+Scrie un RĂSPUNS-MODEL de punctaj maxim pentru cerința de mai jos, așa cum l-ar scrie un candidat foarte bine pregătit, pe foaia de examen.
+
+${REGULI}
+${ctx.barem ? 'BAREMUL OFICIAL al itemului (răspunsul trebuie să acopere tot ce se punctează aici):\n'+ctx.barem : 'Nu avem baremul oficial; acoperă explicit fiecare element cerut.'}
+
+CONTEXTUL SUBIECTULUI:
+${ctx.text||'(fără text suport)'}
+
+CERINȚA (${ctx.max} puncte):
+${ctx.cer}
+
+Reguli de scriere:
+- Lungimea să fie potrivită punctajului (un item de 1–2p: 1–3 rânduri; 4–8p: un paragraf sau o listă scurtă explicată; eseu: structurat pe repere, cu titluri scurte).
+- Folosește terminologia de specialitate din literatura românească de consiliere școlară (programele de Consiliere și orientare/Consiliere și dezvoltare personală, ghidurile de consiliere), fără să inventezi citate, ani sau autori.
+- Exemplele să nu conțină nume reale de persoane, școli sau localități.
+- La final adaugă o linie: „💡 Truc de memorare:” cu o idee scurtă de a reține structura.
+Scrie direct răspunsul, în română, fără introduceri.`;
+}
+function askPrompt(cap, sec, q){
+  return `Ești un tutore cald și foarte clar care o ajută pe o profesoară consilier școlar să învețe pentru titularizare (proba Consiliere psihopedagogică, România).
+Ea citește fișa de mai jos și are o întrebare. Răspunde în română, concis (max. ~200 de cuvinte), cu un exemplu concret din școală dacă ajută. Bazează-te pe fișă și pe cunoștințe standard de psihologie/consiliere școlară; dacă ceva nu e sigur, spune asta, nu inventa surse.
+
+FIȘA – ${cap.titlu} / ${sec.titlu}:
+${(sec.puncte||[]).map(p=>'- '+p).join('\n')}
+${sec.retine?'De reținut: '+sec.retine:''}
+
+ÎNTREBAREA EI: ${q}`;
+}
+function parseScore(t, max){ const m=/PUNCTAJ\s*:\s*(\d+)\s*\/\s*(\d+)/i.exec(t||''); if(!m) return null; return Math.max(0,Math.min(max,+m[1])); }
+function aiHTML(t){ return fmt(String(t).replace(/^PUNCTAJ\s*:.*$/im,'').trim()); }
+
+/* panou AI reutilizabil sub un item */
+function aiPanel(host, getCtx, storeKey){
+  const box=document.createElement('div');
+  box.innerHTML=`<div class="btns" style="margin-top:10px"><button class="btn" data-a="grade">🤖 Corectează cu AI</button><button class="btn ghost" data-a="model">💡 Model de răspuns</button></div>
+    <div class="aiout" hidden></div>`;
+  host.appendChild(box);
+  const out=box.querySelector('.aiout'); let ctrl=null;
+  const prev = storeKey && S.ai && S.ai[storeKey];
+  if(prev){ out.hidden=false; out.innerHTML = scoreBadge(prev.score, prev.max) + aiHTML(prev.text); }
+  box.querySelectorAll('button[data-a]').forEach(b=>b.onclick=async()=>{
+    if(!aiOn()){ toast('AI nu e activ încă – vezi Setări pe Acasă'); return; }
+    const ctx=getCtx(); const mode=b.dataset.a;
+    if(mode==='grade' && !String(ctx.raspuns||'').trim()){ toast('Scrie întâi un răspuns ✍️'); return; }
+    if(ctrl) ctrl.abort(); ctrl=new AbortController();
+    out.hidden=false; out.innerHTML='<p class="muted small">🤔 Claude citește…</p>';
+    box.querySelectorAll('button').forEach(x=>x.disabled=true);
+    try {
+      const txt = await aiAsk(mode==='grade'?gradePrompt(ctx):modelPrompt(ctx), t=>{ out.innerHTML=(mode==='grade'?'':'<div class="pill" style="margin-bottom:6px">Model de răspuns</div>')+aiHTML(t); }, ctrl.signal);
+      if(mode==='grade'){ const sc=parseScore(txt, ctx.max); out.innerHTML=scoreBadge(sc,ctx.max)+aiHTML(txt);
+        if(storeKey){ S.ai=S.ai||{}; S.ai[storeKey]={score:sc,max:ctx.max,text:txt,at:Date.now()}; save(); } tick(); host.dispatchEvent(new CustomEvent('scored')); }
+      else { out.innerHTML='<div class="pill" style="margin-bottom:6px">Model de răspuns</div>'+aiHTML(txt); }
+    } catch(e){ if(e.name!=='AbortError') out.innerHTML=`<p class="small" style="color:var(--bad)">⚠️ ${esc(e.message||e)}</p>`; }
+    box.querySelectorAll('button').forEach(x=>x.disabled=false);
+  });
+  return box;
+}
+function scoreBadge(sc,max){ if(sc==null) return ''; const p=sc/max; const cls=p>=.8?'ok':(p>=.5?'':'bad');
+  return `<div class="score ${cls}">${sc}<small>/${max} p</small></div>`; }
+
+/* ================= EXAMENE OFICIALE ================= */
+function okey(id,si,itId){ return `o:${id}-${si}-${itId}`; }
+function ofiScore(o){ let got=0, max=0, done=0, n=0;
+  o.subiecte.forEach((s,si)=>s.items.forEach(it=>{ n++; max+=it.p; const r=(S.ai||{})[okey(o.id,si,it.id)]; if(r&&r.score!=null){ got+=r.score; done++; } }));
+  return {got,max,done,n}; }
+function OficialeList(v){
+  v.innerHTML=`<div class="card"><b>Examene oficiale + corectare AI</b><p class="small muted" style="margin:6px 0 0">Subiectele reale de la titularizare/definitivat. Scrii răspunsul pe fiecare item, apoi AI-ul îl corectează după barem (unde avem baremul oficial) și îți spune exact ce lipsește.</p>
+    <p class="small" style="margin:8px 0 0" data-ai-status>${aiStatusText()}</p></div><div id="l"></div>`;
+  const l=$('#l',v);
+  OFI.slice().sort((a,b)=>b.an-a.an||(a.tip>b.tip?-1:1)).forEach(o=>{ const sc=ofiScore(o); const el=document.createElement('div'); el.className='card tap';
+    el.innerHTML=`<div class="row"><span style="font-size:22px">${o.tip==='Definitivat'?'🎓':'🏛️'}</span><div class="grow"><b>${o.tip} ${o.an} · ${esc(o.varianta)}</b>
+      <div class="small muted">${o.barem?'✅ cu barem oficial':'barem estimat de AI'} · ${sc.done}/${sc.n} itemi corectați</div>
+      <div class="bar" style="margin-top:6px"><i style="width:${Math.round(100*sc.done/sc.n)}%"></i></div></div>${sc.done?`<span class="pill">${sc.got}/${sc.max}</span>`:''}</div>`;
+    el.onclick=()=>go(x=>Oficial(x,o.id),`${o.tip} ${o.an}`); l.appendChild(el); });
+}
+function Oficial(v,id){
+  const o=OFI.find(x=>x.id===id); let cur=0; let iv=null;
+  v.innerHTML=`${o.nota?`<div class="card key">ℹ️ ${esc(o.nota)}</div>`:''}
+    <div class="card row"><span class="grow small">${esc(o.data||'')} · 4 ore · 10p din oficiu</span><button class="btn ghost" id="simb">⏱️ Pornește 4h</button><span class="timer" id="tm" hidden></span></div>
+    <div class="chips" id="ch">${o.subiecte.map((s,i)=>`<button data-i="${i}" class="${i?'':'on'}">${esc(s.titlu)}</button>`).join('')}<button data-i="r">📊 Rezultat</button></div><div id="sb"></div>`;
+  $('#simb',v).onclick=()=>{ $('#simb',v).hidden=true; const tm=$('#tm',v); tm.hidden=false; const end=Date.now()+4*3600e3;
+    iv=setInterval(()=>{ const r=Math.max(0,end-Date.now()); const h=Math.floor(r/3600e3),m=Math.floor(r%3600e3/60e3),s=Math.floor(r%60e3/1e3);
+      tm.textContent=`${h}:${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`; if(!r){clearInterval(iv);toast('Timpul a expirat! ⏰');} },1000); };
+  cleanup=()=>{ if(iv) clearInterval(iv); };
+  const subWords=si=>o.subiecte[si].items.reduce((a,it)=>a+words(S.answers[okey(o.id,si,it.id)]),0);
+  const render=()=>{ const sb=$('#sb',v);
+    if(cur==='r'){ const sc=ofiScore(o); const nota=(sc.got+10)/10;
+      sb.innerHTML=`<div class="card hero"><div class="muted small">Notă estimată (din ${sc.done}/${sc.n} itemi corectați)</div><div class="big">${nota.toFixed(2)}</div>
+        <div class="small">${sc.got} din ${sc.max} puncte + 10 din oficiu</div></div>
+        ${o.subiecte.map((s,si)=>{ let g=0,m=0; const rows=s.items.map(it=>{ const r=(S.ai||{})[okey(o.id,si,it.id)]; m+=it.p; if(r&&r.score!=null) g+=r.score;
+          return `<div class="row small" style="padding:4px 0;border-top:1px solid var(--line)"><span class="grow">${esc(it.id)}. ${esc(it.cer.split('\n')[0].slice(0,70))}…</span><b>${r&&r.score!=null?r.score:'–'}/${it.p}</b></div>`; }).join('');
+          return `<div class="card"><div class="row"><b class="grow">${esc(s.titlu)}</b><span class="pill">${g}/${m}</span></div>${rows}</div>`; }).join('')}
+        <p class="small muted">Nota e calculată ca la examen: (total + 10) / 10. Itemii necorectați intră cu 0.</p>`;
+      return; }
+    const s=o.subiecte[cur];
+    sb.innerHTML=`<div class="card"><div class="row"><b class="grow">${esc(s.titlu)}</b><span class="pill">${s.puncte} p</span></div><div style="margin-top:8px">${fmt(s.text)}</div>
+      <div class="btns" style="margin-top:10px"><button class="btn ghost" id="all">🤖 Corectează tot subiectul</button></div></div><div id="its"></div>`;
+    const its=$('#its',sb);
+    s.items.forEach(it=>{ const key=okey(o.id,cur,it.id); const el=document.createElement('div'); el.className='card';
+      el.innerHTML=`<div class="row" style="align-items:flex-start"><div class="grow">${fmt((/^[A-Za-z0-9]+\./.test(it.cer)||it.id.length>2?'':'**'+it.id+'.** ')+it.cer)}</div><span class="pill">${it.p}p</span></div>
+        <textarea style="min-height:${it.p<=3?90:(it.p<=8?150:260)}px" placeholder="Scrie răspunsul aici (se salvează singur)…">${esc(S.answers[key]||'')}</textarea>
+        <div class="small muted wc"></div>
+        ${it.barem?`<details style="margin-top:8px"><summary class="small" style="cursor:pointer;color:var(--accent);font-weight:600">🔑 Baremul oficial (uită-te după ce scrii 😉)</summary><div class="small" style="margin-top:6px">${inline(it.barem)}</div></details>`:''}`;
+      const ta=el.querySelector('textarea'), wc=el.querySelector('.wc'); const upd=()=>{ const w=words(ta.value); wc.textContent=w?`${w} cuvinte ≈ ${(w/275).toFixed(1)} pagini`:''; }; upd();
+      let tmr; ta.oninput=()=>{ upd(); clearTimeout(tmr); tmr=setTimeout(()=>{S.answers[key]=ta.value;save();},400); };
+      const ctxFn=()=>{ S.answers[key]=ta.value; save(); return { examen:`${o.tip==='Definitivat'?'examenul național de definitivare':'concursul național de titularizare'} ${o.an}`, text:s.text, cer:it.cer, max:it.p, barem:it.barem||'', raspuns:ta.value, totalWords:subWords(cur) }; };
+      el._panel=aiPanel(el, ctxFn, key); its.appendChild(el); });
+    $('#all',sb).onclick=async()=>{ if(!aiOn()) return toast('AI nu e activ încă – vezi Setări pe Acasă');
+      const cards=[...its.children].filter(c=>c.querySelector('textarea').value.trim()); if(!cards.length) return toast('Scrie întâi niște răspunsuri ✍️');
+      $('#all',sb).disabled=true;
+      for(const c of cards){ const b=c._panel.querySelector('button[data-a=grade]'); c.scrollIntoView({behavior:'smooth',block:'start'});
+        await new Promise(res=>{ c.addEventListener('scored',res,{once:true}); b.click(); const chk=setInterval(()=>{ if(!b.disabled){ clearInterval(chk); res(); } },500); });
+        if(c._panel.querySelector('.aiout').textContent.includes('⚠️')) break; }
+      $('#all',sb).disabled=false; toast('Gata! Vezi 📊 Rezultat'); };
+  };
+  v.querySelectorAll('#ch button').forEach(b=>b.onclick=()=>{ v.querySelectorAll('#ch button').forEach(x=>x.classList.remove('on')); b.classList.add('on'); cur=b.dataset.i==='r'?'r':+b.dataset.i; render(); });
   render();
 }
 

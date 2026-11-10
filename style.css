@@ -103,3 +103,13 @@ input,select{font:inherit;color:var(--ink);background:var(--card);border:1px sol
 mark{background:color-mix(in srgb,var(--warn) 45%,transparent);color:inherit;border-radius:3px}
 .search{width:100%;margin-bottom:12px;padding:11px 14px;border-radius:12px}
 hr{border:0;border-top:1px solid var(--line);margin:16px 0}
+
+/* ---- AI ---- */
+.aiout{margin-top:10px;padding:12px 14px;border-radius:12px;background:var(--soft);border:1px solid var(--line);font-size:15px;line-height:1.5}
+.aiout p{margin:6px 0}
+.score{display:inline-flex;align-items:baseline;gap:2px;font-size:28px;font-weight:800;color:var(--warn);margin-bottom:4px}
+.score small{font-size:14px;font-weight:600;opacity:.8}
+.score.ok{color:var(--ok)} .score.bad{color:var(--bad)}
+.aihero{border:1.5px solid var(--accent);background:linear-gradient(135deg,color-mix(in srgb,var(--accent) 10%,var(--card)),var(--card))}
+.ask input,#akey{min-width:0;border:1px solid var(--line);border-radius:12px;padding:10px 12px;font:inherit;font-size:16px;background:var(--card);color:var(--ink)}
+.card.key{background:var(--soft)}

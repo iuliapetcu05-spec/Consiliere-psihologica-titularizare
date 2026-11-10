@@ -4,7 +4,8 @@ import os, glob
 root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 files = sorted(glob.glob(os.path.join(root, 'content', '*.js'))) + \
         sorted(glob.glob(os.path.join(root, 'content', 'capitole', '*.js'))) + \
-        sorted(glob.glob(os.path.join(root, 'content', 'teste', '*.js')))
+        sorted(glob.glob(os.path.join(root, 'content', 'teste', '*.js'))) + \
+        sorted(glob.glob(os.path.join(root, 'content', 'oficiale', '*.js')))
 os.makedirs(os.path.join(root, 'data'), exist_ok=True)
 with open(os.path.join(root, 'data', 'continut.js'), 'w', encoding='utf-8') as out:
     out.write('/* Generat automat de tools/build.py – editează fișierele din content/ */\n')

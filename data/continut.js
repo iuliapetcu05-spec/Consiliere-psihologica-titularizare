@@ -3,6 +3,7 @@
 /* ---- content/00-init.js ---- */
 // Structuri de date. Fiecare fișier din content/ adaugă în aceste liste.
 window.CAPITOLE = []; window.CARDURI = []; window.GRILE = []; window.AF = []; window.SUBIECTE = [];
+window.OFICIALE = [];
 
 /* ---- content/capitole/s01.js ---- */
 /* CAPITOLUL I (Specialitate) – Elemente de psihologia dezvoltării / vârstelor */
@@ -924,6 +925,119 @@ AF.push(
  {c:'s08', s:'Disgrafia se datorează unui deficit intelectual.', v:false}
 );
 
+/* ---- content/capitole/s09.js ---- */
+/* CAPITOLUL IX (Specialitate) – Consilierea carierei */
+CAPITOLE.push({id:'s09', parte:'Tematica de specialitate', nr:'IX', emoji:'🧭', scurt:'Consilierea carierei',
+titlu:'Consilierea carierei',
+sectiuni:[
+{titlu:'1. Identitate vocațională, carieră, profesie, ocupație', puncte:[
+ '**Identitatea** = conștiința clară a individualității, din integrarea percepției de sine cu percepția așteptărilor celorlalți; după Erikson include caracteristici, talente, identificări, roluri. Se cristalizează mai ales în adolescență (decizii despre cursuri, facultate, relații etc.).',
+ '**Identitatea vocațională** = cunoașterea propriilor interese, valori, abilități + preferința pentru anumite activități și medii de muncă; etalonul maturizării adolescentului.',
+ '**Dezvoltarea carierei** = creștere cantitativă și calitativă a experienței; cuprinde autocunoașterea, formarea, rolurile, planificarea evenimentelor vieții.',
+ 'Plan de carieră: Care sunt obiectivele mele? Ce pași? Cine mă poate sprijini? Ce rol are fiecare? Pași practici: explorarea oportunităților (anunțuri, târguri, candidatură spontană), lista firmelor, alegerea abordării (personal, telefonic, e-mail), perseverența, urmărirea rezultatelor.',
+ '**Cariera** = traseul parcurs în exercitarea unor activități care cer pregătire, concretizate în competențe atestate; succesiune de roluri, ocupații, funcții.',
+ 'Belkin (via Al. I. Dumitru): **slujba** – muncă pentru bani, la cererea altuia; **cariera** – succesiune ordonată de slujbe, ca rezultat al performanțelor; **munca/vocația** – ce facem din plăcere, „chemare”.',
+ '**Profesia** = activitate specializată, cu pregătire generală și specializată, certificată (calificarea).',
+ '**Ocupația** = desfășurarea concretă a unei munci asociate unei profesii, la un loc de muncă, pentru venit (pregătire, unelte, operații, program, salarizare, norme).']},
+{titlu:'2. Factori în alegerea carierei', puncte:[
+ 'Principalii factori: **familia, școala, grupul de prieteni**.',
+ 'Tipuri de alegeri vocaționale (M. Jigău): orientate social (prestigiu), altruiste, egoiste/autonome (confort, câștig), reactive/frustrante (opuse dorinței celor cu care e în conflict), conformiste, hedonice/narcisiste.',
+ '**Familia**: influență adesea decisivă; părinții își supraapreciază copiii și le impun trasee nepotrivite → decizie dificilă, adeziune redusă. Criteriile părinților: siguranța profesiei, durata studiilor, avantajele materiale, poziția socială, riscurile, tradiția familiei, supraprotecția.',
+ 'Ce trebuie să facă părinții: să cunoască temerile copilului, să sugereze fără a impune, să respecte aspirațiile, să se informeze, să evite stereotipurile, să ofere suport afectiv, să-l îndrume spre un consilier.',
+ '**Școala** – trei niveluri: organizarea sistemului, conținutul învățământului, acțiunile specifice de orientare. Serviciile oferite în școală au adresabilitate și exactitate mai mari.',
+ 'Aspirațiile profesionale = sinteza interiorizării valorilor, conduitelor dezirabile și a nevoii de succes – obiectiv pe termen lung.',
+ '**Grupul de prieteni**: suport emoțional, socializare; dezaprobarea agresivă a părinților crește adeziunea la grup.']},
+{titlu:'3. Cariera din perspectiva psihologiei pozitive', puncte:[
+ '**M. Seligman** – trei arii: emoții pozitive, trăsături pozitive, instituții pozitive.',
+ '**Broaden-and-Build** (Fredrickson): emoțiile pozitive lărgesc registrul de reacții și construiesc resurse pe termen lung.',
+ '**Flow-ul** (Csikszentmihalyi): absorbirea totală într-o activitate interesantă care valorifică abilitățile; condiții – fără focalizare pe sine, sentimentul controlului, motivație intrinsecă.',
+ '**Hardiness** (Kobasa): robustețe psihologică – atitudini și strategii care transformă stresul în oportunitate.',
+ 'Inventarul **VIA** (Values in Action) – 24 de puncte forte de caracter (curaj, perseverență, iertare, înțelepciune…).',
+ 'Modele de organizare a muncii: **caracteristicile muncii** (varietate, semnificația sarcinii, autonomie, feedback) și **cerințe–control**.',
+ 'Leadership pozitiv/transformațional: motivație inspirațională, stimulare intelectuală, considerație individuală.',
+ 'Seligman – trei căi spre fericire: **viața plăcută** (emoții pozitive), **viața angajată**, **viața cu sens** → împreună: viața deplină.']},
+{titlu:'4. TIC în consilierea carierei', puncte:[
+ 'Denumiri: e-counseling, consiliere online, cybercounseling.',
+ 'Avantaje: autonomia clientului, stocarea și regăsirea datelor, învățare prin accesare repetată, flexibilitate.',
+ 'Dezavantaje: pasivitatea receptării, **depersonalizarea comunicării**, perisabilitatea informațiilor, sensibilitate redusă la diferențele individuale.',
+ 'Resurse TIC (clasificare europeană): **autoapreciere**, **conștientizarea oportunităților** (baze de date), **învățarea luării deciziilor** (potrivirea profilului cu oportunitățile), **învățarea tranziției** (CV, plan de acțiune, interviu).',
+ 'Două utilizări: TIC ca mediu de interacțiune consilier–client (e-mail, chat, videoconferință) și ca resursă în procesul decizional.']},
+{titlu:'5. Metode și tehnici ale consilierii carierei', puncte:[
+ 'Consilierea începe cu stabilirea obiectivelor (unde se va ajunge) și a căilor (ce trebuie făcut).',
+ 'Metode: **observația** (un singur subiect în focar, criterii, situații reale, repetare, corelare cu alte date), **autobiografia**, **chestionarul** (de interese, valori), **interviul** structurat, **tehnicile sociometrice**, probele practice.',
+ '**Metoda „umbrei”**: elevul însoțește o zi (8 ore) un profesionist la locul de muncă, apoi relatează colegilor.',
+ '**Sortarea cardurilor**: cartoane cu profesii în categorii „Nu le-aș alege / Le-aș alege / Indiferente”, apoi după criterii proprii.',
+ '**Fișa psihopedagogică**: aspecte fizice și de sănătate, integrare școlară și socială, caracteristici psihologice, recomandări, caracterizare generală.',
+ 'Testele – doar când e nevoie: decalaj aspirații–resurse, indecizie, profesii cu aptitudini speciale.',
+ '**Kuder** (Preference Record): persoanele cu aceeași profesie au interese asemănătoare.',
+ '**Holland – RIASEC**: Realist, Investigativ, Artistic, Social, Întreprinzător, Convențional; cod personal de 3 litere. SDS (Self-Directed Search).',
+ '**GATB**: baterie pentru 9 factori aptitudinali (G, V, N, S, P, Q, K, F, M). **DAT**: 8 subteste. **BBT** (Achtnich – testul fotografiilor profesiilor, inspirat de Szondi; 8 nevoi de bază). **Strong** Vocational Interest Blank. **NEO-PI** (Costa și McCrae). **Inventarul canadian de interese ocupaționale** (5 factori bipolari).',
+ 'Criterii de alegere a testelor: **validitate** (măsoară ce susține), **fidelitate** (stabilitate în timp), cost, timp, scorare, etaloane, formarea necesară, utilitate.']},
+{titlu:'6. Marketing personal', puncte:[
+ 'Marketingul personal = pregătirea pentru contactul cu angajatorii și dezvoltarea abilităților de prezentare.',
+ '**Scrisoarea de intenție**: „carte de vizită”, citită înaintea CV-ului; ~1 pagină A4, fără greșeli, atitudine pozitivă; interesul pentru post/firmă, punctele forte, ce poate aduce candidatul, disponibilitatea pentru interviu.',
+ '**CV**: cronologic (invers cronologic, accent pe experiență), funcțional (abilități și realizări), biografic; Europass. Reguli: 1–2 pagini, fără greșeli, fapte relevante, fără date fictive, cel mai înalt nivel de studii primul.',
+ '**Portofoliul**: colecție de produse ale elevului; evaluare longitudinală, cu informații despre progres.',
+ '**Interviul de angajare**: formal (structurat, comisie) sau informal; etape – întrebări de contact, de prezentare, de detaliu, întrebările candidatului, încheiere. ~60% din întrebări privesc studiile, abilitățile, experiența. Pregătire: dosar, gândire pozitivă, ținută, **limbaj nonverbal**.']},
+{titlu:'6. Decizia de carieră', puncte:[
+ 'Decizia de carieră = selectarea unei alternative din mai multe; dificultăți – presiunea timpului, discrepanța cerințe–abilități, prea multe/puține alternative, informații insuficiente, presiuni sociale.',
+ '**Stiluri decizionale (A. Băban)**: **planificat** (rațional), **agonizant** („Nu mă pot decide”), **impulsiv** („Decid acum, mă gândesc mai târziu”), **intuitiv** („Simt că așa e”), **delăsător** (amânare), **fatalist** („Ce va fi, va fi”), **compliant** („Dacă crezi că e bine…”), **paralizat** („Știu că trebuie, dar nu pot”).',
+ 'Autocunoaștere: interese, valori, personalitate, aptitudini (Fleishman).',
+ 'Etapele deciziei: identificarea deciziei și a alternativelor; obținerea informațiilor; evaluarea alternativelor (consecințe, costuri–beneficii pentru sine și pentru alții); planul de implementare.',
+ 'Indecizia: **de dezvoltare** (normală, cu comportament explorator) vs **indecisivitate** (anxietate, dependență de alții, amânare, lipsă de încredere).',
+ 'Tehnici: informații multiple și verificate, alternative clare, timp suficient, acceptarea riscului, „nu există alternativă ideală”, recompensează-te pentru deciziile bune.']},
+{titlu:'7. Educația permanentă', puncte:[
+ 'Învățarea pe tot parcursul vieții presupune independența în gestionarea resurselor; la vârsta adultă – autoinstruire și autoeducație.',
+ 'Vezi și capitolul V (dimensiuni, Memorandumul UE).']}
+]});
+
+CARDURI.push(
+ {c:'s09', q:'Ce este identitatea vocațională?', a:'Combinația dintre cunoașterea propriilor interese, valori, abilități și preferința pentru anumite activități, stiluri de interacțiune și medii de muncă.', term:'Identitatea vocațională', short:'interese, valori, abilități + preferințe de muncă'},
+ {c:'s09', q:'Slujbă vs carieră vs muncă/vocație (Belkin)', a:'- **Slujba:** activitate pentru bani, la cererea altuia\n- **Cariera:** succesiune ordonată de slujbe, ca urmare a performanței\n- **Munca/vocația:** ce faci din plăcere, „chemare”'},
+ {c:'s09', q:'Tipuri de alegeri vocaționale (Jigău)', a:'Orientate social, altruiste, egoiste/autonome, reactive/frustrante, conformiste, hedonice/narcisiste.'},
+ {c:'s09', q:'Cum ar trebui să-și sprijine părinții copilul în alegerea carierei?', a:'- să-i cunoască temerile și succesele\n- să sugereze, nu să impună\n- să-i respecte aspirațiile\n- să fie informați\n- să evite stereotipurile\n- să ofere suport afectiv\n- să-l îndrume spre un consilier'},
+ {c:'s09', q:'Cele trei arii ale psihologiei pozitive (Seligman)', a:'- Emoții pozitive\n- Trăsături pozitive\n- Instituții pozitive'},
+ {c:'s09', q:'Ce este starea de flux (flow)?', a:'Absorbirea totală într-o activitate interesantă care valorifică și dezvoltă abilitățile (Csikszentmihalyi).', term:'Flow-ul', short:'absorbire totală într-o activitate (Csikszentmihalyi)'},
+ {c:'s09', q:'Teoria Broaden-and-Build', a:'Emoțiile pozitive lărgesc registrul de reacții cognitive și comportamentale și construiesc resurse personale pe termen lung.'},
+ {c:'s09', q:'Ce este „hardiness”?', a:'Robustețea/rezistența psihologică (Kobasa) – atitudini și strategii care transformă stresul în oportunitate de creștere.', term:'Hardiness', short:'robustețe psihologică (Kobasa)'},
+ {c:'s09', q:'Cele trei căi spre fericire (Seligman)', a:'- Viața plăcută\n- Viața angajată\n- Viața cu sens\n→ Viața deplină'},
+ {c:'s09', q:'Resurse TIC pentru orientare (clasificarea europeană)', a:'- Autoapreciere\n- Conștientizarea oportunităților\n- Învățarea luării deciziilor\n- Învățarea tranziției'},
+ {c:'s09', q:'Ce este metoda „umbrei”?', a:'Elevul însoțește o zi întreagă (8 ore) o persoană dintr-o profesie, o observă la locul de muncă și apoi povestește colegilor.', term:'Metoda „umbrei”', short:'o zi alături de un profesionist la locul de muncă'},
+ {c:'s09', q:'Tipurile Holland (RIASEC)', a:'- **R**ealist\n- **I**nvestigativ\n- **A**rtistic\n- **S**ocial\n- **E** – Întreprinzător\n- **C**onvențional', term:'Modelul Holland', short:'RIASEC – tipuri de personalitate vocațională'},
+ {c:'s09', q:'Tipul Holland care preferă să ajute și să învețe oamenii', a:'Tipul **Social (S)**.'},
+ {c:'s09', q:'Ce este BBT?', a:'Testul fotografiilor profesiilor (Berufsbilder Test) al lui M. Achtnich, inspirat de Szondi; identifică nevoi de bază prin fotografii cu persoane la muncă.'},
+ {c:'s09', q:'Validitate vs fidelitate', a:'- **Validitatea:** testul măsoară ce susține că măsoară\n- **Fidelitatea:** stabilitatea în timp a rezultatelor'},
+ {c:'s09', q:'Tipuri de CV', a:'- Cronologic (invers cronologic, experiență)\n- Funcțional (abilități, realizări)\n- Biografic\n- Europass'},
+ {c:'s09', q:'Ce trebuie să conțină o scrisoare de intenție?', a:'Interesul pentru post și firmă, punctele forte, cum poate contribui candidatul, disponibilitatea pentru interviu; ~1 pagină, fără greșeli, ton pozitiv.'},
+ {c:'s09', q:'Stilurile decizionale (A. Băban)', a:'Planificat, agonizant, impulsiv, intuitiv, delăsător, fatalist, compliant, paralizat.'},
+ {c:'s09', q:'Ce exprimă stilul „compliant”?', a:'Acceptarea deciziei altuia în locul propriei decizii: „Dacă crezi că e bine…”', term:'Stilul compliant', short:'„Dacă crezi că e bine…” – decide altul'},
+ {c:'s09', q:'Indecizie de dezvoltare vs indecisivitate', a:'- **De dezvoltare:** etapă normală, comportament explorator\n- **Indecisivitate:** anxietate, dependență de alții, amânare, lipsă de încredere'}
+);
+
+GRILE.push(
+ {c:'s09', q:'Codul personal Holland are:', o:['2 litere','3 litere','5 litere','6 litere'], r:1},
+ {c:'s09', q:'Tipul Holland atras de activități nestructurate, creative:', o:['Realist','Convențional','Artistic','Întreprinzător'], r:2},
+ {c:'s09', q:'Conceptul de „flow” aparține lui:', o:['Seligman','Csikszentmihalyi','Kobasa','Holland'], r:1},
+ {c:'s09', q:'„Ce va fi, va fi” – stilul decizional:', o:['Intuitiv','Fatalist','Agonizant','Impulsiv'], r:1},
+ {c:'s09', q:'„Nu mă pot decide” – stilul decizional:', o:['Agonizant','Planificat','Delăsător','Compliant'], r:0},
+ {c:'s09', q:'Un dezavantaj al TIC în consiliere este:', o:['Autonomia clientului','Depersonalizarea comunicării','Stocarea datelor','Flexibilitatea'], r:1},
+ {c:'s09', q:'Testele psihologice în consilierea carierei se folosesc:', o:['Mereu, la toți elevii','Doar când e nevoie (decalaj, indecizie, aptitudini speciale)','Niciodată','Doar la gimnaziu'], r:1},
+ {c:'s09', q:'CV-ul cronologic începe cu:', o:['Prima activitate din viață','Activitățile cele mai recente','Hobby-urile','Fotografia'], r:1},
+ {c:'s09', q:'Robustețea psihologică (hardiness) a fost introdusă de:', o:['Kobasa','Seligman','Super','Kuder'], r:0},
+ {c:'s09', q:'Principalii factori în decizia vocațională sunt:', o:['Familia, școala, prietenii','Doar notele','Doar salariul','Doar testele'], r:0}
+);
+
+AF.push(
+ {c:'s09', s:'Scrisoarea de intenție este citită de angajator după CV.', v:false, e:'E citită înaintea CV-ului.'},
+ {c:'s09', s:'Dezaprobarea agresivă a grupului de prieteni de către părinți crește adeziunea copilului la grup.', v:true},
+ {c:'s09', s:'Serviciile de orientare din școală au o rată de exactitate mai mare decât cele din afara școlii.', v:true},
+ {c:'s09', s:'Viața plăcută singură garantează fericirea de lungă durată.', v:false},
+ {c:'s09', s:'Fidelitatea unui test se referă la stabilitatea în timp a rezultatelor.', v:true},
+ {c:'s09', s:'Indecizia de dezvoltare este o etapă normală a procesului decizional.', v:true},
+ {c:'s09', s:'În CV e acceptabil să adaugi date fictive, dacă sunt convingătoare.', v:false},
+ {c:'s09', s:'Există întotdeauna o alternativă ideală în deciziile de carieră.', v:false}
+);
+
 /* ---- content/teste/t01.js ---- */
 SUBIECTE.push({nr:1, tema:'Comunicarea și feedback-ul · Consilierea · Brainstorming (carieră)', subiecte:[
 {titlu:'Subiectul I', puncte:30,
@@ -1719,3 +1833,249 @@ SUBIECTE.push({nr:20, tema:'Consilierea și educația familiei, situații de ris
   {cer:'5. CS 2.2 – **autocontrolul emoțional** la adolescenți.', rep:['Autocontrol: stăpânirea reacțiilor emoționale, voință, autodisciplină, perseverență; predictor al succesului.','Formarea răbdării, rezistența la tentații; mijloace: relaxare, gândire pozitivă, autosugestie, exerciții de respirație.','Activitate: „Să conștientizăm emoțiile noastre” – studii de caz, ciorchine, jurnalul emoțiilor.']}
  ]}
 ]});
+
+/* ---- content/oficiale/o2021v2.js ---- */
+OFICIALE.push({
+  id: 'tit2021v2', an: 2021, tip: 'Titularizare', varianta: 'Varianta 2', data: '21 iulie 2021', barem: false,
+  subiecte: [
+    {
+      titlu: 'Subiectul I', puncte: 30,
+      text: 'A. Se dă următorul enunț: „Personalizarea comunicării face ca același cadru instituțional, același conținut formal și aceeași clasă de elevi să fie explorate și valorificate diferit de către profesori și de către consilierii școlari în cadrul unităților de învățământ.”\nB. „Procesul complex al comunicării presupune, printre altele, abilitatea de a gestiona și soluționa conflictele.”',
+      items: [
+        { id: 'A', cer: 'A. Pornind de la enunț, demonstrați, în trei pagini, rolul comunicării în procesul de consiliere, pe baza structurii:\n- semnificația conceptelor de consiliere psihologică și de comunicare;\n- două componente fundamentale ale procesului de comunicare și două niveluri ale comunicării;\n- două criterii de clasificare a comunicării;\n- explicarea conceptului de asertivitate;\n- particularitățile definitorii ale comportamentului asertiv, care determină comunicarea asertivă;\n- particularitățile comunicării în activitatea de consiliere;\n- două condiții care favorizează conversația, ca metodă de cunoaștere a personalității;\n- specificitatea limbajului utilizat în comunicare, în procesul de consiliere.\nNotă: valorificarea enunțului – 1p; respectarea numărului de pagini – 1p.', p: 18 },
+        { id: 'Ba', cer: 'B. a) Enumerați două efecte pozitive și două efecte negative ale conflictelor.', p: 4 },
+        { id: 'Bb', cer: 'B. b) Enunțați două prejudecăți/stereotipuri/convingeri eronate despre conflicte, existente în mentalul colectiv, care pot scădea eficiența managementului conflictelor.', p: 2 },
+        { id: 'Bc', cer: 'B. c) Prezentați succint două metode/strategii utilizate în soluționarea situațiilor conflictuale.', p: 4 },
+        { id: 'Bd', cer: 'B. d) Precizați două principii ale managementului conflictelor.', p: 2 }
+      ]
+    },
+    {
+      titlu: 'Subiectul al II-lea', puncte: 30,
+      text: '„Consilierea psihopedagogică este o relație de asistență și suport dintre consilier și consiliat, derulată în scopul orientării școlare și profesionale a elevilor, asistenței psihopedagogice a elevilor, consilierii părinților și consultanței oferite cadrelor didactice.”',
+      items: [
+        { id: 'A', cer: 'Evidențiați necesitatea construirii, de către profesorul consilier școlar, a climatului educativ stimulativ în activitatea pe care o desfășoară în unitățile de învățământ.', p: 4 },
+        { id: 'B', cer: 'Specificați două caracteristici ale activității de consiliere a carierei.', p: 4 },
+        { id: 'C', cer: 'Exemplificați modalitatea prin care profesorul consilier realizează distincția dintre carieră, profesie și ocupație, în cadrul consilierii carierei.', p: 4 },
+        { id: 'D', cer: 'Detaliați două metode de consiliere psihopedagogică.', p: 4 },
+        { id: 'E', cer: 'Exemplificați o strategie de intervenție specifică în cazul elevilor cu părinți divorțați.', p: 4 },
+        { id: 'F', cer: 'Enunțați două principii ale lucrului cu adulții (consilierea cadrelor didactice) și două principii de etică pe care le respectă consilierul școlar în cabinetul de asistență psihopedagogică.', p: 8 },
+        { id: 'G', cer: 'Prezentați rolul activității de consiliere în sistemul de învățământ din România.', p: 2 }
+      ]
+    },
+    {
+      titlu: 'Subiectul al III-lea', puncte: 30,
+      text: 'Secvență din programa de Consiliere și orientare, clasa a XI-a:\nCompetență specifică 4.2. Evaluarea opțiunilor personale privind dezvoltarea personală și profesională.\nConținuturi: Planificarea carierei – opțiuni și resurse de realizare a planului de carieră de scurtă și lungă durată.\n\nRealizați un demers didactic pentru dezvoltarea competenței 4.2. prin ÎNVĂȚAREA PRIN PROBLEMATIZARE, ca metodă didactică modernă.',
+      items: [
+        { id: 'demers', cer: 'Demers didactic, cu:\n- explicarea metodei didactice;\n- enumerarea a trei acțiuni/etape ale metodei, menționând două avantaje ale utilizării acesteia;\n- prezentarea, în aproximativ o pagină, a conținutului științific care vizează dezvoltarea competenței;\n- menționarea unei activități de învățare adecvate, precizând resursele (timp, loc, material didactic, forme de organizare);\n- exemplificarea modului de dezvoltare a competenței, utilizând metoda, prin activitatea de învățare menționată.', p: 30 }
+      ]
+    }
+  ]
+});
+
+/* ---- content/oficiale/o2022v3.js ---- */
+OFICIALE.push({
+  id: 'tit2022v3', an: 2022, tip: 'Titularizare', varianta: 'Varianta 3', data: '13 iulie 2022', barem: false,
+  subiecte: [
+    {
+      titlu: 'Subiectul I', puncte: 30,
+      text: 'Se dă următorul enunț: „Paradigma managerială aplicată analizei clasei de elevi abordează statutul și rolul cadrului didactic, în spiritul valorilor activismului, dinamismului, participării, cooperării și angajării întrucât interacțiunile sociale condiționează dezvoltarea intelectuală a elevului, atitudinile sale cu privire la obiectivele educative ale școlii, dar și rezultatele elevului la învățătură.”\nPornind de la acest enunț, argumentați, în patru pagini, necesitatea demonstrării, de către profesorul consilier școlar, a capacității de a construi un climat educativ din punct de vedere socio-afectiv, stimulativ și eficient.',
+      items: [
+        { id: 'eseu', cer: 'Eseu de 4 pagini, pe baza structurii:\n- precizarea semnificației conceptului de management al clasei de elevi;\n- detalierea dimensiunii psihologice (a doua dominantă structurală a managementului clasei), numind totodată alte două dimensiuni care susțin activitatea educațională;\n- prezentarea a trei strategii (modalități) de prevenire/rezolvare a situațiilor critice în clasa de elevi, exemplificând modul de acțiune al profesorului consilier pentru fiecare;\n- justificarea importanței competenței profesorului consilier de asigurare a climatului educativ adecvat în unitatea de învățământ.\nNotă: valorificarea adecvată a enunțului – 1p; respectarea numărului de pagini – 1p.', p: 30 }
+      ]
+    },
+    {
+      titlu: 'Subiectul al II-lea', puncte: 30,
+      text: '„Conduita psihosocială este un capitol științific distinct în pregătirea concursului pentru ocuparea postului de profesor consilier școlar. Acest capitol vizează: utilizarea conceptelor specifice psihologiei pentru cunoașterea și explicarea unor fapte/procese din viața socială, aplicarea cunoștințelor specifice sociologiei și psihologiei în rezolvarea unor situații/probleme, recunoașterea unor tipuri de relații, a unor comportamente și atitudini sociale în situații date.”',
+      items: [
+        { id: 'A', cer: 'Definiți cunoașterea de sine și stima de sine.', p: 6 },
+        { id: 'B', cer: 'Realizați delimitarea conceptuală imagine de sine – formarea imaginii de sine, detaliind totodată în ce constă percepția socială a imaginii de sine.', p: 8 },
+        { id: 'C', cer: 'Precizați rolul relațiilor interpersonale în formarea și dezvoltarea personalității.', p: 2 },
+        { id: 'D', cer: 'Enumerați cinci tipuri de relații interpersonale.', p: 5 },
+        { id: 'E', cer: 'Explicați distincția între comportamentele sociale și atitudinile sociale.', p: 5 },
+        { id: 'F', cer: 'Dați câte un exemplu de comportament prosocial, respectiv antisocial, care se pot manifesta de către elevi într-o unitate de învățământ preuniversitar.', p: 4 }
+      ]
+    },
+    {
+      titlu: 'Subiectul al III-lea', puncte: 30,
+      text: 'Secvență din programa de Consiliere și orientare, clasa a IX-a:\nCompetență specifică 1.2. Examinarea caracteristicilor specifice adolescenței.\nConținuturi: Autocunoaștere și dezvoltare personală. Autocunoaștere: încredere în sine; factori care influențează încrederea în sine.\n\nRealizați un demers didactic pentru formarea competenței 1.2. prin intermediul STUDIULUI DE CAZ, ca metodă didactică modernă.',
+      items: [
+        { id: 'demers', cer: 'Demers didactic, cu:\n- explicarea metodei didactice;\n- enumerarea a patru etape ale învățării bazate pe studiu de caz;\n- justificarea faptului că învățarea bazată pe studiu de caz este o metodă didactică activă;\n- prezentarea, în aproximativ o pagină, a conținutului științific care vizează formarea competenței specifice;\n- menționarea unei activități de învățare adecvate, precizând resursele (timp, loc, material didactic, forme de organizare a clasei);\n- exemplificarea modului de formare a competenței specifice, utilizând metoda, prin activitatea de învățare menționată.', p: 30 }
+      ]
+    }
+  ]
+});
+
+/* ---- content/oficiale/o2023v3.js ---- */
+OFICIALE.push({
+  id: 'tit2023v3', an: 2023, tip: 'Titularizare', varianta: 'Varianta 3', data: '12 iulie 2023', barem: false,
+  subiecte: [
+    {
+      titlu: 'Subiectul I', puncte: 30,
+      text: 'Se dă următorul enunț: „Calitatea educației se referă la identificarea, de către profesorul consilier școlar, a acelor dimensiuni ale procesului didactic care să sprijine învățarea tuturor categoriilor de elevi, să asigure succesul, să facă sistemul deschis, flexibil și eficient.”\nPornind de la acest enunț, argumentați în patru pagini necesitatea demonstrării de către profesorul consilier școlar a capacității de adaptare continuă a procesului de consiliere la specificul elevilor/grupelor de elevi, prin realizarea acelor schimbări necesare, evolutive în funcție de contextul nevoilor de formare și integrare socio-profesională a elevului.',
+      items: [
+        { id: 'eseu', cer: 'Eseu de 4 pagini, pe baza structurii:\n- precizarea semnificației conceptului de consiliere psihopedagogică;\n- prezentarea a trei caracteristici ale consilierii psihopedagogice;\n- detalierea a trei factori perturbatori ai procesului instructiv-educativ, numind totodată două strategii de intervenție pentru prevenirea insuccesului școlar;\n- menționarea a două modalități de evaluare a progreselor realizate de elevi, ca urmare a activității de consiliere;\n- argumentarea afirmației potrivit căreia consilierul școlar trebuie să demonstreze capacitatea de adaptare a activităților de consiliere la particularitățile de vârstă ale colectivului/grupei de elevi.\nNotă: valorificarea adecvată a enunțului – 2p; respectarea numărului de pagini – 1p.', p: 30 }
+      ]
+    },
+    {
+      titlu: 'Subiectul al II-lea', puncte: 30,
+      text: '„Conduita psihosocială este un capitol științific de care profesorul consilier școlar trebuie să țină seama în pregătirea sa, întrucât vizează capacitatea de a construi un climat educativ suportiv din punct de vedere socio-afectiv, stimulativ și eficient la nivelul instituției de învățământ.”',
+      items: [
+        { id: 'A', cer: 'Definiți noțiunile: consiliere a cadrelor didactice și învățare eficientă.', p: 6 },
+        { id: 'B', cer: 'Formulați două principii ale consilierii cadrelor didactice din perspectiva lucrului cu adulții.', p: 2 },
+        { id: 'C', cer: 'Enumerați cinci responsabilități ale profesorului consilier școlar în asigurarea unui climat educativ suportiv socio-afectiv, stimulativ și eficient la nivelul instituției.', p: 5 },
+        { id: 'D', cer: 'Explicați distincția dintre abuzul de putere și bullying.', p: 5 },
+        { id: 'E', cer: 'Construiți două exemple distincte de modalități de prevenire, respectiv două modalități de rezolvare a situațiilor critice în clasa de elevi.', p: 8 },
+        { id: 'F', cer: 'Justificați importanța formării continue a profesorului consilier școlar în scopul asigurării unui climat educativ suportiv la nivelul unității de învățământ.', p: 4 }
+      ]
+    },
+    {
+      titlu: 'Subiectul al III-lea', puncte: 30,
+      text: 'Răspundeți la cerințele care vizează metodica disciplinei. Secvența pentru itemul 5 (Consiliere și orientare, clasa a IX-a):\nCompetențe generale: 1. Explorarea resurselor personale care influențează planificarea carierei; 2. Integrarea abilităților de interrelaționare, în vederea dezvoltării personale și profesionale.\nCompetențe specifice: 1.2. Examinarea caracteristicilor specifice adolescenței (Creștere și schimbare: adolescența – caracteristicile dezvoltării fizice, cognitive, emoționale); 2.2. Aplicarea tehnicilor de autocontrol emoțional (Comunicare: forme de comunicare eficientă; Autocontrol emoțional: tehnici de autocontrol emoțional).',
+      items: [
+        { id: '1', cer: 'Precizați conținutul noțiunilor: activitate de învățare interdisciplinară și trunchi comun.', p: 6 },
+        { id: '2', cer: 'Explicați necesitatea Notei de prezentare, ca parte a structurii programei școlare pentru Consiliere și orientare.', p: 3 },
+        { id: '3', cer: 'Prezentați comparativ evaluarea inițială și evaluarea finală la Consiliere și orientare.', p: 3 },
+        { id: '4', cer: 'Proiectați o listă de control/verificare, ca instrument al observării sistematice a activității și comportamentului elevilor, formulând cinci enunțuri/caracteristici/comportamente ale elevului, în vederea evaluării la Consiliere și orientare.', p: 10 },
+        { id: '5a', cer: '5. a) Precizați relația dintre competențele generale și competențele specifice din secvența dată.', p: 3 },
+        { id: '5b', cer: '5. b) Construiți o activitate didactică prin care să formați/dezvoltați competența specifică 2.2.', p: 5 }
+      ]
+    }
+  ]
+});
+
+/* ---- content/oficiale/o2025v3.js ---- */
+OFICIALE.push({
+  id: 'tit2025v3', an: 2025, tip: 'Titularizare', varianta: 'Varianta 3', data: '15 iulie 2025', barem: false,
+  subiecte: [
+    {
+      titlu: 'Subiectul I', puncte: 30,
+      text: 'Realizați o prezentare, de trei pagini, prin care să justificați necesitatea consilierii psihopedagogice în scopul dezvoltării armonioase a personalității elevilor prin activități de autocunoaștere, intercunoaștere, comunicare și relaționare optimă cu ceilalți, formarea și dezvoltarea unor tehnici de învățare eficientă și creativă, de luare de decizii și rezolvare de probleme, de a rezista presiunilor negative ale grupului, de control al stresului, de dobândire de repere în orientarea școlară și profesională.\nPunctajul se acordă pentru respectarea următoarelor repere:',
+      items: [
+        { id: 'a', cer: 'Precizarea particularităților a trei obiective ale procesului de consiliere psihopedagogică desfășurat de profesorul consilier școlar.', p: 3 },
+        { id: 'b', cer: 'Menționarea celor șase componente fundamentale ale procesului de consiliere psihopedagogică.', p: 6 },
+        { id: 'c', cer: 'Numirea a trei caracteristici specifice atitudinii consilierului școlar de acceptare non-critică a beneficiarilor.', p: 3 },
+        { id: 'd', cer: 'Definirea noțiunii stimă de sine prin relaționare cu imaginea de sine.', p: 2 },
+        { id: 'e', cer: 'Evidențierea specificului a trei acțiuni prin care un profesor contribuie la dezvoltarea stimei de sine a elevilor.', p: 3 },
+        { id: 'f', cer: 'Prezentarea etapelor modificării comportamentelor inadecvate, ca parte a managementului clasei.', p: 4 },
+        { id: 'g', cer: 'Construirea a două exemple în care sunt ilustrate metode utilizate de profesorul consilier pentru a reduce frecvența comportamentelor inadecvate la elevi.', p: 2 },
+        { id: 'h', cer: 'Prezentarea modului în care profesorul consilier contribuie la stabilirea unei relații funcționale școală–familie și influența acesteia asupra creării și menținerii stării de bine a elevilor.', p: 3 },
+        { id: 'i', cer: 'Justificarea opiniei lui Ion Al. Dumitru: „Succesul consilierii psihopedagogice este dat de implicarea conștientă, activă și responsabilă a persoanei în autodezvoltarea propriei personalități, considerate elemente de bază ale schimbării evolutiv-adaptative a persoanei. Conștientizarea de către fiecare persoană a propriilor capacități și disponibilități și cultivarea dorinței și voinței acesteia de a se manifesta liber, autonom sunt condiții esențiale ale trăirii unei vieți pline de sens, însoțită de sentimentul autoîmplinirii.”', p: 3 },
+        { id: 'j', cer: 'Respectarea numărului de pagini precizat (trei pagini).', p: 1 }
+      ]
+    },
+    {
+      titlu: 'Subiectul al II-lea', puncte: 30,
+      text: '„Pe măsura înaintării în școală, elevii trebuie să proceseze o cantitate tot mai mare de informație și să opereze cu informația la un nivel tot mai abstract. Aceasta necesită utilizarea unor strategii de studiu din ce în ce mai sofisticate, dezvoltarea competenței de a învăța să înveți. Activitățile de consiliere psihopedagogică pot oferi cadrul de desfășurare a unor programe de dezvoltare a unor strategii eficiente de învățare, prin care se poate valorifica și îmbogăți experiența de învățare a elevilor, se pot forma deprinderi relevante pentru dezvoltarea strategiilor de învățare care pot fi transferate în orice domeniu.”',
+      items: [
+        { id: 'A', cer: 'Definiți conceptul de strategie de învățare în relație cu eficiența învățării.', p: 2 },
+        { id: 'B', cer: 'Precizați semnificația noțiunilor stil de învățare și metaînvățare, ca elemente esențiale în realizarea unei învățări eficiente și durabile.', p: 4 },
+        { id: 'C', cer: 'Menționați două modalități de identificare a stilurilor de învățare.', p: 2 },
+        { id: 'D', cer: 'Explicați în ce constă eficacitatea instruirii, indicând o modalitate prin care aceasta poate fi atinsă.', p: 4 },
+        { id: 'E', cer: 'Scrieți câte un exemplu concret de intervenție specializată a profesorului consilier școlar în raport cu trei factori perturbatori ai procesului instructiv-educativ identificați.', p: 6 },
+        { id: 'F', cer: 'Descrieți trei tipuri de resurse psihologice ale persoanei implicate în realizarea învățării și specificați modul în care profesorul consilier contribuie la facilitarea procesului de identificare și valorificare a acestora.', p: 8 },
+        { id: 'G', cer: 'Redactați un text coerent de 10 rânduri, cu caracter științific, în care să relevați rolul consilierii psihopedagogice în dezvoltarea gândirii critice la elevi.', p: 4 }
+      ]
+    },
+    {
+      titlu: 'Subiectul al III-lea', puncte: 30,
+      text: 'Secvență din programa de Consiliere și orientare, clasa a IX-a:\nCompetență specifică 2.2. Aplicarea tehnicilor de autocontrol emoțional.\nConținuturi: Comunicare și abilități sociale. Comunicare: forme de comunicare eficientă. Autocontrol emoțional: tehnici de autocontrol emoțional.\n\nRealizați un demers didactic pentru dezvoltarea competenței 2.2. prin intermediul DEMONSTRAȚIEI, ca metodă didactică tradițională, prin:',
+      items: [
+        { id: 'a', cer: 'Explicarea metodei didactice (demonstrația).', p: 5 },
+        { id: 'b', cer: 'Precizarea a două forme didactice ale metodei.', p: 6 },
+        { id: 'c', cer: 'Specificarea a două cerințe didactice în utilizarea metodei demonstrației.', p: 6 },
+        { id: 'd', cer: 'Menționarea unei activități de învățare adecvate pentru dezvoltarea competenței specifice date.', p: 3 },
+        { id: 'e', cer: 'Precizarea resurselor (de timp, de loc, material didactic, forme de organizare a clasei) utilizate în activitatea de la d.', p: 4 },
+        { id: 'f', cer: 'Exemplificarea modului de dezvoltare a competenței specifice, utilizând metoda demonstrației, prin activitatea de învățare de la d.', p: 6 }
+      ]
+    }
+  ]
+});
+
+/* ---- content/oficiale/o2026def.js ---- */
+OFICIALE.push({
+  id: 'def2026v2', an: 2026, tip: 'Definitivat', varianta: 'Varianta 2', data: '14 iulie 2026', barem: true,
+  nota: 'Am primit doar BAREMUL acestei variante, nu și subiectul. Cerințele de mai jos sunt reconstruite din barem, deci formularea exactă din subiect poate fi alta. Punctajele sunt cele oficiale.',
+  subiecte: [
+    {
+      titlu: 'Subiectul I', puncte: 60,
+      text: 'Partea A – comunicarea în consiliere. Partea B – dependența de internet la elevi. (Text reconstruit din barem.)',
+      items: [
+        { id: 'Aa', cer: 'A. a) Precizați rolul comunicării în exprimarea emoțiilor.', p: 2, barem: '2p. Ex.: rol în gestionarea energiei trăirilor emoționale în direcția dezvoltării persoanei; rol în controlul comportamentului verbalo-motoriu, premisă a mecanismelor de apărare ale Eului.' },
+        { id: 'Ab', cer: 'A. b) Enumerați trei bariere ale comunicării în activitatea consilierului școlar.', p: 3, barem: '3×1p. Ex.: tendința de a judeca; oferirea de soluții; evitarea abordării unor probleme importante.' },
+        { id: 'Ac', cer: 'A. c) Descrieți modalitățile de gestionare a două dintre barierele de la b., în consilierea beneficiarilor aflați în situații conflictuale.', p: 4, barem: '2×2p.' },
+        { id: 'Ad', cer: 'A. d) Redactați un text (în limita de spațiu precizată) care să evidențieze diferența dintre comunicarea pasivă și comunicarea agresivă.', p: 5, barem: 'Redactare care evidențiază diferența – 4p (NOTĂ: dacă doar precizează caracteristicile fiecărui tip, fără diferență – câte 1p; pasivă = evitarea confruntărilor, conflictelor; agresivă = critică, drepturi proprii mai importante decât ale altora, ostilitate, furie). Încadrarea în spațiu – 1p.' },
+        { id: 'Ae', cer: 'A. e) Prezentați specificul a trei tipuri de comunicare utilizate în consilierea școlară, altele decât cele de la d.', p: 6, barem: '3×2p. Ex.: evaluativă – cel mai frecvent mod de a provoca reacția defensivă; descriptivă – cea mai eficientă prevenire a reacțiilor defensive și a blocării comunicării; empatică – previne reacțiile negative despre sine și ceilalți. NOTĂ: doar numite – câte 1p.' },
+        { id: 'Ba', cer: 'B. a) Precizați conținutul conceptului de dependență de internet.', p: 2, barem: '2p. Ex.: pierderea controlului asupra impulsurilor și utilizarea compulsivă a mediului online.' },
+        { id: 'Bb', cer: 'B. b) Explicați diferența dintre utilizarea funcțională și utilizarea problematică a internetului.', p: 4, barem: '4p. Ex.: diferența ține de autoreglare – în utilizarea funcțională autocontrolul e subordonat Eului; în cea problematică apar dificultăți de autoreglare a impulsurilor.' },
+        { id: 'Bc', cer: 'B. c) Menționați trei aspecte caracteristice comportamentelor de risc asociate utilizării excesive a internetului.', p: 3, barem: '3×1p. Ex.: iritabilitate; anxietate; neglijarea realității.' },
+        { id: 'Bd', cer: 'B. d) Prezentați trei modalități de prevenire a dependenței de internet în mediul școlar.', p: 9, barem: '3×3p. Ex.: monitorizarea timpului online (program orar, evidență, alarme); consolidarea relațiilor sociale (interacțiuni față în față, sport, activități educaționale); dezvoltarea abilităților de coping. NOTĂ: doar precizate – câte 1p.' },
+        { id: 'Be', cer: 'B. e) Descrieți trei strategii de intervenție utilizate în consilierea elevilor cu risc de dependență de internet.', p: 9, barem: '3×3p. Ex.: stabilirea scopurilor programului de utilizare a internetului (grafic tematic și orar, acces minimal); monitorizarea interacțiunilor față în față (grafic de activități educative, culturale, voluntariat); activități-suport ale specialiștilor (consiliere individuală, de grup, terapie). NOTĂ: doar precizate – câte 1p.' },
+        { id: 'Bf', cer: 'B. f) Numiți două modalități de intervenție ale profesorului consilier școlar.', p: 4, barem: '2×2p. Ex.: consiliere individuală; elaborarea de programe de intervenție.' },
+        { id: 'Bg', cer: 'B. g) Ilustrați prin două exemple importanța măsurilor de sprijin pentru promovarea comportamentelor sănătoase, în scopul combaterii dependenței de internet.', p: 4, barem: '2×2p.' },
+        { id: 'Bh', cer: 'B. h) Detaliați rolul profesorului consilier școlar în consilierea părinților elevilor aflați în situații de risc privind utilizarea internetului.', p: 3, barem: '3p. Ex.: prevenție prin informarea și sensibilizarea părinților privind semnalele dependenței; contact permanent cu părinții elevilor în risc.' },
+        { id: 'Bi', cer: 'B. i) Utilizarea adecvată a limbajului de specialitate (se evaluează pe tot Subiectul I).', p: 1, barem: '1p.' },
+        { id: 'Bj', cer: 'B. j) Încadrarea în limita de spațiu precizată.', p: 1, barem: '1p.' }
+      ]
+    },
+    {
+      titlu: 'Subiectul al II-lea', puncte: 30,
+      text: 'Metodica consilierii și dezvoltării personale. (Text reconstruit din barem; din exemplele baremului reiese că competența specifică dată vizează identificarea și exprimarea emoțiilor.)',
+      items: [
+        { id: '1', cer: '1. Formulați trei exemple de activități de învățare specifice consilierii și dezvoltării personale, care să vizeze competența specifică dată (identificarea/exprimarea emoțiilor).', p: 9, barem: '3×3p. Ex.: exerciții de identificare a emoțiilor pe suporturi diverse (imagini, povești, secvențe de film); auto-reflecție prin propoziții lacunare „Eu simt … atunci când …”; asocierea unei activități preferate (lectură, dans, șah) cu emoția trăită, cu suporturi vizuale.' },
+        { id: '2a', cer: '2. a) Precizați semnificația conceptului de evaluare formativă.', p: 5, barem: '5p. Ex.: tip de evaluare care vizează ameliorarea instruirii sau a materialului didactic.' },
+        { id: '2b', cer: '2. b) Menționați două instrumente de evaluare alternative utilizate în consilierea școlară.', p: 6, barem: '2×3p. Ex.: portofoliul de dezvoltare personală/vocațională; jurnalul reflexiv.' },
+        { id: '3', cer: '3. Prezentați necesitatea utilizării, în consilierea psihopedagogică, a metodelor: învățarea prin cooperare, problematizarea, proiectul (în limita de spațiu precizată).', p: 10, barem: '3×3p pentru necesitatea fiecărei metode (NOTĂ: doar înțelesul metodei, fără necesitate – câte 1p; cooperare = activitate în grup organizată după obiective, corectare reciprocă; problematizare = căutarea independentă a soluțiilor; proiect = pune în evidență capacități și cunoștințe superioare). Încadrarea în spațiu – 1p.' }
+      ]
+    }
+  ]
+});
+
+/* ---- content/oficiale/o2026v1.js ---- */
+OFICIALE.push({
+  id: 'tit2026v1', an: 2026, tip: 'Titularizare', varianta: 'Varianta 1', data: '21 iulie 2026', barem: true,
+  subiecte: [
+    {
+      titlu: 'Subiectul I', puncte: 30,
+      text: 'Se dă următorul text:\n„Profesorul cu vocație știe că a fi preocupat de conștientizarea, supravegherea și îmbogățirea conduitei sale comunicative este o cerință elementară, mai ales pentru că nu tot ce intenționăm reușim să spunem, nu tot ce spunem se aude, nu tot ce se aude se și înțelege, se înțelege și ce nu spunem, iar ceea ce se înțelege nu depinde numai de noi ce devine. În acest context, funcția deținută de profesorul consilier – care își păstrează în esență rolul de resursă la întrebările elevilor în legătură cu lumea – este benefic să se exercite într-un proces didactic de tip eveniment, la care să participe toți elevii, să ajute la formarea deprinderilor individuale și simțului responsabilității, să le permită elevilor dezvoltarea capacității de a anticipa schimbările din jur și de a se adapta la ele.”\n\nRealizați, în aproximativ patru pagini, o prezentare a rolului profesorului consilier școlar în dezvoltarea abilităților de comunicare la elevi. Punctajul se acordă pentru respectarea următoarelor repere:',
+      items: [
+        { id: 'a', cer: 'Formularea ideii principale a textului dat.', p: 1, barem: '1p. Ex.: profesorul consilier își păstrează rolul de resursă pentru întrebările elevilor despre lume, rol benefic într-un demers didactic de tip eveniment, la care participă toți elevii, contribuind la formarea deprinderilor individuale și a simțului responsabilității.' },
+        { id: 'b', cer: 'Precizarea a două abilități ale profesorului consilier școlar.', p: 2, barem: '2×1p. Oricare două abilități. Ex.: ascultarea activă; adresarea întrebărilor.' },
+        { id: 'c', cer: 'Evidențierea modului în care abilitățile de la b. facilitează comunicarea eficientă cu beneficiarii în consilierea psihopedagogică.', p: 2, barem: '2×1p. Ex.: ascultarea activă – facilitează înțelegerea mesajului și manifestarea interesului față de gândurile și sentimentele interlocutorului; adresarea întrebărilor – facilitează clarificarea informațiilor și explorarea alternativelor.' },
+        { id: 'd', cer: 'Exemplificarea a patru situații care se constituie în bariere ale comunicării eficiente.', p: 8, barem: '4×2p. Ex.: critica și judecarea – evaluare negativă, a fi sau nu de acord cu părerile interlocutorului; etichetarea – stereotipuri pentru a caracteriza o persoană; abaterea și evitarea – schimbarea cursului discuției de la preocupările interlocutorului; lipsa contactului vizual. NOTĂ: dacă doar enumeră, fără exemplificare, câte 1p.' },
+        { id: 'e', cer: 'Descrierea a două modalități de optimizare a comunicării.', p: 4, barem: '2×2p. Ex.: comunicarea evaluativă – cel mai frecvent mod de a provoca o reacție defensivă; comunicarea descriptivă – cea mai eficientă modalitate de prevenire a reacțiilor defensive și a blocării comunicării. NOTĂ: dacă doar enumeră, câte 1p.' },
+        { id: 'f', cer: 'Menționarea a două efecte pozitive și a două efecte negative ale conflictelor în mediul școlar.', p: 4, barem: '(2×1p)+(2×1p). Ex. pozitive: creșterea coeziunii grupului; dezvoltarea abilităților de adaptare. Negative: diminuarea stimei de sine; scăderea implicării în activitate.' },
+        { id: 'g', cer: 'Explicarea conceptului de comunicare asertivă.', p: 2, barem: '2p. Ex.: comunicare directă, deschisă și onestă, care favorizează încrederea în noi și câștigarea respectului celorlalți, cu exprimarea emoțiilor și gândurilor astfel încât ne satisfacem nevoile fără a le deranja pe ale interlocutorului.' },
+        { id: 'h', cer: 'Precizarea rolului comportamentului colaborativ în prevenirea conflictelor.', p: 1, barem: '1p. Ex.: creșterea coeziunii grupului poate conduce la diminuarea conflictelor.' },
+        { id: 'i', cer: 'Formularea a două principii ale managementului conflictelor.', p: 2, barem: '2×1p. Ex.: focalizarea pe problemă; utilizarea comunicării asertive pe perioada conflictului.' },
+        { id: 'j', cer: 'Argumentarea importanței cunoașterii și aplicării de către profesorul consilier a principiilor managementului conflictelor în realizarea și menținerea unui climat școlar pozitiv.', p: 3, barem: '3p. Ex.: focalizarea pe problemă – descrierea situației evitând generalizarea pripită și etichetarea; comunicarea asertivă – adaptare eficientă la situația conflictuală, transmiterea emoțiilor și convingerilor fără a critica opiniile celorlalți.' },
+        { id: 'k', cer: 'Respectarea numărului de pagini precizat (aprox. 4 pagini).', p: 1, barem: '1p, cu toleranță de ± o jumătate de pagină. (În aplicație: o pagină de examen ≈ 250–300 de cuvinte scrise de mână.)' }
+      ]
+    },
+    {
+      titlu: 'Subiectul al II-lea', puncte: 30,
+      text: '„Modalitatea cea mai puțin costisitoare și cea mai umană de a proteja și de a spori sănătatea fizică și psihică a oamenilor este prevenirea apariției unor disfuncționalități, tulburări sau boli. Consilierea psihopedagogică are un rol proactiv, încercând să pregătească copiii și tinerii să știe cum să procedeze în diverse situații de viață, previzibile sau nu, și cum să-și gestioneze adecvat emoțiile pentru a face față cu succes unor solicitări variate.”',
+      items: [
+        { id: 'A', cer: 'Menționați două obiective ale procesului de consiliere psihopedagogică.', p: 2, barem: '2×1p. Ex.: promovarea sănătății și a stării de bine; dezvoltarea personală.' },
+        { id: 'B', cer: 'Enumerați trei factori de protecție, respectiv trei factori de risc care influențează dezvoltarea personalității copiilor și a adolescenților.', p: 6, barem: '3×1p protecție (ex.: stimă de sine ridicată; sprijinul familiei; capacitate ridicată de rezolvare a problemelor) + 3×1p risc (ex.: stimă de sine scăzută; neglijare din partea familiei; catastrofizare).' },
+        { id: 'C', cer: 'Argumentați necesitatea cunoașterii factorilor de risc de la B. de către profesorul consilier în elaborarea unui program de consiliere care vizează managementul comportamentelor și situațiilor de risc.', p: 3, barem: 'Argumentare adecvată – 3p; argumentare superficială – 1p.' },
+        { id: 'D', cer: 'Exemplificați trei mecanisme de autocontrol individual al emoțiilor.', p: 6, barem: '3×1p mențiune + 3×1p exemplificare. Ex.: dezvoltarea inteligenței emoționale – recunoașterea propriilor emoții; coping adaptativ – umorul în reevaluarea situației; raționalizarea – justificări pentru protejarea imaginii de sine.' },
+        { id: 'E', cer: 'Descrieți două modalități de desfășurare a activităților cu elevii în scopul unui management eficient al stresului.', p: 4, barem: '2×2p. Ex.: stabilirea priorităților – reevaluarea activităților zilnice, identificarea celor prioritare și încadrarea lor în timp; evitarea procrastinării – planificarea activităților prioritare în perioadele de maximă eficiență.' },
+        { id: 'F', cer: 'Redactați un text coerent, semnificativ științific, de 10 rânduri, în care să prezentați relația dintre reziliență și managementul stresului.', p: 4, barem: 'Prezentarea relației – 3p (NOTĂ: dacă doar explică termenii – câte 1p; reziliența = capacitatea de adaptare, de a funcționa optim în condiții de suprasolicitare; managementul stresului = strategii cognitive, emoționale și comportamentale pentru reducerea/stăpânirea/tolerarea tensiunilor). Respectarea a 10 rânduri – 1p.' },
+        { id: 'Ga', cer: 'G. a) Precizați semnificația termenului alexitimie.', p: 2, barem: '2p. Ex.: capacitatea scăzută sau incapacitatea unor persoane de a-și exprima verbal emoțiile.' },
+        { id: 'Gb', cer: 'G. b) Descrieți succint trei etape ale unui plan de intervenție specific consilierii individuale, elaborat pentru un elev alexitimic.', p: 3, barem: '3×1p. Ex.: definirea problemei – stabilirea clară a dificultăților elevului; descrierea problemei – analiza funcțională cognitivă, emoțională și comportamentală; formularea planului de intervenție – obiective pe termen lung, obiective specifice, strategii, activități.' }
+      ]
+    },
+    {
+      titlu: 'Subiectul al III-lea', puncte: 30,
+      text: 'Secvență din programa de Consiliere și dezvoltare personală, clasa a VIII-a:\nCompetență specifică 2.2. Negocierea conflictelor prin diferite tehnici de comunicare.\nConținuturi: Conflictele: caracteristici, surse, modalități de prevenire. Stilurile de negociere a conflictelor sau de abordare constructivă prin aplicarea tehnicilor simple de comunicare.\n\nRealizați un demers didactic pentru dezvoltarea competenței specifice 2.2. utilizând STUDIUL DE CAZ, ca metodă didactică interactivă, prin:',
+      items: [
+        { id: 'a', cer: 'Explicarea metodei didactice (studiul de caz).', p: 5, barem: '5p. NOTĂ: dacă doar precizează semnificația (metodă de confruntare directă cu o situație reală, autentică, tipică pentru un set de situații problematice), fără explicare – 2p.' },
+        { id: 'b', cer: 'Prezentarea a trei etape ale aplicării metodei studiului de caz.', p: 6, barem: '3×2p. Ex.: prezentarea cadrului general și a cazului (clar, precis, complet); sesizarea nuanțelor cazului și a necesității rezolvării lui (se cer informații suplimentare, surse); dezbaterea în grup a modurilor de soluționare (grupuri mici de 5–6, apoi în plen).' },
+        { id: 'c', cer: 'Specificarea a două cerințe didactice în utilizarea studiului de caz.', p: 6, barem: '2×3p. Ex.: să existe o situație care va fi analizată; situația aleasă să fie adecvată scopului didactic urmărit.' },
+        { id: 'd', cer: 'Menționarea unei activități de învățare adecvate pentru dezvoltarea competenței specifice date.', p: 3, barem: '3p pentru orice activitate de învățare adecvată CS 2.2 (negocierea conflictelor).' },
+        { id: 'e', cer: 'Precizarea resurselor (de timp, de loc, material didactic, forme de organizare a clasei) pentru activitatea de la d.', p: 4, barem: '4×1p – câte 1p pentru fiecare: timp, loc, material didactic, formă de organizare.' },
+        { id: 'f', cer: 'Exemplificarea modului de dezvoltare a competenței specifice, utilizând studiul de caz, prin activitatea de învățare de la d.', p: 6, barem: 'Exemplificare adecvată (dezvoltă CS 2.2 + folosește studiul de caz + prin activitatea de la d.) – 6p; demers care nu respectă una dintre aceste condiții – 2p.' }
+      ]
+    }
+  ]
+});
